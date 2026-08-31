@@ -6,29 +6,29 @@ export const MOVE_TYPES = {
     id: 'Shoot',
     code: 'TIRO',
     labelIt: 'Tiro',
-    color: '#f43f5e', // rose-500
+    color: '#f43f5e', // Rosa (rose-500)
     badgeClass: 'bg-rose-500/20 text-rose-300 border-rose-500/40',
   },
   D: {
     id: 'Dribble',
     code: 'DRIB',
-    labelIt: 'Dribbling',
-    color: '#06b6d4', // cyan-500
-    badgeClass: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40',
+    labelIt: 'Dribbling (Off)',
+    color: '#3b82f6', // Blu (blue-500)
+    badgeClass: 'bg-blue-600/25 text-blue-300 border-blue-500/40',
   },
   B: {
     id: 'Block',
     code: 'BLOC',
-    labelIt: 'Blocco',
-    color: '#a855f7', // purple-500
-    badgeClass: 'bg-purple-500/20 text-purple-300 border-purple-500/40',
+    labelIt: 'Blocco (Dif)',
+    color: '#10b981', // Verde (emerald-500)
+    badgeClass: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
   },
   C: {
     id: 'Catch',
     code: 'PARA',
     labelIt: 'Parata',
-    color: '#f59e0b', // amber-500
-    badgeClass: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
+    color: '#d97706', // Ocra (amber-600 / ochre)
+    badgeClass: 'bg-amber-600/25 text-amber-300 border-amber-500/50',
   },
 };
 

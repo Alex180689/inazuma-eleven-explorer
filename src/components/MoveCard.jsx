@@ -1,6 +1,13 @@
 import React from 'react';
-import { Zap, Sparkles } from 'lucide-react';
+import { Zap, Sparkles, Flame, Wind, Mountain, Trees } from 'lucide-react';
 import { getMoveInfo, checkMoveStab } from '../utils/hissatsu';
+
+const ELEMENT_ICON_MAP = {
+  Fire: Flame,
+  Wind: Wind,
+  Earth: Mountain,
+  Wood: Trees,
+};
 
 export default function MoveCard({
   moveName,
@@ -24,6 +31,7 @@ export default function MoveCard({
   const moveInfo = getMoveInfo(moveName);
   const isStab = checkMoveStab(moveName, playerElement);
   const applyStabVisual = isStab && showStabEffect;
+  const ElementIcon = moveInfo?.elementKey ? ELEMENT_ICON_MAP[moveInfo.elementKey] : null;
 
   return (
     <div
@@ -61,7 +69,7 @@ export default function MoveCard({
         </span>
       </div>
 
-      {/* Right: Badges (STAB + Type + Element) */}
+      {/* Right: Badges (STAB + Type + Element Icon) */}
       <div className="flex items-center gap-1.5 shrink-0 ml-2">
         {/* STAB Pill */}
         {applyStabVisual && (
@@ -71,21 +79,23 @@ export default function MoveCard({
           </span>
         )}
 
-        {/* Move Type Badge (TIRO / DRIB / BLOC / PARA) */}
+        {/* Move Type Badge (TIRO rosa, DRIB blu, BLOC verde, PARA ocra) */}
         {moveInfo?.type && (
           <span
             className={`px-1.5 py-0.5 rounded text-[9px] font-bold font-mono border uppercase tracking-wider ${moveInfo.type.badgeClass}`}
+            title={`Tipo: ${moveInfo.type.labelIt}`}
           >
             {moveInfo.type.code}
           </span>
         )}
 
-        {/* Move Element Badge */}
-        {moveInfo?.element && (
+        {/* Move Element Icon Badge */}
+        {moveInfo?.element && ElementIcon && (
           <span
-            className={`px-1.5 py-0.5 rounded text-[9px] font-bold font-mono border uppercase tracking-wider ${moveInfo.element.badgeClass}`}
+            className={`w-5 h-5 rounded-md flex items-center justify-center border transition-all ${moveInfo.element.badgeClass}`}
+            title={`Elemento: ${moveInfo.element.nameIt}`}
           >
-            {moveInfo.element.nameIt}
+            <ElementIcon size={12} className="shrink-0" />
           </span>
         )}
 
