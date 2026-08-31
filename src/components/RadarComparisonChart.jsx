@@ -189,9 +189,9 @@ export default function RadarComparisonChart({
             />
           ))}
 
-          {/* Concentric level percentage indicators */}
-          <text x={centerX + 4} y={centerY - radius * 0.5} fill="#475569" fontSize="8px" fontFamily="monospace">50%</text>
-          <text x={centerX + 4} y={centerY - radius} fill="#475569" fontSize="8px" fontFamily="monospace">100%</text>
+          {/* Concentric level indicators */}
+          <text x={centerX + 4} y={centerY - radius * 0.5} fill="#475569" fontSize="8px" fontFamily="monospace">50</text>
+          <text x={centerX + 4} y={centerY - radius} fill="#475569" fontSize="8px" fontFamily="monospace">100</text>
 
           {/* Radial Spokes / Axes */}
           {statsList.map((_, i) => {

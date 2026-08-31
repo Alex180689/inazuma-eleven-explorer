@@ -147,13 +147,6 @@ export default function PlayerCard({
 
         {/* Core Stats Progress Bars */}
         <div className="p-5 pb-3">
-          <div className="flex items-center justify-between mb-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono">
-              Statistiche di Gioco
-            </h4>
-            <span className="text-[10px] text-slate-500 font-mono">Max 100</span>
-          </div>
-
           <div className="space-y-1">
             {STAT_KEYS.map(stat => (
               <StatBar
