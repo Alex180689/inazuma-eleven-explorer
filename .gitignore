@@ -5,11 +5,19 @@ node_modules/
 dist/
 dist-ssr/
 
+# Sprites (excluded for lightweight repo)
+sprites/
+public/sprites/
+wiki_scraper/sprites/
+wiki_scraper/cache/
+
 # Temp and logs
 *.log
 *.tmp
 verify_*.png
 test_*.png
+*.bundle
+*.zip
 
 # Editor / OS
 .DS_Store
