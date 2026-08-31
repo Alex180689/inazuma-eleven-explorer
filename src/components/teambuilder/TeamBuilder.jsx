@@ -180,6 +180,8 @@ export default function TeamBuilder({
   onLoadTeam,
   isWeighted = true,
   allPlayers = [],
+  settings: externalSettings,
+  onUpdateSettings,
 }) {
   const currentFormation = useMemo(() => {
     return (
@@ -192,8 +194,10 @@ export default function TeamBuilder({
   const [activeTeamId, setActiveTeamIdState] = useState(() => getActiveTeamId());
   const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
 
-  // Settings state (pitch stretch, slot size, badge size, etc.)
-  const [settings, setSettings] = useState(() => getTeamBuilderSettings());
+  // Settings state (pitch stretch, slot size, badge size, radar, etc.)
+  const [localSettings, setLocalSettings] = useState(() => getTeamBuilderSettings());
+  const settings = externalSettings || localSettings;
+  const setSettings = onUpdateSettings || setLocalSettings;
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   // QR Code Modals state (generation & webcam scanner)

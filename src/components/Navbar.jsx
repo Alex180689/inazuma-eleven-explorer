@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
-import { Zap, Upload, RotateCcw, Info, Sparkles, Shield, Trophy } from 'lucide-react';
+import { Zap, Upload, RotateCcw, Info, Sparkles, Shield, Trophy, Settings } from 'lucide-react';
 
 export default function Navbar({
   playersCount = 495,
   onResetToDefault,
   onUploadCSV,
   onOpenShortcuts,
+  onOpenSettings,
 }) {
   const fileInputRef = useRef(null);
 
@@ -79,12 +80,24 @@ export default function Navbar({
           {/* Reset button */}
           <button
             onClick={onResetToDefault}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-xs font-semibold text-slate-400 hover:text-white transition-all"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-xs font-semibold text-slate-400 hover:text-white transition-all cursor-pointer"
             title="Reimposta confronto predefinito (Mark vs Joe King)"
           >
             <RotateCcw size={13} />
             <span className="hidden sm:inline">Reset</span>
           </button>
+
+          {/* Settings button */}
+          {onOpenSettings && (
+            <button
+              onClick={onOpenSettings}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-amber-500/40 text-xs font-semibold text-slate-300 hover:text-amber-300 transition-all cursor-pointer shadow-sm"
+              title="Apri Impostazioni (Dimensioni Radar, Campo, Opacità, Sfondi)"
+            >
+              <Settings size={13} className="text-amber-400" />
+              <span className="hidden sm:inline">Impostazioni</span>
+            </button>
+          )}
         </div>
       </div>
     </header>

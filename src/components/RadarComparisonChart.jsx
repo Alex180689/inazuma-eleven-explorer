@@ -4,7 +4,15 @@ import { ELEMENTS } from '../constants/elements';
 import { STAT_KEYS, VITAL_KEYS, getStatDelta, calculateTotalStats, calculateOverall, getPlayerColor } from '../utils/statsUtils';
 import { Layers, Trophy, Sparkles } from 'lucide-react';
 
-export default function RadarComparisonChart({ player1, player2, p1Theme, p2Theme, isWeighted = true }) {
+export default function RadarComparisonChart({
+  player1,
+  player2,
+  p1Theme,
+  p2Theme,
+  isWeighted = true,
+  radarWidth = 560,
+  radarHeight = 480,
+}) {
   const [chartMode, setChartMode] = useState('core'); // 'core' (7 stats) | 'all' (9 stats)
   const [hoveredStat, setHoveredStat] = useState(null);
 
@@ -48,12 +56,12 @@ export default function RadarComparisonChart({ player1, player2, p1Theme, p2Them
     : STAT_KEYS;
 
   const numStats = statsList.length;
-  // Dimensions with ample margin for labels so nothing overflows
-  const svgWidth = 460;
-  const svgHeight = 390;
+  // Dimensions scale with user-configured radar settings
+  const svgWidth = Math.min(600, Math.max(380, radarWidth - 60));
+  const svgHeight = Math.min(520, Math.max(320, radarHeight - 110));
   const centerX = svgWidth / 2;
   const centerY = svgHeight / 2 - 5;
-  const radius = 120;
+  const radius = Math.min((svgWidth - 110) / 2, (svgHeight - 80) / 2);
 
   // Concentric levels (25%, 50%, 75%, 100%)
   const levels = [0.25, 0.5, 0.75, 1.0];

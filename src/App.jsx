@@ -14,10 +14,17 @@ import RadarComparisonChart from './components/RadarComparisonChart';
 import PlayerSearchModal from './components/PlayerSearchModal';
 import TeamBuilder from './components/teambuilder/TeamBuilder';
 import ElectricShockEffect from './components/ElectricShockEffect';
+import TeamBuilderSettingsModal, {
+  getTeamBuilderSettings,
+  saveTeamBuilderSettings,
+  DEFAULT_TEAMBUILDER_SETTINGS,
+} from './components/teambuilder/TeamBuilderSettingsModal';
 
 export default function App() {
   const [players, setPlayers] = useState(defaultPlayers);
   const [shockTrigger, setShockTrigger] = useState(0);
+  const [builderSettings, setBuilderSettings] = useState(() => getTeamBuilderSettings());
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   
   // Default selected players: Mark Evans (Raimon) vs Joe King (Royal Academy)
   const [player1, setPlayer1] = useState(() => {
@@ -321,6 +328,7 @@ export default function App() {
         playersCount={players.length}
         onResetToDefault={handleReset}
         onUploadCSV={handleUploadCSV}
+        onOpenSettings={() => setIsSettingsOpen(true)}
       />
 
       {/* Main Container */}
@@ -339,9 +347,9 @@ export default function App() {
         />
 
         {/* Bottom Comparison Stage (3-Column Layout on Desktop, Responsive Stack on Mobile) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
-          {/* Left Column: Player 1 Card (Cols 3.5 / 12) */}
-          <div className="lg:col-span-3 xl:col-span-3 order-1 flex flex-col">
+        <div className="flex flex-col lg:flex-row items-stretch justify-center gap-5 lg:gap-6">
+          {/* Left Column: Player 1 Card */}
+          <div className="w-full lg:w-[280px] xl:w-[310px] shrink-0 flex flex-col order-1">
             <PlayerCard
               player={player1}
               rivalPlayer={player2}
@@ -352,13 +360,19 @@ export default function App() {
             />
           </div>
 
-          {/* Center Column: Radar Chart Showcase (Cols 6 / 12 on Desktop for extra space) */}
-          <div className="lg:col-span-6 xl:col-span-6 order-2 flex flex-col">
+          {/* Center Column: Radar Chart Showcase (Width and Height controlled by Settings) */}
+          <div
+            className="flex-1 flex flex-col mx-auto w-full order-2 transition-all duration-300"
+            style={{
+              maxWidth: `${builderSettings.radarWidth || 560}px`,
+            }}
+          >
             <div
-              className="glass-card rounded-2xl p-5 sm:p-6 border shadow-2xl flex-1 flex flex-col justify-between transition-all duration-500"
+              className="glass-card rounded-2xl p-4 sm:p-5 border shadow-2xl flex-1 flex flex-col justify-between transition-all duration-300"
               style={{
                 borderColor: 'rgba(51, 65, 85, 0.6)',
                 background: `linear-gradient(135deg, ${p1TeamTheme.primary}10 0%, rgba(15, 23, 42, 0.9) 50%, ${p2TeamTheme.primary}10 100%)`,
+                minHeight: `${builderSettings.radarHeight || 480}px`,
               }}
             >
               <RadarComparisonChart
@@ -367,12 +381,14 @@ export default function App() {
                 p1Theme={p1Theme}
                 p2Theme={p2Theme}
                 isWeighted={isWeighted}
+                radarWidth={builderSettings.radarWidth || 560}
+                radarHeight={builderSettings.radarHeight || 480}
               />
             </div>
           </div>
 
-          {/* Right Column: Player 2 Card (Cols 3.5 / 12) */}
-          <div className="lg:col-span-3 xl:col-span-3 order-3 flex flex-col">
+          {/* Right Column: Player 2 Card */}
+          <div className="w-full lg:w-[280px] xl:w-[310px] shrink-0 flex flex-col order-3">
             <PlayerCard
               player={player2}
               rivalPlayer={player1}
@@ -429,6 +445,8 @@ export default function App() {
             onLoadTeam={handleLoadTeam}
             isWeighted={isWeighted}
             allPlayers={players}
+            settings={builderSettings}
+            onUpdateSettings={setBuilderSettings}
           />
         </div>
       </main>
@@ -451,6 +469,18 @@ export default function App() {
         uniqueTeams={uniqueTeams}
         isWeighted={isWeighted}
         excludedPlayerNames={excludedPlayerNames}
+      />
+
+      {/* Settings Modal Dialog (Accessible from top Navbar and TeamBuilder) */}
+      <TeamBuilderSettingsModal
+        isOpen={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+        settings={builderSettings}
+        onChangeSettings={setBuilderSettings}
+        onResetSettings={() => {
+          setBuilderSettings(DEFAULT_TEAMBUILDER_SETTINGS);
+          saveTeamBuilderSettings(DEFAULT_TEAMBUILDER_SETTINGS);
+        }}
       />
 
       {/* Electric Lightning Shock VFX */}
