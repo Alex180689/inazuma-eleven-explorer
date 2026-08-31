@@ -47,6 +47,7 @@ export default function BenchSection({
           return (
             <div key={slot.id} className="relative flex flex-col items-center">
               <PlayerSlot
+                key={`${slot.id}-${player?.name || 'empty'}`}
                 slot={slot}
                 player={player}
                 isBench={true}
@@ -75,6 +76,7 @@ export default function BenchSection({
           return (
             <div key={slot.id} className="relative flex flex-col items-center">
               <PlayerSlot
+                key={`${slot.id}-${player?.name || 'empty'}`}
                 slot={slot}
                 player={player}
                 isBench={true}

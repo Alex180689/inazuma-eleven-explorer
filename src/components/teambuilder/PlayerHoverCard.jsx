@@ -5,6 +5,7 @@ import { ELEMENTS } from '../../constants/elements';
 import { POSITIONS } from '../../constants/positions';
 import { STAT_KEYS, calculateOverall, getPlayerTier } from '../../utils/statsUtils';
 import { getPlayerSpriteUrl } from '../../utils/spriteUtils';
+import { getMoveInfo, checkMoveStab } from '../../utils/hissatsu';
 import { Flame, Wind, Mountain, Trees, Sparkles, Zap, Shield, Trophy } from 'lucide-react';
 
 const ELEMENT_ICONS = {
@@ -297,20 +298,65 @@ export default function PlayerHoverCard({ player, targetRect, settings, isWeight
 
           <div className="grid grid-cols-2 gap-1.5">
             {player.moves && player.moves.length > 0 ? (
-              player.moves.slice(0, 4).map((move, idx) => (
-                <div
-                  key={idx}
-                  className="px-2 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center gap-1.5 shadow-sm"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
-                  <span
-                    className="text-[10px] font-semibold text-slate-200 truncate"
-                    title={move}
+              player.moves.slice(0, 4).map((move, idx) => {
+                const moveInfo = getMoveInfo(move);
+                const isStab = checkMoveStab(move, player.element);
+                const applyStab = isStab && (settings?.showStabEffect !== false);
+                const MoveElemIcon = moveInfo?.elementKey ? ELEMENT_ICONS[moveInfo.elementKey] : null;
+
+                return (
+                  <div
+                    key={idx}
+                    className={`px-2 py-1 rounded-xl flex items-center justify-between gap-1 shadow-sm transition-all ${
+                      applyStab
+                        ? 'bg-slate-900/95 border border-amber-400/50 shadow-[0_0_8px_rgba(245,158,11,0.12)]'
+                        : 'bg-slate-900/90 border border-slate-800/90'
+                    }`}
+                    title={
+                      applyStab
+                        ? `${move} • STAB (+20% Potenza per affinità con ${player.element})`
+                        : move
+                    }
                   >
-                    {move}
-                  </span>
-                </div>
-              ))
+                    <div className="flex items-center gap-1.5 min-w-0 flex-1">
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full shrink-0 ${
+                          applyStab ? 'bg-amber-400 animate-pulse' : 'bg-slate-600'
+                        }`}
+                      />
+                      <span
+                        className={`text-[10px] font-semibold truncate ${
+                          applyStab ? 'text-amber-100' : 'text-slate-200'
+                        }`}
+                      >
+                        {move}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center gap-1 shrink-0 ml-1">
+                      {/* Move Type Badge (TIRO rosa, DRIB blu, BLOC verde, PARA ocra) */}
+                      {moveInfo?.type && (
+                        <span
+                          className={`px-1 py-0.2 rounded text-[8px] font-bold font-mono border uppercase tracking-wider ${moveInfo.type.badgeClass}`}
+                          title={`Tipo: ${moveInfo.type.labelIt}`}
+                        >
+                          {moveInfo.type.code}
+                        </span>
+                      )}
+
+                      {/* Move Element Icon Badge */}
+                      {moveInfo?.element && MoveElemIcon && (
+                        <span
+                          className={`w-4 h-4 rounded flex items-center justify-center border ${moveInfo.element.badgeClass}`}
+                          title={`Elemento: ${moveInfo.element.nameIt}`}
+                        >
+                          <MoveElemIcon size={10} className="shrink-0" />
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                );
+              })
             ) : (
               <div className="col-span-2 text-center py-2 text-[10px] text-slate-500 italic">
                 Nessuna mossa registrata

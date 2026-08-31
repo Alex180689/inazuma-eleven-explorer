@@ -98,6 +98,7 @@ export default function SoccerPitch({
               }}
             >
               <PlayerSlot
+                key={`${slot.id}-${player?.name || 'empty'}`}
                 slot={slot}
                 player={player}
                 isBench={false}

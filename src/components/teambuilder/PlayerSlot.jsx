@@ -139,16 +139,9 @@ export default function PlayerSlot({
         }}
       >
         {player ? (
-          /* OCCUPIED SLOT CARD with layoutId for physical glide across slots */
-          <motion.div
-            layoutId={`player-card-${player.id}`}
-            transition={{
-              type: 'spring',
-              stiffness: 360,
-              damping: 24,
-              mass: 0.8,
-            }}
-            className={`w-full h-full relative flex items-center justify-center ${
+          /* OCCUPIED SLOT CARD */
+          <div
+            className={`w-full h-full relative flex items-center justify-center transition-all duration-200 ${
               cardBg.isNone ? 'bg-transparent border-0 ring-0 shadow-none' : `rounded-2xl border-2 ${cardBg.containerClass}`
             }`}
             style={
@@ -176,8 +169,8 @@ export default function PlayerSlot({
               <img
                 src={getPlayerSpriteUrl(player.name)}
                 alt={player.name}
-                loading="lazy"
-                decoding="async"
+                loading="eager"
+                decoding="sync"
                 className="w-full h-full object-contain [image-rendering:pixelated] pointer-events-none drop-shadow-[0_4px_6px_rgba(0,0,0,0.85)] relative z-10"
                 onError={(e) => {
                   const parts = player.name.trim().toLowerCase().split(/\s+/);
@@ -254,7 +247,7 @@ export default function PlayerSlot({
                 )}
               </div>
             )}
-          </motion.div>
+          </div>
         ) : (
           /* EMPTY SLOT (Only role inside, no text underneath!) */
           <div
