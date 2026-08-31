@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import jsQR from 'jsqr';
-import { Camera, X, RefreshCw, AlertCircle, CheckCircle, VideoOff, Zap } from 'lucide-react';
+import { Camera, X, RefreshCw, CheckCircle, VideoOff, Zap, Upload, Image as ImageIcon } from 'lucide-react';
 import { decodeQrStringToTeam } from '../../utils/teamQr';
 
 // Synthesize an energetic success audio chime using Web Audio API
@@ -39,6 +39,7 @@ export default function TeamQrScannerModal({
 }) {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+  const fileInputRef = useRef(null);
   const animFrameRef = useRef(null);
   const streamRef = useRef(null);
 
@@ -47,6 +48,7 @@ export default function TeamQrScannerModal({
   const [errorMsg, setErrorMsg] = useState(null);
   const [isScanning, setIsScanning] = useState(false);
   const [scannedSuccess, setScannedSuccess] = useState(false);
+  const [isDraggingFile, setIsDraggingFile] = useState(false);
 
   // Stop video stream
   const stopStream = useCallback(() => {
@@ -67,6 +69,29 @@ export default function TeamQrScannerModal({
     }
   }, []);
 
+  // Handle successful detection
+  const handleSuccess = useCallback(
+    (detectedText) => {
+      const result = decodeQrStringToTeam(detectedText, allPlayers);
+      if (result.success && result.team) {
+        setIsScanning(false);
+        setScannedSuccess(true);
+        playScanSuccessChime();
+
+        setTimeout(() => {
+          stopStream();
+          onTeamScanned(result.team);
+          onClose();
+        }, 400);
+        return true;
+      } else {
+        setErrorMsg(result.error || 'Dati QR non validi.');
+        return false;
+      }
+    },
+    [allPlayers, onTeamScanned, onClose, stopStream]
+  );
+
   // Enumerate camera devices
   const loadDevices = useCallback(async () => {
     try {
@@ -86,7 +111,7 @@ export default function TeamQrScannerModal({
     }
   }, [selectedDeviceId]);
 
-  // Start webcam stream
+  // Start webcam stream with HD preferences for crisp QR resolution
   const startCamera = useCallback(async (deviceId) => {
     stopStream();
     setErrorMsg(null);
@@ -94,9 +119,12 @@ export default function TeamQrScannerModal({
 
     try {
       const constraints = {
-        video: deviceId
-          ? { deviceId: { exact: deviceId } }
-          : { facingMode: 'environment' },
+        video: {
+          deviceId: deviceId ? { exact: deviceId } : undefined,
+          facingMode: deviceId ? undefined : { ideal: 'environment' },
+          width: { ideal: 1920, min: 1280 },
+          height: { ideal: 1080, min: 720 },
+        },
         audio: false,
       };
 
@@ -110,7 +138,7 @@ export default function TeamQrScannerModal({
         setIsScanning(true);
       }
 
-      // Re-enumerate to get labeled device names after permission granted
+      // Re-enumerate devices after permission granted
       loadDevices();
     } catch (err) {
       console.error('Errore accesso webcam:', err);
@@ -141,25 +169,62 @@ export default function TeamQrScannerModal({
     };
   }, [isOpen, selectedDeviceId, startCamera, stopStream]);
 
-  // QR Scanning Loop: Native BarcodeDetector (GPU) with high-speed jsQR fallback
+  // Process file upload directly (reading pixels into jsQR)
+  const handleImageFileUpload = (file) => {
+    if (!file) return;
+    setErrorMsg(null);
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        const tempCanvas = document.createElement('canvas');
+        tempCanvas.width = img.width;
+        tempCanvas.height = img.height;
+        const ctx = tempCanvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        const imgData = ctx.getImageData(0, 0, img.width, img.height);
+        const code = jsQR(imgData.data, img.width, img.height, {
+          inversionAttempts: 'attemptBoth',
+        });
+
+        if (code && code.data) {
+          handleSuccess(code.data);
+        } else {
+          setErrorMsg('Nessun QR code leggibile rilevato nell\'immagine selezionata. Assicurati che il codice sia a fuoco e ben illuminato.');
+        }
+      };
+      img.src = e.target?.result;
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // Drag & drop handlers
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    setIsDraggingFile(true);
+  };
+  const handleDragLeave = (e) => {
+    e.preventDefault();
+    setIsDraggingFile(false);
+  };
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setIsDraggingFile(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file && file.type.startsWith('image/')) {
+      handleImageFileUpload(file);
+    }
+  };
+
+  // Continuous Camera QR Scanning Loop
   useEffect(() => {
     if (!isScanning || !isOpen) return;
 
-    let isNativeBarcodeDetectorSupported = false;
-    let barcodeDetector = null;
+    let frameCount = 0;
 
-    try {
-      if ('BarcodeDetector' in window) {
-        barcodeDetector = new window.BarcodeDetector({ formats: ['qr_code'] });
-        isNativeBarcodeDetectorSupported = true;
-      }
-    } catch {
-      isNativeBarcodeDetectorSupported = false;
-    }
-
-    let isProcessing = false;
-
-    const scanFrame = async () => {
+    const scanFrame = () => {
       if (!isScanning) return;
       const video = videoRef.current;
       const canvas = canvasRef.current;
@@ -176,58 +241,41 @@ export default function TeamQrScannerModal({
         canvas.height = height;
       }
 
-      let detectedText = null;
+      const ctx = canvas.getContext('2d', { willReadFrequently: true });
+      if (ctx) {
+        ctx.drawImage(video, 0, 0, width, height);
+        const imageData = ctx.getImageData(0, 0, width, height);
 
-      // 1. Try Native BarcodeDetector if available (instant hardware acceleration)
-      if (isNativeBarcodeDetectorSupported && barcodeDetector && !isProcessing) {
-        try {
-          isProcessing = true;
-          const barcodes = await barcodeDetector.detect(video);
-          if (barcodes && barcodes.length > 0) {
-            detectedText = barcodes[0].rawValue;
-          }
-        } catch {
-          // Fallback to jsQR
-        } finally {
-          isProcessing = false;
-        }
-      }
+        // 1. Scan full frame with jsQR
+        let code = jsQR(imageData.data, width, height, {
+          inversionAttempts: 'dontInvert',
+        });
 
-      // 2. Fallback to jsQR on canvas frame buffer
-      if (!detectedText) {
-        const ctx = canvas.getContext('2d', { willReadFrequently: true });
-        if (ctx) {
-          ctx.drawImage(video, 0, 0, width, height);
-          const imageData = ctx.getImageData(0, 0, width, height);
-          const code = jsQR(imageData.data, width, height, {
+        // Alternate inversion on frames to catch dark-mode QR codes efficiently
+        if (!code && frameCount % 3 === 0) {
+          code = jsQR(imageData.data, width, height, {
             inversionAttempts: 'attemptBoth',
           });
-          if (code && code.data) {
-            detectedText = code.data;
-          }
+        }
+
+        // 2. If not found on full frame, try focused center crop (where the user holds the target)
+        if (!code && width >= 400 && height >= 400) {
+          const cropSize = Math.round(Math.min(width, height) * 0.7);
+          const cropX = Math.round((width - cropSize) / 2);
+          const cropY = Math.round((height - cropSize) / 2);
+          const cropData = ctx.getImageData(cropX, cropY, cropSize, cropSize);
+          code = jsQR(cropData.data, cropSize, cropSize, {
+            inversionAttempts: 'dontInvert',
+          });
+        }
+
+        if (code && code.data) {
+          const success = handleSuccess(code.data);
+          if (success) return;
         }
       }
 
-      // If valid QR code detected
-      if (detectedText) {
-        const result = decodeQrStringToTeam(detectedText, allPlayers);
-        if (result.success && result.team) {
-          setIsScanning(false);
-          setScannedSuccess(true);
-          playScanSuccessChime();
-
-          // Brief visual success animation before applying
-          setTimeout(() => {
-            stopStream();
-            onTeamScanned(result.team);
-            onClose();
-          }, 380);
-          return;
-        } else {
-          // Unsupported QR format, keep scanning
-        }
-      }
-
+      frameCount++;
       animFrameRef.current = requestAnimationFrame(scanFrame);
     };
 
@@ -236,7 +284,7 @@ export default function TeamQrScannerModal({
     return () => {
       if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
     };
-  }, [isScanning, isOpen, allPlayers, onTeamScanned, onClose, stopStream]);
+  }, [isScanning, isOpen, handleSuccess]);
 
   if (!isOpen) return null;
 
@@ -265,7 +313,7 @@ export default function TeamQrScannerModal({
               Scansiona QR Squadra
             </h3>
             <p className="text-xs text-slate-400 font-mono">
-              Inquadra il QR code per importare all'istante la formazione
+              Inquadra con la webcam o carica direttamente l'immagine
             </p>
           </div>
         </div>
@@ -290,8 +338,17 @@ export default function TeamQrScannerModal({
           </div>
         )}
 
-        {/* Viewfinder Area */}
-        <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black border-2 border-slate-800 flex items-center justify-center shadow-inner">
+        {/* Viewfinder / Drag & Drop Area */}
+        <div
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          className={`relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black border-2 transition-all flex items-center justify-center shadow-inner ${
+            isDraggingFile
+              ? 'border-cyan-400 bg-cyan-950/40 ring-4 ring-cyan-500/30'
+              : 'border-slate-800'
+          }`}
+        >
           {/* Live Video */}
           <video
             ref={videoRef}
@@ -303,14 +360,22 @@ export default function TeamQrScannerModal({
           {/* Offscreen Canvas for Frame Extraction */}
           <canvas ref={canvasRef} className="hidden" />
 
+          {/* Drag & Drop Overlay */}
+          {isDraggingFile && (
+            <div className="absolute inset-0 bg-cyan-950/80 backdrop-blur-xs flex flex-col items-center justify-center text-cyan-300 font-bold gap-2 z-30 pointer-events-none">
+              <Upload size={48} className="animate-bounce text-cyan-400" />
+              <span className="text-sm font-mono tracking-wider">RILASCIA L'IMMAGINE QR QUI</span>
+            </div>
+          )}
+
           {/* Holographic Inazuma Target Overlay */}
-          {isScanning && !scannedSuccess && (
+          {isScanning && !scannedSuccess && !isDraggingFile && (
             <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
               {/* Darkened outer vignette */}
-              <div className="absolute inset-0 border-[36px] sm:border-[44px] border-black/45" />
+              <div className="absolute inset-0 border-[32px] sm:border-[40px] border-black/45" />
 
               {/* Central Target Box */}
-              <div className="w-48 h-48 sm:w-56 sm:h-56 relative rounded-2xl border-2 border-cyan-400/80 shadow-[0_0_20px_rgba(6,182,212,0.4)] flex items-center justify-center overflow-hidden">
+              <div className="w-52 h-52 sm:w-60 sm:h-60 relative rounded-2xl border-2 border-cyan-400/80 shadow-[0_0_20px_rgba(6,182,212,0.4)] flex items-center justify-center overflow-hidden">
                 {/* Target Corners */}
                 <div className="absolute top-0 left-0 w-5 h-5 border-t-4 border-l-4 border-cyan-300 -translate-x-0.5 -translate-y-0.5" />
                 <div className="absolute top-0 right-0 w-5 h-5 border-t-4 border-r-4 border-cyan-300 translate-x-0.5 -translate-y-0.5" />
@@ -328,33 +393,59 @@ export default function TeamQrScannerModal({
 
           {/* Success Flash Overlay */}
           {scannedSuccess && (
-            <div className="absolute inset-0 bg-emerald-500/30 backdrop-blur-xs flex flex-col items-center justify-center text-emerald-300 font-bold gap-2 animate-pulse">
+            <div className="absolute inset-0 bg-emerald-500/30 backdrop-blur-xs flex flex-col items-center justify-center text-emerald-300 font-bold gap-2 animate-pulse z-30">
               <CheckCircle size={54} className="text-emerald-400 drop-shadow-lg" />
-              <span className="text-sm font-mono tracking-wider">SQUADRA RILEVATA!</span>
+              <span className="text-sm font-mono tracking-wider">SQUADRA CARICATA!</span>
             </div>
           )}
 
           {/* Error State */}
           {errorMsg && (
-            <div className="absolute inset-0 bg-slate-950/90 flex flex-col items-center justify-center p-5 text-center gap-3">
-              <VideoOff size={42} className="text-red-400" />
+            <div className="absolute inset-0 bg-slate-950/90 flex flex-col items-center justify-center p-5 text-center gap-2.5 z-20">
+              <VideoOff size={36} className="text-red-400" />
               <p className="text-xs text-red-300 font-medium max-w-xs">{errorMsg}</p>
               <button
-                onClick={() => startCamera(selectedDeviceId)}
+                onClick={() => {
+                  setErrorMsg(null);
+                  startCamera(selectedDeviceId);
+                }}
                 className="mt-1 px-4 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold flex items-center gap-1.5 border border-slate-700"
               >
                 <RefreshCw size={13} />
-                <span>Riprova</span>
+                <span>Riprova Telecamera</span>
               </button>
             </div>
           )}
         </div>
 
+        {/* Upload Image Alternative Button */}
+        <div className="w-full mt-3">
+          <button
+            type="button"
+            onClick={() => fileInputRef.current?.click()}
+            className="w-full py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 active:bg-slate-600 text-slate-200 hover:text-white border border-cyan-500/40 text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer active:scale-95"
+          >
+            <ImageIcon size={15} className="text-cyan-400" />
+            <span>Carica Immagine QR da File (o trascinala qui)</span>
+          </button>
+          <input
+            type="file"
+            ref={fileInputRef}
+            accept="image/*"
+            className="hidden"
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) handleImageFileUpload(file);
+              e.target.value = '';
+            }}
+          />
+        </div>
+
         {/* Footer Hint */}
-        <div className="mt-3.5 text-center">
+        <div className="mt-2.5 text-center">
           <p className="text-[11px] text-slate-400 flex items-center justify-center gap-1">
             <Zap size={12} className="text-amber-400 shrink-0" />
-            <span>Riconoscimento ultrarapido in tempo reale (Hardware Accelerated)</span>
+            <span>Supporta HD 1080p, scansione a due passate e contrasto invertito</span>
           </p>
         </div>
       </div>
