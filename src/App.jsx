@@ -428,6 +428,7 @@ export default function App() {
             onClearTeam={handleClearTeam}
             onLoadTeam={handleLoadTeam}
             isWeighted={isWeighted}
+            allPlayers={players}
           />
         </div>
       </main>

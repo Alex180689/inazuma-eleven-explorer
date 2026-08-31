@@ -18,11 +18,15 @@ import {
   FolderOpen,
   Download,
   Upload,
+  QrCode,
+  ScanLine,
 } from 'lucide-react';
 import SoccerPitch from './SoccerPitch';
 import BenchSection from './BenchSection';
 import SaveTeamModal from './SaveTeamModal';
 import PlayerHoverCard from './PlayerHoverCard';
+import TeamQrModal from './TeamQrModal';
+import TeamQrScannerModal from './TeamQrScannerModal';
 import TeamBuilderSettingsModal, {
   getTeamBuilderSettings,
   DEFAULT_TEAMBUILDER_SETTINGS,
@@ -175,6 +179,7 @@ export default function TeamBuilder({
   onClearTeam,
   onLoadTeam,
   isWeighted = true,
+  allPlayers = [],
 }) {
   const currentFormation = useMemo(() => {
     return (
@@ -190,6 +195,20 @@ export default function TeamBuilder({
   // Settings state (pitch stretch, slot size, badge size, etc.)
   const [settings, setSettings] = useState(() => getTeamBuilderSettings());
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
+  // QR Code Modals state (generation & webcam scanner)
+  const [isQrModalOpen, setIsQrModalOpen] = useState(false);
+  const [isScannerModalOpen, setIsScannerModalOpen] = useState(false);
+
+  const handleTeamScanned = (scannedTeam) => {
+    if (!scannedTeam) return;
+    if (onSelectFormation && scannedTeam.formationId) {
+      onSelectFormation(scannedTeam.formationId);
+    }
+    if (onLoadTeam) {
+      onLoadTeam(scannedTeam);
+    }
+  };
 
   const currentSavedTeam = useMemo(() => {
     return savedTeams.find((t) => t.id === activeTeamId) || null;
@@ -749,26 +768,50 @@ export default function TeamBuilder({
                   </button>
                 )}
 
-                {/* Export & Import Backup JSON Buttons */}
-                <div className="pt-2 border-t border-slate-800/80 flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={handleExportTeams}
-                    className="flex-1 py-2 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 active:bg-slate-600 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm"
-                    title="Esporta tutte le squadre salvate in un file JSON"
-                  >
-                    <Download size={13} className="text-cyan-400" />
-                    <span>Esporta</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => importInputRef.current?.click()}
-                    className="flex-1 py-2 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 active:bg-slate-600 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm"
-                    title="Importa squadre salvate da un file JSON"
-                  >
-                    <Upload size={13} className="text-amber-400" />
-                    <span>Importa</span>
-                  </button>
+                {/* Export, Import & QR Code Tools */}
+                <div className="pt-2.5 border-t border-slate-800/80 space-y-2">
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setIsQrModalOpen(true)}
+                      className="py-2 px-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 hover:border-amber-400 text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm active:scale-95"
+                      title="Genera il QR Code della formazione corrente per condividerla"
+                    >
+                      <QrCode size={14} className="text-amber-400" />
+                      <span>Genera QR</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setIsScannerModalOpen(true)}
+                      className="py-2 px-2.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 hover:border-cyan-400 text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm active:scale-95"
+                      title="Inquadra con la webcam un QR Code per caricare la squadra"
+                    >
+                      <ScanLine size={14} className="text-cyan-400" />
+                      <span>Leggi QR</span>
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      type="button"
+                      onClick={handleExportTeams}
+                      className="py-1.5 px-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-[11px] font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm active:scale-95"
+                      title="Esporta tutte le squadre salvate in un file JSON"
+                    >
+                      <Download size={13} className="text-slate-400" />
+                      <span>Esporta JSON</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => importInputRef.current?.click()}
+                      className="py-1.5 px-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-[11px] font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm active:scale-95"
+                      title="Importa squadre salvate da un file JSON"
+                    >
+                      <Upload size={13} className="text-slate-400" />
+                      <span>Importa JSON</span>
+                    </button>
+                  </div>
+
                   <input
                     type="file"
                     ref={importInputRef}
@@ -828,6 +871,27 @@ export default function TeamBuilder({
         settings={settings}
         onChangeSettings={setSettings}
         onResetSettings={() => setSettings(DEFAULT_TEAMBUILDER_SETTINGS)}
+      />
+
+      {/* QR Code Generator Modal Dialog */}
+      <TeamQrModal
+        isOpen={isQrModalOpen}
+        onClose={() => setIsQrModalOpen(false)}
+        teamData={{
+          name: currentSavedTeam ? currentSavedTeam.name : 'Squadra Inazuma',
+          formationId: selectedFormationId,
+          fieldPlayers,
+          benchPlayers,
+        }}
+        formationName={currentFormation?.name || '4-4-2'}
+      />
+
+      {/* QR Code Scanner Webcam Modal Dialog */}
+      <TeamQrScannerModal
+        isOpen={isScannerModalOpen}
+        onClose={() => setIsScannerModalOpen(false)}
+        onTeamScanned={handleTeamScanned}
+        allPlayers={allPlayers}
       />
     </div>
   );

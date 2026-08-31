@@ -41,12 +41,17 @@ export default {
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'lightning': 'lightning 2s ease-in-out infinite',
+        'scanline': 'scanline 2s ease-in-out infinite',
       },
       keyframes: {
         lightning: {
           '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
           '50%': { opacity: '0.8', transform: 'scale(1.05)' },
-        }
+        },
+        scanline: {
+          '0%, 100%': { transform: 'translateY(-90px)' },
+          '50%': { transform: 'translateY(90px)' },
+        },
       }
     },
   },
