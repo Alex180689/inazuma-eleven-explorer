@@ -12,8 +12,7 @@ export const DEFAULT_TEAMBUILDER_SETTINGS = {
   showOvrBadge: true,
   showRoleBadge: true,
   showElementBadge: true,
-  radarWidth: 560, // px (400 to 760)
-  radarHeight: 480, // px (380 to 650)
+  radarWidth: 560, // px (380 to 780)
 };
 
 export const BACKGROUND_OPTIONS = [
@@ -320,56 +319,30 @@ export default function TeamBuilderSettingsModal({
           <div className="space-y-3 pt-2 border-t border-slate-800">
             <div className="flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-wider font-mono">
               <Activity size={14} />
-              <span>Dimensioni Sezione Radar Centrale</span>
+              <span>Larghezza Sezione Radar Centrale</span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {/* Slider Larghezza Radar */}
-              <div className="bg-slate-950/80 p-3.5 rounded-2xl border border-slate-800">
-                <div className="flex items-center justify-between text-xs font-semibold text-slate-200 mb-2">
-                  <span>Larghezza Radar</span>
-                  <span className="font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
-                    {settings.radarWidth ?? 560} px
-                  </span>
-                </div>
-                <input
-                  type="range"
-                  min="400"
-                  max="760"
-                  step="10"
-                  value={settings.radarWidth ?? 560}
-                  onChange={(e) => update('radarWidth', Number(e.target.value))}
-                  className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
-                />
-                <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
-                  <span>Stretto (400px)</span>
-                  <span>Predefinito (560px)</span>
-                  <span>Largo (760px)</span>
-                </div>
+            {/* Slider Larghezza Radar */}
+            <div className="bg-slate-950/80 p-3.5 rounded-2xl border border-slate-800">
+              <div className="flex items-center justify-between text-xs font-semibold text-slate-200 mb-2">
+                <span>Larghezza Radar</span>
+                <span className="font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
+                  {settings.radarWidth ?? 560} px
+                </span>
               </div>
-
-              {/* Slider Altezza Radar */}
-              <div className="bg-slate-950/80 p-3.5 rounded-2xl border border-slate-800">
-                <div className="flex items-center justify-between text-xs font-semibold text-slate-200 mb-2">
-                  <span>Altezza Radar</span>
-                  <span className="font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/30">
-                    {settings.radarHeight ?? 480} px
-                  </span>
-                </div>
-                <input
-                  type="range"
-                  min="380"
-                  max="650"
-                  step="10"
-                  value={settings.radarHeight ?? 480}
-                  onChange={(e) => update('radarHeight', Number(e.target.value))}
-                  className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
-                />
-                <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
-                  <span>Compatto (380px)</span>
-                  <span>Predefinito (480px)</span>
-                  <span>Espanso (650px)</span>
-                </div>
+              <input
+                type="range"
+                min="380"
+                max="780"
+                step="10"
+                value={settings.radarWidth ?? 560}
+                onChange={(e) => update('radarWidth', Number(e.target.value))}
+                className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                <span>Compatto (380px)</span>
+                <span>Predefinito (560px)</span>
+                <span>Espanso (780px)</span>
               </div>
             </div>
           </div>

@@ -347,9 +347,9 @@ export default function App() {
         />
 
         {/* Bottom Comparison Stage (3-Column Layout on Desktop, Responsive Stack on Mobile) */}
-        <div className="flex flex-col lg:flex-row items-stretch justify-center gap-5 lg:gap-6">
+        <div className="flex flex-col lg:flex-row items-stretch justify-center gap-5 lg:gap-6 w-full mx-auto">
           {/* Left Column: Player 1 Card */}
-          <div className="w-full lg:w-[280px] xl:w-[310px] shrink-0 flex flex-col order-1">
+          <div className="w-full lg:w-[290px] xl:w-[310px] shrink-0 flex flex-col order-1">
             <PlayerCard
               player={player1}
               rivalPlayer={player2}
@@ -360,11 +360,11 @@ export default function App() {
             />
           </div>
 
-          {/* Center Column: Radar Chart Showcase (Width and Height controlled by Settings) */}
+          {/* Center Column: Radar Chart Showcase (Side cards remain locked and attached with constant gap) */}
           <div
-            className="flex-1 flex flex-col mx-auto w-full order-2 transition-all duration-300"
+            className="w-full lg:shrink-0 flex flex-col order-2 transition-all duration-300"
             style={{
-              maxWidth: `${builderSettings.radarWidth || 560}px`,
+              width: `min(100%, ${builderSettings.radarWidth || 560}px)`,
             }}
           >
             <div
@@ -372,7 +372,6 @@ export default function App() {
               style={{
                 borderColor: 'rgba(51, 65, 85, 0.6)',
                 background: `linear-gradient(135deg, ${p1TeamTheme.primary}10 0%, rgba(15, 23, 42, 0.9) 50%, ${p2TeamTheme.primary}10 100%)`,
-                minHeight: `${builderSettings.radarHeight || 480}px`,
               }}
             >
               <RadarComparisonChart
@@ -382,13 +381,12 @@ export default function App() {
                 p2Theme={p2Theme}
                 isWeighted={isWeighted}
                 radarWidth={builderSettings.radarWidth || 560}
-                radarHeight={builderSettings.radarHeight || 480}
               />
             </div>
           </div>
 
           {/* Right Column: Player 2 Card */}
-          <div className="w-full lg:w-[280px] xl:w-[310px] shrink-0 flex flex-col order-3">
+          <div className="w-full lg:w-[290px] xl:w-[310px] shrink-0 flex flex-col order-3">
             <PlayerCard
               player={player2}
               rivalPlayer={player1}
