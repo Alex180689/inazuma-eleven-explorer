@@ -1,125 +1,125 @@
 SDBC;WGFM
 
 Shoot
-Spinning Shoot;SW;Tiro Roteante
+Spinning Shot;SW;Tiro Roteante
 Spiral Shot;SW;Colpo a Spirale
 Condor Dive;SW;Colpo del Condor
-Suisei Shoot;SW;Colpo della Cometa
+Comet Shot;SW;Colpo della Cometa
 Cross Drive;SW;Tiro Incrociato
 Corodra Shoot;SW;
 Back Tornado;SW;Tornado Inverso
 Hawk Shot;SW;Tiro del Rapace
-Inazuma Otoshi;SW;Trampolino Inazuma
+Inazuma Drop;SW;Trampolino Inazuma
 Inazuma Break;SW;Ariete Inazuma
 Inazuma 1gou;SW;Doppio Trampolino Inazuma
-Divine Arrow;SW;Freccia Saettante
+Divine Arrows;SW;Freccia Saettante
 God Knows;SW;Colpo Supremo
 Rolling Kick;SG;Rovesciata Volante
-Psycho Shot;SG;
+Wrath Shot;SG;
 Hyakuretsu Shot;SG;Tiro dai Cento Calci
-Phantom Shoot;SG;Tiro Fantasma
+Phantom Shot;SG;Tiro Fantasma
 Freeze Shot;SG;Tiro Congelante
 Dragon Crash;SG;Dragon Crash
 Run Ball Run;SG;
-Kung Fu Head;SG;
+Kung Fu Header;SG;
 Dark Tornado;SG;
-Bunshin Shoot;SG;
-Koutei Penguin 2gou;SG;
+Clone Shot;SG;
+emperor Penguin No.2;SG;
 Death Zone;SG;
 Grenade Shot;SF;
 Meteor Attack;SF;
-Patriot Shoot;SF;
+Patriot Shot;SF;
 Fire Tornado;SF;
-Synamite Shoot;SF;
+Dynamite Shot;SF;
 Shine Drive;SF;
-Dokonjou Bat;SF;
+Utter Gutsiness Bat;SF;
 Twin Boost;SF;
 Dragon Tornado;SF;
-Honoo no Kazamidori;SF;
+Fire Rooster;SF;
 Triangle Z;SF;
 The Phoenix;SF;
 The Galaxy;SF;
 Snake Shot;SM;
 Tarzan Kick;SM;
-Kamikakushi;SM;
-Tsuchi Daruma;SM;
+Teleport Shot;SM;
+Dirt Ball;SM;
 Reflect Buster;SM;
 
 Dribble
-Tamanori Pierrot;DW;
-Shippuu Dash;DW;
-Tatsumaki Senpuu;DW;
+Rodeo Clown;DW;
+Flurry Dash;DW;
+Whirlwind Twister;DW;
 Zigzag Spark;DW;
-Dokugiri no Jutsu;DW;
-Kamaitachi;DW;
+Poison Fog;DW;
+Whirlwind Cut;DW;
 Dash Storm;DW;
 Heaven's Time;DW;
 Moonsault;DG;
-Noroi;DG;
+Black Magic;DG;
 Magic;DG;
-Super Scan;DG;
-Zanzou;DG;
+Attack Scan;DG;
+Afterimage;DG;
 Illusion Ball;DG;
-Bushin Feint;DG;
+Bunshin Feint;DG;
 Judge Through;DF;
 Heat Tackle;DF;
 Boost Glider;DF;
-Dash Accel;DM;
-Gorimuchuu;DM;
+Dash Accelerator;DM;
+Bewildered;DM;
 Super Armadillo;DM;
 Monkey Turn;DM;
-Jigoku Guruma;DM;
-Mogura Feint;DM;
+Rolling Hell;DM;
+Mole Fake;DM;
 
-Block;BW;
+Block
 Coil Turn;BW;
 Spinning Cut;BW;
 Blade Attack;BW;
 Cyclone;BW;
-Hurricane Arrow;BW;
+Hurricane Arrows;BW;
 Killer Slide;BG;
 Quick Draw;BG;
-Doppelganger;BG;
-Onryou;BG;
+Clone Faker;BG;
+Ghost Pull;BG;
 Fake Ball;BG;
-Super Scan;BG;
-Kumo no Ito;BG;
-Kage Nui;BG;
+Attack Scan;BG;
+Spider Web;BG;
+Shadow Stitch;BG;
 Harvest;BG;
-Sabaki no Tettsui;BF;
-Shikofumi;BM;
+Divine Stamp;BF;
+Sumo Stomp;BM;
 Horn Train;BM;
-Ushiro no Shoumen;BM;
+About Face;BM;
 Earthquake;BM;
 The Wall;BM;
-Kagome Kagome;BM;
+Bamboo Pattern;BM;
 Mega Quake;BM;
 
 
 Catch
 Tornado Catch;CW;
-Kogarashi;CW;
-Tsumuji;CW;
+Mistral;CW;
+Whirlwind;CW;
 Tsunami Wall;CW;
 Killer Blade;CG;
-Yugamu Kuukan;CG;
-Shoot Pocket;CG;
-Nekketsu Punch;CF;
+Warp Space;CG;
+Shot Pocket;CG;
+Fireball Knuckle;CF;
 Pressure Punch;CF;
 Power Shield;CF;
 Rocket Kobushi;CF;
-Bakuretsu Punch;CF;
+Blazing Knuckle;CF;
 Counterstrike;CF;
 Full Power Shield;CF;
 Toughness Block;CM;
 Wild Claw;CM;
-Makiwari Chop;CM;
-Goal Zurashi;CM;
+Wood Chopper;CM;
+Sliding Goal;CM;
 God Hand;CM;
 Gigant Wall;CM;
-Mugen no Kabe;CM;
+Infinite Wall;CM;
 Majin the Hand;CM;
-Triple Defence;CM;
+Triple Defense;CM;
 
 
 

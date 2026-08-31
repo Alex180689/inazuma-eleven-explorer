@@ -192,6 +192,10 @@ export default function TeamBuilder({
   // Saved Teams state
   const [savedTeams, setSavedTeams] = useState(() => getSavedTeams());
   const [activeTeamId, setActiveTeamIdState] = useState(() => getActiveTeamId());
+  const [activeTeamName, setActiveTeamName] = useState(() => {
+    const initial = getSavedTeams().find((t) => t.id === getActiveTeamId());
+    return initial ? initial.name : null;
+  });
   const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
 
   // Settings state (pitch stretch, slot size, badge size, radar, etc.)
@@ -206,6 +210,9 @@ export default function TeamBuilder({
 
   const handleTeamScanned = (scannedTeam) => {
     if (!scannedTeam) return;
+    if (scannedTeam.name) {
+      setActiveTeamName(scannedTeam.name);
+    }
     if (onSelectFormation && scannedTeam.formationId) {
       onSelectFormation(scannedTeam.formationId);
     }
@@ -223,6 +230,7 @@ export default function TeamBuilder({
       if (onClearTeam) onClearTeam();
       setActiveTeamIdState(null);
       setActiveTeamId(null);
+      setActiveTeamName(null);
       return;
     }
     if (!val) return;
@@ -230,6 +238,7 @@ export default function TeamBuilder({
     if (team) {
       setActiveTeamIdState(team.id);
       setActiveTeamId(team.id);
+      setActiveTeamName(team.name);
       if (onLoadTeam) {
         onLoadTeam(team);
       }
@@ -247,6 +256,7 @@ export default function TeamBuilder({
     if (result.success) {
       setSavedTeams(result.teams);
       setActiveTeamIdState(result.team.id);
+      setActiveTeamName(result.team.name);
     }
   };
 
@@ -882,7 +892,7 @@ export default function TeamBuilder({
         isOpen={isQrModalOpen}
         onClose={() => setIsQrModalOpen(false)}
         teamData={{
-          name: currentSavedTeam ? currentSavedTeam.name : 'Squadra Inazuma',
+          name: activeTeamName || (currentSavedTeam ? currentSavedTeam.name : 'Squadra Inazuma'),
           formationId: selectedFormationId,
           fieldPlayers,
           benchPlayers,

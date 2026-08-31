@@ -15,13 +15,20 @@ export default function TeamQrModal({
 
   const fieldCount = Object.keys(teamData?.fieldPlayers || {}).length;
   const benchCount = Object.keys(teamData?.benchPlayers || {}).length;
-  const teamName = teamData?.name || 'Squadra Inazuma';
+  const [editableTeamName, setEditableTeamName] = useState(teamData?.name || 'Squadra Inazuma');
+
+  useEffect(() => {
+    if (isOpen && teamData?.name) {
+      setEditableTeamName(teamData.name);
+    }
+  }, [isOpen, teamData?.name]);
 
   useEffect(() => {
     if (!isOpen || !teamData) return;
 
+    const currentName = (editableTeamName || '').trim() || 'Squadra Inazuma';
     const encoded = encodeTeamToQrString({
-      name: teamName,
+      name: currentName,
       formationId: teamData.formationId,
       fieldPlayers: teamData.fieldPlayers,
       benchPlayers: teamData.benchPlayers,
@@ -52,7 +59,7 @@ export default function TeamQrModal({
     }, 50);
 
     return () => clearTimeout(timer);
-  }, [isOpen, teamData, teamName]);
+  }, [isOpen, teamData, editableTeamName]);
 
   if (!isOpen) return null;
 
@@ -92,13 +99,13 @@ export default function TeamQrModal({
         </button>
 
         {/* Header */}
-        <div className="flex items-center gap-2.5 mb-4 pr-8">
+        <div className="flex items-center gap-2.5 mb-3 pr-8">
           <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 shrink-0">
             <QrCode size={22} />
           </div>
           <div className="min-w-0 flex-1">
             <h3 className="font-bold text-base text-amber-300 font-display truncate">
-              {teamName}
+              {editableTeamName || 'Squadra Inazuma'}
             </h3>
             <p className="text-xs text-slate-400 font-mono flex items-center gap-2 mt-0.5">
               <span>Modulo: {formationName}</span>
@@ -106,6 +113,20 @@ export default function TeamQrModal({
               <span className="text-emerald-400 font-semibold">{fieldCount + benchCount} giocatori</span>
             </p>
           </div>
+        </div>
+
+        {/* Editable Name Input */}
+        <div className="mb-3">
+          <label className="block text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">
+            Nome Squadra nel QR:
+          </label>
+          <input
+            type="text"
+            value={editableTeamName}
+            onChange={(e) => setEditableTeamName(e.target.value)}
+            placeholder="Nome Squadra..."
+            className="w-full bg-slate-950/80 border border-slate-700 focus:border-amber-400 rounded-xl px-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none transition-colors"
+          />
         </div>
 
         {/* QR Code Container */}

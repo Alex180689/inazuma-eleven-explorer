@@ -1,11 +1,10 @@
-/**
- * Utility for Encoding and Decoding Inazuma Eleven Teams into Compact QR Code Data
- */
+import legacyQrMap from './legacyQrMap.js';
 
 export const QR_PREFIX = 'IE1:';
 
 /**
  * Encodes current team state into a compact string for QR generation
+ * Uses player names for permanent stability across CSV row additions and reordering
  * @param {Object} param
  * @param {string} param.name - Team name
  * @param {string} param.formationId - Formation ID (e.g. 'f-base-442')
@@ -16,15 +15,16 @@ export const QR_PREFIX = 'IE1:';
 export function encodeTeamToQrString({ name, formationId, fieldPlayers = {}, benchPlayers = {} }) {
   const fieldMap = {};
   Object.entries(fieldPlayers).forEach(([slotIdx, player]) => {
-    if (player && player.id) {
-      fieldMap[slotIdx] = player.id;
+    if (player && (player.name || player.id)) {
+      // Use player name for permanent, immutable resolution
+      fieldMap[slotIdx] = player.name || player.id;
     }
   });
 
   const benchMap = {};
   Object.entries(benchPlayers).forEach(([slotIdx, player]) => {
-    if (player && player.id) {
-      benchMap[slotIdx] = player.id;
+    if (player && (player.name || player.id)) {
+      benchMap[slotIdx] = player.name || player.id;
     }
   });
 
@@ -74,13 +74,37 @@ export function decodeQrStringToTeam(qrString, allPlayers = []) {
 
     const resolvePlayer = (item) => {
       if (!item) return null;
-      // If item is an ID string (e.g. "p_1")
       if (typeof item === 'string') {
-        return playerById.get(item) || playerByName.get(item.toLowerCase().trim()) || null;
+        const trimmed = item.trim();
+        const lower = trimmed.toLowerCase();
+
+        // 1. If it's a legacy numeric ID (like "p_498"), check legacy map first
+        if (legacyQrMap && legacyQrMap[trimmed]) {
+          const mappedName = legacyQrMap[trimmed].toLowerCase().trim();
+          if (playerByName.has(mappedName)) {
+            return playerByName.get(mappedName);
+          }
+        }
+
+        // 2. Direct name match
+        if (playerByName.has(lower)) {
+          return playerByName.get(lower);
+        }
+
+        // 3. Direct ID match
+        if (playerById.has(trimmed)) {
+          return playerById.get(trimmed);
+        }
+
+        return null;
       }
       // If item is already an object
       if (typeof item === 'object' && item.id) {
-        return playerById.get(item.id) || item;
+        return (
+          playerById.get(item.id) ||
+          (item.name ? playerByName.get(item.name.toLowerCase().trim()) : null) ||
+          item
+        );
       }
       return null;
     };
