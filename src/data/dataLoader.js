@@ -1,7 +1,7 @@
 import Papa from 'papaparse';
 import defaultPlayers from './players.json';
 import { calculateOverall, calculateTotalStats } from '../utils/statsUtils';
-import rawCSV from '../../IE1.csv?raw';
+import rawCSV from '../../IE.csv?raw';
 
 // Parse CSV text into normalized player objects
 export function parseCSVData(csvText) {
@@ -11,6 +11,8 @@ export function parseCSVData(csvText) {
       header: true,
       skipEmptyLines: true,
       dynamicTyping: true,
+      transformHeader: (h) => (h || '').trim(),
+      transform: (val) => (typeof val === 'string' ? val.trim() : val),
     });
 
     if (!results.data || results.data.length === 0) {

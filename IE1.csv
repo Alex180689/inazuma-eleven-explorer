@@ -242,7 +242,6 @@ Carl Gnu,Connection Map,FW,Wood,77,152,42,55,53,62,71,72,54,15,Dynamite Shoot,Da
 Scean Spector,Connection Map,DF,Wind,138,154,47,30,28,56,62,56,60,20,Doppelganger,Noroi,Onryou,Ushiro no Shoumen
 Bo Ling,Connection Map,DF,Wood,147,146,45,55,79,50,56,57,52,16,Killer Slide,Zigzag Spark,Cyclone,Kamaitachi
 Troy Trucker,Connection Map,FW,Wind,77,156,66,53,63,58,60,79,52,17,Coil Turn,Meteor Attack,Kung Fu Head,Kamaitachi
-Drew Straitedge,Connection Map,GK,Earth,118,124,49,46,44,44,46,42,47,0,Pressure Punch,Monkey Turn,Wood Chopper,Whirlwind
 Bos Horne,Connection Map,DF,Earth,85,146,60,61,54,56,59,68,55,17,Doppelganger,Gorimuchuu,Heat Tackle,Kagome Kagome
 Pete Grimes,Connection Map,GK,Fire,158,176,44,53,60,41,52,62,52,31,Pressure Punch,Toughness Block,Coil Turn,Full Power Shield
 Homer Pidgeon,Connection Map,DF,Fire,213,130,60,60,56,52,60,77,56,15,Coil Turn,Monkey Turn,Cross Drive,Harvest
@@ -307,7 +306,6 @@ Thomas Cott,Connection Map,GK,Wind,147,150,53,59,53,56,63,59,56,16,Tornado Catch
 Bo Luger,Connection Map,FW,Wood,158,148,78,56,54,56,54,58,61,27,Tamanori Pierrot,Illusion Ball,Tsuchi Daruma,Run Ball Run
 Rory Polisher,Connection Map,GK,Fire,173,142,47,59,61,43,58,61,62,14,Nekketsu Punch,Power Shield,Mogura Feint,Full Power Shield
 Willow Withers,Connection Map,MF,Wood,90,152,42,56,59,55,60,62,76,21,Shippuu Dash,Quick Draw,Suisei Shoot,Zigzag Spark
-Stu Perstitious (Lucky),Connection Map,DF,Fire,147,170,40,56,69,40,63,53,53,0,Spinning Shot,Spinning Cut,Moonsault,Harvest
 Hal Leeward,Connection Map,MF,Wood,160,138,55,71,75,56,58,63,56,33,Magic,Judge Through,Onryou,Fake Ball
 Den Taligene,Connection Map,MF,Fire,129,122,72,49,50,48,50,40,70,26,Gorimuchuu,Super Scan (OF),Super Scan (DF),Dokugiri no Jutsu
 Isaiah Shutt,Connection Map,FW,Earth,107,134,64,68,54,60,52,56,52,20,Spinning Cut,Cross Drive,Gorimuchuu,Back Tornado
@@ -357,7 +355,6 @@ Tosh Coach,Connection Map,DF,Earth,99,96,34,70,39,78,37,32,32,17,Coil Turn,Doppe
 Max Bright,Connection Map,MF,Wind,147,133,50,44,41,55,67,52,58,15,Tatsumaki Senpuu,Magic,Phantom Shoot,Shine Drive
 Harry Harper,Connection Map,GK,Wind,103,132,43,52,60,60,60,56,52,16,Killer Blade,Makiwari Chop,Kogarashi,Dynamite Shoot
 Moses Pumper,Connection Map,FW,Fire,85,138,63,67,46,70,60,68,54,20,Onryou,Noroi,Psycho Shot,Mogura Feint
-Phil O'Biblist,Connection Map,MF,Fire,160,142,65,58,60,67,30,52,61,0,Black Magic,Ghost Pull,Kung Fu Header,Run Ball Run
 Onslow Ball,Connection Map,DF,Wood,85,146,58,69,47,70,61,63,60,17,Shikofumi,Dynamite Shoot,Tamanori Pierrot,Fake Ball
 Django Keyes,Connection Map,GK,Wind,85,198,43,76,46,76,42,38,41,28,Pressure Punch,Shoot Pocket,Kumo no Ito,Counterstrike
 Cory Andish,Connection Map,FW,Wood,134,136,59,70,47,69,62,62,57,20,Tamanori Pierrot,Monkey Turn,Run Ball Run,Back Tornado
@@ -366,7 +363,6 @@ Trey Dalbum,Connection Map,FW,Wood,112,126,52,54,41,49,45,62,60,30,Illusion Ball
 Mark Tinney,Connection Map,MF,Earth,149,136,60,58,56,53,52,53,60,12,Tatsumaki Senpuu,Coil Turn,Kamaitachi,Cyclone
 Chaz Anover,Connection Map,MF,Wood,151,158,53,62,53,61,58,56,53,28,Tatsumaki Senpuu,Illusion Ball,Coil Turn,Cyclone
 Theo Riser,Connection Map,MF,Fire,140,126,42,60,60,64,43,44,48,15,Tatsumaki Senpuu,Spinning Cut,Kamaitachi,Hurricane Arrow
-Rob Zervatory,Connection Map,FW,Wood,173,154,68,52,58,57,62,63,52,0,Killer Slide,Meteor Attack,Dash Accelerator,Shine Drive
 Rob Ottman,Connection Map,GK,Wind,121,108,58,52,55,48,54,54,58,15,Pressure Punch,Tatsumaki Senpuu,Makiwari Chop,Bakuretsu Punch
 Glen Garry,Connection Map,MF,Wind,118,126,48,51,44,44,51,48,40,31,Gorimuchuu,Illusion Ball,Moonsault,Kagome Kagome
 Gauge Diven,Connection Map,DF,Fire,118,186,54,61,59,61,57,55,55,16,Killer Slide,Zigzag Spark,Cyclone,Kamaitachi
@@ -437,7 +433,7 @@ Dan Dandy,Scouting,DF,Wind,154,150,61,43,44,63,68,65,68,21,Coil Turn,Spinning Cu
 Beau Fort,Scouting,DF,Wind,145,137,48,48,45,60,68,52,54,19,Spinning Cut,Illusion Ball,Cyclone,Gorimuchuu
 Jack Frosty,Scouting,DF,Wind,178,166,65,70,64,65,67,60,68,9,Coil Turn,Magic,Kumo no Ito,Hawk Shot
 Shaun Imago,Scouting,DF,Wind,123,132,42,36,30,55,60,60,60,15,Coil Turn,Cross Drive,Illusion Ball,Bunshin Shoot
-Doug Lee,Scouting,DF,Fire,112,158,44,36,30,55,70,62,57,0,Sumo Stomp,The Wall,Mole Fake,Divine Stamp
+Doug Lee,Scouting,DF,Fire,112,158,44,36,30,55,70,62,57,15,Sumo Stomp,The Wall,Mole Fake,Divine Stamp
 Scout Messenger,Scouting,DF,Wood,154,156,69,61,56,58,63,56,52,20,Coil Turn,Dash Accel,Kamaitachi,Cyclone
 Sam Murray,Scouting,DF,Wind,107,142,67,54,52,69,35,68,59,14,Kage Nui,Dokugiri no Jutsu,Bunshin Feint,Bunshin Shoot
 Drew Reiner,Scouting,DF,Earth,165,168,66,71,70,66,62,68,63,32,Coil Turn,Blade Attack,Kumo no Ito,Cross Drive
@@ -468,7 +464,6 @@ Dave Altair,Scouting,FW,Wind,213,136,61,63,57,58,53,69,60,22,Dash Accel,Spiral S
 Manny Atom,Scouting,FW,Fire,213,148,67,59,54,68,64,61,54,15,Dash Accel,Hyakuretsu Shot,Run Ball Run,Zigzag Spark
 Gene Bottle,Scouting,FW,Wind,83,138,62,60,40,68,52,69,52,14,Doppelganger,Spinning Shoot,Zanzou,Divine Arrow
 Ashley Dale,Scouting,FW,Wood,187,160,54,60,78,60,70,61,68,25,Rolling Kick,Phantom Shoot,Zanzou,Dokonjou Bat
-Ike Doerflinger,Scouting,FW,Wood,138,152,53,60,58,61,52,56,52,0,Spinning Shot,Utter Gutsiness Bat,About Face,Boost Glider
 Ben Evolent,Scouting,FW,Wind,169,154,68,52,60,60,52,59,52,10,Snake Shot,Phantom Shoot,Meteor Attack,Run Ball Run
 Ashley Fay,Scouting,FW,Wind,123,100,62,56,40,51,40,57,52,32,Snake Shot,Hyakuretsu Shot,Illusion Ball,Back Tornado
 Mo Hawkes,Scouting,FW,Fire,140,141,60,69,47,63,60,62,60,22,Shikofumi,Mogura Feint,Earthquake,Tsuchi Daruma
@@ -494,16 +489,15 @@ Nathin Gaunt,Scouting,MF,Earth,79,140,40,56,52,61,76,52,61,15,Gorimuchuu,Monkey 
 Rory Boomer,Scouting,MF,Earth,171,156,71,62,57,56,60,65,79,25,Killer Slide,Heat Tackle,Ushiro no Shoumen,Reflect Buster
 Erik Eagle,Scouting,MF,Wood,154,197,79,60,76,64,63,53,71,36,Spinning Shoot,Spinning Cut,Illusion Ball,The Phoenix
 Cash Barganier,Scouting,FW,Fire,167,156,43,35,38,52,76,37,61,22,Suisei Shoot,Dynamite Shoot,Patriot Shoot,Shine Drive
-Saggy,Scouting,FW,Wood,195,165,77,71,60,70,64,70,67,0,Dash Accelerator,Attack Scan,Patriot Shot,Reflect Buster
 Shadow Cimmerian,Scouting,FW,Wood,193,176,60,74,68,73,63,60,64,29,Kage Nui,Dark Tornado,Doppelganger,Death Zone
 Byron Love,Zeus,MF,Wood,167,184,79,69,77,70,72,68,67,0,Heaven's Time,Divine Stamp,Cyclone,Whirlwind
 Dan Nettles,Scouting,GK,Wood,189,136,62,60,58,60,61,38,53,15,Toughness Block,Blade Attack,Shoot Pocket,Harvest
-Ike Flinger Doerflinger,Scouting,FW,Wood,138,152,53,60,58,61,52,56,52,22,Spinning Shoot,Dokonjou Bat,Ushiro no Shoumen,Boost Glider,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Ike Flinger Doerflinger,Scouting,FW,Wood,138,152,53,60,58,61,52,56,52,22,Spinning Shot,Utter Gutsiness Bat,About Face,Boost Glider
 Harley Trotter,Scouting,FW,Fire,112,141,70,56,56,59,61,71,54,21,Snake Shot,Patriot Shoot,Tatsumaki Senpuu,Super Scan (OF)
 Jess Uplement,Scouting,MF,Earth,118,102,57,60,40,42,50,52,52,31,Tatsumaki Senpuu,Super Armadillo,Tsuchi Daruma,Jigoku Guruma
 Zin Giber,Scouting,MF,Wood,103,144,41,59,54,58,74,59,54,19,Gorimuchuu,Magic,Dokonjou Bat,Judge Through
 Owen Greenfield,Scouting,MF,Wood,187,156,60,67,72,64,63,63,60,40,Magic,Illusion Ball,Moonsault,Boost Glider
-Chris Smiles Miles,Scouting,MF,Wood,129,190,58,69,60,60,52,57,56,20,Killer Slide,Dash Accel,Monkey Turn,Moonsault,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Chris Smiles Miles,Scouting,MF,Wood,129,190,58,69,60,60,52,57,56,20,Killer Slide,Dash Accel,Monkey Turn,Moonsault
 Ebenezer Marner,Scouting,DF,Fire,121,130,42,36,31,56,68,63,55,15,Killer Slide,Fake Ball,Illusion Ball,Sabaki no Tettsui
 Alec Smart,Scouting,GK,Fire,116,118,45,48,50,40,51,47,45,43,Dash Accel,Killer Slide,Toughness Block,Counterstrike
 Reid Scarlet,Scouting,DF,Fire,94,148,61,62,50,69,54,64,57,22,Dash Accel,Kamikakushi,Bunshin Feint,Tarzan Kick
@@ -515,7 +509,7 @@ Nick Knack,Scouting,MF,Fire,151,133,52,54,68,48,53,57,60,15,Spinning Cut,Illusio
 Ted Larkin,Scouting,MF,Wood,94,136,60,59,62,63,62,70,58,14,Onryou,Noroi,Ushiro no Shoumen,Psycho Shot
 Lloyd Tabb,Scouting,DF,Wind,83,130,41,52,62,56,62,59,63,15,Coil Turn,Monkey Turn,Cyclone,Hurricane Arrow
 Lou Paster,Scouting,FW,Wind,193,196,58,62,63,56,60,70,55,25,Kamikakushi,Psycho Shot,Kumo no Ito,Bunshin Feint
-Rob Observer Zervatory,Scouting,FW,Wood,173,154,68,52,58,57,62,63,52,16,Killer Slide,Meteor Attack,Dash Accel,Shine Drive,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Rob Observer Zervatory,Connection Map,FW,Wood,173,154,68,52,58,57,62,63,52,16,Killer Slide,Meteor Attack,Dash Accelerator,Shine Drive
 Paul Downs,Scouting,MF,Wind,173,194,48,52,71,41,53,57,62,17,Killer Slide,Blade Attack,Magic,Kumo no Ito
 Fran Zimmer,Scouting,DF,Wind,114,137,60,56,53,61,55,64,56,15,Killer Slide,Blade Attack,Zigzag Spark,Freeze Shot
 Anthony Phinder,Scouting,FW,Fire,173,132,54,53,56,60,60,61,56,12,Spinning Shoot,Phantom Shoot,Dynamite Shoot,Twin Boost
@@ -524,7 +518,7 @@ Rob Anchor,Scouting,DF,Wind,204,144,61,57,74,53,61,71,55,15,Coil Turn,Quick Draw
 Knight Reader,Scouting,DF,Earth,123,106,44,48,46,72,51,49,47,24,Super Scan (DF),Super Scan (OF),Harvest,Kage Nui
 Harold Derry,Scouting,DF,Fire,107,104,38,34,34,68,60,64,68,16,Killer Slide,Horn Train,Heat Tackle,Kage Nui
 Spike Coiffs,Scouting,DF,Wind,147,158,40,60,77,43,53,58,52,11,Tamanori Pierrot,Fake Ball,Dokugiri no Jutsu,Cyclone
-Bob Dingy Dingnagian,Scouting,MF,Earth,107,140,46,56,59,60,60,63,59,26,Shikofumi,Tamanori Pierrot,Rolling Kick,Magic,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Bob Dingy Dingnagian,Scouting,MF,Earth,107,140,46,56,59,60,60,63,59,26,Shikofumi,Tamanori Pierrot,Rolling Kick,Magic
 Bully Thrower,Scouting,FW,Wind,171,156,44,54,69,41,61,55,57,17,Shippuu Dash,Dokonjou Bat,Judge Through,Zigzag Spark
 Lenny Lakeman,Scouting,GK,Fire,138,113,54,60,52,46,48,52,63,15,Pressure Punch,Shoot Pocket,Horn Train,Bakuretsu Punch
 Hal LeButt,Scouting,GK,Wind,158,192,41,52,68,44,59,63,60,16,Power Shield,Tatsumaki Senpuu,Kamaitachi,Full Power Shield
@@ -546,16 +540,16 @@ Rip Airman,Scouting,DF,Earth,94,134,48,52,54,53,65,66,59,22,Coil Turn,Spinning C
 Gene Bates,Scouting,DF,Fire,184,156,60,63,61,60,35,64,56,15,Killer Slide,Fake Ball,Super Scan (OF),Super Scan (DF)
 Powers Squatts,Scouting,GK,Fire,187,156,62,62,40,71,28,60,56,17,Noroi,Killer Blade,Doppelganger,Makiwari Chop
 Aessop Fabel,Scouting,DF,Fire,105,156,64,54,53,53,61,63,60,17,Quick Draw,Condor Dive,Onryou,Kagome Kagome
-Stu Lucky Perstitious,Scouting,DF,Fire,147,170,40,56,69,40,63,53,53,15,Spinning Shoot,Spinning Cut,Moonsault,Harvest,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Stu Lucky Perstitious,Connection Map,DF,Fire,147,170,40,56,69,40,63,53,53,15,Spinning Shot,Spinning Cut,Moonsault,Harvest
 Archy Medez,Scouting,GK,Wind,151,138,53,60,62,54,63,60,58,13,Nekketsu Punch,Condor Dive,Hawk Shot,Makiwari Chop
 Hank O'Buff,Scouting,GK,Wind,112,137,46,61,60,62,66,67,52,23,Power Shield,Killer Slide,Coil Turn,Full Power Shield
-Trey Bonzer Cultivator,Scouting,DF,Wood,169,168,42,56,73,51,61,62,60,18,Doppelganger,Ushiro no Shoumen,Super Armadillo,Shikofumi,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Trey Bonzer Cultivator,Scouting,DF,Wood,169,168,42,56,73,51,61,62,60,18,Doppelganger,Ushiro no Shoumen,Super Armadillo,Shikofumi
 Butler Chambers,Scouting,FW,Fire,123,124,71,58,40,42,48,60,56,18,Kamikakushi,Doppelganger,Magic,Back Tornado
 Webber Poster,Scouting,MF,Fire,121,106,55,56,46,45,40,56,56,32,Tatsumaki Senpuu,Shippuu Dash,Zanzou,Grenade Shot
 Ronny Knowles,Scouting,DF,Wood,103,138,60,62,40,60,60,62,52,15,Doppelganger,Onryou,Kage Nui,Psycho Shot
 Vaughn DeVille,Scouting,DF,Wind,125,129,55,62,55,55,61,66,59,24,Tamanori Pierrot,Magic,Kamikakushi,Cyclone
 Carl Nivor,Scouting,GK,Wood,101,154,48,52,58,52,67,64,56,27,Toughness Block,Bakuretsu Punch,Earthquake,Sabaki no Tettsui
-Jig Charley Charleston,Scouting,MF,Earth,103,150,60,76,61,56,56,69,61,15,Illusion Ball,Blade Attack,Spinning Cut,Hurricane Arrow,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Jig Charley Charleston,Scouting,MF,Earth,103,150,60,76,61,56,56,69,61,15,Illusion Ball,Blade Attack,Spinning Cut,Hurricane Arrow
 Alton Oldhat,Scouting,MF,Earth,121,104,60,62,48,40,47,60,62,15,Dokugiri no Jutsu,Kamikakushi,Ushiro no Shoumen,Kagome Kagome
 Dustin Westend,Scouting,FW,Wind,79,130,47,54,60,52,68,60,54,27,Suisei Shoot,Dynamite Shoot,Illusion Ball,Divine Arrow
 Sandy Beecher,Scouting,FW,Wind,129,136,61,59,52,59,58,65,62,17,Grenade Shot,Noroi,Twin Boost,Kage Nui
@@ -592,7 +586,7 @@ Paul Chucker,Scouting,GK,Wood,112,106,61,52,51,44,43,63,58,19,Tamanori Pierrot,R
 Jay Archer,Scouting,FW,Fire,198,144,54,69,44,66,58,64,60,16,Grenade Shot,Horn Train,Dynamite Shoot,Patriot Shoot
 Tom Stevenson,Scouting,DF,Fire,127,132,52,56,60,60,66,59,52,20,Horn Train,Judge Through,Kamaitachi,Harvest
 Pat Greene,Scouting,MF,Fire,112,118,53,56,44,41,46,58,63,15,Zigzag Spark,Super Scan (DF),Tsuchi Daruma,Hurricane Arrow
-Jack Trades Tradesman,Scouting,FW,Earth,145,136,59,54,61,60,56,61,61,9,Dokonjou Bat,Judge Through,Ushiro no Shoumen,Dokugiri no Jutsu,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Jack Trades Tradesman,Scouting,FW,Earth,145,136,59,54,61,60,56,61,61,9,Dokonjou Bat,Judge Through,Ushiro no Shoumen,Dokugiri no Jutsu
 Dwight Self,Scouting,FW,Wind,105,152,65,52,54,53,56,70,56,16,Kamikakushi,Magic,Psycho Shot,Illusion Ball
 Jack Nimble,Scouting,DF,Earth,167,142,50,56,61,43,55,56,62,20,Kumo no Ito,Gorimuchuu,Jigoku Guruma,Kagome Kagome
 Nathan Weyton,Scouting,DF,Wind,125,132,45,33,33,54,64,63,60,16,Coil Turn,Spinning Cut,Cyclone,Kamaitachi
@@ -604,7 +598,7 @@ Mo Lusk,Scouting,FW,Earth,136,196,56,60,60,71,53,62,56,21,Shikofumi,Earthquake,T
 Spike Pitt,Scouting,FW,Earth,149,132,60,52,55,57,61,54,63,34,Grenade Shot,Meteor Attack,Mogura Feint,Tsuchi Daruma
 Hans Bigger,Scouting,DF,Wood,169,132,59,60,52,60,56,53,60,30,Spinning Cut,Kumo no Ito,Bunshin Feint,Hurricane Arrow
 Casey Novak,Scouting,DF,Wood,149,140,60,64,51,69,57,62,63,16,Quick Draw,Blade Attack,Gorimuchuu,Counterstrike
-Alf Groundsy Groundsman,Scouting,DF,Earth,165,136,60,60,55,68,56,62,55,15,Killer Slide,Quick Draw,Meteor Attack,Blade Attack,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Alf Groundsy Groundsman,Scouting,DF,Earth,165,136,60,60,55,68,56,62,55,15,Killer Slide,Quick Draw,Meteor Attack,Blade Attack
 Errol Lorre,Scouting,FW,Wood,154,188,60,63,53,56,52,61,58,32,Hawk Shot,Quick Draw,Back Tornado,Ushiro no Shoumen
 Ivor Parrot,Scouting,MF,Wind,127,110,62,52,48,51,41,62,56,34,Gorimuchuu,Dokugiri no Jutsu,Dash Storm,Hurricane Arrow
 Sid Parting,Scouting,DF,Wind,134,133,68,60,63,69,47,64,52,17,Killer Slide,Fake Ball,Illusion Ball,Ushiro no Shoumen
@@ -614,7 +608,7 @@ Rod Headstock,Scouting,GK,Fire,129,106,59,59,41,44,42,59,56,35,Toughness Block,Q
 Andy Craft,Scouting,FW,Wood,134,106,40,40,47,44,47,41,40,35,Kamikakushi,Noroi,Psycho Shot,Bunshin Feint
 Pres Cripton,Scouting,FW,Earth,123,156,56,64,53,60,52,53,62,22,Kamikakushi,Judge Through,Run Ball Run,Moonsault
 Pike Tucker,Scouting,FW,Fire,134,154,44,34,28,61,64,56,55,21,Kamikakushi,Fake Ball,Bunshin Shoot,Bunshin Feint
-Cam Agent Broadsheet,Scouting,MF,Wood,103,142,44,60,60,56,60,71,52,24,Tamanori Pierrot,Zanzou,Phantom Shoot,Run Ball Run,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Cam Agent Broadsheet,Scouting,MF,Wood,103,142,44,60,60,56,60,71,52,24,Tamanori Pierrot,Zanzou,Phantom Shoot,Run Ball Run
 Clay Modlin,Scouting,FW,Earth,209,154,63,61,61,62,36,65,52,20,Killer Slide,Dynamite Shoot,Twin Boost,Jigoku Guruma
 Horace Nelson,Scouting,GK,Fire,92,142,65,56,53,57,56,71,59,16,Pressure Punch,Power Shield,Quick Draw,Kogarashi
 Daz Tighthead,Scouting,GK,Wood,156,170,68,76,62,69,63,70,64,24,Shikofumi,Horn Train,Jigoku Guruma,Hurricane Arrow
@@ -686,7 +680,7 @@ Doug Walker,Scouting,GK,Earth,158,142,45,52,70,42,56,57,61,18,Nekketsu Punch,Hor
 Ry Sling,Scouting,DF,Wind,165,190,46,56,71,44,63,55,54,20,Doppelganger,Kage Nui,Magic,Illusion Ball
 Tiny Forester,Scouting,DF,Earth,162,137,55,62,70,47,60,63,61,19,Shikofumi,The Wall,Tsuchi Daruma,Super Armadillo
 Neville List,Scouting,DF,Wood,77,178,40,57,55,52,74,70,52,27,Dokonjou Bat,Kung Fu Head,Spinning Cut,Cyclone
-Sagaminator Saggy,Scouting,FW,Wood,195,165,77,71,60,70,64,70,67,22,Dash Accel,Super Scan (OF),Patriot Shoot,Reflect Buster,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Sagaminator Saggy,Scouting,FW,Wood,195,165,77,71,60,70,64,70,67,22,Dash Accelerator,Attack Scan,Patriot Shot,Reflect Buster
 Frank Drake,Scouting,DF,Wind,171,158,57,58,60,57,64,66,52,27,Shippuu Dash,Spinning Cut,Zanzou,Blade Attack
 Joe Stick,Scouting,MF,Fire,145,188,48,63,61,43,54,62,58,18,Gorimuchuu,Fake Ball,Judge Through,Ushiro no Shoumen
 Les Knightley,Scouting,GK,Fire,129,194,56,64,60,66,55,52,52,14,Pressure Punch,Shoot Pocket,Ushiro no Shoumen,Counterstrike
@@ -694,7 +688,6 @@ Des Count,Scouting,DF,Wind,112,150,62,60,63,71,63,60,54,19,Shikofumi,Illusion Ba
 Skip Sofrenic,Scouting,MF,Earth,217,146,60,66,49,61,54,79,61,22,Shikofumi,The Wall,Patriot Shoot,Shine Drive
 Paul Sapp,Scouting,MF,Earth,217,144,62,61,44,64,55,68,56,18,Dash Accel,Gorimuchuu,Monkey Turn,Fake Ball
 Turner Fortune,Scouting,DF,Wood,127,113,29,36,50,77,40,46,42,22,Spinning Cut,Judge Through,Illusion Ball,Bunshin Feint
-
 Cass Crocker,Scouting,FW,Fire,125,146,68,51,64,38,44,40,44,10,Snake Shot,Tarzan Kick,Freeze Shot,Spinning Cut
 Les Abel,Scouting,FW,Fire,90,156,46,57,57,52,64,56,52,15,Grenade Shot,Killer Slide,Judge Through,Shine Drive
 Sayer Lemon,Scouting,DF,Fire,167,144,52,61,54,52,63,59,53,12,Quick Draw,Super Scan (DF),Super Scan (OF),Kumo no Ito
@@ -757,7 +750,7 @@ Stan Dupp,Scouting,FW,Wood,191,134,58,65,47,67,53,69,54,19,Tamanori Pierrot,Tarz
 Lincoln Hawking,Scouting,FW,Earth,173,154,57,52,62,73,54,63,60,8,Kamikakushi,Tarzan Kick,Dokonjou Bat,Horn Train
 Tex Tingle,Scouting,GK,Wood,132,121,40,51,54,45,60,44,45,15,Killer Blade,Blade Attack,Heat Tackle,Full Power Shield
 Fane Club,Scouting,GK,Wind,138,128,45,50,44,69,48,43,49,42,Tornado Catch,Wild Claw,Hawk Shot,Kogarashi
-Jak Hammer Hammerslam,Scouting,FW,Fire,88,158,43,59,52,63,66,64,60,25,Killer Slide,Onryou,Horn Train,Tsuchi Daruma,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Jak Hammer Hammerslam,Scouting,FW,Fire,88,158,43,59,52,63,66,64,60,25,Killer Slide,Onryou,Horn Train,Tsuchi Daruma
 Tim Eisback,Scouting,DF,Wood,83,136,48,58,57,57,69,60,58,26,Tatsumaki Senpuu,Zanzou,Quick Draw,Cyclone
 Horty Courture,Scouting,FW,Wood,103,126,29,48,43,48,60,47,42,42,Killer Slide,Quick Draw,Tatsumaki Senpuu,Snake Shot
 Sage Wisdom,Scouting,MF,Earth,83,146,49,63,60,56,64,52,59,22,Killer Slide,Judge Through,Cyclone,Zanzou
@@ -831,7 +824,7 @@ Walker Sleep,Scouting,GK,Earth,149,158,63,61,62,56,52,52,60,23,Pressure Punch,Sh
 Andy Wallpole,Scouting,MF,Fire,81,154,61,61,62,54,56,67,56,16,Super Scan (DF),Super Scan (OF),Kung Fu Head,Dokugiri no Jutsu
 Eaton Rampage,Scouting,FW,Earth,110,112,51,44,48,50,73,47,37,31,Tamanori Pierrot,Dynamite Shoot,Monkey Turn,Tsuchi Daruma
 Philip Flagg,Scouting,DF,Earth,193,148,40,29,32,53,60,33,60,19,Shikofumi,Horn Train,Monkey Turn,Earthquake
-Drew Strait Straitedge,Scouting,GK,Earth,118,124,49,46,44,44,46,42,47,40,Pressure Punch,Monkey Turn,Makiwari Chop,Tsumuji,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Drew Strait Straitedge,Connection Map,GK,Earth,118,124,49,46,44,44,46,42,47,40,Pressure Punch,Monkey Turn,Wood Chopper,Whirlwind
 Matt Tudor,Scouting,DF,Fire,90,124,29,46,44,79,56,62,50,20,Quick Draw,Blade Attack,Zanzou,Jigoku Guruma
 Keifer Tiliser,Scouting,DF,Fire,129,160,63,60,62,64,62,63,53,17,Coil Turn,Zigzag Spark,Dokugiri no Jutsu,Kage Nui
 Paisley Onepiece,Scouting,DF,Wind,77,150,62,61,51,60,52,61,60,15,Fake Ball,Judge Through,Dokonjou Bat,Ushiro no Shoumen
@@ -871,10 +864,9 @@ Shylock Watson,Scouting,DF,Wood,121,118,43,42,41,45,40,44,49,44,Coil Turn,Magic,
 Rob Burnsides,Scouting,DF,Wind,195,150,46,55,61,62,69,63,54,26,Suisei Shoot,Quick Draw,Kagome Kagome,Shine Drive
 Tyson Moodey,Scouting,GK,Wood,92,146,40,54,61,55,77,61,61,34,Power Shield,Kumo no Ito,Full Power Shield,Kagome Kagome
 Cardin Hands,Scouting,FW,Wood,118,148,61,52,53,62,51,71,54,20,Grenade Shot,Dash Accel,Patriot Shoot,Zanzou
-Tenshou,Scouting,DF,Fire,112,158,44,36,30,55,70,62,57,15,Shikofumi,The Wall,Mogura Feint,Sabaki no Tettsui
 Sean Lavender,Scouting,FW,Wood,116,132,67,52,56,58,62,71,54,19,Dynamite Shoot,Monkey Turn,Twin Boost,Shine Drive
 Walter Poseur,Scouting,DF,Wind,90,146,44,61,63,61,68,60,55,27,Doppelganger,Gorimuchuu,Blade Attack,Kumo no Ito
-Phil Biblist O'Biblist,Scouting,MF,Fire,160,142,65,58,60,67,30,52,61,16,Noroi,Onryou,Kung Fu Head,Run Ball Run,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Phil Biblist O'Biblist,Connection Map,MF,Fire,160,142,65,58,60,67,30,52,61,16,Black Magic,Ghost Pull,Kung Fu Header,Run Ball Run
 Mick Thatcher,Scouting,GK,Earth,156,198,44,59,72,44,54,52,61,17,Toughness Block,Super Scan (DF),Rocket Kobushi,Gigant Wall
 Larry Oldman,Scouting,FW,Earth,94,118,36,49,44,40,53,54,41,42,Spinning Shoot,Gorimuchuu,Cross Drive,Bunshin Feint
 Olef Tennant,Scouting,DF,Wind,94,198,62,54,68,60,52,28,57,28,Suisei Shoot,Killer Slide,Dynamite Shoot,Run Ball Run
@@ -954,7 +946,7 @@ Dan Carpenter,Scouting,GK,Earth,145,144,40,54,60,42,52,56,60,15,Nekketsu Punch,S
 Julian Siezer,Scouting,FW,Earth,167,148,40,32,34,58,64,60,58,19,Phantom Shoot,Gorimuchuu,Dokugiri no Jutsu,Shine Drive
 Cole Coaker,Scouting,GK,Wood,90,132,47,52,60,52,62,59,58,19,Nekketsu Punch,Killer Blade,Kage Nui,Bakuretsu Punch
 Shep Shank,Scouting,FW,Wind,96,146,48,55,61,53,62,55,61,33,Tarzan Kick,Snake Shot,Hawk Shot,Condor Dive
-Mike Creasey Creasewell,Scouting,MF,Wind,110,150,58,67,58,67,54,60,63,16,Coil Turn,Tatsumaki Senpuu,Spinning Cut,Zigzag Spark,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Mike Creasey Creasewell,Scouting,MF,Wind,110,150,58,67,58,67,54,60,63,16,Coil Turn,Tatsumaki Senpuu,Spinning Cut,Zigzag Spark
 Sam Gale,Scouting,GK,Fire,151,129,48,52,66,44,55,60,63,19,Fake Ball,Shoot Pocket,Cyclone,Wild Claw
 Isaac Goss,Scouting,MF,Earth,145,156,63,52,57,53,54,58,56,38,Dash Accel,Gorimuchuu,Mogura Feint,Blade Attack
 Romeo Montague,Scouting,GK,Fire,173,158,57,60,63,60,56,61,55,12,Toughness Block,Rocket Kobushi,Kumo no Ito,Full Power Shield
@@ -977,7 +969,7 @@ Per Hockside,Wi-Fi Download,FW,Fire,107,150,42,55,57,54,69,67,62,26,Grenade Shot
 Cam O'Miles,Wi-Fi Download,GK,Wood,83,132,70,53,56,63,28,62,55,22,Pressure Punch,Quick Draw,Makiwari Chop,Hurricane Arrow
 Drew Straws,Wi-Fi Download,FW,Wood,160,132,60,52,55,55,62,58,52,11,Spinning Shoot,Magic,Fake Ball,Hyakuretsu Shot
 John Maggie,Wi-Fi Download,DF,Wood,121,76,76,79,61,72,31,79,72,9,Shikofumi,Toughness Block,Earthquake,Counterstrike
-Lux Botty Sidebottom,Wi-Fi Download,GK,Fire,81,158,40,59,52,60,63,61,54,27,Tornado Catch,Shoot Pocket,Kogarashi,Kumo no Ito,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Lux Botty Sidebottom,Wi-Fi Download,GK,Fire,81,158,40,59,52,60,63,61,54,27,Tornado Catch,Shoot Pocket,Kogarashi,Kumo no Ito
 Esau Fagus,Wi-Fi Download,FW,Wind,85,156,46,52,46,58,41,43,40,34,Noroi,Kamikakushi,Psycho Shot,Divine Arrow
 Bambis Shakin,Wi-Fi Download,FW,Earth,118,134,50,57,59,57,76,55,60,16,Suisei Shoot,Freeze Shot,Illusion Ball,Twin Boost
 Percy Verence,Wi-Fi Download,FW,Fire,127,173,52,62,64,68,68,72,60,27,Super Scan (DF),Super Scan (OF),Kamikakushi,Divine Arrow
@@ -987,7 +979,7 @@ Brook Atwater,Wi-Fi Download,DF,Wind,151,148,57,60,54,56,53,60,59,16,Killer Slid
 Chuck Hardy,Wi-Fi Download,FW,Wind,173,134,49,57,70,45,52,62,62,15,Suisei Shoot,Condor Dive,Illusion Ball,Dash Storm
 Max Scara,Wi-Fi Download,GK,Wind,127,198,62,62,40,40,40,52,52,34,Onryou,Magic,Killer Blade,Counterstrike
 Archie Meades,Wi-Fi Download,GK,Wood,118,120,57,54,40,70,49,62,53,20,Pressure Punch,Killer Blade,Rocket Kobushi,Bunshin Feint
-Noel Vacancie Vacancies,Wi-Fi Download,GK,Fire,138,194,57,65,59,70,52,62,54,20,Nekketsu Punch,Rocket Kobushi,Fake Ball,Kagome Kagome,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Noel Vacancie Vacancies,Wi-Fi Download,GK,Fire,138,194,57,65,59,70,52,62,54,20,Nekketsu Punch,Rocket Kobushi,Fake Ball,Kagome Kagome
 Weldon Wrought,Wi-Fi Download,DF,Wind,165,170,41,55,62,42,62,55,58,17,Coil Turn,Monkey Turn,Blade Attack,Harvest
 Joe Rassock,Wi-Fi Download,GK,Wind,154,165,44,52,66,48,60,52,60,15,Shoot Pocket,Zigzag Spark,Wild Claw,Hyakuretsu Shot
 Grant Mardy,Wi-Fi Download,DF,Wind,121,113,60,55,40,42,40,56,60,20,Tamanori Pierrot,Doppelganger,Magic,Illusion Ball
@@ -1000,7 +992,7 @@ Sam Fitspire,Wi-Fi Download,GK,Wood,88,136,63,63,42,60,56,64,60,20,Power Shield,
 Troy Glodight,Wi-Fi Download,DF,Earth,154,150,60,60,60,79,62,56,52,26,Onryou,Kumo no Ito,Dokugiri no Jutsu,Jigoku Guruma
 Ropert Chapp,Wi-Fi Download,DF,Wind,92,148,61,64,50,62,55,63,62,16,Judge Through,Killer Slide,Ushiro no Shoumen,Tsuchi Daruma
 Jack Mate,Wi-Fi Download,DF,Wind,136,153,62,68,61,69,53,60,56,14,Killer Slide,Fake Ball,Spinning Cut,Hurricane Arrow
-Bill Wordsy Wordsworthy,Wi-Fi Download,MF,Earth,116,122,45,73,40,43,42,41,46,34,Noroi,Onryou,Bunshin Shoot,Bunshin Feint,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Bill Wordsy Wordsworthy,Wi-Fi Download,MF,Earth,116,122,45,73,40,43,42,41,46,34,Noroi,Onryou,Bunshin Shoot,Bunshin Feint
 Harry Caine,Wi-Fi Download,GK,Wind,125,161,73,70,60,64,64,60,62,27,Tornado Catch,Power Shield,Tsumuji,Counterstrike
 Bane Marie,Wi-Fi Download,DF,Earth,112,190,52,67,58,60,56,58,58,22,Shikofumi,Grenade Shot,The Wall,Mega Quake
 Luther Rio,Wi-Fi Download,GK,Wind,101,142,46,56,55,52,64,69,60,24,Killer Blade,Coil Turn,Power Shield,Counterstrike
@@ -1011,7 +1003,7 @@ Brock Twigg,Wi-Fi Download,MF,Wood,213,190,48,48,51,78,45,49,70,24,Tamanori Pier
 Marc O'Lepsy,Wi-Fi Download,DF,Wood,127,136,68,61,58,60,57,62,57,19,Doppelganger,Magic,Kage Nui,Dokugiri no Jutsu
 Burt Mocking,Wi-Fi Download,DF,Wood,134,190,61,61,51,51,45,57,58,17,Tamanori Pierrot,Run Ball Run,Magic,Cyclone
 Rusty Spoakes,Wi-Fi Download,GK,Fire,138,154,40,36,33,61,68,62,54,22,Pressure Punch,Power Shield,Bakuretsu Punch,Harvest
-Bobby Yeller Yellow,Wi-Fi Download,GK,Wood,129,100,47,44,46,52,48,49,44,14,Tornado Catch,Tsumuji,Kogarashi,Hurricane Arrow,Scouting,,,0,0,0,0,0,0,0,0,0,0,,,,
+Bobby Yeller Yellow,Wi-Fi Download,GK,Wood,129,100,47,44,46,52,48,49,44,14,Tornado Catch,Tsumuji,Kogarashi,Hurricane Arrow
 Paul Rush,Campaign,MF,Wood,176,156,60,71,60,68,79,62,67,26,Tatsumaki Senpuu,Zanzou,Kage Nui,Bunshin Shoot
 Guile Crocket,Campaign,DF,Fire,158,172,63,47,44,61,72,71,66,26,Tatsumaki Senpuu,Condor Dive,Hawk Shot,Boost Glider
 Claude Snap,Campaign,FW,Wind,195,154,66,62,61,64,67,68,68,17,Dash Accel,Freeze Shot,Twin Boost,Bunshin Feint
@@ -1020,3 +1012,6 @@ Pete LeGume,Campaign,DF,Fire,182,164,62,68,62,64,67,64,60,19,Dash Accel,Spinning
 Heath Rower,Campaign,MF,Wind,160,146,56,56,53,56,59,52,56,34,Spinning Shoot,Tatsumaki Senpuu,Kamaitachi,Back Tornado
 Finn Attick,Campaign,DF,Wind,182,178,61,61,68,69,60,70,65,19,Blade Attack,Dokugiri no Jutsu,Cyclone,Cross Drive
 Carey Bean,Campaign,MF,Fire,160,174,60,49,40,69,68,61,60,25,Rolling Kick,Zanzou,Run Ball Run,Moonsault
+Layton, Layton Team, DF, Wood, 255,255,84,84,84,84,84,84,84,59,Sabaki no Tettsui,Counterstrike,gigant Wall,The Galaxy
+Luke,Layton Team,MF,Wind,240,240,79,74,79,69,99,79,74,51,Rocket Kobushi,Run Ball Run,Cyclone,Moonsault
+Flora,Layton Team,MF,Wood,240,240,79,74,79,69,99,79,74,51, Kagome Kagome,Magic,Koutei Penguin 2gou,Ushiro no Shoumen
