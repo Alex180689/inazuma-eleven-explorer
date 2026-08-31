@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Production build
+dist/
+dist-ssr/
+
+# Temp and logs
+*.log
+*.tmp
+verify_*.png
+test_*.png
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
