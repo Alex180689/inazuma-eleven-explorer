@@ -190,20 +190,6 @@ export default function PlayerCard({
           </div>
         </div>
       </div>
-
-      {/* Card Footer with Quick Change Button */}
-      <div className="px-5 py-3 bg-slate-950/80 border-t border-slate-800/80 flex items-center justify-between">
-        <span className="text-[11px] text-slate-500 font-mono">
-          ID: {player.id}
-        </span>
-        <button
-          onClick={onOpenSearch}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold border border-slate-700 transition-all hover:scale-105 active:scale-95 shadow-sm"
-        >
-          <Search size={12} />
-          <span>Cambia Giocatore {playerNumber}</span>
-        </button>
-      </div>
     </div>
   );
 }
