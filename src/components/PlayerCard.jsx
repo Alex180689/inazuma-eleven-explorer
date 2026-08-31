@@ -146,7 +146,7 @@ export default function PlayerCard({
         </div>
 
         {/* Core Stats Progress Bars */}
-        <div className="p-5 pb-3">
+        <div className="px-5 pt-2.5 pb-3">
           <div className="space-y-1">
             {STAT_KEYS.map(stat => (
               <StatBar
