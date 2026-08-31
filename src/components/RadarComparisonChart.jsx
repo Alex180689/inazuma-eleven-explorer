@@ -356,10 +356,7 @@ export default function RadarComparisonChart({ player1, player2, p1Theme, p2Them
         {/* Players Legend */}
         <div className="grid grid-cols-2 gap-2 text-xs">
           {/* P1 Badge */}
-          <div
-            className="flex items-center gap-2 p-2 rounded-xl bg-slate-950/70 border transition-colors"
-            style={{ borderColor: `${p1ColorTheme.color}60` }}
-          >
+          <div className="flex items-center gap-2 p-2 rounded-xl bg-slate-950/70 transition-colors">
             <span
               className="w-3 h-3 rounded-full shrink-0 shadow"
               style={{ background: p1ColorTheme.color, boxShadow: `0 0 8px ${p1ColorTheme.glowColor}` }}
@@ -371,10 +368,7 @@ export default function RadarComparisonChart({ player1, player2, p1Theme, p2Them
           </div>
 
           {/* P2 Badge */}
-          <div
-            className="flex items-center gap-2 p-2 rounded-xl bg-slate-950/70 border transition-colors"
-            style={{ borderColor: `${p2ColorTheme.color}60` }}
-          >
+          <div className="flex items-center gap-2 p-2 rounded-xl bg-slate-950/70 transition-colors">
             <span
               className="w-3 h-3 rounded-full shrink-0 shadow"
               style={{ background: p2ColorTheme.color, boxShadow: `0 0 8px ${p2ColorTheme.glowColor}` }}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import jsQR from 'jsqr';
+import QrScanner from 'qr-scanner';
 import { Camera, X, RefreshCw, CheckCircle, VideoOff, Zap, Upload, Image as ImageIcon } from 'lucide-react';
 import { decodeQrStringToTeam } from '../../utils/teamQr';
 
@@ -38,9 +38,8 @@ export default function TeamQrScannerModal({
   allPlayers = [],
 }) {
   const videoRef = useRef(null);
-  const canvasRef = useRef(null);
+  const scannerRef = useRef(null);
   const fileInputRef = useRef(null);
-  const streamRef = useRef(null);
 
   const [devices, setDevices] = useState([]);
   const [selectedDeviceId, setSelectedDeviceId] = useState('');
@@ -49,139 +48,151 @@ export default function TeamQrScannerModal({
   const [scannedSuccess, setScannedSuccess] = useState(false);
   const [isDraggingFile, setIsDraggingFile] = useState(false);
 
-  // Stop video stream
-  const stopStream = useCallback(() => {
-    if (streamRef.current) {
-      streamRef.current.getTracks().forEach((track) => {
-        try {
-          track.stop();
-        } catch {}
-      });
-      streamRef.current = null;
+  // Stop scanner and release camera
+  const stopScanner = useCallback(() => {
+    if (scannerRef.current) {
+      try {
+        scannerRef.current.stop();
+        scannerRef.current.destroy();
+      } catch {}
+      scannerRef.current = null;
     }
-    if (videoRef.current) {
-      videoRef.current.srcObject = null;
-    }
+    setIsScanning(false);
   }, []);
 
-  // Enumerate camera devices
-  const loadDevices = useCallback(async () => {
-    try {
-      if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) return;
-      const allDevices = await navigator.mediaDevices.enumerateDevices();
-      const videoDevices = allDevices.filter((d) => d.kind === 'videoinput');
-      setDevices(videoDevices);
-      if (videoDevices.length > 0 && !selectedDeviceId) {
-        // Prefer back / environment camera if available
-        const backCam = videoDevices.find((d) =>
-          /back|rear|environment|posteriore/i.test(d.label)
+  // Handle successful QR detection
+  const handleDecodedString = useCallback(
+    (rawString) => {
+      if (!rawString || typeof rawString !== 'string') return;
+      const result = decodeQrStringToTeam(rawString, allPlayers);
+      if (result.success && result.team) {
+        if (scannerRef.current) {
+          try {
+            scannerRef.current.stop();
+          } catch {}
+        }
+        setIsScanning(false);
+        setScannedSuccess(true);
+        playScanSuccessChime();
+
+        setTimeout(() => {
+          stopScanner();
+          onTeamScanned(result.team);
+          onClose();
+        }, 500);
+      }
+    },
+    [allPlayers, onTeamScanned, onClose, stopScanner]
+  );
+
+  // Start the PosteID-grade high-speed QrScanner
+  const initAndStartScanner = useCallback(
+    async (deviceId) => {
+      stopScanner();
+      setErrorMsg(null);
+      setScannedSuccess(false);
+
+      if (!videoRef.current) return;
+
+      try {
+        // Enumerate camera devices
+        const cameraList = await QrScanner.listCameras(true);
+        setDevices(cameraList);
+
+        const activeCamera = deviceId || (cameraList.length > 0 ? cameraList[0].id : 'environment');
+        if (!selectedDeviceId && cameraList.length > 0) {
+          setSelectedDeviceId(activeCamera);
+        }
+
+        const scanner = new QrScanner(
+          videoRef.current,
+          (result) => {
+            const raw = typeof result === 'string' ? result : result?.data;
+            handleDecodedString(raw);
+          },
+          {
+            onDecodeError: () => {
+              // Frame without QR code: ignore silently and keep scanning at 25fps
+            },
+            preferredCamera: activeCamera,
+            maxScansPerSecond: 25, // Blazing-fast 25 scans per second WebWorker
+            highlightScanRegion: false,
+            highlightCodeOutline: false,
+            calculateScanRegion: (video) => {
+              // Focus scanning on the central square target box
+              const smallest = Math.min(video.videoWidth, video.videoHeight);
+              const size = Math.round(smallest * 0.7);
+              return {
+                x: Math.round((video.videoWidth - size) / 2),
+                y: Math.round((video.videoHeight - size) / 2),
+                width: size,
+                height: size,
+                downScaledWidth: 480,
+                downScaledHeight: 480,
+              };
+            },
+          }
         );
-        setSelectedDeviceId(backCam ? backCam.deviceId : videoDevices[0].deviceId);
-      }
-    } catch (err) {
-      console.warn('Errore lettura dispositivi video', err);
-    }
-  }, [selectedDeviceId]);
 
-  // Start webcam stream
-  const startCamera = useCallback(async (deviceId) => {
-    stopStream();
-    setErrorMsg(null);
-    setScannedSuccess(false);
-
-    try {
-      const constraints = {
-        video: {
-          deviceId: deviceId ? { exact: deviceId } : undefined,
-          facingMode: deviceId ? undefined : { ideal: 'environment' },
-          width: { ideal: 1280, min: 640 },
-          height: { ideal: 720, min: 480 },
-        },
-        audio: false,
-      };
-
-      const stream = await navigator.mediaDevices.getUserMedia(constraints);
-      streamRef.current = stream;
-
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-        videoRef.current.setAttribute('playsinline', 'true');
-        await videoRef.current.play();
+        scannerRef.current = scanner;
+        await scanner.start();
         setIsScanning(true);
+      } catch (err) {
+        console.error('Errore avvio scanner:', err);
+        let msg = 'Impossibile accedere alla fotocamera.';
+        if (err?.name === 'NotAllowedError') {
+          msg = 'Permesso telecamera negato. Abilita la fotocamera nelle impostazioni del browser.';
+        } else if (err?.name === 'NotFoundError') {
+          msg = 'Nessuna webcam o fotocamera trovata.';
+        }
+        setErrorMsg(msg);
+        setIsScanning(false);
       }
+    },
+    [handleDecodedString, stopScanner, selectedDeviceId]
+  );
 
-      loadDevices();
-    } catch (err) {
-      console.error('Errore accesso webcam:', err);
-      let msg = 'Impossibile accedere alla telecamera.';
-      if (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError') {
-        msg = 'Permesso telecamera negato. Abilita la fotocamera nelle impostazioni del browser.';
-      } else if (err.name === 'NotFoundError' || err.name === 'DevicesNotFoundError') {
-        msg = 'Nessuna telecamera o webcam trovata sul dispositivo.';
-      } else if (err.name === 'NotReadableError') {
-        msg = 'La telecamera è già in uso da un altro programma.';
-      }
-      setErrorMsg(msg);
-      setIsScanning(false);
-    }
-  }, [stopStream, loadDevices]);
-
-  // Initialize camera when modal opens or deviceId changes
+  // Mount/Unmount effect
   useEffect(() => {
     if (isOpen) {
-      startCamera(selectedDeviceId);
+      initAndStartScanner(selectedDeviceId);
     } else {
-      stopStream();
+      stopScanner();
       setErrorMsg(null);
       setScannedSuccess(false);
     }
     return () => {
-      stopStream();
+      stopScanner();
     };
-  }, [isOpen, selectedDeviceId, startCamera, stopStream]);
+  }, [isOpen, selectedDeviceId, initAndStartScanner, stopScanner]);
 
-  // Process file upload directly
-  const handleImageFileUpload = (file) => {
+  // Handle direct file upload
+  const handleImageFileUpload = async (file) => {
     if (!file) return;
     setErrorMsg(null);
 
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.onload = () => {
-        const tempCanvas = document.createElement('canvas');
-        tempCanvas.width = img.width;
-        tempCanvas.height = img.height;
-        const ctx = tempCanvas.getContext('2d');
-        ctx.drawImage(img, 0, 0);
+    try {
+      const result = await QrScanner.scanImage(file, { returnDetailedScanResult: true });
+      const raw = typeof result === 'string' ? result : result?.data;
+      if (raw) {
+        const decoded = decodeQrStringToTeam(raw, allPlayers);
+        if (decoded.success && decoded.team) {
+          setIsScanning(false);
+          setScannedSuccess(true);
+          playScanSuccessChime();
 
-        const imgData = ctx.getImageData(0, 0, img.width, img.height);
-        const code = jsQR(imgData.data, img.width, img.height, {
-          inversionAttempts: 'attemptBoth',
-        });
-
-        if (code && code.data) {
-          const res = decodeQrStringToTeam(code.data, allPlayers);
-          if (res.success && res.team) {
-            setIsScanning(false);
-            setScannedSuccess(true);
-            playScanSuccessChime();
-
-            setTimeout(() => {
-              stopStream();
-              onTeamScanned(res.team);
-              onClose();
-            }, 500);
-          } else {
-            setErrorMsg(res.error || 'Dati QR non validi.');
-          }
+          setTimeout(() => {
+            stopScanner();
+            onTeamScanned(decoded.team);
+            onClose();
+          }, 500);
         } else {
-          setErrorMsg('Nessun QR code rilevato nell\'immagine selezionata.');
+          setErrorMsg(decoded.error || 'Dati QR non validi per questa versione di gioco.');
         }
-      };
-      img.src = e.target?.result;
-    };
-    reader.readAsDataURL(file);
+      }
+    } catch {
+      setErrorMsg('Nessun QR code leggibile rilevato nell\'immagine selezionata.');
+    }
   };
 
   // Drag & drop handlers
@@ -202,101 +213,6 @@ export default function TeamQrScannerModal({
     }
   };
 
-  // Periodic Snapshot Scanner: takes a snapshot every ~400ms, decodes target box crop
-  useEffect(() => {
-    if (!isScanning || !isOpen) return;
-
-    let isBusy = false;
-
-    const processSnapshot = () => {
-      if (!isScanning || isBusy) return;
-      const video = videoRef.current;
-      const canvas = canvasRef.current;
-
-      if (!video || !canvas || video.readyState < 2 || video.videoWidth === 0) {
-        return;
-      }
-
-      isBusy = true;
-
-      try {
-        const vW = video.videoWidth;
-        const vH = video.videoHeight;
-
-        const ctx = canvas.getContext('2d', { willReadFrequently: true });
-        if (!ctx) return;
-
-        let detectedTeam = null;
-
-        // Pass 1: FOCUSED CENTER CROP (matching the central square target box)
-        // Scaled to 480x480 for instant, pin-sharp jsQR detection
-        const boxSize = Math.round(Math.min(vW, vH) * 0.65);
-        const cropX = Math.round((vW - boxSize) / 2);
-        const cropY = Math.round((vH - boxSize) / 2);
-
-        canvas.width = 480;
-        canvas.height = 480;
-        ctx.drawImage(video, cropX, cropY, boxSize, boxSize, 0, 0, 480, 480);
-        let imgData = ctx.getImageData(0, 0, 480, 480);
-
-        let code = jsQR(imgData.data, 480, 480, { inversionAttempts: 'attemptBoth' });
-
-        if (code && code.data) {
-          const res = decodeQrStringToTeam(code.data, allPlayers);
-          if (res.success && res.team) {
-            detectedTeam = res.team;
-          }
-        }
-
-        // Pass 2: Fallback down-scaled full frame (if QR was held outside center)
-        if (!detectedTeam) {
-          const overviewW = 640;
-          const overviewH = Math.round((vH / vW) * 640);
-          canvas.width = overviewW;
-          canvas.height = overviewH;
-          ctx.drawImage(video, 0, 0, overviewW, overviewH);
-          imgData = ctx.getImageData(0, 0, overviewW, overviewH);
-
-          code = jsQR(imgData.data, overviewW, overviewH, { inversionAttempts: 'attemptBoth' });
-          if (code && code.data) {
-            const res = decodeQrStringToTeam(code.data, allPlayers);
-            if (res.success && res.team) {
-              detectedTeam = res.team;
-            }
-          }
-        }
-
-        // Valid Team Recognized!
-        if (detectedTeam) {
-          setIsScanning(false);
-          setScannedSuccess(true);
-          playScanSuccessChime();
-
-          // Show checkmark for 500ms as requested, then apply team and close
-          setTimeout(() => {
-            stopStream();
-            onTeamScanned(detectedTeam);
-            onClose();
-          }, 500);
-          return;
-        }
-
-        // If not recognized: continues silently observing on next tick
-      } catch (err) {
-        console.warn('Frame scan warning:', err);
-      } finally {
-        isBusy = false;
-      }
-    };
-
-    // Run snapshot every 400ms (half-second cadence)
-    const intervalId = setInterval(processSnapshot, 400);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [isScanning, isOpen, allPlayers, onTeamScanned, onClose, stopStream]);
-
   if (!isOpen) return null;
 
   return (
@@ -305,10 +221,10 @@ export default function TeamQrScannerModal({
         {/* Close Button */}
         <button
           onClick={() => {
-            stopStream();
+            stopScanner();
             onClose();
           }}
-          className="absolute top-4 right-4 p-1.5 rounded-full bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors z-20"
+          className="absolute top-4 right-4 p-1.5 rounded-full bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors z-20 cursor-pointer"
           title="Chiudi"
         >
           <X size={18} />
@@ -329,7 +245,7 @@ export default function TeamQrScannerModal({
           </div>
         </div>
 
-        {/* Camera Device Selector (if multiple cameras available) */}
+        {/* Camera Device Selector */}
         {devices.length > 1 && (
           <div className="w-full mb-3">
             <label className="text-[11px] font-mono font-semibold text-slate-300 block mb-1">
@@ -337,11 +253,17 @@ export default function TeamQrScannerModal({
             </label>
             <select
               value={selectedDeviceId}
-              onChange={(e) => setSelectedDeviceId(e.target.value)}
+              onChange={(e) => {
+                const newId = e.target.value;
+                setSelectedDeviceId(newId);
+                if (scannerRef.current) {
+                  scannerRef.current.setCamera(newId);
+                }
+              }}
               className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-slate-200 font-medium focus:outline-none focus:border-cyan-400 cursor-pointer"
             >
               {devices.map((device, idx) => (
-                <option key={device.deviceId || idx} value={device.deviceId}>
+                <option key={device.id || idx} value={device.id}>
                   {device.label || `Telecamera ${idx + 1}`}
                 </option>
               ))}
@@ -349,7 +271,7 @@ export default function TeamQrScannerModal({
           </div>
         )}
 
-        {/* Viewfinder / Drag & Drop Area */}
+        {/* Viewfinder / Video Container */}
         <div
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
@@ -360,17 +282,13 @@ export default function TeamQrScannerModal({
               : 'border-slate-800'
           }`}
         >
-          {/* Live Video */}
+          {/* Live Video managed by QrScanner */}
           <video
             ref={videoRef}
             className="w-full h-full object-cover"
             playsInline
-            autoPlay
             muted
           />
-
-          {/* Offscreen Canvas for Snapshot Extraction */}
-          <canvas ref={canvasRef} className="hidden" />
 
           {/* Drag & Drop Overlay */}
           {isDraggingFile && (
@@ -383,7 +301,7 @@ export default function TeamQrScannerModal({
           {/* Holographic Inazuma Target Overlay */}
           {isScanning && !scannedSuccess && !isDraggingFile && (
             <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-              {/* Darkened outer vignette */}
+              {/* Darkened outer border */}
               <div className="absolute inset-0 border-[32px] sm:border-[40px] border-black/45" />
 
               {/* Central Target Box */}
@@ -403,7 +321,7 @@ export default function TeamQrScannerModal({
             </div>
           )}
 
-          {/* Success Checkmark Overlay - 500ms presentation */}
+          {/* Success Checkmark Overlay (500ms) */}
           {scannedSuccess && (
             <div className="absolute inset-0 bg-emerald-500/40 backdrop-blur-xs flex flex-col items-center justify-center text-emerald-200 font-bold gap-3 z-30 animate-fadeIn">
               <CheckCircle size={64} className="text-emerald-400 drop-shadow-[0_0_20px_#10b981]" />
@@ -421,9 +339,9 @@ export default function TeamQrScannerModal({
               <button
                 onClick={() => {
                   setErrorMsg(null);
-                  startCamera(selectedDeviceId);
+                  initAndStartScanner(selectedDeviceId);
                 }}
-                className="mt-1 px-4 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold flex items-center gap-1.5 border border-slate-700"
+                className="mt-1 px-4 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold flex items-center gap-1.5 border border-slate-700 cursor-pointer"
               >
                 <RefreshCw size={13} />
                 <span>Riprova Telecamera</span>
@@ -459,7 +377,7 @@ export default function TeamQrScannerModal({
         <div className="mt-2.5 text-center">
           <p className="text-[11px] text-slate-400 flex items-center justify-center gap-1">
             <Zap size={12} className="text-amber-400 shrink-0" />
-            <span>Scansione a intervalli regolari (400ms) con zoom sul mirino centrale</span>
+            <span>Motore ZXing WebAssembly a 25 fps con scansione hardware su WebWorker</span>
           </p>
         </div>
       </div>

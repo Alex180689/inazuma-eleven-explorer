@@ -8,7 +8,7 @@ import PositionBadge from './PositionBadge';
 import PlayerAvatar from './PlayerAvatar';
 import MoveCard from './MoveCard';
 import StatBar from './StatBar';
-import { User, Trophy, Search, Zap, Sparkles } from 'lucide-react';
+import { User, Trophy, Search, Zap, Sparkles, Heart } from 'lucide-react';
 
 export default function PlayerCard({
   player,
@@ -115,14 +115,14 @@ export default function PlayerCard({
           {/* PE Meter */}
           <div className="bg-slate-950/70 rounded-xl p-2 border border-slate-800/80">
             <div className="flex items-center justify-between text-xs mb-1">
-              <span className="font-semibold text-emerald-400 flex items-center gap-1 text-[11px]">
-                <Zap size={11} /> PE (Energia)
+              <span className="font-semibold text-rose-400 flex items-center gap-1 text-[11px]">
+                <Heart size={11} className="fill-rose-500 text-rose-500" /> PE
               </span>
               <span className="font-mono font-bold text-slate-200">{player.stats.fp}</span>
             </div>
             <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full"
+                className="h-full bg-gradient-to-r from-red-600 to-rose-400 rounded-full"
                 style={{ width: `${Math.min(100, (player.stats.fp / 220) * 100)}%` }}
               />
             </div>
@@ -132,7 +132,7 @@ export default function PlayerCard({
           <div className="bg-slate-950/70 rounded-xl p-2 border border-slate-800/80">
             <div className="flex items-center justify-between text-xs mb-1">
               <span className="font-semibold text-cyan-400 flex items-center gap-1 text-[11px]">
-                <Sparkles size={11} /> PT (Tecnica)
+                <Sparkles size={11} /> PT
               </span>
               <span className="font-mono font-bold text-slate-200">{player.stats.tp}</span>
             </div>
