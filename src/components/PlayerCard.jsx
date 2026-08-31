@@ -17,6 +17,7 @@ export default function PlayerCard({
   onOpenSearch,
   playerTheme,
   isWeighted = true,
+  showStabEffect = true,
 }) {
   if (!player) {
     return (
@@ -178,6 +179,7 @@ export default function PlayerCard({
                 moveName={player.moves[slot]}
                 slotIndex={slot}
                 playerElement={player.element}
+                showStabEffect={showStabEffect}
               />
             ))}
           </div>

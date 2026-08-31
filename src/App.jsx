@@ -357,6 +357,7 @@ export default function App() {
               onOpenSearch={() => handleOpenSearch(1)}
               playerTheme={p1Theme}
               isWeighted={isWeighted}
+              showStabEffect={builderSettings.showStabEffect ?? true}
             />
           </div>
 
@@ -394,6 +395,7 @@ export default function App() {
               onOpenSearch={() => handleOpenSearch(2)}
               playerTheme={p2Theme}
               isWeighted={isWeighted}
+              showStabEffect={builderSettings.showStabEffect ?? true}
             />
           </div>
         </div>

@@ -13,6 +13,7 @@ export const DEFAULT_TEAMBUILDER_SETTINGS = {
   showRoleBadge: true,
   showElementBadge: true,
   radarWidth: 560, // px (380 to 780)
+  showStabEffect: true, // Show STAB bonus visual highlight
 };
 
 export const BACKGROUND_OPTIONS = [
@@ -397,6 +398,29 @@ export default function TeamBuilderSettingsModal({
                   className="rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4"
                 />
                 <span className="text-xs text-slate-300 font-medium">Strisce Erba Campo</span>
+              </label>
+
+              {/* Toggle STAB Bonus */}
+              <label className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800 cursor-pointer hover:border-slate-700 transition-colors col-span-2">
+                <input
+                  type="checkbox"
+                  checked={settings.showStabEffect ?? true}
+                  onChange={(e) => update('showStabEffect', e.target.checked)}
+                  className="rounded border-slate-700 text-amber-500 focus:ring-amber-500 w-4 h-4"
+                />
+                <div className="flex items-center justify-between flex-1 min-w-0">
+                  <div className="min-w-0 flex-1">
+                    <span className="text-xs text-slate-200 font-medium block">
+                      Evidenzia Bonus STAB (+20%)
+                    </span>
+                    <span className="text-[10px] text-slate-400 block">
+                      Bordo dorato e badge per tecniche dello stesso elemento del calciatore
+                    </span>
+                  </div>
+                  <span className="px-1.5 py-0.5 rounded text-[9px] font-black font-mono bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-950 shadow-sm uppercase tracking-wider shrink-0 ml-2">
+                    STAB
+                  </span>
+                </div>
               </label>
             </div>
           </div>

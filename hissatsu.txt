@@ -1,4 +1,6 @@
 SDBC;WGFM
+
+Shoot
 Spinning Shoot;SW;Tiro Roteante
 Spiral Shot;SW;Colpo a Spirale
 Condor Dive;SW;Colpo del Condor
@@ -43,6 +45,81 @@ Kamikakushi;SM;
 Tsuchi Daruma;SM;
 Reflect Buster;SM;
 
+Dribble
+Tamanori Pierrot;DW;
+Shippuu Dash;DW;
+Tatsumaki Senpuu;DW;
+Zigzag Spark;DW;
+Dokugiri no Jutsu;DW;
+Kamaitachi;DW;
+Dash Storm;DW;
+Heaven's Time;DW;
+Moonsault;DG;
+Noroi;DG;
+Magic;DG;
+Super Scan;DG;
+Zanzou;DG;
+Illusion Ball;DG;
+Bushin Feint;DG;
+Judge Through;DF;
+Heat Tackle;DF;
+Boost Glider;DF;
+Dash Accel;DM;
+Gorimuchuu;DM;
+Super Armadillo;DM;
+Monkey Turn;DM;
+Jigoku Guruma;DM;
+Mogura Feint;DM;
+
+Block;BW;
+Coil Turn;BW;
+Spinning Cut;BW;
+Blade Attack;BW;
+Cyclone;BW;
+Hurricane Arrow;BW;
+Killer Slide;BG;
+Quick Draw;BG;
+Doppelganger;BG;
+Onryou;BG;
+Fake Ball;BG;
+Super Scan;BG;
+Kumo no Ito;BG;
+Kage Nui;BG;
+Harvest;BG;
+Sabaki no Tettsui;BF;
+Shikofumi;BM;
+Horn Train;BM;
+Ushiro no Shoumen;BM;
+Earthquake;BM;
+The Wall;BM;
+Kagome Kagome;BM;
+Mega Quake;BM;
+
+
+Catch
+Tornado Catch;CW;
+Kogarashi;CW;
+Tsumuji;CW;
+Tsunami Wall;CW;
+Killer Blade;CG;
+Yugamu Kuukan;CG;
+Shoot Pocket;CG;
+Nekketsu Punch;CF;
+Pressure Punch;CF;
+Power Shield;CF;
+Rocket Kobushi;CF;
+Bakuretsu Punch;CF;
+Counterstrike;CF;
+Full Power Shield;CF;
+Toughness Block;CM;
+Wild Claw;CM;
+Makiwari Chop;CM;
+Goal Zurashi;CM;
+God Hand;CM;
+Gigant Wall;CM;
+Mugen no Kabe;CM;
+Majin the Hand;CM;
+Triple Defence;CM;
 
 
 
