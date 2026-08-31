@@ -110,13 +110,13 @@ export default function PlayerCard({
           </div>
         </div>
 
-        {/* Vital Points (FP & TP) */}
+        {/* Vital Points (PE & PT) */}
         <div className="px-5 py-3 bg-slate-900/60 border-b border-slate-800/80 grid grid-cols-2 gap-2.5">
-          {/* FP Meter */}
+          {/* PE Meter */}
           <div className="bg-slate-950/70 rounded-xl p-2 border border-slate-800/80">
             <div className="flex items-center justify-between text-xs mb-1">
               <span className="font-semibold text-emerald-400 flex items-center gap-1 text-[11px]">
-                <Zap size={11} /> FP (Fatica)
+                <Zap size={11} /> PE (Energia)
               </span>
               <span className="font-mono font-bold text-slate-200">{player.stats.fp}</span>
             </div>
@@ -128,11 +128,11 @@ export default function PlayerCard({
             </div>
           </div>
 
-          {/* TP Meter */}
+          {/* PT Meter */}
           <div className="bg-slate-950/70 rounded-xl p-2 border border-slate-800/80">
             <div className="flex items-center justify-between text-xs mb-1">
               <span className="font-semibold text-cyan-400 flex items-center gap-1 text-[11px]">
-                <Sparkles size={11} /> TP (Tecnica)
+                <Sparkles size={11} /> PT (Tecnica)
               </span>
               <span className="font-mono font-bold text-slate-200">{player.stats.tp}</span>
             </div>
@@ -151,7 +151,7 @@ export default function PlayerCard({
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono">
               Statistiche di Gioco
             </h4>
-            <span className="text-[10px] text-slate-500 font-mono">Max ~85</span>
+            <span className="text-[10px] text-slate-500 font-mono">Max 100</span>
           </div>
 
           <div className="space-y-1">

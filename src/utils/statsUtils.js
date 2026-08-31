@@ -2,18 +2,18 @@ import { POSITIONS } from '../constants/positions';
 import { ELEMENTS } from '../constants/elements';
 
 export const STAT_KEYS = [
-  { key: 'kick', labelIt: 'Tiro', labelEn: 'Kick', max: 85, icon: 'Flame', desc: 'Potenza di tiro e precisione' },
-  { key: 'body', labelIt: 'Fisico', labelEn: 'Body', max: 85, icon: 'ShieldAlert', desc: 'Dribbling e contrasti fisici' },
-  { key: 'control', labelIt: 'Controllo', labelEn: 'Control', max: 85, icon: 'Target', desc: 'Controllo palla e precisione passaggi' },
-  { key: 'guard', labelIt: 'Difesa', labelEn: 'Guard', max: 85, icon: 'Shield', desc: 'Capacità difensiva e parate' },
-  { key: 'speed', labelIt: 'Velocità', labelEn: 'Speed', max: 85, icon: 'Zap', desc: 'Velocità di corsa sul campo' },
-  { key: 'stamina', labelIt: 'Resistenza', labelEn: 'Stamina', max: 85, icon: 'Activity', desc: 'Resistenza alla fatica nel tempo' },
-  { key: 'guts', labelIt: 'Grinta', labelEn: 'Guts', max: 85, icon: 'HeartHandshake', desc: 'Spirito di rimonta e bonus duelli' },
+  { key: 'kick', labelIt: 'Tiro', labelEn: 'Kick', max: 100, icon: 'Flame', desc: 'Potenza di tiro e precisione' },
+  { key: 'body', labelIt: 'Fisico', labelEn: 'Body', max: 100, icon: 'ShieldAlert', desc: 'Dribbling e contrasti fisici' },
+  { key: 'control', labelIt: 'Controllo', labelEn: 'Control', max: 100, icon: 'Target', desc: 'Controllo palla e precisione passaggi' },
+  { key: 'guard', labelIt: 'Difesa', labelEn: 'Guard', max: 100, icon: 'Shield', desc: 'Capacità difensiva e parate' },
+  { key: 'speed', labelIt: 'Velocità', labelEn: 'Speed', max: 100, icon: 'Zap', desc: 'Velocità di corsa sul campo' },
+  { key: 'stamina', labelIt: 'Resistenza', labelEn: 'Stamina', max: 100, icon: 'Activity', desc: 'Resistenza alla fatica nel tempo' },
+  { key: 'guts', labelIt: 'Grinta', labelEn: 'Guts', max: 100, icon: 'HeartHandshake', desc: 'Spirito di rimonta e bonus duelli' },
 ];
 
 export const VITAL_KEYS = [
-  { key: 'fp', labelIt: 'FP (Fatica)', labelEn: 'FP', max: 220, unit: 'FP', desc: 'Punti Fatica / Fitness Point' },
-  { key: 'tp', labelIt: 'TP (Tecnica)', labelEn: 'TP', max: 200, unit: 'TP', desc: 'Punti Tecnica per mosse speciali' },
+  { key: 'fp', labelIt: 'PE (Energia)', labelEn: 'PE', max: 220, unit: 'PE', desc: 'Punti Energia' },
+  { key: 'tp', labelIt: 'PT (Tecnica)', labelEn: 'PT', max: 200, unit: 'PT', desc: 'Punti Tecnica per mosse speciali' },
 ];
 
 // Calculate total core stats sum

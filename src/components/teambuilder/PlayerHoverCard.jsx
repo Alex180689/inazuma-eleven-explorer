@@ -78,14 +78,14 @@ export default function PlayerHoverCard({ player, targetRect, settings, isWeight
     return { x, y };
   };
 
-  // Grid level polygons (33%, 66%, 100%)
-  const gridLevels = [0.33, 0.66, 1.0];
+  // Grid level polygons (25%, 50%, 75%, 100%)
+  const gridLevels = [0.25, 0.5, 0.75, 1.0];
 
   // Player Stats Polygon Points
   const polygonPoints = useMemo(() => {
     return STAT_KEYS.map((stat, i) => {
       const val = player.stats?.[stat.key] || 50;
-      const fraction = Math.min(1, Math.max(0.15, val / (stat.max || 85)));
+      const fraction = Math.min(1, Math.max(0.12, val / 100));
       const { x, y } = getCoordinates(i, fraction);
       return `${x},${y}`;
     }).join(' ');
@@ -191,8 +191,8 @@ export default function PlayerHoverCard({ player, targetRect, settings, isWeight
           <div className="w-full flex items-center justify-between text-[10px] text-slate-400 font-mono px-1">
             <span className="font-semibold uppercase tracking-wider text-slate-300">Radar Statistiche</span>
             <div className="flex items-center gap-2 text-[10px]">
-              <span className="text-emerald-400 font-bold">FP: {player.stats?.fp || 100}</span>
-              <span className="text-cyan-400 font-bold">TP: {player.stats?.tp || 100}</span>
+              <span className="text-emerald-400 font-bold">PE: {player.stats?.fp || 100}</span>
+              <span className="text-cyan-400 font-bold">PT: {player.stats?.tp || 100}</span>
             </div>
           </div>
 
@@ -248,7 +248,7 @@ export default function PlayerHoverCard({ player, targetRect, settings, isWeight
             {/* Vertices & Stat Labels */}
             {STAT_KEYS.map((stat, i) => {
               const val = player.stats?.[stat.key] || 50;
-              const fraction = Math.min(1, Math.max(0.15, val / (stat.max || 85)));
+              const fraction = Math.min(1, Math.max(0.12, val / 100));
               const dot = getCoordinates(i, fraction);
               const labelPos = getCoordinates(i, 1.34);
 

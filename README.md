@@ -1,92 +1,97 @@
 # ⚡ Inazuma Eleven Explorer & Team Builder (IE1)
 
-Un'applicazione web moderna, reattiva e ricca di effetti visivi per esplorare il database completo di oltre **1000+ giocatori** del primo videogioco di **Inazuma Eleven** (Nintendo DS), confrontare statistiche testa a testa con grafici radar interattivi e costruire la propria squadra ideale con un Team Builder avanzato.
+A modern, responsive, and visually rich web application for exploring the complete database of **1,000+ players** from the first **Inazuma Eleven** video game (Nintendo DS). Compare players head-to-head with interactive 7-axis radar charts, evaluate role-weighted stats, and build your dream squad using an advanced, Balatro-inspired tactical Team Builder.
 
 ---
 
-## 🌟 Caratteristiche Principali
+## 🌟 Key Features
 
-### 1. ⚔️ Head-to-Head Player Comparison (Confronto Testa a Testa)
-* **Motore di Confronto Statistiche**: Confronta in tempo reale due giocatori su tutte le 7 statistiche chiave (Tiro, Fisico, Controllo, Difesa, Velocità, Resistenza, Grinta) oltre a FP (Fatica) e TP (Tecnica).
-* **Grafico Radar a 7 Assi Dinamico**: Radar SVG personalizzato con colorazioni tematiche sincronizzate con l'elemento e i colori della squadra dei giocatori.
-* **Valutazione Overall (OVR) & Tier List**:
-  * Modalità **"Pesate (Ruolo)"**: calcola l'overall tenendo conto dell'impatto specifico delle statistiche per il ruolo naturale (GK, DF, MF, FW).
-  * Modalità **"Senza Pesi (Pure)"**: media aritmetica pura delle statistiche.
-  * Assegnazione dinamica del **Tier (S+, S, A, B, C, D)** con soglie tarate sul gioco.
-* **Scontro Casuale con VFX Elettrici**: Genera duelli casuali con spettacolari scariche di fulmini ad alta tensione animate su Canvas.
-* **Duelli Iconici Storici**: Preset per rivivere al volo le grandi rivalità della serie (Mark Evans vs Joe King, Axel Blaze vs Jude Sharp, Mark Evans vs Byron Love, ecc.).
-* **Tecniche Speciali (Hissatsu)**: Schede dettagliate per tutte e 4 le mosse speciali di ciascun giocatore, con tipo, costo TP ed elemento.
+### 1. ⚔️ Head-to-Head Player Comparison
+* **Real-time Stat Engine**: Compare any two players across all 7 core statistics (Kick, Body, Control, Guard, Speed, Stamina, Guts) plus Vital Points: **PE** (Energy Points / FP) and **PT** (Technique Points / TP).
+* **Dynamic 7-Axis Radar Chart**: Custom SVG radar polygon scaled to 100 with distinct concentric levels (25%, 50%, 75%, 100%), synchronized team colors, and elemental glows.
+* **Overall (OVR) & Tier List**:
+  * **Role-Weighted Mode**: Calculates overall rating based on tactical role weights (GK, DF, MF, FW).
+  * **Pure Mode**: Unweighted arithmetic average of core stats.
+  * Tier ranks (**S+, S, A, B, C, D**) dynamically calculated from competitive stat cutoffs.
+* **Random Matchup with Electric VFX**: Generate surprise matchups accompanied by high-voltage lightning shock animations rendered on an HTML5 canvas.
+* **Iconic Story Rivalries**: Quick presets to instantly compare classic series duels (Mark Evans vs Joe King, Axel Blaze vs Jude Sharp, Mark Evans vs Byron Love, etc.).
+* **Special Moves (Hissatsu)**: Complete technical cards for each player's 4 special moves, showing category, PT cost, and element.
 
-### 2. 📋 Team Builder Tattico Interattivo
-* **Campo da Calcio e Panchina**:
-  * Organizzazione completa degli 11 titolari e delle 5 riserve.
-  * Drag & Drop fluido con follower stile carta collezionabile (effetto Balatro con inclinazione dinamica).
-  * Rimozione rapida con combinazione tasto `Ctrl` + click.
-  * Personalizzazione grafica: sfondi delle icone personalizzabili, alone luminoso radiale elementale, opacità regolabile.
-* **Hover Info Card con Mini Radar**:
-  * Passando il mouse su qualsiasi giocatore in campo o in panchina compare una finestra in sovrimpressione con statistiche, mini grafico radar a 7 assi, mosse speciali e punti vitali.
-  * Adattamento intelligente: finestra forzata a sinistra per la panchina e ancoraggio sicuro ai bordi dello schermo.
-* **Gestione Moduli & Formazioni**:
-  * Supporto per schemi tattici classici (4-4-2, 4-3-3, 3-5-2, ecc.) con posizionamento automatico degli slot.
-* **Salvataggio & Backup Squadre**:
-  * Salva e rinomina formazioni illimitate nel `localStorage` del browser.
-  * Pulsanti **Esporta** e **Importa** in formato `.json` per conservare, condividere o spostare le squadre tra browser e dispositivi.
-
----
-
-## 🛠️ Tecnologie Utilizzate
-
-* **React 18** + **Vite**: rendering ultra-rapido, Hot Module Replacement e bundle ottimizzato.
-* **Tailwind CSS**: styling atomico responsive con palette scura da sala giochi e accenti neon.
-* **Framer Motion**: micro-interazioni, transizioni fluide e animazioni di trascinamento.
-* **HTML5 Canvas**: effetti grafici di fulmini e scosse elettriche native a 60fps.
-* **Lucide React**: set completo di icone vettoriali moderne.
+### 2. 📋 Tactical Interactive Team Builder
+* **Pitch & Bench Management**:
+  * Organize your full squad: 11 starters on the pitch and 5 substitutes on the bench.
+  * Fluid Drag-and-Drop system with collectible card tilt and dynamic cursor tracking (Balatro-inspired visual style).
+  * Quick-remove players using `Ctrl + Click`.
+  * Customizable visuals: interchangeable card backgrounds, elemental radial aura glows, and adjustable popover opacity.
+* **Hover Info Card with Mini-Radar**:
+  * Hovering over any slot shows an instant popover with player details, 7-axis mini-radar, moveset, and vital points.
+  * Smart positioning automatically locks to the left for bench slots and maintains safe screen margins.
+* **Tactical Formations**:
+  * Full support for tactical systems (4-4-2, 4-3-3, 3-5-2, etc.) with automatic positional slot recalculation.
+* **Saved Teams & Cloudless Backup**:
+  * Save unlimited team configurations in browser local storage.
+  * **JSON Export & Import**: One-click download/upload to backup or transfer teams between browsers and devices.
+* **⚡ QR Code Generation & High-Speed Webcam Scanner**:
+  * **Generate QR**: Encodes the entire squad (formation, 11 starters, 5 bench players) into an ultra-compact ~100-character payload, creating a crisp, low-density QR code that can be saved as PNG or scanned instantly.
+  * **Read QR with Webcam**: Real-time camera scanner with device selection (integrated webcam, USB cameras, phone cameras) that snapshots the viewfinder, verifies the team structure, displays a success checkmark, and loads the squad onto the pitch in milliseconds.
+  * Direct image upload / drag-and-drop also supported inside the scanner.
 
 ---
 
-## 🚀 Avvio Rapido
+## 🛠️ Tech Stack
 
-### Metodo 1: Doppio Click su Windows *(Consigliato)*
-Fai semplicemente doppio click sul file:
+* **React 18** + **Vite**: Ultra-fast rendering, Hot Module Replacement (HMR), and optimized production builds.
+* **Tailwind CSS**: Utility-first styling with an arcade dark theme and vivid neon accents.
+* **Framer Motion**: Smooth micro-interactions, layout transitions, and fluid card drag animations.
+* **HTML5 Canvas**: Native 60fps electric shock fractal lightning effects.
+* **Lucide React**: Modern icon set.
+* **jsQR & QRCode**: Fast QR generation and sub-second browser-based QR decoding.
+
+---
+
+## 🚀 Getting Started
+
+### Method 1: Double-Click Launcher on Windows *(Recommended)*
+Simply double-click:
 ```text
 avvia_server.bat
 ```
-Lo script verificherà Node.js e le dipendenze, avviando il server locale su `http://localhost:3000`.
+The script will verify Node.js, install dependencies if missing, and launch the local server at `http://localhost:3000`.
 
-### Metodo 2: Da Riga di Comando / Bash
+### Method 2: Command Line / Bash
 ```bash
-# Installa le dipendenze (se non già presenti)
+# Install dependencies
 npm install
 
-# Avvia il server di sviluppo
+# Start development server
 npm run dev
 ```
-Apri poi il browser all'indirizzo [http://localhost:3000](http://localhost:3000).
+Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## 📁 Struttura del Progetto
+## 📁 Project Structure
 
 ```text
 IE1/
 ├── src/
 │   ├── components/
-│   │   ├── teambuilder/       # Componenti Team Builder (campo, slot, hover card, panchina)
-│   │   ├── DualSearchSelector # Selettori di ricerca e bottoni scontro
-│   │   ├── ElectricShockEffect# VFX animazione fulmini su canvas
-│   │   ├── PlayerCard         # Scheda giocatore completa
-│   │   ├── RadarComparisonChart # Radar chart comparativo a 7 assi
+│   │   ├── teambuilder/       # Pitch, player slots, hover card, QR modals, settings
+│   │   ├── DualSearchSelector # Search dropdowns and duel buttons
+│   │   ├── ElectricShockEffect# Canvas lightning VFX overlay
+│   │   ├── PlayerCard         # Detailed player summary card
+│   │   ├── RadarComparisonChart # 7-axis head-to-head comparison radar
 │   │   └── ...
-│   ├── constants/             # Elementi, ruoli, tecniche e squadre
-│   ├── data/                  # Database JSON dei 1013 giocatori di IE1
-│   └── utils/                 # Utility per statistiche, sprite, storage e colori
-├── public/                    # Risorse statiche e sprite WebP
-├── avvia_server.bat           # Launcher rapido Windows
-├── avvia_server.sh            # Launcher bash Linux/macOS
+│   ├── constants/             # Elements, formations, positions, moves
+│   ├── data/                  # Full IE1 1,013-player database (players.json)
+│   └── utils/                 # QR encoding, stat normalization, sprite resolvers
+├── public/                    # Static assets and 230+ character sprites
+├── avvia_server.bat           # Windows 1-click launcher
+├── avvia_server.sh            # Linux/macOS bash launcher
 └── package.json
 ```
 
 ---
 
-## 📜 Licenza & Crediti
-I diritti del franchise e dei personaggi appartengono a **LEVEL-5**. Questo progetto è sviluppato per scopo amatoriale, di studio e consultazione.
+## 📜 License & Credits
+All Inazuma Eleven characters, artwork, and trademarks belong to **LEVEL-5**. This project is an open-source fan creation developed for educational, analytical, and archival purposes.

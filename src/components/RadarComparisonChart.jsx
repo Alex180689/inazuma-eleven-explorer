@@ -41,8 +41,8 @@ export default function RadarComparisonChart({ player1, player2, p1Theme, p2Them
   const statsList = chartMode === 'all'
     ? [
         ...STAT_KEYS,
-        { key: 'fp', labelIt: 'FP', labelEn: 'FP', max: 220 },
-        { key: 'tp', labelIt: 'TP', labelEn: 'TP', max: 200 },
+        { key: 'fp', labelIt: 'PE', labelEn: 'PE', max: 220 },
+        { key: 'tp', labelIt: 'PT', labelEn: 'PT', max: 200 },
         { key: 'freedom', labelIt: 'Libertà', labelEn: 'Freedom', max: 70 },
       ]
     : STAT_KEYS;
@@ -76,21 +76,21 @@ export default function RadarComparisonChart({ player1, player2, p1Theme, p2Them
       .join(' ');
   };
 
-  // Generate Player 1 Polygon Points
+  // Generate Player 1 Polygon Points (scaled to 100 max)
   const p1Points = statsList
     .map((stat, i) => {
       const val = player1.stats[stat.key] || 0;
-      const fraction = Math.min(1, Math.max(0.12, val / (stat.max || 85)));
+      const fraction = Math.min(1, Math.max(0.12, val / (stat.max || 100)));
       const { x, y } = getCoordinates(i, fraction);
       return `${x},${y}`;
     })
     .join(' ');
 
-  // Generate Player 2 Polygon Points
+  // Generate Player 2 Polygon Points (scaled to 100 max)
   const p2Points = statsList
     .map((stat, i) => {
       const val = player2.stats[stat.key] || 0;
-      const fraction = Math.min(1, Math.max(0.12, val / (stat.max || 85)));
+      const fraction = Math.min(1, Math.max(0.12, val / (stat.max || 100)));
       const { x, y } = getCoordinates(i, fraction);
       return `${x},${y}`;
     })
@@ -133,7 +133,7 @@ export default function RadarComparisonChart({ player1, player2, p1Theme, p2Them
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            Completo (+FP/TP/Libertà)
+            Completo (+PE/PT/Libertà)
           </button>
         </div>
       </div>
@@ -336,7 +336,7 @@ export default function RadarComparisonChart({ player1, player2, p1Theme, p2Them
           <div className="absolute top-2 inset-x-4 glass-panel p-2.5 rounded-xl border border-amber-500/40 shadow-2xl flex items-center justify-between text-xs z-20">
             <div className="flex items-center gap-2">
               <span className="font-bold text-amber-300">{activeStatObj.labelIt}</span>
-              <span className="text-slate-400 font-mono text-[10px]">Max: {activeStatObj.max || 85}</span>
+              <span className="text-slate-400 font-mono text-[10px]">Max: {activeStatObj.max || 100}</span>
             </div>
 
             <div className="flex items-center gap-3 font-mono font-bold">

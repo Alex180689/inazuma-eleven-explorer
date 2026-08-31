@@ -566,11 +566,11 @@ export default function TeamBuilder({
                   </div>
                 </div>
 
-                {/* TP Totali */}
+                {/* PT Totali */}
                 <div className="px-3 py-1.5 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center gap-2">
                   <Zap size={14} className="text-cyan-400" />
                   <div className="leading-none">
-                    <span className="text-[9px] text-slate-400 uppercase font-mono block">TP Totali</span>
+                    <span className="text-[9px] text-slate-400 uppercase font-mono block">PT Totali</span>
                     <span className="text-sm font-black font-mono text-cyan-300">
                       {teamMetrics.totalTP > 0 ? teamMetrics.totalTP : '--'}
                     </span>

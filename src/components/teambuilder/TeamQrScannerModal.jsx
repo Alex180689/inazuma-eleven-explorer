@@ -40,7 +40,6 @@ export default function TeamQrScannerModal({
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const fileInputRef = useRef(null);
-  const animFrameRef = useRef(null);
   const streamRef = useRef(null);
 
   const [devices, setDevices] = useState([]);
@@ -52,10 +51,6 @@ export default function TeamQrScannerModal({
 
   // Stop video stream
   const stopStream = useCallback(() => {
-    if (animFrameRef.current) {
-      cancelAnimationFrame(animFrameRef.current);
-      animFrameRef.current = null;
-    }
     if (streamRef.current) {
       streamRef.current.getTracks().forEach((track) => {
         try {
@@ -68,29 +63,6 @@ export default function TeamQrScannerModal({
       videoRef.current.srcObject = null;
     }
   }, []);
-
-  // Handle successful detection
-  const handleSuccess = useCallback(
-    (detectedText) => {
-      const result = decodeQrStringToTeam(detectedText, allPlayers);
-      if (result.success && result.team) {
-        setIsScanning(false);
-        setScannedSuccess(true);
-        playScanSuccessChime();
-
-        setTimeout(() => {
-          stopStream();
-          onTeamScanned(result.team);
-          onClose();
-        }, 400);
-        return true;
-      } else {
-        setErrorMsg(result.error || 'Dati QR non validi.');
-        return false;
-      }
-    },
-    [allPlayers, onTeamScanned, onClose, stopStream]
-  );
 
   // Enumerate camera devices
   const loadDevices = useCallback(async () => {
@@ -111,7 +83,7 @@ export default function TeamQrScannerModal({
     }
   }, [selectedDeviceId]);
 
-  // Start webcam stream with HD preferences for crisp QR resolution
+  // Start webcam stream
   const startCamera = useCallback(async (deviceId) => {
     stopStream();
     setErrorMsg(null);
@@ -122,8 +94,8 @@ export default function TeamQrScannerModal({
         video: {
           deviceId: deviceId ? { exact: deviceId } : undefined,
           facingMode: deviceId ? undefined : { ideal: 'environment' },
-          width: { ideal: 1920, min: 1280 },
-          height: { ideal: 1080, min: 720 },
+          width: { ideal: 1280, min: 640 },
+          height: { ideal: 720, min: 480 },
         },
         audio: false,
       };
@@ -138,7 +110,6 @@ export default function TeamQrScannerModal({
         setIsScanning(true);
       }
 
-      // Re-enumerate devices after permission granted
       loadDevices();
     } catch (err) {
       console.error('Errore accesso webcam:', err);
@@ -169,7 +140,7 @@ export default function TeamQrScannerModal({
     };
   }, [isOpen, selectedDeviceId, startCamera, stopStream]);
 
-  // Process file upload directly (reading pixels into jsQR)
+  // Process file upload directly
   const handleImageFileUpload = (file) => {
     if (!file) return;
     setErrorMsg(null);
@@ -190,9 +161,22 @@ export default function TeamQrScannerModal({
         });
 
         if (code && code.data) {
-          handleSuccess(code.data);
+          const res = decodeQrStringToTeam(code.data, allPlayers);
+          if (res.success && res.team) {
+            setIsScanning(false);
+            setScannedSuccess(true);
+            playScanSuccessChime();
+
+            setTimeout(() => {
+              stopStream();
+              onTeamScanned(res.team);
+              onClose();
+            }, 500);
+          } else {
+            setErrorMsg(res.error || 'Dati QR non validi.');
+          }
         } else {
-          setErrorMsg('Nessun QR code leggibile rilevato nell\'immagine selezionata. Assicurati che il codice sia a fuoco e ben illuminato.');
+          setErrorMsg('Nessun QR code rilevato nell\'immagine selezionata.');
         }
       };
       img.src = e.target?.result;
@@ -218,73 +202,100 @@ export default function TeamQrScannerModal({
     }
   };
 
-  // Continuous Camera QR Scanning Loop
+  // Periodic Snapshot Scanner: takes a snapshot every ~400ms, decodes target box crop
   useEffect(() => {
     if (!isScanning || !isOpen) return;
 
-    let frameCount = 0;
+    let isBusy = false;
 
-    const scanFrame = () => {
-      if (!isScanning) return;
+    const processSnapshot = () => {
+      if (!isScanning || isBusy) return;
       const video = videoRef.current;
       const canvas = canvasRef.current;
 
       if (!video || !canvas || video.readyState < 2 || video.videoWidth === 0) {
-        animFrameRef.current = requestAnimationFrame(scanFrame);
         return;
       }
 
-      const width = video.videoWidth;
-      const height = video.videoHeight;
-      if (canvas.width !== width || canvas.height !== height) {
-        canvas.width = width;
-        canvas.height = height;
-      }
+      isBusy = true;
 
-      const ctx = canvas.getContext('2d', { willReadFrequently: true });
-      if (ctx) {
-        ctx.drawImage(video, 0, 0, width, height);
-        const imageData = ctx.getImageData(0, 0, width, height);
+      try {
+        const vW = video.videoWidth;
+        const vH = video.videoHeight;
 
-        // 1. Scan full frame with jsQR
-        let code = jsQR(imageData.data, width, height, {
-          inversionAttempts: 'dontInvert',
-        });
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        if (!ctx) return;
 
-        // Alternate inversion on frames to catch dark-mode QR codes efficiently
-        if (!code && frameCount % 3 === 0) {
-          code = jsQR(imageData.data, width, height, {
-            inversionAttempts: 'attemptBoth',
-          });
-        }
+        let detectedTeam = null;
 
-        // 2. If not found on full frame, try focused center crop (where the user holds the target)
-        if (!code && width >= 400 && height >= 400) {
-          const cropSize = Math.round(Math.min(width, height) * 0.7);
-          const cropX = Math.round((width - cropSize) / 2);
-          const cropY = Math.round((height - cropSize) / 2);
-          const cropData = ctx.getImageData(cropX, cropY, cropSize, cropSize);
-          code = jsQR(cropData.data, cropSize, cropSize, {
-            inversionAttempts: 'dontInvert',
-          });
-        }
+        // Pass 1: FOCUSED CENTER CROP (matching the central square target box)
+        // Scaled to 480x480 for instant, pin-sharp jsQR detection
+        const boxSize = Math.round(Math.min(vW, vH) * 0.65);
+        const cropX = Math.round((vW - boxSize) / 2);
+        const cropY = Math.round((vH - boxSize) / 2);
+
+        canvas.width = 480;
+        canvas.height = 480;
+        ctx.drawImage(video, cropX, cropY, boxSize, boxSize, 0, 0, 480, 480);
+        let imgData = ctx.getImageData(0, 0, 480, 480);
+
+        let code = jsQR(imgData.data, 480, 480, { inversionAttempts: 'attemptBoth' });
 
         if (code && code.data) {
-          const success = handleSuccess(code.data);
-          if (success) return;
+          const res = decodeQrStringToTeam(code.data, allPlayers);
+          if (res.success && res.team) {
+            detectedTeam = res.team;
+          }
         }
-      }
 
-      frameCount++;
-      animFrameRef.current = requestAnimationFrame(scanFrame);
+        // Pass 2: Fallback down-scaled full frame (if QR was held outside center)
+        if (!detectedTeam) {
+          const overviewW = 640;
+          const overviewH = Math.round((vH / vW) * 640);
+          canvas.width = overviewW;
+          canvas.height = overviewH;
+          ctx.drawImage(video, 0, 0, overviewW, overviewH);
+          imgData = ctx.getImageData(0, 0, overviewW, overviewH);
+
+          code = jsQR(imgData.data, overviewW, overviewH, { inversionAttempts: 'attemptBoth' });
+          if (code && code.data) {
+            const res = decodeQrStringToTeam(code.data, allPlayers);
+            if (res.success && res.team) {
+              detectedTeam = res.team;
+            }
+          }
+        }
+
+        // Valid Team Recognized!
+        if (detectedTeam) {
+          setIsScanning(false);
+          setScannedSuccess(true);
+          playScanSuccessChime();
+
+          // Show checkmark for 500ms as requested, then apply team and close
+          setTimeout(() => {
+            stopStream();
+            onTeamScanned(detectedTeam);
+            onClose();
+          }, 500);
+          return;
+        }
+
+        // If not recognized: continues silently observing on next tick
+      } catch (err) {
+        console.warn('Frame scan warning:', err);
+      } finally {
+        isBusy = false;
+      }
     };
 
-    animFrameRef.current = requestAnimationFrame(scanFrame);
+    // Run snapshot every 400ms (half-second cadence)
+    const intervalId = setInterval(processSnapshot, 400);
 
     return () => {
-      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+      clearInterval(intervalId);
     };
-  }, [isScanning, isOpen, handleSuccess]);
+  }, [isScanning, isOpen, allPlayers, onTeamScanned, onClose, stopStream]);
 
   if (!isOpen) return null;
 
@@ -313,7 +324,7 @@ export default function TeamQrScannerModal({
               Scansiona QR Squadra
             </h3>
             <p className="text-xs text-slate-400 font-mono">
-              Inquadra con la webcam o carica direttamente l'immagine
+              Inquadra al centro o carica direttamente l'immagine
             </p>
           </div>
         </div>
@@ -354,10 +365,11 @@ export default function TeamQrScannerModal({
             ref={videoRef}
             className="w-full h-full object-cover"
             playsInline
+            autoPlay
             muted
           />
 
-          {/* Offscreen Canvas for Frame Extraction */}
+          {/* Offscreen Canvas for Snapshot Extraction */}
           <canvas ref={canvasRef} className="hidden" />
 
           {/* Drag & Drop Overlay */}
@@ -391,11 +403,13 @@ export default function TeamQrScannerModal({
             </div>
           )}
 
-          {/* Success Flash Overlay */}
+          {/* Success Checkmark Overlay - 500ms presentation */}
           {scannedSuccess && (
-            <div className="absolute inset-0 bg-emerald-500/30 backdrop-blur-xs flex flex-col items-center justify-center text-emerald-300 font-bold gap-2 animate-pulse z-30">
-              <CheckCircle size={54} className="text-emerald-400 drop-shadow-lg" />
-              <span className="text-sm font-mono tracking-wider">SQUADRA CARICATA!</span>
+            <div className="absolute inset-0 bg-emerald-500/40 backdrop-blur-xs flex flex-col items-center justify-center text-emerald-200 font-bold gap-3 z-30 animate-fadeIn">
+              <CheckCircle size={64} className="text-emerald-400 drop-shadow-[0_0_20px_#10b981]" />
+              <span className="text-base font-mono tracking-widest uppercase text-white font-black drop-shadow">
+                SQUADRA RICONOSCIUTA!
+              </span>
             </div>
           )}
 
@@ -445,7 +459,7 @@ export default function TeamQrScannerModal({
         <div className="mt-2.5 text-center">
           <p className="text-[11px] text-slate-400 flex items-center justify-center gap-1">
             <Zap size={12} className="text-amber-400 shrink-0" />
-            <span>Supporta HD 1080p, scansione a due passate e contrasto invertito</span>
+            <span>Scansione a intervalli regolari (400ms) con zoom sul mirino centrale</span>
           </p>
         </div>
       </div>
