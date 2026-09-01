@@ -400,36 +400,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Quick Tips / Team Color Indicators Footer Banner */}
-        <div className="glass-panel rounded-xl p-3 px-4 border border-slate-800 text-xs text-slate-400 flex flex-wrap items-center justify-between gap-3">
-          {/* Left: Team theme pills */}
-          <div className="flex items-center gap-3 flex-wrap">
-            <span className="flex items-center gap-1.5 text-slate-300 font-medium">
-              <span className="w-2.5 h-2.5 rounded-full" style={{ background: p1TeamTheme.primary }} />
-              <span>{player1?.team} ({p1TeamTheme.name})</span>
-            </span>
-            <span className="text-slate-600">vs</span>
-            <span className="flex items-center gap-1.5 text-slate-300 font-medium">
-              <span className="w-2.5 h-2.5 rounded-full" style={{ background: p2TeamTheme.primary }} />
-              <span>{player2?.team} ({p2TeamTheme.name})</span>
-            </span>
-          </div>
-
-          {/* Middle / Right: Keyboard Shortcuts & Team Builder Button */}
-          <div className="flex items-center gap-3 flex-wrap">
-            <div className="hidden sm:flex items-center gap-3">
-              <span className="flex items-center gap-1">
-                <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">Spazio</kbd> Scambia
-              </span>
-              <span className="flex items-center gap-1">
-                <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">R</kbd> Casuale
-              </span>
-              <span className="flex items-center gap-1">
-                <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">1</kbd> o <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">2</kbd> Ricerca
-              </span>
-            </div>
-          </div>
-        </div>
 
         {/* Team Builder Section (Always Open by Default) */}
         <div id="team-builder-section">
