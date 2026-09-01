@@ -82,7 +82,7 @@ Quick Draw;BG;
 Clone Faker;BG;
 Ghost Pull;BG;
 Fake Ball;BG;
-Attack Scan;BG;
+Defence Scan;BG;
 Spider Web;BG;
 Shadow Stitch;BG;
 Harvest;BG;

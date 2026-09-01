@@ -51,8 +51,7 @@ export default defineConfig({
     },
     {
       name: 'serve-videos',
-      configureServer(server) {
-        // Sync videos on server start
+      buildStart() {
         const syncVideos = () => {
           try {
             const videosDir = path.resolve(__dirname, 'videos');
@@ -69,6 +68,43 @@ export default defineConfig({
                 fs.copyFileSync(src, dst);
               }
             }
+            // Remove deleted files
+            const publicFiles = fs.readdirSync(publicVideosDir);
+            for (const pf of publicFiles) {
+              if (!files.includes(pf)) {
+                try { fs.unlinkSync(path.resolve(publicVideosDir, pf)); } catch (e) {}
+              }
+            }
+            fs.writeFileSync(registryFile, JSON.stringify(files, null, 2));
+          } catch (e) {
+            console.error('Error syncing videos:', e);
+          }
+        };
+        syncVideos();
+      },
+      configureServer(server) {
+        const syncVideos = () => {
+          try {
+            const videosDir = path.resolve(__dirname, 'videos');
+            const publicVideosDir = path.resolve(__dirname, 'public', 'videos');
+            const registryFile = path.resolve(__dirname, 'src', 'data', 'videoRegistry.json');
+            if (!fs.existsSync(videosDir)) return;
+            if (!fs.existsSync(publicVideosDir)) fs.mkdirSync(publicVideosDir, { recursive: true });
+
+            const files = fs.readdirSync(videosDir).filter(f => /\.(mp4|webm|gif)$/i.test(f));
+            for (const f of files) {
+              const src = path.resolve(videosDir, f);
+              const dst = path.resolve(publicVideosDir, f);
+              if (!fs.existsSync(dst) || fs.statSync(src).mtimeMs > fs.statSync(dst).mtimeMs) {
+                fs.copyFileSync(src, dst);
+              }
+            }
+            const publicFiles = fs.readdirSync(publicVideosDir);
+            for (const pf of publicFiles) {
+              if (!files.includes(pf)) {
+                try { fs.unlinkSync(path.resolve(publicVideosDir, pf)); } catch (e) {}
+              }
+            }
             fs.writeFileSync(registryFile, JSON.stringify(files, null, 2));
           } catch (e) {
             console.error('Error syncing videos:', e);
@@ -76,6 +112,15 @@ export default defineConfig({
         };
 
         syncVideos();
+
+        // Automatically watch the videos directory for any new, modified or removed recordings
+        const videosDir = path.resolve(__dirname, 'videos');
+        server.watcher.add(videosDir);
+        server.watcher.on('all', (event, file) => {
+          if (file && file.replace(/\\/g, '/').includes('/videos/')) {
+            syncVideos();
+          }
+        });
 
         server.middlewares.use((req, res, next) => {
           if (req.url && req.url.startsWith('/videos/')) {
