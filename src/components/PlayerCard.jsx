@@ -179,6 +179,7 @@ export default function PlayerCard({
                 moveName={player.moves[slot]}
                 slotIndex={slot}
                 playerElement={player.element}
+                playerName={player.name}
                 showStabEffect={showStabEffect}
               />
             ))}

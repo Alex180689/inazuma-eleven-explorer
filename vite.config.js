@@ -48,6 +48,76 @@ export default defineConfig({
           next();
         });
       }
+    },
+    {
+      name: 'serve-videos',
+      configureServer(server) {
+        // Sync videos on server start
+        const syncVideos = () => {
+          try {
+            const videosDir = path.resolve(__dirname, 'videos');
+            const publicVideosDir = path.resolve(__dirname, 'public', 'videos');
+            const registryFile = path.resolve(__dirname, 'src', 'data', 'videoRegistry.json');
+            if (!fs.existsSync(videosDir)) return;
+            if (!fs.existsSync(publicVideosDir)) fs.mkdirSync(publicVideosDir, { recursive: true });
+
+            const files = fs.readdirSync(videosDir).filter(f => /\.(mp4|webm|gif)$/i.test(f));
+            for (const f of files) {
+              const src = path.resolve(videosDir, f);
+              const dst = path.resolve(publicVideosDir, f);
+              if (!fs.existsSync(dst) || fs.statSync(src).mtimeMs > fs.statSync(dst).mtimeMs) {
+                fs.copyFileSync(src, dst);
+              }
+            }
+            fs.writeFileSync(registryFile, JSON.stringify(files, null, 2));
+          } catch (e) {
+            console.error('Error syncing videos:', e);
+          }
+        };
+
+        syncVideos();
+
+        server.middlewares.use((req, res, next) => {
+          if (req.url && req.url.startsWith('/videos/')) {
+            const rawName = req.url.replace('/videos/', '').split('?')[0];
+            const fileName = decodeURIComponent(rawName);
+            const filePath = path.resolve(__dirname, 'videos', fileName);
+
+            if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+              const ext = path.extname(filePath).toLowerCase();
+              const mimeTypes = {
+                '.mp4': 'video/mp4',
+                '.webm': 'video/webm',
+                '.gif': 'image/gif',
+              };
+              const stat = fs.statSync(filePath);
+              const range = req.headers.range;
+
+              if (range) {
+                const parts = range.replace(/bytes=/, '').split('-');
+                const start = parseInt(parts[0], 10);
+                const end = parts[1] ? parseInt(parts[1], 10) : stat.size - 1;
+                const chunksize = end - start + 1;
+                const file = fs.createReadStream(filePath, { start, end });
+                res.writeHead(206, {
+                  'Content-Range': `bytes ${start}-${end}/${stat.size}`,
+                  'Accept-Ranges': 'bytes',
+                  'Content-Length': chunksize,
+                  'Content-Type': mimeTypes[ext] || 'video/mp4',
+                });
+                return file.pipe(res);
+              } else {
+                res.writeHead(200, {
+                  'Content-Length': stat.size,
+                  'Content-Type': mimeTypes[ext] || 'video/mp4',
+                });
+                return fs.createReadStream(filePath).pipe(res);
+              }
+            }
+          }
+          next();
+        });
+      }
     }
   ],
   server: {
