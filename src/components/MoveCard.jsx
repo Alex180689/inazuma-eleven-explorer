@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Zap, Sparkles, Flame, Wind, Mountain, Trees, Film } from 'lucide-react';
+import { Zap, Sparkles, Flame, Wind, Mountain, Trees } from 'lucide-react';
 import { getMoveInfo, checkMoveStab } from '../utils/hissatsu';
 import { findMoveVideo } from '../utils/videoUtils';
 import MoveVideoHoverCard from './MoveVideoHoverCard';
@@ -72,13 +72,20 @@ export default function MoveCard({
         {/* Left: Slot index + Move Name */}
         <div className="flex items-center gap-2.5 min-w-0 flex-1">
           <span
-            className={`w-5 h-5 rounded-md flex items-center justify-center font-mono text-[10px] font-extrabold shrink-0 transition-colors ${
+            className={`relative w-5 h-5 rounded-md flex items-center justify-center font-mono text-[10px] font-extrabold shrink-0 transition-colors ${
               applyStabVisual
                 ? 'bg-amber-400/20 text-amber-300 border border-amber-400/40'
                 : 'bg-slate-800 group-hover:bg-slate-700 text-slate-300'
             }`}
           >
             {slotIndex + 1}
+
+            {/* Pallino rosso nell'angolo in alto a destra nel caso in cui la mossa NON abbia un video */}
+            {!video && (
+              <span
+                className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-red-500 ring-1 ring-slate-900 shadow-sm pointer-events-none"
+              />
+            )}
           </span>
 
           <span
@@ -92,17 +99,8 @@ export default function MoveCard({
           </span>
         </div>
 
-        {/* Right: Badges (Video + STAB + Type + Element Icon) */}
+        {/* Right: Badges (STAB + Type + Element Icon) */}
         <div className="flex items-center gap-1.5 shrink-0 ml-2">
-          {/* Video Clip Available Indicator */}
-          {video && (
-            <span
-              className="w-5 h-5 rounded-md flex items-center justify-center bg-amber-500/20 border border-amber-500/40 text-amber-300 transition-all shrink-0 shadow-sm"
-            >
-              <Film size={11} className="animate-pulse" />
-            </span>
-          )}
-
           {/* STAB Pill */}
           {applyStabVisual && (
             <span className="px-1.5 py-0.5 rounded text-[9px] font-black font-mono bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-950 shadow-sm uppercase tracking-wider flex items-center gap-0.5 animate-pulse">

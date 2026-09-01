@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useDeferredValue } from 'react';
 import { Search, X, ArrowUpDown, Check, Trophy, Sparkles, Zap, RotateCcw } from 'lucide-react';
 import { POSITION_LIST, POSITIONS } from '../constants/positions';
 import { ELEMENT_LIST, ELEMENTS } from '../constants/elements';
@@ -20,6 +20,7 @@ export default function PlayerSearchModal({
   excludedPlayerNames,
 }) {
   const [searchTerm, setSearchTerm] = useState('');
+  const deferredSearchTerm = useDeferredValue(searchTerm);
   const [selectedRole, setSelectedRole] = useState('ALL');
   const [selectedElement, setSelectedElement] = useState('ALL');
   const [selectedTeam, setSelectedTeam] = useState('ALL');
@@ -50,7 +51,7 @@ export default function PlayerSearchModal({
       try {
         localStorage.setItem(RECRUITED_STORAGE_KEY, JSON.stringify(next));
       } catch (e) {
-        console.error('Failed to save recruited players to localStorage', e);
+        console.error('Error saving recruited players to localStorage:', e);
       }
       return next;
     });
@@ -74,8 +75,9 @@ export default function PlayerSearchModal({
   useEffect(() => {
     setDisplayCount(60);
     if (scrollContainerRef.current) scrollContainerRef.current.scrollTop = 0;
-  }, [searchTerm, selectedRole, selectedElement, selectedTeam, selectedRecruited, sortBy, sortOrder]);
+  }, [deferredSearchTerm, selectedRole, selectedElement, selectedTeam, selectedRecruited, sortBy, sortOrder]);
 
+  // Infinite scroll load more handler
   const handleScroll = (e) => {
     const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
     if (scrollHeight - scrollTop - clientHeight < 300) {
@@ -94,47 +96,26 @@ export default function PlayerSearchModal({
     }
   }, [isOpen, onClose]);
 
-  // Filter and Sort players with grouping by move
+  // Filter and Sort players with grouping by move - highly optimized for instantaneous 60fps search
   const { directPlayers, moveGroups, totalCount, isGrouped } = useMemo(() => {
-    const term = searchTerm.trim().toLowerCase();
+    const term = deferredSearchTerm.trim().toLowerCase();
 
-    // 1. Filter base players by role, element, team, recruited, excluded
-    const baseFiltered = allPlayers.filter((p) => {
-      // Role filter
-      if (selectedRole !== 'ALL' && p.position !== selectedRole) {
-        return false;
-      }
+    // 1. Single pass base filtering
+    const baseFiltered = [];
+    for (let i = 0; i < allPlayers.length; i++) {
+      const p = allPlayers[i];
+      if (selectedRole !== 'ALL' && p.position !== selectedRole) continue;
+      if (selectedElement !== 'ALL' && p.element !== selectedElement) continue;
+      if (selectedTeam !== 'ALL' && p.team !== selectedTeam) continue;
+      if (selectedRecruited === 'RECRUITED' && !recruitedPlayers[p.name]) continue;
+      if (selectedRecruited === 'UNRECRUITED' && recruitedPlayers[p.name]) continue;
+      if (excludedPlayerNames && excludedPlayerNames.has(p.name)) continue;
 
-      // Element filter
-      if (selectedElement !== 'ALL' && p.element !== selectedElement) {
-        return false;
-      }
-
-      // Team filter
-      if (selectedTeam !== 'ALL' && p.team !== selectedTeam) {
-        return false;
-      }
-
-      // Recruited status filter
-      if (selectedRecruited === 'RECRUITED' && !recruitedPlayers[p.name]) {
-        return false;
-      }
-      if (selectedRecruited === 'UNRECRUITED' && recruitedPlayers[p.name]) {
-        return false;
-      }
-
-      // Exclude players already placed in other slots of the team
-      if (excludedPlayerNames && excludedPlayerNames.has(p.name)) {
-        return false;
-      }
-
-      return true;
-    }).map((p) => ({
-      ...p,
-      ovr: isWeighted
-        ? (p.ovrWeighted ?? calculateOverall(p, true))
-        : (p.ovrPure ?? calculateOverall(p, false)),
-    }));
+      baseFiltered.push({
+        ...p,
+        ovr: isWeighted ? (p.ovrWeighted ?? p.ovr ?? 50) : (p.ovrPure ?? p.ovr ?? 50),
+      });
+    }
 
     const sortFn = (a, b) => {
       let valA, valB;
@@ -144,8 +125,8 @@ export default function PlayerSearchModal({
             ? a.name.localeCompare(b.name)
             : b.name.localeCompare(a.name);
         case 'total':
-          valA = a.totalStats ?? calculateTotalStats(a);
-          valB = b.totalStats ?? calculateTotalStats(b);
+          valA = a.totalStats ?? 0;
+          valB = b.totalStats ?? 0;
           break;
         case 'kick':
           valA = a.stats.kick || 0;
@@ -194,19 +175,15 @@ export default function PlayerSearchModal({
           break;
       }
 
-      if (sortOrder === 'asc') {
-        return valA - valB;
-      } else {
-        return valB - valA;
-      }
+      return sortOrder === 'asc' ? valA - valB : valB - valA;
     };
 
     if (!term) {
-      const sorted = baseFiltered.sort(sortFn);
+      baseFiltered.sort(sortFn);
       return {
-        directPlayers: sorted,
+        directPlayers: baseFiltered,
         moveGroups: [],
-        totalCount: sorted.length,
+        totalCount: baseFiltered.length,
         isGrouped: false,
       };
     }
@@ -216,24 +193,36 @@ export default function PlayerSearchModal({
     const moveGroupsMap = new Map(); // moveName => player[]
     const seenDirectNames = new Set();
 
-    baseFiltered.forEach((p) => {
+    for (let i = 0; i < baseFiltered.length; i++) {
+      const p = baseFiltered[i];
       const matchName = p.name.toLowerCase().includes(term);
       const matchTeam = p.team.toLowerCase().includes(term);
       if (matchName || matchTeam) {
         directMatches.push(p);
         seenDirectNames.add(p.name);
       }
-    });
+    }
 
-    baseFiltered.forEach((p) => {
-      if (!seenDirectNames.has(p.name)) {
-        const matchingMoves = p.moves?.filter((m) => m.toLowerCase().includes(term)) || [];
-        matchingMoves.forEach((m) => {
-          if (!moveGroupsMap.has(m)) moveGroupsMap.set(m, []);
-          moveGroupsMap.get(m).push(p);
-        });
+    // Only search move names if term has at least 2 characters!
+    // Single character queries (like "t" or "a") match 90+ moves and 1000+ players, causing DOM freeze.
+    if (term.length >= 2) {
+      for (let i = 0; i < baseFiltered.length; i++) {
+        const p = baseFiltered[i];
+        if (!seenDirectNames.has(p.name) && p.moves) {
+          for (let j = 0; j < p.moves.length; j++) {
+            const m = p.moves[j];
+            if (m && m.toLowerCase().includes(term)) {
+              let list = moveGroupsMap.get(m);
+              if (!list) {
+                list = [];
+                moveGroupsMap.set(m, list);
+              }
+              list.push(p);
+            }
+          }
+        }
       }
-    });
+    }
 
     // Sort direct matches with name prefix priority if sortBy === 'ovr' or 'name'
     directMatches.sort((a, b) => {
@@ -261,7 +250,7 @@ export default function PlayerSearchModal({
       totalCount: directMatches.length + movePlayersTotal,
       isGrouped: moveGroupsList.length > 0,
     };
-  }, [allPlayers, searchTerm, selectedRole, selectedElement, selectedTeam, selectedRecruited, excludedPlayerNames, isWeighted, sortBy, sortOrder, recruitedPlayers]);
+  }, [allPlayers, deferredSearchTerm, selectedRole, selectedElement, selectedTeam, selectedRecruited, excludedPlayerNames, isWeighted, sortBy, sortOrder, recruitedPlayers]);
 
   // Helper to render individual player cards cleanly (without the inner move label)
   const renderPlayerCard = (player) => {
@@ -617,8 +606,18 @@ export default function PlayerSearchModal({
                           </div>
                         )}
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
-                          {directPlayers.map((player) => renderPlayerCard(player))}
+                          {directPlayers.slice(0, displayCount).map((player) => renderPlayerCard(player))}
                         </div>
+                        {directPlayers.length > displayCount && (
+                          <div className="py-2.5 text-center">
+                            <button
+                              onClick={() => setDisplayCount((prev) => Math.min(prev + 60, directPlayers.length))}
+                              className="px-4 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 active:bg-slate-600 text-amber-400 font-bold text-xs border border-slate-700 transition-all shadow-md"
+                            >
+                              Carica altri ({directPlayers.length - displayCount} rimanenti)
+                            </button>
+                          </div>
+                        )}
                       </div>
                     )}
 
