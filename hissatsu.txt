@@ -6,7 +6,7 @@ Spiral Shot;SW;Colpo a Spirale
 Condor Dive;SW;Colpo del Condor
 Comet Shot;SW;Colpo della Cometa
 Cross Drive;SW;Tiro Incrociato
-Corodra Shoot;SW;
+Corodra Shoot;SW;Tiro CoroDragon
 Back Tornado;SW;Tornado Inverso
 Hawk Shot;SW;Tiro del Rapace
 Inazuma Drop;SW;Trampolino Inazuma
@@ -15,61 +15,61 @@ Inazuma 1gou;SW;Doppio Trampolino Inazuma
 Divine Arrows;SW;Freccia Saettante
 God Knows;SW;Colpo Supremo
 Rolling Kick;SG;Rovesciata Volante
-Wrath Shot;SG;;24
+Wrath Shot;SG;Tiro dai Cento Calci;24
 Hyakuretsu Shot;SG;Tiro dai Cento Calci
 Phantom Shot;SG;Tiro Fantasma
 Freeze Shot;SG;Tiro Congelante
 Dragon Crash;SG;Dragon Crash
-Run Ball Run;SG;
-Kung Fu Header;SG;
-Dark Tornado;SG;
-Clone Shot;SG;
-emperor Penguin No.2;SG;
-Death Zone;SG;;59
-Grenade Shot;SF;
-Meteor Attack;SF;
-Patriot Shot;SF;
-Fire Tornado;SF;
-Dynamite Shot;SF;
-Shine Drive;SF;
-Utter Gutsiness Bat;SF;
-Twin Boost;SF;
-Dragon Tornado;SF;
-Fire Rooster;SF;
-Triangle Z;SF;
-The Phoenix;SF;
-The Galaxy;SF;
-Snake Shot;SM;
-Tarzan Kick;SM;
-Teleport Shot;SM;
-Dirt Ball;SM;
-Reflect Buster;SM;
+Run Ball Run;SG;Pallone Rotante
+Kung Fu Header;SG;Colpo del Kung Fu
+Dark Tornado;SG;Dark Tornado
+Clone Shot;SG;Colpo Ripetuto
+Emperor Penguin No.2;SG;Pinguino Imperatore No.2
+Death Zone;SG;Zona Micidiale;59
+Grenade Shot;SF;Tiro Fulminante
+Meteor Attack;SF;Attacco Meteorite
+Patriot Shot;SF;Saetta Spiovente
+Fire Tornado;SF;Tornado di Fuoco
+Dynamite Shot;SF;Tiro Dinamite
+Shine Drive;SF;Lampo Abbagliante
+Utter Gutsiness Bat;SF;Colpo del Battitore
+Twin Boost;SF;Calcio Gemello
+Dragon Tornado;SF;Dragon Tornado
+Fire Rooster;SF;Ali di Fuoco
+Triangle Z;SF;Triangolo Z
+The Phoenix;SF;Volo della Fenice
+The Galaxy;SF;La Galassia
+Snake Shot;SM;Tiro del Serpente
+Tarzan Kick;SM;Calcio di Tarzan
+Teleport Shot;SM;Tiro Dimensionale
+Dirt Ball;SM;Tiro Ninja a Valanga
+Reflect Buster;SM;Meteora Rimbalzante
 
 Dribble
-Rodeo Clown;DW;
-Flurry Dash;DW;
-Whirlwind Twister;DW;
-Zigzag Spark;DW;
-Poison Fog;DW;
-Whirlwind Cut;DW;
-Dash Storm;DW;
-Heaven's Time;DW;
-Moonsault;DG;
-Black Magic;DG;
-Magic;DG;
-Attack Scan;DG;
-Afterimage;DG;
-Illusion Ball;DG;
-Bunshin Feint;DG;
-Breakthrough;DF;
-Heat Tackle;DF;
-Boost Glider;DF;
-Dash Accelerator;DM;
-Bewildered;DM;
-Super Armadillo;DM;
-Monkey Turn;DM;
-Rolling Hell;DM;
-Mole Fake;DM;
+Rodeo Clown;DW;Clown Equilibrista
+Flurry Dash;DW;Scatto Repentino
+Whirlwind Twister;DW;Vortice Implacabile
+Zigzag Spark;DW;Fulmine Zig-Zag
+Poison Fog;DW;Nebbia Velenosa
+Whirlwind Cut;DW;Furia dei Venti
+Dash Storm;DW;Grande Turbine
+Heaven's Time;DW;Salto Temporale
+Moonsault;DG;Salto Avvitato
+Black Magic;DG;Viluppo d'Ombre
+Magic;DG;Trucco Magico
+Attack Scan;DG;Scan Offensivo
+Afterimage;DG;Ninja Dribbling
+Illusion Ball;DG;Grande Illusione
+Bunshin Feint;DG;Illusione Ottica
+Breakthrough;DF;Calcio Stordente
+Heat Tackle;DF;Dribbling Rovente
+Boost Glider;DF;Turbo Aliante
+Dash Accelerator;DM;Scatto Bruciante
+Bewildered;DM;Tempesta di Polvere
+Super Armadillo;DM;Super Armadillo
+Monkey Turn;DM;Scimmia Volante
+Rolling Hell;DM;Ruota Infuocata
+Mole Fake;DM;Effetto Talpa
 
 Block
 Coil Turn;BW;

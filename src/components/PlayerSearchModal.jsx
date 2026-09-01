@@ -96,8 +96,19 @@ export default function PlayerSearchModal({
     }
   }, [isOpen, onClose]);
 
-  // Filter and Sort players with grouping by move - highly optimized for instantaneous 60fps search
-  const { directPlayers, moveGroups, totalCount, isGrouped } = useMemo(() => {
+  // Disable background body scrolling when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [isOpen]);
+
+  // Filter and Sort players with grouping by team and move - highly optimized for instantaneous 60fps search
+  const { directPlayers, teamGroups, moveGroups, totalCount, isGrouped } = useMemo(() => {
     const term = deferredSearchTerm.trim().toLowerCase();
 
     // 1. Single pass base filtering
@@ -182,6 +193,7 @@ export default function PlayerSearchModal({
       baseFiltered.sort(sortFn);
       return {
         directPlayers: baseFiltered,
+        teamGroups: [],
         moveGroups: [],
         totalCount: baseFiltered.length,
         isGrouped: false,
@@ -189,26 +201,39 @@ export default function PlayerSearchModal({
     }
 
     // When a search term is present:
-    const directMatches = [];
+    const nameMatches = [];
+    const teamGroupsMap = new Map(); // teamName => player[]
     const moveGroupsMap = new Map(); // moveName => player[]
-    const seenDirectNames = new Set();
+    const seenNames = new Set();
 
+    // 1. Strict Name matches
     for (let i = 0; i < baseFiltered.length; i++) {
       const p = baseFiltered[i];
-      const matchName = p.name.toLowerCase().includes(term);
-      const matchTeam = p.team.toLowerCase().includes(term);
-      if (matchName || matchTeam) {
-        directMatches.push(p);
-        seenDirectNames.add(p.name);
+      if (p.name.toLowerCase().includes(term)) {
+        nameMatches.push(p);
+        seenNames.add(p.name);
       }
     }
 
-    // Only search move names if term has at least 2 characters!
-    // Single character queries (like "t" or "a") match 90+ moves and 1000+ players, causing DOM freeze.
+    // 2. Team matches (players belonging to a matching team who weren't already matched by name)
+    for (let i = 0; i < baseFiltered.length; i++) {
+      const p = baseFiltered[i];
+      if (!seenNames.has(p.name) && p.team.toLowerCase().includes(term)) {
+        let list = teamGroupsMap.get(p.team);
+        if (!list) {
+          list = [];
+          teamGroupsMap.set(p.team, list);
+        }
+        list.push(p);
+        seenNames.add(p.name);
+      }
+    }
+
+    // 3. Move matches (if not already matched by name or team, and term has >= 2 chars)
     if (term.length >= 2) {
       for (let i = 0; i < baseFiltered.length; i++) {
         const p = baseFiltered[i];
-        if (!seenDirectNames.has(p.name) && p.moves) {
+        if (!seenNames.has(p.name) && p.moves) {
           for (let j = 0; j < p.moves.length; j++) {
             const m = p.moves[j];
             if (m && m.toLowerCase().includes(term)) {
@@ -224,14 +249,23 @@ export default function PlayerSearchModal({
       }
     }
 
-    // Sort direct matches with name prefix priority if sortBy === 'ovr' or 'name'
-    directMatches.sort((a, b) => {
+    // Sort name matches with name prefix priority
+    nameMatches.sort((a, b) => {
       const aStarts = a.name.toLowerCase().startsWith(term);
       const bStarts = b.name.toLowerCase().startsWith(term);
       if (aStarts && !bStarts) return -1;
       if (!aStarts && bStarts) return 1;
       return sortFn(a, b);
     });
+
+    const teamGroupsList = [];
+    let teamPlayersTotal = 0;
+    teamGroupsMap.forEach((players, teamName) => {
+      players.sort(sortFn);
+      teamGroupsList.push({ teamName, players });
+      teamPlayersTotal += players.length;
+    });
+    teamGroupsList.sort((a, b) => b.players.length - a.players.length);
 
     const moveGroupsList = [];
     let movePlayersTotal = 0;
@@ -240,15 +274,16 @@ export default function PlayerSearchModal({
       moveGroupsList.push({ moveName, players });
       movePlayersTotal += players.length;
     });
-
-    // Sort move groups by number of players descending
     moveGroupsList.sort((a, b) => b.players.length - a.players.length);
 
+    const isGrouped = teamGroupsList.length > 0 || moveGroupsList.length > 0;
+
     return {
-      directPlayers: directMatches,
+      directPlayers: nameMatches,
+      teamGroups: teamGroupsList,
       moveGroups: moveGroupsList,
-      totalCount: directMatches.length + movePlayersTotal,
-      isGrouped: moveGroupsList.length > 0,
+      totalCount: nameMatches.length + teamPlayersTotal + movePlayersTotal,
+      isGrouped,
     };
   }, [allPlayers, deferredSearchTerm, selectedRole, selectedElement, selectedTeam, selectedRecruited, excludedPlayerNames, isWeighted, sortBy, sortOrder, recruitedPlayers]);
 
@@ -575,9 +610,11 @@ export default function PlayerSearchModal({
           <div className="px-5 py-2 bg-slate-950/70 border-b border-slate-800 flex items-center justify-between text-xs text-slate-400 shrink-0">
             <span>
               Trovati <strong className="text-amber-400">{totalCount}</strong> giocatori
-              {isGrouped && moveGroups.length > 0 && (
+              {isGrouped && (
                 <span className="text-slate-500 ml-1.5 font-mono text-[11px]">
-                  ({directPlayers.length} per nome, {totalCount - directPlayers.length} per mossa)
+                  ({directPlayers.length} per nome
+                  {teamGroups.length > 0 ? `, ${teamGroups.reduce((acc, g) => acc + g.players.length, 0)} per squadra` : ''}
+                  {moveGroups.length > 0 ? `, ${moveGroups.reduce((acc, g) => acc + g.players.length, 0)} per mossa` : ''})
                 </span>
               )}
             </span>
@@ -594,10 +631,10 @@ export default function PlayerSearchModal({
               <>
                 {isGrouped ? (
                   <div className="space-y-6">
-                    {/* Direct Matches (by Name or Team) */}
+                    {/* Direct Matches (by Name) */}
                     {directPlayers.length > 0 && (
                       <div>
-                        {moveGroups.length > 0 && (
+                        {(teamGroups.length > 0 || moveGroups.length > 0) && (
                           <div className="flex items-center gap-2 mb-3 px-1">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
                             <span className="text-xs font-black uppercase tracking-wider text-slate-300 font-mono">
@@ -621,9 +658,28 @@ export default function PlayerSearchModal({
                       </div>
                     )}
 
+                    {/* Grouped by Team */}
+                    {teamGroups.map(({ teamName, players }) => (
+                      <div key={`team-${teamName}`} className="pt-2">
+                        <div className="flex items-center gap-2.5 mb-3 px-3.5 py-2 rounded-xl bg-slate-950/90 border border-sky-500/30 shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+                          <span className="w-2.5 h-2.5 rounded-full bg-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.8)] shrink-0 animate-pulse" />
+                          <span className="text-xs font-black uppercase tracking-wider text-sky-400 font-mono flex items-center gap-1.5">
+                            <span>SQUADRA:</span>
+                            <span className="text-white underline decoration-sky-500/50 underline-offset-4">{teamName}</span>
+                          </span>
+                          <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-slate-800/90 text-sky-300 border border-slate-700 font-mono font-bold ml-auto">
+                            {players.length} {players.length === 1 ? 'giocatore' : 'giocatori'}
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
+                          {players.map((player) => renderPlayerCard(player))}
+                        </div>
+                      </div>
+                    ))}
+
                     {/* Grouped by Move */}
                     {moveGroups.map(({ moveName, players }) => (
-                      <div key={moveName} className="pt-2">
+                      <div key={`move-${moveName}`} className="pt-2">
                         <div className="flex items-center gap-2.5 mb-3 px-3.5 py-2 rounded-xl bg-slate-950/90 border border-amber-500/30 shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
                           <span className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(245,158,11,0.8)] shrink-0 animate-pulse" />
                           <span className="text-xs font-black uppercase tracking-wider text-amber-400 font-mono flex items-center gap-1.5">
