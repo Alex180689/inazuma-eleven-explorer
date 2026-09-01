@@ -1,7 +1,7 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Film, Sparkles } from 'lucide-react';
+import { Film, Sparkles, Zap } from 'lucide-react';
 import { getMoveInfo, checkMoveStab } from '../utils/hissatsu';
 
 export default function MoveVideoHoverCard({
@@ -11,11 +11,13 @@ export default function MoveVideoHoverCard({
   moveName,
   playerElement,
   targetRect,
+  videoWindowWidth = 340,
 }) {
   if (!isOpen || !video || !targetRect) return null;
 
-  const cardWidth = 320;
-  const cardHeight = 270;
+  const cardWidth = Math.max(260, Math.min(540, videoWindowWidth));
+  const maxVideoHeight = Math.round(cardWidth * 0.62);
+  const cardHeight = maxVideoHeight + 76;
   const margin = 16;
 
   // Horizontal position: place to right if on left half of screen, else to left
@@ -54,7 +56,7 @@ export default function MoveVideoHoverCard({
         {/* Ambient Top Glow */}
         <div className="absolute -top-10 -right-10 w-28 h-28 bg-amber-500/20 rounded-full blur-2xl pointer-events-none" />
 
-        {/* Header: Player Name + Move Name + Badges */}
+        {/* Header: Player Name + Move Name + PT Cost + STAB + Type */}
         <div className="flex items-center justify-between gap-2 pb-2 mb-2 border-b border-slate-800/80 relative z-10">
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5 text-[10px] font-mono text-slate-400">
@@ -66,12 +68,24 @@ export default function MoveVideoHoverCard({
             </h4>
           </div>
 
-          <div className="flex items-center gap-1 shrink-0">
+          <div className="flex items-center gap-1.5 shrink-0">
+            {/* PT Cost Badge */}
+            {moveInfo?.tpCost !== null && moveInfo?.tpCost !== undefined && (
+              <span className="px-2 py-0.5 rounded text-[10px] font-black font-mono bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm flex items-center gap-0.5 tracking-tight">
+                <Zap size={10} className="fill-cyan-400 text-cyan-400" />
+                <span>{moveInfo.tpCost}</span>
+                <span className="text-[8px] text-cyan-400 font-normal">PT</span>
+              </span>
+            )}
+
+            {/* STAB Pill */}
             {isStab && (
               <span className="px-1.5 py-0.5 rounded text-[8px] font-black font-mono bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-950 shadow-sm uppercase">
                 STAB
               </span>
             )}
+
+            {/* Move Type Badge */}
             {moveInfo?.type && (
               <span
                 className={`px-1.5 py-0.5 rounded text-[8px] font-bold font-mono border uppercase ${moveInfo.type.badgeClass}`}
@@ -83,12 +97,16 @@ export default function MoveVideoHoverCard({
         </div>
 
         {/* Video / GIF Player Container */}
-        <div className="relative rounded-xl overflow-hidden bg-black border border-slate-800/90 shadow-inner flex items-center justify-center min-h-[160px] max-h-[220px]">
+        <div
+          className="relative rounded-xl overflow-hidden bg-black border border-slate-800/90 shadow-inner flex items-center justify-center min-h-[160px]"
+          style={{ maxHeight: `${maxVideoHeight}px` }}
+        >
           {video.isGif ? (
             <img
               src={video.url}
               alt={`${playerName} - ${moveName}`}
               className="w-full h-full object-contain"
+              style={{ maxHeight: `${maxVideoHeight}px` }}
             />
           ) : (
             <video
@@ -97,7 +115,8 @@ export default function MoveVideoHoverCard({
               loop
               muted
               playsInline
-              className="w-full h-full object-contain max-h-[220px]"
+              className="w-full h-full object-contain"
+              style={{ maxHeight: `${maxVideoHeight}px` }}
             />
           )}
 

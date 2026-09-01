@@ -1,4 +1,4 @@
-import { X, Settings, RotateCcw, Sliders, Eye, Palette, Activity } from 'lucide-react';
+import { X, Settings, RotateCcw, Sliders, Eye, Palette, Activity, Film } from 'lucide-react';
 
 export const DEFAULT_TEAMBUILDER_SETTINGS = {
   pitchWidth: 540, // px (420 to 720)
@@ -14,6 +14,7 @@ export const DEFAULT_TEAMBUILDER_SETTINGS = {
   showElementBadge: true,
   radarWidth: 560, // px (380 to 780)
   showStabEffect: true, // Show STAB bonus visual highlight
+  videoWindowWidth: 340, // px (260 to 540) - Dimensione finestra video clip
 };
 
 export const BACKGROUND_OPTIONS = [
@@ -344,6 +345,38 @@ export default function TeamBuilderSettingsModal({
                 <span>Compatto (380px)</span>
                 <span>Predefinito (560px)</span>
                 <span>Espanso (780px)</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Section: Dimensione Finestra Video / Clip Tecnica */}
+          <div className="space-y-3 pt-2 border-t border-slate-800">
+            <div className="flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-wider font-mono">
+              <Film size={14} />
+              <span>Dimensione Finestra Video (Clip in Hover)</span>
+            </div>
+
+            {/* Slider Dimensione Finestra Video */}
+            <div className="bg-slate-950/80 p-3.5 rounded-2xl border border-slate-800">
+              <div className="flex items-center justify-between text-xs font-semibold text-slate-200 mb-2">
+                <span>Larghezza Finestra Video</span>
+                <span className="font-mono text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
+                  {settings.videoWindowWidth ?? 340} px
+                </span>
+              </div>
+              <input
+                type="range"
+                min="260"
+                max="540"
+                step="10"
+                value={settings.videoWindowWidth ?? 340}
+                onChange={(e) => update('videoWindowWidth', Number(e.target.value))}
+                className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                <span>Compatta (260px)</span>
+                <span>Predefinita (340px)</span>
+                <span>Grande (540px)</span>
               </div>
             </div>
           </div>

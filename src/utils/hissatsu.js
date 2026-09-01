@@ -1,5 +1,5 @@
 import rawHissatsu from '../../hissatsu.txt?raw';
-import { ELEMENTS } from '../constants/elements';
+import { ELEMENTS } from '../constants/elements.js';
 
 export const MOVE_TYPES = {
   S: {
@@ -61,6 +61,8 @@ function buildHissatsuRegistry(rawText) {
       const name = parts[0].trim();
       const code = parts[1].trim().toUpperCase();
       const itTranslation = parts[2] ? parts[2].trim() : '';
+      const rawCost = parts[3] ? parts[3].trim() : '';
+      const tpCost = rawCost && !isNaN(Number(rawCost)) ? Number(rawCost) : null;
 
       if (code.length === 2) {
         const typeChar = code[0];
@@ -77,6 +79,7 @@ function buildHissatsuRegistry(rawText) {
           elementKey: elemKey,
           element: elementInfo,
           translationIt: itTranslation,
+          tpCost,
         };
 
         registry.set(normKey(name), entry);

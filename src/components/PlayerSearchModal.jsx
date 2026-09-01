@@ -138,13 +138,38 @@ export default function PlayerSearchModal({
 
         return true;
       })
-      .map((p) => ({
-        ...p,
-        ovr: isWeighted
-          ? (p.ovrWeighted ?? calculateOverall(p, true))
-          : (p.ovrPure ?? calculateOverall(p, false)),
-      }))
+      .map((p) => {
+        let matchedMove = null;
+        if (term) {
+          const matchName = p.name.toLowerCase().includes(term);
+          const matchTeam = p.team.toLowerCase().includes(term);
+          if (!matchName && !matchTeam) {
+            matchedMove = p.moves?.find((m) => m.toLowerCase().includes(term)) || null;
+          }
+        }
+        return {
+          ...p,
+          matchedMove,
+          ovr: isWeighted
+            ? (p.ovrWeighted ?? calculateOverall(p, true))
+            : (p.ovrPure ?? calculateOverall(p, false)),
+        };
+      })
       .sort((a, b) => {
+        // If there's an active search term, prioritize players whose NAME matches
+        if (term) {
+          const aNameMatch = a.name.toLowerCase().includes(term);
+          const bNameMatch = b.name.toLowerCase().includes(term);
+          if (aNameMatch && !bNameMatch) return -1;
+          if (!aNameMatch && bNameMatch) return 1;
+
+          // If both match by name, check who starts with term
+          const aStarts = a.name.toLowerCase().startsWith(term);
+          const bStarts = b.name.toLowerCase().startsWith(term);
+          if (aStarts && !bStarts) return -1;
+          if (!aStarts && bStarts) return 1;
+        }
+
         let valA, valB;
         switch (sortBy) {
           case 'name':
@@ -514,6 +539,12 @@ export default function PlayerSearchModal({
                               {player.name}
                             </h4>
                             <p className="text-[10px] sm:text-[11px] text-slate-400 truncate mt-0.5">{player.team}</p>
+                            {player.matchedMove && (
+                              <p className="text-[10px] text-amber-400 font-mono truncate mt-0.5 flex items-center gap-1">
+                                <span className="text-[9px] text-amber-500 font-bold uppercase">Mossa:</span>
+                                <span className="font-semibold text-amber-200">{player.matchedMove}</span>
+                              </p>
+                            )}
                             <div className="flex items-center gap-1.5 mt-1">
                               <PositionBadge position={player.position} size="sm" />
                               <ElementBadge element={player.element} size="sm" showLabel={false} />

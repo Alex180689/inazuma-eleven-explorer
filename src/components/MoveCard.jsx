@@ -17,6 +17,7 @@ export default function MoveCard({
   playerElement,
   playerName,
   showStabEffect = true,
+  videoWindowWidth = 340,
 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [targetRect, setTargetRect] = useState(null);
@@ -67,13 +68,6 @@ export default function MoveCard({
             ? 'bg-slate-950/85 border border-amber-400/50 hover:border-amber-400 shadow-[0_0_10px_rgba(245,158,11,0.12)]'
             : 'bg-slate-950/60 hover:bg-slate-900/90 border border-slate-800/80 hover:border-slate-700'
         }`}
-        title={
-          video
-            ? `${moveName} • Clip video in loop disponibile!`
-            : applyStabVisual
-            ? `${moveName} • Bonus STAB (+20% Potenza per elemento affine: ${playerElement})`
-            : moveName
-        }
       >
         {/* Left: Slot index + Move Name */}
         <div className="flex items-center gap-2.5 min-w-0 flex-1">
@@ -104,7 +98,6 @@ export default function MoveCard({
           {video && (
             <span
               className="w-5 h-5 rounded-md flex items-center justify-center bg-amber-500/20 border border-amber-500/40 text-amber-300 transition-all shrink-0 shadow-sm"
-              title="Clip Video in loop disponibile al passaggio del mouse"
             >
               <Film size={11} className="animate-pulse" />
             </span>
@@ -122,7 +115,6 @@ export default function MoveCard({
           {moveInfo?.type && (
             <span
               className={`px-1.5 py-0.5 rounded text-[9px] font-bold font-mono border uppercase tracking-wider ${moveInfo.type.badgeClass}`}
-              title={`Tipo: ${moveInfo.type.labelIt}`}
             >
               {moveInfo.type.code}
             </span>
@@ -132,7 +124,6 @@ export default function MoveCard({
           {moveInfo?.element && ElementIcon && (
             <span
               className={`w-5 h-5 rounded-md flex items-center justify-center border transition-all ${moveInfo.element.badgeClass}`}
-              title={`Elemento: ${moveInfo.element.nameIt}`}
             >
               <ElementIcon size={12} className="shrink-0" />
             </span>
@@ -157,6 +148,7 @@ export default function MoveCard({
           moveName={moveName}
           playerElement={playerElement}
           targetRect={targetRect}
+          videoWindowWidth={videoWindowWidth}
         />
       )}
     </>

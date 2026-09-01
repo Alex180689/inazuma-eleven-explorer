@@ -18,6 +18,7 @@ export default function PlayerCard({
   playerTheme,
   isWeighted = true,
   showStabEffect = true,
+  videoWindowWidth = 340,
 }) {
   if (!player) {
     return (
@@ -181,6 +182,7 @@ export default function PlayerCard({
                 playerElement={player.element}
                 playerName={player.name}
                 showStabEffect={showStabEffect}
+                videoWindowWidth={videoWindowWidth}
               />
             ))}
           </div>

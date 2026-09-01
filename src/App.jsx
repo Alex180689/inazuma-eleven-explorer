@@ -358,6 +358,7 @@ export default function App() {
               playerTheme={p1Theme}
               isWeighted={isWeighted}
               showStabEffect={builderSettings.showStabEffect ?? true}
+              videoWindowWidth={builderSettings.videoWindowWidth ?? 340}
             />
           </div>
 
@@ -396,6 +397,7 @@ export default function App() {
               playerTheme={p2Theme}
               isWeighted={isWeighted}
               showStabEffect={builderSettings.showStabEffect ?? true}
+              videoWindowWidth={builderSettings.videoWindowWidth ?? 340}
             />
           </div>
         </div>
