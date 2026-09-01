@@ -204,36 +204,36 @@ export default function PlayerSearchModal({
     const nameMatches = [];
     const teamGroupsMap = new Map(); // teamName => player[]
     const moveGroupsMap = new Map(); // moveName => player[]
-    const seenNames = new Set();
+    const allUniquePlayerIds = new Set();
 
     // 1. Strict Name matches
     for (let i = 0; i < baseFiltered.length; i++) {
       const p = baseFiltered[i];
       if (p.name.toLowerCase().includes(term)) {
         nameMatches.push(p);
-        seenNames.add(p.name);
+        allUniquePlayerIds.add(p.id);
       }
     }
 
-    // 2. Team matches (players belonging to a matching team who weren't already matched by name)
+    // 2. Team matches (all players belonging to a matching team)
     for (let i = 0; i < baseFiltered.length; i++) {
       const p = baseFiltered[i];
-      if (!seenNames.has(p.name) && p.team.toLowerCase().includes(term)) {
+      if (p.team.toLowerCase().includes(term)) {
         let list = teamGroupsMap.get(p.team);
         if (!list) {
           list = [];
           teamGroupsMap.set(p.team, list);
         }
         list.push(p);
-        seenNames.add(p.name);
+        allUniquePlayerIds.add(p.id);
       }
     }
 
-    // 3. Move matches (if not already matched by name or team, and term has >= 2 chars)
+    // 3. Move matches (all players learning a matching move, term >= 2 chars)
     if (term.length >= 2) {
       for (let i = 0; i < baseFiltered.length; i++) {
         const p = baseFiltered[i];
-        if (!seenNames.has(p.name) && p.moves) {
+        if (p.moves) {
           for (let j = 0; j < p.moves.length; j++) {
             const m = p.moves[j];
             if (m && m.toLowerCase().includes(term)) {
@@ -243,6 +243,7 @@ export default function PlayerSearchModal({
                 moveGroupsMap.set(m, list);
               }
               list.push(p);
+              allUniquePlayerIds.add(p.id);
             }
           }
         }
@@ -259,20 +260,16 @@ export default function PlayerSearchModal({
     });
 
     const teamGroupsList = [];
-    let teamPlayersTotal = 0;
     teamGroupsMap.forEach((players, teamName) => {
       players.sort(sortFn);
       teamGroupsList.push({ teamName, players });
-      teamPlayersTotal += players.length;
     });
     teamGroupsList.sort((a, b) => b.players.length - a.players.length);
 
     const moveGroupsList = [];
-    let movePlayersTotal = 0;
     moveGroupsMap.forEach((players, moveName) => {
       players.sort(sortFn);
       moveGroupsList.push({ moveName, players });
-      movePlayersTotal += players.length;
     });
     moveGroupsList.sort((a, b) => b.players.length - a.players.length);
 
@@ -282,13 +279,13 @@ export default function PlayerSearchModal({
       directPlayers: nameMatches,
       teamGroups: teamGroupsList,
       moveGroups: moveGroupsList,
-      totalCount: nameMatches.length + teamPlayersTotal + movePlayersTotal,
+      totalCount: allUniquePlayerIds.size,
       isGrouped,
     };
   }, [allPlayers, deferredSearchTerm, selectedRole, selectedElement, selectedTeam, selectedRecruited, excludedPlayerNames, isWeighted, sortBy, sortOrder, recruitedPlayers]);
 
   // Helper to render individual player cards cleanly (without the inner move label)
-  const renderPlayerCard = (player) => {
+  const renderPlayerCard = (player, keyPrefix = 'direct') => {
     const isCurrentSelected = currentPlayer?.name === player.name;
     const isOtherSelected = otherPlayer?.name === player.name;
     const isRecruited = !!recruitedPlayers[player.name];
@@ -296,7 +293,7 @@ export default function PlayerSearchModal({
 
     return (
       <div
-        key={player.id}
+        key={`${keyPrefix}-${player.id}`}
         onClick={() => {
           onSelectPlayer(player);
           onClose();
@@ -643,7 +640,7 @@ export default function PlayerSearchModal({
                           </div>
                         )}
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
-                          {directPlayers.slice(0, displayCount).map((player) => renderPlayerCard(player))}
+                          {directPlayers.slice(0, displayCount).map((player) => renderPlayerCard(player, 'name'))}
                         </div>
                         {directPlayers.length > displayCount && (
                           <div className="py-2.5 text-center">
@@ -672,7 +669,7 @@ export default function PlayerSearchModal({
                           </span>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
-                          {players.map((player) => renderPlayerCard(player))}
+                          {players.map((player) => renderPlayerCard(player, `team-${teamName}`))}
                         </div>
                       </div>
                     ))}
@@ -691,7 +688,7 @@ export default function PlayerSearchModal({
                           </span>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
-                          {players.map((player) => renderPlayerCard(player))}
+                          {players.map((player) => renderPlayerCard(player, `move-${moveName}`))}
                         </div>
                       </div>
                     ))}
@@ -699,7 +696,7 @@ export default function PlayerSearchModal({
                 ) : (
                   <>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
-                      {directPlayers.slice(0, displayCount).map((player) => renderPlayerCard(player))}
+                      {directPlayers.slice(0, displayCount).map((player) => renderPlayerCard(player, 'flat'))}
                     </div>
 
                     {directPlayers.length > displayCount && (
