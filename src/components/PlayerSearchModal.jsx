@@ -6,6 +6,7 @@ import { calculateOverall, getPlayerTier, calculateTotalStats } from '../utils/s
 import ElementBadge from './ElementBadge';
 import PositionBadge from './PositionBadge';
 import PlayerAvatar from './PlayerAvatar';
+import PlayerHoverCard from './teambuilder/PlayerHoverCard';
 
 export default function PlayerSearchModal({
   isOpen,
@@ -18,6 +19,7 @@ export default function PlayerSearchModal({
   uniqueTeams = [],
   isWeighted = true,
   excludedPlayerNames,
+  settings,
 }) {
   const [searchTerm, setSearchTerm] = useState('');
   const deferredSearchTerm = useDeferredValue(searchTerm);
@@ -60,6 +62,22 @@ export default function PlayerSearchModal({
   const inputRef = useRef(null);
   const scrollContainerRef = useRef(null);
 
+  // Hover Player Card state (with debounced entry and instant dismissal)
+  const [hoveredCardInfo, setHoveredCardInfo] = useState(null);
+  const hoverTimeoutRef = useRef(null);
+
+  const handleCardHover = (player, rect) => {
+    clearTimeout(hoverTimeoutRef.current);
+    hoverTimeoutRef.current = setTimeout(() => {
+      setHoveredCardInfo({ player, targetRect: rect });
+    }, 140);
+  };
+
+  const handleCardLeave = () => {
+    clearTimeout(hoverTimeoutRef.current);
+    setHoveredCardInfo(null);
+  };
+
   // Focus input and reset scroll on open
   useEffect(() => {
     if (isOpen) {
@@ -68,17 +86,20 @@ export default function PlayerSearchModal({
       setTimeout(() => inputRef.current?.focus(), 50);
     } else {
       setSearchTerm('');
+      handleCardLeave();
     }
   }, [isOpen]);
 
   // Reset display count on filter changes
   useEffect(() => {
     setDisplayCount(60);
+    handleCardLeave();
     if (scrollContainerRef.current) scrollContainerRef.current.scrollTop = 0;
   }, [deferredSearchTerm, selectedRole, selectedElement, selectedTeam, selectedRecruited, sortBy, sortOrder]);
 
   // Infinite scroll load more handler
   const handleScroll = (e) => {
+    handleCardLeave();
     const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
     if (scrollHeight - scrollTop - clientHeight < 300) {
       setDisplayCount((prev) => Math.min(prev + 48, totalCount));
@@ -294,7 +315,10 @@ export default function PlayerSearchModal({
     return (
       <div
         key={`${keyPrefix}-${player.id}`}
+        onMouseEnter={(e) => handleCardHover(player, e.currentTarget.getBoundingClientRect())}
+        onMouseLeave={handleCardLeave}
         onClick={() => {
+          handleCardLeave();
           onSelectPlayer(player);
           onClose();
         }}
@@ -721,6 +745,16 @@ export default function PlayerSearchModal({
             )}
           </div>
         </div>
+
+        {/* Hover Player Info Popover Card with Mini Radar Chart and Moves */}
+        {isOpen && hoveredCardInfo && (
+          <PlayerHoverCard
+            player={hoveredCardInfo.player}
+            targetRect={hoveredCardInfo.targetRect}
+            settings={settings}
+            isWeighted={isWeighted}
+          />
+        )}
       </div>
   );
 }

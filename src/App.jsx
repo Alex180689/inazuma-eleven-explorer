@@ -441,6 +441,7 @@ export default function App() {
         uniqueTeams={uniqueTeams}
         isWeighted={isWeighted}
         excludedPlayerNames={excludedPlayerNames}
+        settings={builderSettings}
       />
 
       {/* Settings Modal Dialog (Accessible from top Navbar and TeamBuilder) */}
