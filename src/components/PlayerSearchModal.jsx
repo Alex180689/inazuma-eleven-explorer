@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef, useDeferredValue } from 'react';
-import { Search, X, ArrowUpDown, Check, Trophy, Sparkles, Zap, RotateCcw } from 'lucide-react';
+import { Search, X, ArrowUpDown, Check, Trophy, Sparkles, Zap, RotateCcw, Plus, Minus } from 'lucide-react';
 import { POSITION_LIST, POSITIONS } from '../constants/positions';
 import { ELEMENT_LIST, ELEMENTS } from '../constants/elements';
 import { calculateOverall, getPlayerTier, calculateTotalStats } from '../utils/statsUtils';
@@ -54,6 +54,36 @@ export default function PlayerSearchModal({
         localStorage.setItem(RECRUITED_STORAGE_KEY, JSON.stringify(next));
       } catch (e) {
         console.error('Error saving recruited players to localStorage:', e);
+      }
+      return next;
+    });
+  };
+
+  // Persistent player counters in localStorage
+  const COUNTER_STORAGE_KEY = 'ie1_player_counters';
+  const [playerCounters, setPlayerCounters] = useState(() => {
+    try {
+      const saved = localStorage.getItem(COUNTER_STORAGE_KEY);
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+
+  const updatePlayerCounter = (playerName, delta) => {
+    setPlayerCounters((prev) => {
+      const current = prev[playerName] || 0;
+      const nextVal = Math.max(0, current + delta);
+      const next = { ...prev };
+      if (nextVal === 0) {
+        delete next[playerName];
+      } else {
+        next[playerName] = nextVal;
+      }
+      try {
+        localStorage.setItem(COUNTER_STORAGE_KEY, JSON.stringify(next));
+      } catch (e) {
+        console.error('Error saving player counters to localStorage:', e);
       }
       return next;
     });
@@ -200,6 +230,10 @@ export default function PlayerSearchModal({
           valA = a.stats.freedom || 0;
           valB = b.stats.freedom || 0;
           break;
+        case 'counter':
+          valA = playerCounters[a.name] || 0;
+          valB = playerCounters[b.name] || 0;
+          break;
         case 'ovr':
         default:
           valA = a.ovr;
@@ -303,7 +337,7 @@ export default function PlayerSearchModal({
       totalCount: allUniquePlayerIds.size,
       isGrouped,
     };
-  }, [allPlayers, deferredSearchTerm, selectedRole, selectedElement, selectedTeam, selectedRecruited, excludedPlayerNames, isWeighted, sortBy, sortOrder, recruitedPlayers]);
+  }, [allPlayers, deferredSearchTerm, selectedRole, selectedElement, selectedTeam, selectedRecruited, excludedPlayerNames, isWeighted, sortBy, sortOrder, recruitedPlayers, playerCounters]);
 
   // Helper to render individual player cards cleanly (without the inner move label)
   const renderPlayerCard = (player, keyPrefix = 'direct') => {
@@ -311,6 +345,8 @@ export default function PlayerSearchModal({
     const isOtherSelected = otherPlayer?.name === player.name;
     const isRecruited = !!recruitedPlayers[player.name];
     const tier = getPlayerTier(player.ovr);
+    const count = playerCounters[player.name] || 0;
+    const showCounters = settings?.showPlayerCounters !== false;
 
     return (
       <div
@@ -322,7 +358,7 @@ export default function PlayerSearchModal({
           onSelectPlayer(player);
           onClose();
         }}
-        className={`p-2.5 sm:p-3 rounded-xl cursor-pointer border transition-all duration-150 flex items-center justify-between gap-2.5 select-none relative ${
+        className={`p-2.5 sm:p-3 rounded-xl cursor-pointer border transition-all duration-150 flex items-center justify-between gap-2 select-none relative ${
           isCurrentSelected
             ? 'bg-slate-900 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.25)] ring-1 ring-amber-500'
             : isOtherSelected
@@ -361,9 +397,47 @@ export default function PlayerSearchModal({
               {player.name}
             </h4>
             <p className="text-[10px] sm:text-[11px] text-slate-400 truncate mt-0.5">{player.team}</p>
-            <div className="flex items-center gap-1.5 mt-1">
+            <div className="flex items-center gap-1.5 mt-1 flex-wrap">
               <PositionBadge position={player.position} size="sm" />
               <ElementBadge element={player.element} size="sm" showLabel={false} />
+
+              {/* Counter Widget (- [N] +) with Persistent Memory */}
+              {showCounters && (
+                <div
+                  className="flex items-center bg-slate-900/95 border border-slate-700/80 hover:border-slate-600 rounded-md p-0.5 shadow-sm ml-auto"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      updatePlayerCounter(player.name, -1);
+                    }}
+                    title="Diminuisci contatore"
+                    className="w-4 h-4 rounded flex items-center justify-center bg-slate-800/90 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer active:scale-90"
+                  >
+                    <Minus size={9} strokeWidth={2.5} />
+                  </button>
+                  <span
+                    className={`min-w-[16px] text-center font-mono font-bold text-[11px] px-1 select-none ${
+                      count > 0 ? 'text-amber-300 font-extrabold' : 'text-slate-400'
+                    }`}
+                  >
+                    {count}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      updatePlayerCounter(player.name, 1);
+                    }}
+                    title="Aumenta contatore"
+                    className="w-4 h-4 rounded flex items-center justify-center bg-slate-800/90 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer active:scale-90"
+                  >
+                    <Plus size={9} strokeWidth={2.5} />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -519,6 +593,7 @@ export default function PlayerSearchModal({
                     <option value="fp" className="bg-slate-900">Punti Fatica (FP)</option>
                     <option value="tp" className="bg-slate-900">Punti Tecnica (TP)</option>
                     <option value="freedom" className="bg-slate-900">Libertà (Freedom)</option>
+                    <option value="counter" className="bg-slate-900">Contatore (-/+)</option>
                     <option value="name" className="bg-slate-900">Nome Giocatore (A-Z)</option>
                   </select>
                   <button

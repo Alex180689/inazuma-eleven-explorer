@@ -15,6 +15,7 @@ export const DEFAULT_TEAMBUILDER_SETTINGS = {
   radarWidth: 560, // px (380 to 780)
   showStabEffect: true, // Show STAB bonus visual highlight
   videoWindowWidth: 340, // px (260 to 540) - Dimensione finestra video clip
+  showPlayerCounters: true, // Mostra contatore giocatori con +/- nei risultati di ricerca
 };
 
 export const BACKGROUND_OPTIONS = [
@@ -452,6 +453,29 @@ export default function TeamBuilderSettingsModal({
                   </div>
                   <span className="px-1.5 py-0.5 rounded text-[9px] font-black font-mono bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-950 shadow-sm uppercase tracking-wider shrink-0 ml-2">
                     STAB
+                  </span>
+                </div>
+              </label>
+
+              {/* Toggle Contatore Giocatori nella Ricerca */}
+              <label className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800 cursor-pointer hover:border-slate-700 transition-colors col-span-2">
+                <input
+                  type="checkbox"
+                  checked={settings.showPlayerCounters ?? true}
+                  onChange={(e) => update('showPlayerCounters', e.target.checked)}
+                  className="rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 w-4 h-4"
+                />
+                <div className="flex items-center justify-between flex-1 min-w-0">
+                  <div className="min-w-0 flex-1">
+                    <span className="text-xs text-slate-200 font-medium block">
+                      Contatore Giocatori nella Ricerca
+                    </span>
+                    <span className="text-[10px] text-slate-400 block">
+                      Mostra i tasti - [N] + in ogni riquadro giocatore con memoria persistente
+                    </span>
+                  </div>
+                  <span className="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 uppercase tracking-wider shrink-0 ml-2">
+                    - [N] +
                   </span>
                 </div>
               </label>
