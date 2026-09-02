@@ -358,7 +358,7 @@ export default function PlayerSearchModal({
           onSelectPlayer(player);
           onClose();
         }}
-        className={`p-2.5 sm:p-3 rounded-xl cursor-pointer border transition-all duration-150 flex items-center justify-between gap-2 select-none relative ${
+        className={`p-2 sm:p-2.5 rounded-xl cursor-pointer border transition-all duration-150 flex items-center justify-between gap-2 select-none relative ${
           isCurrentSelected
             ? 'bg-slate-900 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.25)] ring-1 ring-amber-500'
             : isOtherSelected
@@ -387,24 +387,21 @@ export default function PlayerSearchModal({
           <Check size={11} strokeWidth={3.5} className={isRecruited ? 'opacity-100' : 'opacity-0 hover:opacity-100'} />
         </button>
 
-        <div className="flex items-center gap-2.5 min-w-0 flex-1">
+        <div className="flex items-center gap-2 min-w-0 flex-1">
           {/* Avatar Badge with Sprite */}
           <PlayerAvatar player={player} size="sm" showPosition={false} />
 
           {/* Name, Team & Badges */}
           <div className="min-w-0 flex-1">
-            <h4 className="font-bold text-xs sm:text-sm text-white truncate leading-tight" title={player.name}>
-              {player.name}
-            </h4>
-            <p className="text-[10px] sm:text-[11px] text-slate-400 truncate mt-0.5">{player.team}</p>
-            <div className="flex items-center gap-1.5 mt-1 flex-wrap">
-              <PositionBadge position={player.position} size="sm" />
-              <ElementBadge element={player.element} size="sm" showLabel={false} />
+            <div className="flex items-center justify-between gap-1 min-w-0">
+              <h4 className="font-bold text-[11px] sm:text-xs text-white truncate leading-tight flex-1 min-w-0" title={player.name}>
+                {player.name}
+              </h4>
 
-              {/* Counter Widget (- [N] +) with Persistent Memory */}
+              {/* Counter Widget (- [N] +) with Persistent Memory on the name row */}
               {showCounters && (
                 <div
-                  className="flex items-center bg-slate-900/95 border border-slate-700/80 hover:border-slate-600 rounded-md p-0.5 shadow-sm ml-auto"
+                  className="flex items-center bg-slate-900/95 border border-slate-700/80 hover:border-slate-600 rounded-md p-0.5 shadow-sm shrink-0 ml-1"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <button
@@ -438,6 +435,12 @@ export default function PlayerSearchModal({
                   </button>
                 </div>
               )}
+            </div>
+
+            <p className="text-[10px] sm:text-[11px] text-slate-400 truncate mt-0.5">{player.team}</p>
+            <div className="flex items-center gap-1.5 mt-1">
+              <PositionBadge position={player.position} size="sm" />
+              <ElementBadge element={player.element} size="sm" showLabel={false} />
             </div>
           </div>
         </div>
