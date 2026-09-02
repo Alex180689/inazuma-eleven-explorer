@@ -94,6 +94,7 @@ function buildHissatsuRegistry(rawText) {
     ['superscandf', 'superscan'],
     ['superscanof', 'superscan'],
     ['shikofumi', 'sumostomp'],
+    ['gorimuchuu', 'bewildered'],
     ['tsumuji', 'whirlwind'],
     ['yugamukuukan', 'warpspace'],
     ['counterstrike', 'counterstrike'],

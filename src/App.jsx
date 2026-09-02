@@ -63,6 +63,69 @@ export default function App() {
     }
   });
 
+  // Auto-sync field and bench players with canonical database (resolves any outdated move names or stats from previous saves)
+  useEffect(() => {
+    if (!players || players.length === 0) return;
+    const playerByName = new Map(players.map(p => [p.name.toLowerCase().trim(), p]));
+
+    setFieldPlayers(prev => {
+      let changed = false;
+      const next = { ...prev };
+      Object.entries(next).forEach(([key, p]) => {
+        if (p && p.name) {
+          const canonical = playerByName.get(p.name.toLowerCase().trim());
+          if (canonical && JSON.stringify(canonical.moves) !== JSON.stringify(p.moves)) {
+            next[key] = { ...p, ...canonical };
+            changed = true;
+          }
+        }
+      });
+      if (changed) {
+        localStorage.setItem('ie1_teambuilder_field', JSON.stringify(next));
+        return next;
+      }
+      return prev;
+    });
+
+    setBenchPlayers(prev => {
+      let changed = false;
+      const next = { ...prev };
+      Object.entries(next).forEach(([key, p]) => {
+        if (p && p.name) {
+          const canonical = playerByName.get(p.name.toLowerCase().trim());
+          if (canonical && JSON.stringify(canonical.moves) !== JSON.stringify(p.moves)) {
+            next[key] = { ...p, ...canonical };
+            changed = true;
+          }
+        }
+      });
+      if (changed) {
+        localStorage.setItem('ie1_teambuilder_bench', JSON.stringify(next));
+        return next;
+      }
+      return prev;
+    });
+
+    // Also re-sync player1 and player2 if their moves are outdated
+    setPlayer1(prev => {
+      if (!prev?.name) return prev;
+      const canonical = playerByName.get(prev.name.toLowerCase().trim());
+      if (canonical && JSON.stringify(canonical.moves) !== JSON.stringify(prev.moves)) {
+        return { ...prev, ...canonical };
+      }
+      return prev;
+    });
+
+    setPlayer2(prev => {
+      if (!prev?.name) return prev;
+      const canonical = playerByName.get(prev.name.toLowerCase().trim());
+      if (canonical && JSON.stringify(canonical.moves) !== JSON.stringify(prev.moves)) {
+        return { ...prev, ...canonical };
+      }
+      return prev;
+    });
+  }, [players]);
+
   // Set of player names already placed in Team Builder (excluding the slot currently being edited)
   const excludedPlayerNames = useMemo(() => {
     if (typeof searchTargetSlot !== 'object' || searchTargetSlot === null) {

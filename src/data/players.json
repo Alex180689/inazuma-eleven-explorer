@@ -48,7 +48,7 @@
     "moves": [
       "The Wall",
       "Super Armadillo",
-      "Mogura Feint",
+      "Mole Fake",
       "Mega Quake"
     ],
     "totalStats": 415,
@@ -75,9 +75,9 @@
     },
     "moves": [
       "Coil Turn",
-      "Ushiro no Shoumen",
-      "Zanzou",
-      "Kage Nui"
+      "About Face",
+      "Afterimage",
+      "Shadow Stitch"
     ],
     "totalStats": 420,
     "ovrWeighted": 58,
@@ -130,8 +130,8 @@
       "freedom": 17
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Suisei Shoot",
+      "Rodeo Clown",
+      "Comet Shot",
       "Monkey Turn",
       "Run Ball Run"
     ],
@@ -158,10 +158,10 @@
       "freedom": 28
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Quick Draw",
       "Bunshin Feint",
-      "Honoo no Kazamidori"
+      "Fire Rooster"
     ],
     "totalStats": 434,
     "ovrWeighted": 60,
@@ -192,7 +192,7 @@
       "Freeze Shot"
     ],
     "totalStats": 474,
-    "ovrWeighted": 67,
+    "ovrWeighted": 68,
     "ovrPure": 68
   },
   {
@@ -214,10 +214,10 @@
       "freedom": 16
     },
     "moves": [
-      "Tatsumaki Senpuu",
-      "Kung Fu Head",
+      "Whirlwind Twister",
+      "Kung Fu Header",
       "Bunshin Feint",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 421,
     "ovrWeighted": 61,
@@ -243,12 +243,12 @@
     },
     "moves": [
       "Grenade Shot",
-      "Gorimuchuu",
+      "Bewildered",
       "Fake Ball",
       "Twin Boost"
     ],
     "totalStats": 424,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 61
   },
   {
@@ -304,7 +304,7 @@
       "Back Tornado"
     ],
     "totalStats": 436,
-    "ovrWeighted": 62,
+    "ovrWeighted": 63,
     "ovrPure": 62
   },
   {
@@ -327,12 +327,12 @@
     },
     "moves": [
       "Zigzag Spark",
-      "Jigoku Guruma",
+      "Rolling Hell",
       "Dragon Crash",
       "Dragon Tornado"
     ],
     "totalStats": 445,
-    "ovrWeighted": 64,
+    "ovrWeighted": 65,
     "ovrPure": 64
   },
   {
@@ -357,7 +357,7 @@
       "Fire Tornado",
       "Heat Tackle",
       "Quick Draw",
-      "Inazuma Otoshi"
+      "Inazuma Drop"
     ],
     "totalStats": 485,
     "ovrWeighted": 73,
@@ -382,13 +382,13 @@
       "freedom": 14
     },
     "moves": [
-      "Super Scan (DF)",
-      "Super Scan (OF)",
-      "Divine Arrow",
-      "Tamanori Pierrot"
+      "Defence Scan",
+      "Attack Scan",
+      "Divine Arrows",
+      "Rodeo Clown"
     ],
     "totalStats": 401,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -416,7 +416,7 @@
       "Whirlwind"
     ],
     "totalStats": 436,
-    "ovrWeighted": 64,
+    "ovrWeighted": 65,
     "ovrPure": 62
   },
   {
@@ -444,7 +444,7 @@
       "Horn Train"
     ],
     "totalStats": 364,
-    "ovrWeighted": 53,
+    "ovrWeighted": 49,
     "ovrPure": 52
   },
   {
@@ -640,7 +640,7 @@
       "Whirlwind Cut"
     ],
     "totalStats": 416,
-    "ovrWeighted": 60,
+    "ovrWeighted": 61,
     "ovrPure": 59
   },
   {
@@ -668,7 +668,7 @@
       "Wild Claw"
     ],
     "totalStats": 475,
-    "ovrWeighted": 69,
+    "ovrWeighted": 70,
     "ovrPure": 68
   },
   {
@@ -752,7 +752,7 @@
       "Rocket Kobushi"
     ],
     "totalStats": 355,
-    "ovrWeighted": 50,
+    "ovrWeighted": 51,
     "ovrPure": 51
   },
   {
@@ -775,7 +775,7 @@
     },
     "moves": [
       "Black Magic",
-      "Psycho Shot",
+      "Wrath Shot",
       "Doppelganger",
       "Death Zone"
     ],
@@ -803,7 +803,7 @@
     },
     "moves": [
       "Comet Shot",
-      "Psycho Shot",
+      "Wrath Shot",
       "Kung Fu Header",
       "Ghost Pull"
     ],
@@ -1088,7 +1088,7 @@
       "Afterimage"
     ],
     "totalStats": 366,
-    "ovrWeighted": 53,
+    "ovrWeighted": 55,
     "ovrPure": 52
   },
   {
@@ -1144,7 +1144,7 @@
       "Boost Glider"
     ],
     "totalStats": 383,
-    "ovrWeighted": 54,
+    "ovrWeighted": 55,
     "ovrPure": 55
   },
   {
@@ -1284,7 +1284,7 @@
       "Spider Web"
     ],
     "totalStats": 394,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -1312,7 +1312,7 @@
       "Defence Scan"
     ],
     "totalStats": 517,
-    "ovrWeighted": 75,
+    "ovrWeighted": 74,
     "ovrPure": 74
   },
   {
@@ -1335,12 +1335,12 @@
     },
     "moves": [
       "Attack Scan",
-      "Psycho Shot",
+      "Wrath Shot",
       "Defence Scan",
       "Back Tornado"
     ],
     "totalStats": 353,
-    "ovrWeighted": 56,
+    "ovrWeighted": 57,
     "ovrPure": 50
   },
   {
@@ -1392,7 +1392,7 @@
     "moves": [
       "Defence Scan",
       "Attack Scan",
-      "Psycho Shot",
+      "Wrath Shot",
       "Earthquake"
     ],
     "totalStats": 328,
@@ -1420,7 +1420,7 @@
     "moves": [
       "Defence Scan",
       "Attack Scan",
-      "Psycho Shot",
+      "Wrath Shot",
       "Kung Fu Header"
     ],
     "totalStats": 339,
@@ -1530,7 +1530,7 @@
       "freedom": 10
     },
     "moves": [
-      "Psycho Shot",
+      "Wrath Shot",
       "Flurry Dash",
       "Defence Scan",
       "Patriot Shot"
@@ -1559,7 +1559,7 @@
     },
     "moves": [
       "Attack Scan",
-      "Psycho Shot",
+      "Wrath Shot",
       "Defence Scan",
       "Shadow Stitch"
     ],
@@ -1615,7 +1615,7 @@
     },
     "moves": [
       "Defence Scan",
-      "Psycho Shot",
+      "Wrath Shot",
       "Attack Scan",
       "Twin Boost"
     ],
@@ -1698,7 +1698,7 @@
       "freedom": 10
     },
     "moves": [
-      "Psycho Shot",
+      "Wrath Shot",
       "Attack Scan",
       "Defence Scan",
       "Fire Tornado"
@@ -1760,7 +1760,7 @@
       "Fireball Knuckle"
     ],
     "totalStats": 397,
-    "ovrWeighted": 55,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -1788,7 +1788,7 @@
       "Breakthrough"
     ],
     "totalStats": 362,
-    "ovrWeighted": 53,
+    "ovrWeighted": 57,
     "ovrPure": 52
   },
   {
@@ -1811,7 +1811,7 @@
     },
     "moves": [
       "Fake Ball",
-      "Psycho Shot",
+      "Wrath Shot",
       "Zigzag Spark",
       "Utter Gutsiness Bat"
     ],
@@ -2096,7 +2096,7 @@
       "Freeze Shot"
     ],
     "totalStats": 393,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -2124,7 +2124,7 @@
       "Shine Drive"
     ],
     "totalStats": 398,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -2208,7 +2208,7 @@
       "Spinning Cut"
     ],
     "totalStats": 477,
-    "ovrWeighted": 70,
+    "ovrWeighted": 69,
     "ovrPure": 68
   },
   {
@@ -2399,7 +2399,7 @@
     },
     "moves": [
       "Killer Slide",
-      "Clone Faker",
+      "Doppelganger",
       "Freeze Shot",
       "Death Zone"
     ],
@@ -2460,7 +2460,7 @@
       "Kung Fu Header"
     ],
     "totalStats": 371,
-    "ovrWeighted": 54,
+    "ovrWeighted": 53,
     "ovrPure": 53
   },
   {
@@ -2567,7 +2567,7 @@
     },
     "moves": [
       "Killer Slide",
-      "Clone Faker",
+      "Doppelganger",
       "Emperor Penguin No.2",
       "Divine Arrows"
     ],
@@ -2824,7 +2824,7 @@
       "Moonsault"
     ],
     "totalStats": 422,
-    "ovrWeighted": 59,
+    "ovrWeighted": 60,
     "ovrPure": 60
   },
   {
@@ -2852,7 +2852,7 @@
       "Shadow Stitch"
     ],
     "totalStats": 408,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 58
   },
   {
@@ -3076,7 +3076,7 @@
       "About Face"
     ],
     "totalStats": 430,
-    "ovrWeighted": 67,
+    "ovrWeighted": 66,
     "ovrPure": 61
   },
   {
@@ -3104,7 +3104,7 @@
       "Kung Fu Header"
     ],
     "totalStats": 398,
-    "ovrWeighted": 63,
+    "ovrWeighted": 61,
     "ovrPure": 57
   },
   {
@@ -3356,7 +3356,7 @@
       "Killer Blade"
     ],
     "totalStats": 391,
-    "ovrWeighted": 54,
+    "ovrWeighted": 55,
     "ovrPure": 56
   },
   {
@@ -3412,7 +3412,7 @@
       "Full Power Shield"
     ],
     "totalStats": 458,
-    "ovrWeighted": 63,
+    "ovrWeighted": 62,
     "ovrPure": 65
   },
   {
@@ -3524,7 +3524,7 @@
       "Gigant Wall"
     ],
     "totalStats": 416,
-    "ovrWeighted": 61,
+    "ovrWeighted": 63,
     "ovrPure": 59
   },
   {
@@ -3748,7 +3748,7 @@
       "Boost Glider"
     ],
     "totalStats": 398,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -3776,7 +3776,7 @@
       "Spinning Shot"
     ],
     "totalStats": 389,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -3832,7 +3832,7 @@
       "Warp Space"
     ],
     "totalStats": 352,
-    "ovrWeighted": 50,
+    "ovrWeighted": 49,
     "ovrPure": 50
   },
   {
@@ -3888,7 +3888,7 @@
       "Triangle Z"
     ],
     "totalStats": 440,
-    "ovrWeighted": 68,
+    "ovrWeighted": 67,
     "ovrPure": 63
   },
   {
@@ -3969,7 +3969,7 @@
       "Tsunami Wall",
       "Gigant Wall",
       "The Wall",
-      "Shikofumi"
+      "Sumo Stomp"
     ],
     "totalStats": 502,
     "ovrWeighted": 75,
@@ -4000,7 +4000,7 @@
       "Heaven's Time"
     ],
     "totalStats": 462,
-    "ovrWeighted": 71,
+    "ovrWeighted": 70,
     "ovrPure": 66
   },
   {
@@ -4051,7 +4051,7 @@
     },
     "moves": [
       "Dash Storm",
-      "Psycho Shot",
+      "Wrath Shot",
       "Fire Tornado",
       "Fire Rooster"
     ],
@@ -4196,7 +4196,7 @@
       "Doppelganger"
     ],
     "totalStats": 418,
-    "ovrWeighted": 62,
+    "ovrWeighted": 61,
     "ovrPure": 60
   },
   {
@@ -4224,7 +4224,7 @@
       "Snake Shot"
     ],
     "totalStats": 480,
-    "ovrWeighted": 71,
+    "ovrWeighted": 70,
     "ovrPure": 69
   },
   {
@@ -4252,7 +4252,7 @@
       "Breakthrough"
     ],
     "totalStats": 437,
-    "ovrWeighted": 61,
+    "ovrWeighted": 62,
     "ovrPure": 62
   },
   {
@@ -4280,7 +4280,7 @@
       "Whirlwind"
     ],
     "totalStats": 443,
-    "ovrWeighted": 63,
+    "ovrWeighted": 64,
     "ovrPure": 63
   },
   {
@@ -4336,7 +4336,7 @@
       "Horn Train"
     ],
     "totalStats": 475,
-    "ovrWeighted": 71,
+    "ovrWeighted": 72,
     "ovrPure": 68
   },
   {
@@ -4784,7 +4784,7 @@
       "Horn Train"
     ],
     "totalStats": 307,
-    "ovrWeighted": 50,
+    "ovrWeighted": 52,
     "ovrPure": 44
   },
   {
@@ -4946,13 +4946,13 @@
       "freedom": 11
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Cross Drive",
       "Heat Tackle",
-      "Koutei Penguin 2gou"
+      "Emperor Penguin No.2"
     ],
     "totalStats": 321,
-    "ovrWeighted": 46,
+    "ovrWeighted": 47,
     "ovrPure": 46
   },
   {
@@ -4975,7 +4975,7 @@
     },
     "moves": [
       "Killer Slide",
-      "Shippuu Dash",
+      "Flurry Dash",
       "Fake Ball",
       "Tarzan Kick"
     ],
@@ -5198,10 +5198,10 @@
       "freedom": 42
     },
     "moves": [
-      "Suisei Shoot",
-      "Tamanori Pierrot",
+      "Comet Shot",
+      "Rodeo Clown",
       "Hawk Shot",
-      "Koutei Penguin 2gou"
+      "Emperor Penguin No.2"
     ],
     "totalStats": 323,
     "ovrWeighted": 47,
@@ -5232,7 +5232,7 @@
       "Mistral"
     ],
     "totalStats": 316,
-    "ovrWeighted": 47,
+    "ovrWeighted": 46,
     "ovrPure": 45
   },
   {
@@ -5260,7 +5260,7 @@
       "Gigant Wall"
     ],
     "totalStats": 289,
-    "ovrWeighted": 48,
+    "ovrWeighted": 50,
     "ovrPure": 41
   },
   {
@@ -5400,7 +5400,7 @@
       "About Face"
     ],
     "totalStats": 304,
-    "ovrWeighted": 44,
+    "ovrWeighted": 45,
     "ovrPure": 43
   },
   {
@@ -5652,7 +5652,7 @@
       "Back Tornado"
     ],
     "totalStats": 423,
-    "ovrWeighted": 67,
+    "ovrWeighted": 68,
     "ovrPure": 60
   },
   {
@@ -5680,7 +5680,7 @@
       "Wrath Shot"
     ],
     "totalStats": 379,
-    "ovrWeighted": 56,
+    "ovrWeighted": 58,
     "ovrPure": 54
   },
   {
@@ -5904,7 +5904,7 @@
       "Back Tornado"
     ],
     "totalStats": 350,
-    "ovrWeighted": 50,
+    "ovrWeighted": 51,
     "ovrPure": 50
   },
   {
@@ -5988,7 +5988,7 @@
       "Freeze Shot"
     ],
     "totalStats": 397,
-    "ovrWeighted": 56,
+    "ovrWeighted": 55,
     "ovrPure": 57
   },
   {
@@ -6016,7 +6016,7 @@
       "Attack Scan"
     ],
     "totalStats": 344,
-    "ovrWeighted": 49,
+    "ovrWeighted": 50,
     "ovrPure": 49
   },
   {
@@ -6038,10 +6038,10 @@
       "freedom": 36
     },
     "moves": [
-      "Dash Accel",
-      "Spinning Shoot",
+      "Dash Accelerator",
+      "Spinning Shot",
       "Heat Tackle",
-      "Gorimuchuu"
+      "Bewildered"
     ],
     "totalStats": 393,
     "ovrWeighted": 56,
@@ -6095,8 +6095,8 @@
     },
     "moves": [
       "Quick Draw",
-      "Tatsumaki Senpuu",
-      "Dynamite Shoot",
+      "Whirlwind Twister",
+      "Dynamite Shot",
       "Back Tornado"
     ],
     "totalStats": 412,
@@ -6123,12 +6123,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Shoot Pocket",
-      "Onryou",
-      "Kogarashi"
+      "Shot Pocket",
+      "Ghost Pull",
+      "Mistral"
     ],
     "totalStats": 427,
-    "ovrWeighted": 64,
+    "ovrWeighted": 61,
     "ovrPure": 61
   },
   {
@@ -6150,7 +6150,7 @@
       "freedom": 21
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Coil Turn",
       "Cross Drive",
       "Divine Arrow"
@@ -6180,8 +6180,8 @@
     "moves": [
       "Rolling Kick",
       "Spinning Cut",
-      "Ushiro no Shoumen",
-      "Kamaitachi"
+      "About Face",
+      "Whirlwind Cut"
     ],
     "totalStats": 414,
     "ovrWeighted": 59,
@@ -6206,13 +6206,13 @@
       "freedom": 24
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Monkey Turn",
       "Dokugiri no Jutsu",
       "Moonsault"
     ],
     "totalStats": 399,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -6234,8 +6234,8 @@
       "freedom": 16
     },
     "moves": [
-      "Dash Accel",
-      "Spinning Shoot",
+      "Dash Accelerator",
+      "Spinning Shot",
       "Cross Drive",
       "Blade Attack"
     ],
@@ -6268,7 +6268,7 @@
       "Full Power Shield"
     ],
     "totalStats": 357,
-    "ovrWeighted": 54,
+    "ovrWeighted": 52,
     "ovrPure": 51
   },
   {
@@ -6290,10 +6290,10 @@
       "freedom": 15
     },
     "moves": [
-      "Shikofumi",
-      "Dynamite Shoot",
+      "Sumo Stomp",
+      "Dynamite Shot",
       "Tsuchi Daruma",
-      "Jigoku Guruma"
+      "Rolling Hell"
     ],
     "totalStats": 392,
     "ovrWeighted": 56,
@@ -6318,13 +6318,13 @@
       "freedom": 19
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Grenade Shot",
       "Cross Drive",
       "Divine Arrow"
     ],
     "totalStats": 377,
-    "ovrWeighted": 52,
+    "ovrWeighted": 53,
     "ovrPure": 54
   },
   {
@@ -6346,9 +6346,9 @@
       "freedom": 22
     },
     "moves": [
-      "Super Scan (OF)",
-      "Super Scan (DF)",
-      "Judge Through",
+      "Attack Scan",
+      "Defence Scan",
+      "Breakthrough",
       "Bunshin Feint"
     ],
     "totalStats": 401,
@@ -6375,9 +6375,9 @@
     },
     "moves": [
       "Killer Blade",
-      "Kamikakushi",
+      "Teleport Shot",
       "Killer Slide",
-      "Tsumuji"
+      "Whirlwind"
     ],
     "totalStats": 398,
     "ovrWeighted": 59,
@@ -6402,13 +6402,13 @@
       "freedom": 16
     },
     "moves": [
-      "Kamikakushi",
-      "Psycho Shot",
+      "Teleport Shot",
+      "Wrath Shot",
       "Illusion Ball",
       "Shine Drive"
     ],
     "totalStats": 341,
-    "ovrWeighted": 47,
+    "ovrWeighted": 48,
     "ovrPure": 49
   },
   {
@@ -6430,13 +6430,13 @@
       "freedom": 20
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Toughness Block",
       "Rocket Kobushi",
-      "Tsumuji"
+      "Whirlwind"
     ],
     "totalStats": 403,
-    "ovrWeighted": 59,
+    "ovrWeighted": 57,
     "ovrPure": 58
   },
   {
@@ -6460,11 +6460,11 @@
     "moves": [
       "Pressure Punch",
       "Quick Draw",
-      "Tsumuji",
+      "Whirlwind",
       "Full Power Shield"
     ],
     "totalStats": 407,
-    "ovrWeighted": 62,
+    "ovrWeighted": 61,
     "ovrPure": 58
   },
   {
@@ -6487,12 +6487,12 @@
     },
     "moves": [
       "Rocket Kobushi",
-      "Makiwari Chop",
-      "Kagome Kagome",
+      "Wood Chopper",
+      "Bamboo Pattern",
       "Counterstrike"
     ],
     "totalStats": 438,
-    "ovrWeighted": 67,
+    "ovrWeighted": 66,
     "ovrPure": 63
   },
   {
@@ -6514,10 +6514,10 @@
       "freedom": 10
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Horn Train",
       "Illusion Ball",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 395,
     "ovrWeighted": 56,
@@ -6544,8 +6544,8 @@
     "moves": [
       "Snake Shot",
       "Hyakuretsu Shot",
-      "Kumo no Ito",
-      "Bunshin Shoot"
+      "Spider Web",
+      "Clone Shot"
     ],
     "totalStats": 327,
     "ovrWeighted": 51,
@@ -6570,13 +6570,13 @@
       "freedom": 33
     },
     "moves": [
-      "Noroi",
-      "Super Scan (DF)",
-      "Kage Nui",
-      "Bunshin Shoot"
+      "Black Magic",
+      "Defence Scan",
+      "Shadow Stitch",
+      "Clone Shot"
     ],
     "totalStats": 463,
-    "ovrWeighted": 65,
+    "ovrWeighted": 66,
     "ovrPure": 66
   },
   {
@@ -6598,13 +6598,13 @@
       "freedom": 20
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Pressure Punch",
       "The Wall",
       "Gigant Wall"
     ],
     "totalStats": 391,
-    "ovrWeighted": 54,
+    "ovrWeighted": 55,
     "ovrPure": 56
   },
   {
@@ -6629,7 +6629,7 @@
       "Spiral Shot",
       "Quick Draw",
       "Meteor Attack",
-      "Jigoku Guruma"
+      "Rolling Hell"
     ],
     "totalStats": 416,
     "ovrWeighted": 58,
@@ -6657,10 +6657,10 @@
       "Pressure Punch",
       "Power Shield",
       "Spinning Cut",
-      "Makiwari Chop"
+      "Wood Chopper"
     ],
     "totalStats": 359,
-    "ovrWeighted": 54,
+    "ovrWeighted": 52,
     "ovrPure": 51
   },
   {
@@ -6688,7 +6688,7 @@
       "Run Ball Run"
     ],
     "totalStats": 408,
-    "ovrWeighted": 54,
+    "ovrWeighted": 55,
     "ovrPure": 58
   },
   {
@@ -6710,13 +6710,13 @@
       "freedom": 15
     },
     "moves": [
-      "Dynamite Shoot",
-      "Dash Accel",
-      "Kung Fu Head",
+      "Dynamite Shot",
+      "Dash Accelerator",
+      "Kung Fu Header",
       "Shine Drive"
     ],
     "totalStats": 409,
-    "ovrWeighted": 55,
+    "ovrWeighted": 54,
     "ovrPure": 58
   },
   {
@@ -6739,9 +6739,9 @@
     },
     "moves": [
       "Doppelganger",
-      "Noroi",
-      "Onryou",
-      "Ushiro no Shoumen"
+      "Black Magic",
+      "Ghost Pull",
+      "About Face"
     ],
     "totalStats": 339,
     "ovrWeighted": 50,
@@ -6769,7 +6769,7 @@
       "Killer Slide",
       "Zigzag Spark",
       "Cyclone",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 394,
     "ovrWeighted": 54,
@@ -6796,8 +6796,8 @@
     "moves": [
       "Coil Turn",
       "Meteor Attack",
-      "Kung Fu Head",
-      "Kamaitachi"
+      "Kung Fu Header",
+      "Whirlwind Cut"
     ],
     "totalStats": 431,
     "ovrWeighted": 62,
@@ -6823,9 +6823,9 @@
     },
     "moves": [
       "Doppelganger",
-      "Gorimuchuu",
+      "Bewildered",
       "Heat Tackle",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 413,
     "ovrWeighted": 59,
@@ -6856,7 +6856,7 @@
       "Full Power Shield"
     ],
     "totalStats": 364,
-    "ovrWeighted": 51,
+    "ovrWeighted": 50,
     "ovrPure": 52
   },
   {
@@ -6907,8 +6907,8 @@
     },
     "moves": [
       "Grenade Shot",
-      "Dokonjou Bat",
-      "Tatsumaki Senpuu",
+      "Utter Gutsiness Bat",
+      "Whirlwind Twister",
       "Back Tornado"
     ],
     "totalStats": 415,
@@ -6935,12 +6935,12 @@
     },
     "moves": [
       "Killer Blade",
-      "Shoot Pocket",
-      "Kumo no Ito",
+      "Shot Pocket",
+      "Spider Web",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 403,
-    "ovrWeighted": 62,
+    "ovrWeighted": 61,
     "ovrPure": 58
   },
   {
@@ -6962,13 +6962,13 @@
       "freedom": 13
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Meteor Attack",
       "Earthquake",
       "Tsuchi Daruma"
     ],
     "totalStats": 387,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 55
   },
   {
@@ -6990,9 +6990,9 @@
       "freedom": 16
     },
     "moves": [
-      "Kamikakushi",
-      "Onryou",
-      "Noroi",
+      "Teleport Shot",
+      "Ghost Pull",
+      "Black Magic",
       "Tsuchi Daruma"
     ],
     "totalStats": 496,
@@ -7018,9 +7018,9 @@
       "freedom": 27
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Gorimuchuu",
-      "Dynamite Shoot",
+      "Rodeo Clown",
+      "Bewildered",
+      "Dynamite Shot",
       "Illusion Ball"
     ],
     "totalStats": 395,
@@ -7046,9 +7046,9 @@
       "freedom": 22
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Gorimuchuu",
-      "Judge Through",
+      "Rodeo Clown",
+      "Bewildered",
+      "Breakthrough",
       "Tsuchi Daruma"
     ],
     "totalStats": 409,
@@ -7080,7 +7080,7 @@
       "Counterstrike"
     ],
     "totalStats": 383,
-    "ovrWeighted": 53,
+    "ovrWeighted": 51,
     "ovrPure": 55
   },
   {
@@ -7102,9 +7102,9 @@
       "freedom": 32
     },
     "moves": [
-      "Spinning Shoot",
+      "Spinning Shot",
       "Tarzan Kick",
-      "Mogura Feint",
+      "Mole Fake",
       "Tsuchi Daruma"
     ],
     "totalStats": 378,
@@ -7132,11 +7132,11 @@
     "moves": [
       "Killer Blade",
       "Toughness Block",
-      "Makiwari Chop",
-      "Kage Nui"
+      "Wood Chopper",
+      "Shadow Stitch"
     ],
     "totalStats": 393,
-    "ovrWeighted": 54,
+    "ovrWeighted": 55,
     "ovrPure": 56
   },
   {
@@ -7158,13 +7158,13 @@
       "freedom": 15
     },
     "moves": [
-      "Phantom Shoot",
-      "Kumo no Ito",
+      "Phantom Shot",
+      "Spider Web",
       "Dokugiri no Jutsu",
       "God Hand"
     ],
     "totalStats": 360,
-    "ovrWeighted": 64,
+    "ovrWeighted": 58,
     "ovrPure": 51
   },
   {
@@ -7186,10 +7186,10 @@
       "freedom": 15
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Quick Draw",
       "Run Ball Run",
-      "Super Scan (OF)"
+      "Attack Scan"
     ],
     "totalStats": 410,
     "ovrWeighted": 56,
@@ -7215,8 +7215,8 @@
     },
     "moves": [
       "Rolling Kick",
-      "Kamikakushi",
-      "Psycho Shot",
+      "Teleport Shot",
+      "Wrath Shot",
       "Death Zone"
     ],
     "totalStats": 408,
@@ -7243,12 +7243,12 @@
     },
     "moves": [
       "Grenade Shot",
-      "Patriot Shoot",
+      "Patriot Shot",
       "Illusion Ball",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 375,
-    "ovrWeighted": 53,
+    "ovrWeighted": 51,
     "ovrPure": 54
   },
   {
@@ -7270,10 +7270,10 @@
       "freedom": 26
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Condor Dive",
       "Illusion Ball",
-      "Psycho Shot"
+      "Wrath Shot"
     ],
     "totalStats": 362,
     "ovrWeighted": 51,
@@ -7298,9 +7298,9 @@
       "freedom": 16
     },
     "moves": [
-      "Phantom Shoot",
+      "Phantom Shot",
       "Doppelganger",
-      "Psycho Shot",
+      "Wrath Shot",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 402,
@@ -7327,7 +7327,7 @@
     },
     "moves": [
       "Snake Shot",
-      "Gorimuchuu",
+      "Bewildered",
       "Tsuchi Daruma",
       "Reflect Buster"
     ],
@@ -7356,7 +7356,7 @@
     "moves": [
       "Grenade Shot",
       "Freeze Shot",
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Cyclone"
     ],
     "totalStats": 426,
@@ -7383,9 +7383,9 @@
     },
     "moves": [
       "Coil Turn",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Cyclone",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 355,
     "ovrWeighted": 52,
@@ -7411,9 +7411,9 @@
     },
     "moves": [
       "Spiral Shot",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Twin Boost",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 409,
     "ovrWeighted": 59,
@@ -7439,9 +7439,9 @@
     },
     "moves": [
       "Spiral Shot",
-      "Psycho Shot",
-      "Bunshin Shoot",
-      "Zanzou"
+      "Wrath Shot",
+      "Clone Shot",
+      "Afterimage"
     ],
     "totalStats": 380,
     "ovrWeighted": 54,
@@ -7468,7 +7468,7 @@
     "moves": [
       "Horn Train",
       "Zigzag Spark",
-      "Mogura Feint",
+      "Mole Fake",
       "Cyclone"
     ],
     "totalStats": 387,
@@ -7495,8 +7495,8 @@
     },
     "moves": [
       "Rolling Kick",
-      "Phantom Shoot",
-      "Dash Accel",
+      "Phantom Shot",
+      "Dash Accelerator",
       "Dash Storm"
     ],
     "totalStats": 397,
@@ -7522,8 +7522,8 @@
       "freedom": 39
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Shikofumi",
+      "Rodeo Clown",
+      "Sumo Stomp",
       "Toughness Block",
       "Gigant Wall"
     ],
@@ -7551,7 +7551,7 @@
     },
     "moves": [
       "Spiral Shot",
-      "Kung Fu Head",
+      "Kung Fu Header",
       "Zigzag Spark",
       "Dash Storm"
     ],
@@ -7578,13 +7578,13 @@
       "freedom": 20
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Blade Attack",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Hurricane Arrow"
     ],
     "totalStats": 423,
-    "ovrWeighted": 61,
+    "ovrWeighted": 59,
     "ovrPure": 60
   },
   {
@@ -7606,13 +7606,13 @@
       "freedom": 17
     },
     "moves": [
-      "Spinning Shoot",
+      "Spinning Shot",
       "Grenade Shot",
       "Spinning Cut",
       "Shine Drive"
     ],
     "totalStats": 438,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 63
   },
   {
@@ -7640,7 +7640,7 @@
       "Cyclone"
     ],
     "totalStats": 426,
-    "ovrWeighted": 66,
+    "ovrWeighted": 63,
     "ovrPure": 61
   },
   {
@@ -7662,10 +7662,10 @@
       "freedom": 19
     },
     "moves": [
-      "Kage Nui",
-      "Phantom Shoot",
+      "Shadow Stitch",
+      "Phantom Shot",
       "Freeze Shot",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 378,
     "ovrWeighted": 52,
@@ -7690,10 +7690,10 @@
       "freedom": 10
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Toughness Block",
-      "Tsumuji",
-      "Bakuretsu Punch"
+      "Whirlwind",
+      "Blazing Knuckle"
     ],
     "totalStats": 399,
     "ovrWeighted": 57,
@@ -7718,10 +7718,10 @@
       "freedom": 26
     },
     "moves": [
-      "Suisei Shoot",
-      "Gorimuchuu",
+      "Comet Shot",
+      "Bewildered",
       "Heat Tackle",
-      "Patriot Shoot"
+      "Patriot Shot"
     ],
     "totalStats": 412,
     "ovrWeighted": 59,
@@ -7746,13 +7746,13 @@
       "freedom": 17
     },
     "moves": [
-      "Shikofumi",
-      "Gorimuchuu",
-      "Dokonjou Bat",
-      "Onryou"
+      "Sumo Stomp",
+      "Bewildered",
+      "Utter Gutsiness Bat",
+      "Ghost Pull"
     ],
     "totalStats": 407,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 58
   },
   {
@@ -7774,8 +7774,8 @@
       "freedom": 22
     },
     "moves": [
-      "Spinning Shoot",
-      "Kamikakushi",
+      "Spinning Shot",
+      "Teleport Shot",
       "Cross Drive",
       "Divine Arrow"
     ],
@@ -7833,10 +7833,10 @@
       "Pressure Punch",
       "Wild Claw",
       "Harvest",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 429,
-    "ovrWeighted": 66,
+    "ovrWeighted": 64,
     "ovrPure": 61
   },
   {
@@ -7859,8 +7859,8 @@
     },
     "moves": [
       "Grenade Shot",
-      "Dynamite Shoot",
-      "Patriot Shoot",
+      "Dynamite Shot",
+      "Patriot Shot",
       "Divine Arrow"
     ],
     "totalStats": 440,
@@ -7888,8 +7888,8 @@
     "moves": [
       "Power Shield",
       "The Wall",
-      "Makiwari Chop",
-      "Tsumuji"
+      "Wood Chopper",
+      "Whirlwind"
     ],
     "totalStats": 465,
     "ovrWeighted": 65,
@@ -7916,8 +7916,8 @@
     "moves": [
       "Quick Draw",
       "Tarzan Kick",
-      "Judge Through",
-      "Ushiro no Shoumen"
+      "Breakthrough",
+      "About Face"
     ],
     "totalStats": 420,
     "ovrWeighted": 60,
@@ -7970,13 +7970,13 @@
       "freedom": 16
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Grenade Shot",
       "Meteor Attack",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 403,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 58
   },
   {
@@ -7998,13 +7998,13 @@
       "freedom": 23
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Zigzag Spark",
       "Illusion Ball",
       "Dash Storm"
     ],
     "totalStats": 401,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -8026,9 +8026,9 @@
       "freedom": 24
     },
     "moves": [
-      "Dash Accel",
-      "Gorimuchuu",
-      "Super Scan (DF)",
+      "Dash Accelerator",
+      "Bewildered",
+      "Defence Scan",
       "Tsuchi Daruma"
     ],
     "totalStats": 407,
@@ -8054,13 +8054,13 @@
       "freedom": 18
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Pressure Punch",
       "Quick Draw",
-      "Shoot Pocket"
+      "Shot Pocket"
     ],
     "totalStats": 402,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -8083,12 +8083,12 @@
     },
     "moves": [
       "Killer Blade",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Cyclone",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 357,
-    "ovrWeighted": 54,
+    "ovrWeighted": 53,
     "ovrPure": 51
   },
   {
@@ -8110,8 +8110,8 @@
       "freedom": 20
     },
     "moves": [
-      "Suisei Shoot",
-      "Kung Fu Head",
+      "Comet Shot",
+      "Kung Fu Header",
       "Back Tornado",
       "Divine Arrow"
     ],
@@ -8140,7 +8140,7 @@
     "moves": [
       "Coil Turn",
       "Zigzag Spark",
-      "Zanzou",
+      "Afterimage",
       "Harvest"
     ],
     "totalStats": 424,
@@ -8166,13 +8166,13 @@
       "freedom": 14
     },
     "moves": [
-      "Tatsumaki Senpuu",
-      "Kamaitachi",
-      "Bunshin Shoot",
+      "Whirlwind Twister",
+      "Whirlwind Cut",
+      "Clone Shot",
       "Blade Attack"
     ],
     "totalStats": 357,
-    "ovrWeighted": 51,
+    "ovrWeighted": 49,
     "ovrPure": 51
   },
   {
@@ -8196,7 +8196,7 @@
     "moves": [
       "Rolling Kick",
       "Spinning Cut",
-      "Ushiro no Shoumen",
+      "About Face",
       "Kung Fu Head"
     ],
     "totalStats": 353,
@@ -8223,12 +8223,12 @@
     },
     "moves": [
       "Killer Slide",
-      "Makiwari Chop",
-      "Kogarashi",
+      "Wood Chopper",
+      "Mistral",
       "Freeze Shot"
     ],
     "totalStats": 392,
-    "ovrWeighted": 52,
+    "ovrWeighted": 54,
     "ovrPure": 56
   },
   {
@@ -8250,7 +8250,7 @@
       "freedom": 26
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
       "Earthquake",
       "Mega Quake"
@@ -8278,13 +8278,13 @@
       "freedom": 18
     },
     "moves": [
-      "Spinning Shoot",
-      "Tamanori Pierrot",
+      "Spinning Shot",
+      "Rodeo Clown",
       "Condor Dive",
-      "Dokonjou Bat"
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 446,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 64
   },
   {
@@ -8308,11 +8308,11 @@
     "moves": [
       "Pressure Punch",
       "Toughness Block",
-      "Dash Accel",
-      "Kogarashi"
+      "Dash Accelerator",
+      "Mistral"
     ],
     "totalStats": 402,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 57
   },
   {
@@ -8334,9 +8334,9 @@
       "freedom": 21
     },
     "moves": [
-      "Shikofumi",
-      "Noroi",
-      "Ushiro no Shoumen",
+      "Sumo Stomp",
+      "Black Magic",
+      "About Face",
       "Tsuchi Daruma"
     ],
     "totalStats": 284,
@@ -8362,13 +8362,13 @@
       "freedom": 15
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
       "Super Armadillo",
       "Boost Glider"
     ],
     "totalStats": 401,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 57
   },
   {
@@ -8390,10 +8390,10 @@
       "freedom": 14
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Snake Shot",
       "Magic",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 397,
     "ovrWeighted": 57,
@@ -8424,7 +8424,7 @@
       "Illusion Ball"
     ],
     "totalStats": 397,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 57
   },
   {
@@ -8446,10 +8446,10 @@
       "freedom": 18
     },
     "moves": [
-      "Gorimuchuu",
-      "Judge Through",
+      "Bewildered",
+      "Breakthrough",
       "Dokugiri no Jutsu",
-      "Dokonjou Bat"
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 421,
     "ovrWeighted": 60,
@@ -8475,9 +8475,9 @@
     },
     "moves": [
       "Fire Tornado",
-      "Dokonjou Bat",
+      "Utter Gutsiness Bat",
       "Dokugiri no Jutsu",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 422,
     "ovrWeighted": 58,
@@ -8504,8 +8504,8 @@
     "moves": [
       "Tornado Catch",
       "Doppelganger",
-      "Tsumuji",
-      "Kage Nui"
+      "Whirlwind",
+      "Shadow Stitch"
     ],
     "totalStats": 399,
     "ovrWeighted": 57,
@@ -8530,13 +8530,13 @@
       "freedom": 27
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Illusion Ball",
       "Tsuchi Daruma",
       "Run Ball Run"
     ],
     "totalStats": 417,
-    "ovrWeighted": 63,
+    "ovrWeighted": 64,
     "ovrPure": 60
   },
   {
@@ -8558,9 +8558,9 @@
       "freedom": 14
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Power Shield",
-      "Mogura Feint",
+      "Mole Fake",
       "Full Power Shield"
     ],
     "totalStats": 391,
@@ -8586,13 +8586,13 @@
       "freedom": 21
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Quick Draw",
-      "Suisei Shoot",
+      "Comet Shot",
       "Zigzag Spark"
     ],
     "totalStats": 410,
-    "ovrWeighted": 56,
+    "ovrWeighted": 57,
     "ovrPure": 59
   },
   {
@@ -8615,8 +8615,8 @@
     },
     "moves": [
       "Magic",
-      "Judge Through",
-      "Onryou",
+      "Breakthrough",
+      "Ghost Pull",
       "Fake Ball"
     ],
     "totalStats": 434,
@@ -8642,13 +8642,13 @@
       "freedom": 26
     },
     "moves": [
-      "Gorimuchuu",
-      "Super Scan (OF)",
-      "Super Scan (DF)",
+      "Bewildered",
+      "Attack Scan",
+      "Defence Scan",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 379,
-    "ovrWeighted": 54,
+    "ovrWeighted": 53,
     "ovrPure": 54
   },
   {
@@ -8672,7 +8672,7 @@
     "moves": [
       "Spinning Cut",
       "Cross Drive",
-      "Gorimuchuu",
+      "Bewildered",
       "Back Tornado"
     ],
     "totalStats": 406,
@@ -8699,9 +8699,9 @@
     },
     "moves": [
       "Coil Turn",
-      "Dash Accel",
+      "Dash Accelerator",
       "Cyclone",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 403,
     "ovrWeighted": 59,
@@ -8726,7 +8726,7 @@
       "freedom": 40
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Horn Train",
       "Harvest",
       "Shine Drive"
@@ -8755,8 +8755,8 @@
     },
     "moves": [
       "Killer Slide",
-      "Judge Through",
-      "Ushiro no Shoumen",
+      "Breakthrough",
+      "About Face",
       "Twin Boost"
     ],
     "totalStats": 420,
@@ -8782,13 +8782,13 @@
       "freedom": 23
     },
     "moves": [
-      "Phantom Shoot",
-      "Noroi",
-      "Onryou",
-      "Psycho Shot"
+      "Phantom Shot",
+      "Black Magic",
+      "Ghost Pull",
+      "Wrath Shot"
     ],
     "totalStats": 408,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 58
   },
   {
@@ -8816,7 +8816,7 @@
       "Whirlwind"
     ],
     "totalStats": 458,
-    "ovrWeighted": 60,
+    "ovrWeighted": 67,
     "ovrPure": 65
   },
   {
@@ -8840,11 +8840,11 @@
     "moves": [
       "Tornado Catch",
       "Killer Slide",
-      "Tsumuji",
+      "Whirlwind",
       "Harvest"
     ],
     "totalStats": 356,
-    "ovrWeighted": 55,
+    "ovrWeighted": 52,
     "ovrPure": 51
   },
   {
@@ -8867,9 +8867,9 @@
     },
     "moves": [
       "Spinning Cut",
-      "Spinning Shoot",
+      "Spinning Shot",
       "Bunshin Feint",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 431,
     "ovrWeighted": 64,
@@ -8894,9 +8894,9 @@
       "freedom": 35
     },
     "moves": [
-      "Kamikakushi",
+      "Teleport Shot",
       "Doppelganger",
-      "Psycho Shot",
+      "Wrath Shot",
       "Divine Arrow"
     ],
     "totalStats": 365,
@@ -8923,12 +8923,12 @@
     },
     "moves": [
       "Killer Blade",
-      "Makiwari Chop",
-      "Kagome Kagome",
-      "Bakuretsu Punch"
+      "Wood Chopper",
+      "Bamboo Pattern",
+      "Blazing Knuckle"
     ],
     "totalStats": 355,
-    "ovrWeighted": 51,
+    "ovrWeighted": 50,
     "ovrPure": 51
   },
   {
@@ -8952,8 +8952,8 @@
     "moves": [
       "Quick Draw",
       "Zigzag Spark",
-      "Kagome Kagome",
-      "Jigoku Guruma"
+      "Bamboo Pattern",
+      "Rolling Hell"
     ],
     "totalStats": 396,
     "ovrWeighted": 58,
@@ -8979,8 +8979,8 @@
     },
     "moves": [
       "Killer Blade",
-      "Makiwari Chop",
-      "Kogarashi",
+      "Wood Chopper",
+      "Mistral",
       "Spinning Cut"
     ],
     "totalStats": 345,
@@ -9007,8 +9007,8 @@
     },
     "moves": [
       "Quick Draw",
-      "Kumo no Ito",
-      "Kagome Kagome",
+      "Spider Web",
+      "Bamboo Pattern",
       "Hawk Shot"
     ],
     "totalStats": 361,
@@ -9035,7 +9035,7 @@
     },
     "moves": [
       "Tsuchi Daruma",
-      "Mogura Feint",
+      "Mole Fake",
       "The Wall",
       "Mega Quake"
     ],
@@ -9062,8 +9062,8 @@
       "freedom": 17
     },
     "moves": [
-      "Shikofumi",
-      "Gorimuchuu",
+      "Sumo Stomp",
+      "Bewildered",
       "Earthquake",
       "Tsuchi Daruma"
     ],
@@ -9091,12 +9091,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Tsumuji",
-      "Kogarashi",
+      "Whirlwind",
+      "Mistral",
       "Back Tornado"
     ],
     "totalStats": 462,
-    "ovrWeighted": 70,
+    "ovrWeighted": 69,
     "ovrPure": 66
   },
   {
@@ -9119,9 +9119,9 @@
     },
     "moves": [
       "Quick Draw",
-      "Shippuu Dash",
-      "Suisei Shoot",
-      "Kagome Kagome"
+      "Flurry Dash",
+      "Comet Shot",
+      "Bamboo Pattern"
     ],
     "totalStats": 348,
     "ovrWeighted": 53,
@@ -9147,7 +9147,7 @@
     },
     "moves": [
       "Horn Train",
-      "Mogura Feint",
+      "Mole Fake",
       "Earthquake",
       "Harvest"
     ],
@@ -9203,7 +9203,7 @@
     },
     "moves": [
       "Killer Slide",
-      "Judge Through",
+      "Breakthrough",
       "Heat Tackle",
       "Shine Drive"
     ],
@@ -9230,10 +9230,10 @@
       "freedom": 18
     },
     "moves": [
-      "Super Scan (DF)",
-      "Shoot Pocket",
+      "Defence Scan",
+      "Shot Pocket",
       "Counterstrike",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 386,
     "ovrWeighted": 56,
@@ -9258,10 +9258,10 @@
       "freedom": 20
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Hawk Shot",
       "Bunshin Feint",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 381,
     "ovrWeighted": 57,
@@ -9287,9 +9287,9 @@
     },
     "moves": [
       "Grenade Shot",
-      "Dynamite Shoot",
+      "Dynamite Shot",
       "Meteor Attack",
-      "Patriot Shoot"
+      "Patriot Shot"
     ],
     "totalStats": 304,
     "ovrWeighted": 44,
@@ -9314,7 +9314,7 @@
       "freedom": 20
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Zigzag Spark",
       "Illusion Ball",
       "Moonsault"
@@ -9342,7 +9342,7 @@
       "freedom": 19
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Rocket Kobushi",
       "Full Power Shield",
       "Tsuchi Daruma"
@@ -9373,7 +9373,7 @@
       "Killer Slide",
       "The Wall",
       "Harvest",
-      "Shikofumi"
+      "Sumo Stomp"
     ],
     "totalStats": 369,
     "ovrWeighted": 55,
@@ -9398,10 +9398,10 @@
       "freedom": 23
     },
     "moves": [
-      "Bunshin Shoot",
+      "Clone Shot",
       "Bunshin Feint",
-      "Phantom Shoot",
-      "Onryou"
+      "Phantom Shot",
+      "Ghost Pull"
     ],
     "totalStats": 400,
     "ovrWeighted": 55,
@@ -9427,12 +9427,12 @@
     },
     "moves": [
       "Pressure Punch",
-      "Tatsumaki Senpuu",
-      "Bakuretsu Punch",
+      "Whirlwind Twister",
+      "Blazing Knuckle",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 355,
-    "ovrWeighted": 53,
+    "ovrWeighted": 52,
     "ovrPure": 51
   },
   {
@@ -9483,12 +9483,12 @@
     },
     "moves": [
       "Power Shield",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Full Power Shield",
       "Spinning Cut"
     ],
     "totalStats": 414,
-    "ovrWeighted": 59,
+    "ovrWeighted": 57,
     "ovrPure": 59
   },
   {
@@ -9510,10 +9510,10 @@
       "freedom": 21
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Bunshin Feint",
       "Tarzan Kick",
-      "Judge Through"
+      "Breakthrough"
     ],
     "totalStats": 439,
     "ovrWeighted": 64,
@@ -9541,7 +9541,7 @@
       "Killer Slide",
       "Spinning Cut",
       "Zigzag Spark",
-      "Zanzou"
+      "Afterimage"
     ],
     "totalStats": 345,
     "ovrWeighted": 57,
@@ -9566,9 +9566,9 @@
       "freedom": 34
     },
     "moves": [
-      "Noroi",
-      "Onryou",
-      "Super Scan (OF)",
+      "Black Magic",
+      "Ghost Pull",
+      "Attack Scan",
       "Kung Fu Head"
     ],
     "totalStats": 434,
@@ -9597,7 +9597,7 @@
       "Super Armadillo",
       "Heat Tackle",
       "Grenade Shot",
-      "Patriot Shoot"
+      "Patriot Shot"
     ],
     "totalStats": 420,
     "ovrWeighted": 60,
@@ -9624,7 +9624,7 @@
     "moves": [
       "Rolling Kick",
       "Hyakuretsu Shot",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Boost Glider"
     ],
     "totalStats": 397,
@@ -9650,9 +9650,9 @@
       "freedom": 15
     },
     "moves": [
-      "Dynamite Shoot",
-      "Patriot Shoot",
-      "Shikofumi",
+      "Dynamite Shot",
+      "Patriot Shot",
+      "Sumo Stomp",
       "The Wall"
     ],
     "totalStats": 432,
@@ -9679,12 +9679,12 @@
     },
     "moves": [
       "Killer Slide",
-      "Makiwari Chop",
-      "Tsumuji",
+      "Wood Chopper",
+      "Whirlwind",
       "Cyclone"
     ],
     "totalStats": 402,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -9706,8 +9706,8 @@
       "freedom": 30
     },
     "moves": [
-      "Spinning Shoot",
-      "Dash Accel",
+      "Spinning Shot",
+      "Dash Accelerator",
       "Spinning Cut",
       "Moonsault"
     ],
@@ -9734,13 +9734,13 @@
       "freedom": 16
     },
     "moves": [
-      "Shikofumi",
-      "Dash Accel",
-      "Gorimuchuu",
+      "Sumo Stomp",
+      "Dash Accelerator",
+      "Bewildered",
       "Earthquake"
     ],
     "totalStats": 424,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 61
   },
   {
@@ -9763,12 +9763,12 @@
     },
     "moves": [
       "Coil Turn",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Magic",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 421,
-    "ovrWeighted": 60,
+    "ovrWeighted": 61,
     "ovrPure": 60
   },
   {
@@ -9792,8 +9792,8 @@
     "moves": [
       "Rolling Kick",
       "Tarzan Kick",
-      "Super Scan (OF)",
-      "Super Scan (DF)"
+      "Attack Scan",
+      "Defence Scan"
     ],
     "totalStats": 395,
     "ovrWeighted": 55,
@@ -9819,12 +9819,12 @@
     },
     "moves": [
       "Grenade Shot",
-      "Kung Fu Head",
-      "Zanzou",
-      "Judge Through"
+      "Kung Fu Header",
+      "Afterimage",
+      "Breakthrough"
     ],
     "totalStats": 361,
-    "ovrWeighted": 49,
+    "ovrWeighted": 50,
     "ovrPure": 52
   },
   {
@@ -9846,10 +9846,10 @@
       "freedom": 24
     },
     "moves": [
-      "Onryou",
-      "Dash Accel",
+      "Ghost Pull",
+      "Dash Accelerator",
       "Spinning Cut",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 437,
     "ovrWeighted": 65,
@@ -9876,7 +9876,7 @@
     "moves": [
       "Coil Turn",
       "Doppelganger",
-      "Noroi",
+      "Black Magic",
       "The Wall"
     ],
     "totalStats": 322,
@@ -9902,9 +9902,9 @@
       "freedom": 15
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Magic",
-      "Phantom Shoot",
+      "Phantom Shot",
       "Shine Drive"
     ],
     "totalStats": 367,
@@ -9931,12 +9931,12 @@
     },
     "moves": [
       "Killer Blade",
-      "Makiwari Chop",
-      "Kogarashi",
-      "Dynamite Shoot"
+      "Wood Chopper",
+      "Mistral",
+      "Dynamite Shot"
     ],
     "totalStats": 383,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 55
   },
   {
@@ -9958,13 +9958,13 @@
       "freedom": 20
     },
     "moves": [
-      "Onryou",
-      "Noroi",
-      "Psycho Shot",
-      "Mogura Feint"
+      "Ghost Pull",
+      "Black Magic",
+      "Wrath Shot",
+      "Mole Fake"
     ],
     "totalStats": 428,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 61
   },
   {
@@ -9986,9 +9986,9 @@
       "freedom": 17
     },
     "moves": [
-      "Shikofumi",
-      "Dynamite Shoot",
-      "Tamanori Pierrot",
+      "Sumo Stomp",
+      "Dynamite Shot",
+      "Rodeo Clown",
       "Fake Ball"
     ],
     "totalStats": 428,
@@ -10015,12 +10015,12 @@
     },
     "moves": [
       "Pressure Punch",
-      "Shoot Pocket",
-      "Kumo no Ito",
+      "Shot Pocket",
+      "Spider Web",
       "Counterstrike"
     ],
     "totalStats": 362,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 52
   },
   {
@@ -10042,13 +10042,13 @@
       "freedom": 20
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Monkey Turn",
       "Run Ball Run",
       "Back Tornado"
     ],
     "totalStats": 426,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 61
   },
   {
@@ -10076,7 +10076,7 @@
       "Harvest"
     ],
     "totalStats": 379,
-    "ovrWeighted": 52,
+    "ovrWeighted": 53,
     "ovrPure": 54
   },
   {
@@ -10101,7 +10101,7 @@
       "Illusion Ball",
       "Freeze Shot",
       "Back Tornado",
-      "Tamanori Pierrot"
+      "Rodeo Clown"
     ],
     "totalStats": 363,
     "ovrWeighted": 50,
@@ -10126,9 +10126,9 @@
       "freedom": 12
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Coil Turn",
-      "Kamaitachi",
+      "Whirlwind Cut",
       "Cyclone"
     ],
     "totalStats": 392,
@@ -10154,7 +10154,7 @@
       "freedom": 28
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Illusion Ball",
       "Coil Turn",
       "Cyclone"
@@ -10182,9 +10182,9 @@
       "freedom": 15
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Spinning Cut",
-      "Kamaitachi",
+      "Whirlwind Cut",
       "Hurricane Arrow"
     ],
     "totalStats": 361,
@@ -10211,12 +10211,12 @@
     },
     "moves": [
       "Pressure Punch",
-      "Tatsumaki Senpuu",
-      "Makiwari Chop",
-      "Bakuretsu Punch"
+      "Whirlwind Twister",
+      "Wood Chopper",
+      "Blazing Knuckle"
     ],
     "totalStats": 379,
-    "ovrWeighted": 52,
+    "ovrWeighted": 53,
     "ovrPure": 54
   },
   {
@@ -10238,10 +10238,10 @@
       "freedom": 31
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Illusion Ball",
       "Moonsault",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 326,
     "ovrWeighted": 47,
@@ -10269,7 +10269,7 @@
       "Killer Slide",
       "Zigzag Spark",
       "Cyclone",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 402,
     "ovrWeighted": 58,
@@ -10296,7 +10296,7 @@
     "moves": [
       "Zigzag Spark",
       "Twin Boost",
-      "Hurricane Arrow",
+      "Hurricane Arrows",
       "Divine Arrow"
     ],
     "totalStats": 400,
@@ -10322,9 +10322,9 @@
       "freedom": 38
     },
     "moves": [
-      "Onryou",
-      "Psycho Shot",
-      "Bunshin Shoot",
+      "Ghost Pull",
+      "Wrath Shot",
+      "Clone Shot",
       "Bunshin Feint"
     ],
     "totalStats": 402,
@@ -10350,10 +10350,10 @@
       "freedom": 17
     },
     "moves": [
-      "Noroi",
-      "Onryou",
-      "Kamikakushi",
-      "Psycho Shot"
+      "Black Magic",
+      "Ghost Pull",
+      "Teleport Shot",
+      "Wrath Shot"
     ],
     "totalStats": 424,
     "ovrWeighted": 61,
@@ -10380,7 +10380,7 @@
     "moves": [
       "Killer Slide",
       "Condor Dive",
-      "Bunshin Shoot",
+      "Clone Shot",
       "Bunshin Feint"
     ],
     "totalStats": 390,
@@ -10406,10 +10406,10 @@
       "freedom": 45
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Toughness Block",
-      "Tamanori Pierrot",
-      "Kogarashi"
+      "Rodeo Clown",
+      "Mistral"
     ],
     "totalStats": 307,
     "ovrWeighted": 45,
@@ -10434,10 +10434,10 @@
       "freedom": 21
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Phantom Shoot",
+      "Rodeo Clown",
+      "Phantom Shot",
       "Run Ball Run",
-      "Psycho Shot"
+      "Wrath Shot"
     ],
     "totalStats": 391,
     "ovrWeighted": 56,
@@ -10462,13 +10462,13 @@
       "freedom": 21
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Doppelganger",
       "Harvest",
       "Dash Storm"
     ],
     "totalStats": 389,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -10492,11 +10492,11 @@
     "moves": [
       "Wild Claw",
       "Horn Train",
-      "Judge Through",
+      "Breakthrough",
       "Counterstrike"
     ],
     "totalStats": 385,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 55
   },
   {
@@ -10518,7 +10518,7 @@
       "freedom": 19
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Doppelganger",
       "The Wall",
       "Tsuchi Daruma"
@@ -10546,9 +10546,9 @@
       "freedom": 16
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Earthquake",
-      "Mogura Feint",
+      "Mole Fake",
       "Tsuchi Daruma"
     ],
     "totalStats": 377,
@@ -10574,13 +10574,13 @@
       "freedom": 21
     },
     "moves": [
-      "Onryou",
-      "Kamikakushi",
-      "Psycho Shot",
+      "Ghost Pull",
+      "Teleport Shot",
+      "Wrath Shot",
       "Illusion Ball"
     ],
     "totalStats": 442,
-    "ovrWeighted": 64,
+    "ovrWeighted": 65,
     "ovrPure": 63
   },
   {
@@ -10605,7 +10605,7 @@
       "The Wall",
       "Earthquake",
       "Mega Quake",
-      "Shikofumi"
+      "Sumo Stomp"
     ],
     "totalStats": 414,
     "ovrWeighted": 60,
@@ -10630,13 +10630,13 @@
       "freedom": 24
     },
     "moves": [
-      "Dash Accel",
-      "Judge Through",
+      "Dash Accelerator",
+      "Breakthrough",
       "Heat Tackle",
       "Fire Tornado"
     ],
     "totalStats": 423,
-    "ovrWeighted": 58,
+    "ovrWeighted": 60,
     "ovrPure": 60
   },
   {
@@ -10659,12 +10659,12 @@
     },
     "moves": [
       "Killer Blade",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Full Power Shield",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 406,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 58
   },
   {
@@ -10689,7 +10689,7 @@
       "Tarzan Kick",
       "Back Tornado",
       "Illusion Ball",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 315,
     "ovrWeighted": 44,
@@ -10714,13 +10714,13 @@
       "freedom": 15
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Heat Tackle",
       "Twin Boost",
       "Back Tornado"
     ],
     "totalStats": 392,
-    "ovrWeighted": 56,
+    "ovrWeighted": 55,
     "ovrPure": 56
   },
   {
@@ -10772,7 +10772,7 @@
     "moves": [
       "Pressure Punch",
       "Spinning Cut",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Gigant Wall"
     ],
     "totalStats": 397,
@@ -10804,7 +10804,7 @@
       "Gigant Wall"
     ],
     "totalStats": 387,
-    "ovrWeighted": 55,
+    "ovrWeighted": 54,
     "ovrPure": 55
   },
   {
@@ -10826,13 +10826,13 @@
       "freedom": 21
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Dokugiri no Jutsu",
       "Dash Storm",
-      "Shikofumi"
+      "Sumo Stomp"
     ],
     "totalStats": 361,
-    "ovrWeighted": 48,
+    "ovrWeighted": 49,
     "ovrPure": 52
   },
   {
@@ -10854,7 +10854,7 @@
       "freedom": 13
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "The Wall",
       "Earthquake",
       "Mega Quake"
@@ -10882,7 +10882,7 @@
       "freedom": 16
     },
     "moves": [
-      "Spinning Shoot",
+      "Spinning Shot",
       "Grenade Shot",
       "Hawk Shot",
       "Back Tornado"
@@ -10911,9 +10911,9 @@
     },
     "moves": [
       "Fake Ball",
-      "Ushiro no Shoumen",
-      "Kagome Kagome",
-      "Bunshin Shoot"
+      "About Face",
+      "Bamboo Pattern",
+      "Clone Shot"
     ],
     "totalStats": 418,
     "ovrWeighted": 63,
@@ -10941,10 +10941,10 @@
       "Killer Blade",
       "Blade Attack",
       "Cyclone",
-      "Kogarashi"
+      "Mistral"
     ],
     "totalStats": 400,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -10966,13 +10966,13 @@
       "freedom": 13
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Spinning Cut",
       "Tsuchi Daruma",
       "Shine Drive"
     ],
     "totalStats": 393,
-    "ovrWeighted": 56,
+    "ovrWeighted": 57,
     "ovrPure": 56
   },
   {
@@ -10995,9 +10995,9 @@
     },
     "moves": [
       "Killer Slide",
-      "Onryou",
-      "Noroi",
-      "Psycho Shot"
+      "Ghost Pull",
+      "Black Magic",
+      "Wrath Shot"
     ],
     "totalStats": 448,
     "ovrWeighted": 64,
@@ -11024,11 +11024,11 @@
     "moves": [
       "Grenade Shot",
       "Meteor Attack",
-      "Patriot Shoot",
+      "Patriot Shot",
       "Twin Boost"
     ],
     "totalStats": 350,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 50
   },
   {
@@ -11051,8 +11051,8 @@
     },
     "moves": [
       "Horn Train",
-      "Gorimuchuu",
-      "Mogura Feint",
+      "Bewildered",
+      "Mole Fake",
       "Tsuchi Daruma"
     ],
     "totalStats": 358,
@@ -11079,9 +11079,9 @@
     },
     "moves": [
       "Killer Slide",
-      "Gorimuchuu",
+      "Bewildered",
       "The Wall",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 406,
     "ovrWeighted": 59,
@@ -11106,10 +11106,10 @@
       "freedom": 20
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Cross Drive",
       "Illusion Ball",
-      "Dokonjou Bat"
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 384,
     "ovrWeighted": 55,
@@ -11134,10 +11134,10 @@
       "freedom": 23
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Quick Draw",
       "Cyclone",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 448,
     "ovrWeighted": 63,
@@ -11163,9 +11163,9 @@
     },
     "moves": [
       "Blade Attack",
-      "Dokonjou Bat",
-      "Gorimuchuu",
-      "Tamanori Pierrot"
+      "Utter Gutsiness Bat",
+      "Bewildered",
+      "Rodeo Clown"
     ],
     "totalStats": 435,
     "ovrWeighted": 61,
@@ -11192,11 +11192,11 @@
     "moves": [
       "Killer Blade",
       "Killer Slide",
-      "Ushiro no Shoumen",
+      "About Face",
       "Counterstrike"
     ],
     "totalStats": 413,
-    "ovrWeighted": 62,
+    "ovrWeighted": 60,
     "ovrPure": 59
   },
   {
@@ -11219,8 +11219,8 @@
     },
     "moves": [
       "Killer Slide",
-      "Judge Through",
-      "Kumo no Ito",
+      "Breakthrough",
+      "Spider Web",
       "Reflect Buster"
     ],
     "totalStats": 396,
@@ -11246,10 +11246,10 @@
       "freedom": 33
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Tornado Catch",
       "Toughness Block",
-      "Makiwari Chop"
+      "Wood Chopper"
     ],
     "totalStats": 436,
     "ovrWeighted": 60,
@@ -11274,13 +11274,13 @@
       "freedom": 33
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Toughness Block",
       "Rocket Kobushi",
       "Counterstrike"
     ],
     "totalStats": 358,
-    "ovrWeighted": 51,
+    "ovrWeighted": 50,
     "ovrPure": 51
   },
   {
@@ -11302,13 +11302,13 @@
       "freedom": 10
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Killer Blade",
-      "Shoot Pocket",
-      "Tsumuji"
+      "Shot Pocket",
+      "Whirlwind"
     ],
     "totalStats": 463,
-    "ovrWeighted": 66,
+    "ovrWeighted": 67,
     "ovrPure": 66
   },
   {
@@ -11331,12 +11331,12 @@
     },
     "moves": [
       "Killer Blade",
-      "Kamikakushi",
-      "Kogarashi",
+      "Teleport Shot",
+      "Mistral",
       "Reflect Buster"
     ],
     "totalStats": 418,
-    "ovrWeighted": 60,
+    "ovrWeighted": 58,
     "ovrPure": 60
   },
   {
@@ -11360,11 +11360,11 @@
     "moves": [
       "Toughness Block",
       "The Wall",
-      "Mogura Feint",
+      "Mole Fake",
       "Counterstrike"
     ],
     "totalStats": 456,
-    "ovrWeighted": 69,
+    "ovrWeighted": 68,
     "ovrPure": 65
   },
   {
@@ -11387,12 +11387,12 @@
     },
     "moves": [
       "Pressure Punch",
-      "Shoot Pocket",
-      "Kumo no Ito",
+      "Shot Pocket",
+      "Spider Web",
       "Power Shield"
     ],
     "totalStats": 414,
-    "ovrWeighted": 63,
+    "ovrWeighted": 61,
     "ovrPure": 59
   },
   {
@@ -11414,13 +11414,13 @@
       "freedom": 20
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Toughness Block",
       "Horn Train",
       "Gigant Wall"
     ],
     "totalStats": 442,
-    "ovrWeighted": 62,
+    "ovrWeighted": 61,
     "ovrPure": 63
   },
   {
@@ -11444,7 +11444,7 @@
     "moves": [
       "Tornado Catch",
       "Quick Draw",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Cyclone"
     ],
     "totalStats": 451,
@@ -11470,13 +11470,13 @@
       "freedom": 26
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Counterstrike"
     ],
     "totalStats": 456,
-    "ovrWeighted": 70,
+    "ovrWeighted": 68,
     "ovrPure": 65
   },
   {
@@ -11500,11 +11500,11 @@
     "moves": [
       "Power Shield",
       "Horn Train",
-      "Makiwari Chop",
-      "Sabaki no Tettsui"
+      "Wood Chopper",
+      "Divine Stamp"
     ],
     "totalStats": 363,
-    "ovrWeighted": 57,
+    "ovrWeighted": 60,
     "ovrPure": 52
   },
   {
@@ -11554,13 +11554,13 @@
       "freedom": 27
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Power Shield",
       "Wild Claw",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 462,
-    "ovrWeighted": 71,
+    "ovrWeighted": 69,
     "ovrPure": 66
   },
   {
@@ -11584,11 +11584,11 @@
     "moves": [
       "Killer Blade",
       "Doppelganger",
-      "Tsumuji",
-      "Bakuretsu Punch"
+      "Whirlwind",
+      "Blazing Knuckle"
     ],
     "totalStats": 461,
-    "ovrWeighted": 70,
+    "ovrWeighted": 71,
     "ovrPure": 66
   },
   {
@@ -11610,13 +11610,13 @@
       "freedom": 21
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Rocket Kobushi",
       "Heat Tackle",
       "Counterstrike"
     ],
     "totalStats": 433,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 62
   },
   {
@@ -11638,13 +11638,13 @@
       "freedom": 22
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Earthquake",
       "Gigant Wall",
-      "Tamanori Pierrot"
+      "Rodeo Clown"
     ],
     "totalStats": 408,
-    "ovrWeighted": 59,
+    "ovrWeighted": 60,
     "ovrPure": 58
   },
   {
@@ -11668,8 +11668,8 @@
     "moves": [
       "Killer Blade",
       "Quick Draw",
-      "Shoot Pocket",
-      "Tsumuji"
+      "Shot Pocket",
+      "Whirlwind"
     ],
     "totalStats": 484,
     "ovrWeighted": 72,
@@ -11696,11 +11696,11 @@
     "moves": [
       "Pressure Punch",
       "Rocket Kobushi",
-      "Kumo no Ito",
-      "Kogarashi"
+      "Spider Web",
+      "Mistral"
     ],
     "totalStats": 364,
-    "ovrWeighted": 54,
+    "ovrWeighted": 53,
     "ovrPure": 52
   },
   {
@@ -11723,12 +11723,12 @@
     },
     "moves": [
       "Spinning Cut",
-      "Tsumuji",
-      "Kagome Kagome",
+      "Whirlwind",
+      "Bamboo Pattern",
       "Counterstrike"
     ],
     "totalStats": 420,
-    "ovrWeighted": 65,
+    "ovrWeighted": 63,
     "ovrPure": 60
   },
   {
@@ -11752,11 +11752,11 @@
     "moves": [
       "Tornado Catch",
       "Blade Attack",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Counterstrike"
     ],
     "totalStats": 477,
-    "ovrWeighted": 73,
+    "ovrWeighted": 71,
     "ovrPure": 68
   },
   {
@@ -11778,13 +11778,13 @@
       "freedom": 27
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Magic",
       "Rocket Kobushi",
       "Illusion Ball"
     ],
     "totalStats": 430,
-    "ovrWeighted": 65,
+    "ovrWeighted": 61,
     "ovrPure": 61
   },
   {
@@ -11808,11 +11808,11 @@
     "moves": [
       "Tornado Catch",
       "Coil Turn",
-      "Kogarashi",
+      "Mistral",
       "Hurricane Arrow"
     ],
     "totalStats": 401,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -11836,8 +11836,8 @@
     "moves": [
       "Tornado Catch",
       "Doppelganger",
-      "Tsumuji",
-      "Ushiro no Shoumen"
+      "Whirlwind",
+      "About Face"
     ],
     "totalStats": 460,
     "ovrWeighted": 65,
@@ -11863,12 +11863,12 @@
     },
     "moves": [
       "Pressure Punch",
-      "Shoot Pocket",
-      "Makiwari Chop",
-      "Tsumuji"
+      "Shot Pocket",
+      "Wood Chopper",
+      "Whirlwind"
     ],
     "totalStats": 452,
-    "ovrWeighted": 64,
+    "ovrWeighted": 63,
     "ovrPure": 65
   },
   {
@@ -11891,12 +11891,12 @@
     },
     "moves": [
       "Power Shield",
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Tsuchi Daruma",
       "Full Power Shield"
     ],
     "totalStats": 402,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -11919,12 +11919,12 @@
     },
     "moves": [
       "Wild Claw",
-      "Dash Accel",
-      "Makiwari Chop",
-      "Ushiro no Shoumen"
+      "Dash Accelerator",
+      "Wood Chopper",
+      "About Face"
     ],
     "totalStats": 380,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 54
   },
   {
@@ -11946,13 +11946,13 @@
       "freedom": 22
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Toughness Block",
       "Rocket Kobushi",
       "Counterstrike"
     ],
     "totalStats": 421,
-    "ovrWeighted": 65,
+    "ovrWeighted": 64,
     "ovrPure": 60
   },
   {
@@ -11975,9 +11975,9 @@
     },
     "moves": [
       "Quick Draw",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Blade Attack",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 421,
     "ovrWeighted": 64,
@@ -12004,8 +12004,8 @@
     "moves": [
       "Magic",
       "Spinning Cut",
-      "Super Scan (DF)",
-      "Judge Through"
+      "Defence Scan",
+      "Breakthrough"
     ],
     "totalStats": 396,
     "ovrWeighted": 58,
@@ -12030,8 +12030,8 @@
       "freedom": 15
     },
     "moves": [
-      "Kumo no Ito",
-      "Kagome Kagome",
+      "Spider Web",
+      "Bamboo Pattern",
       "Dash Storm",
       "Shine Drive"
     ],
@@ -12089,7 +12089,7 @@
       "Spinning Cut",
       "Illusion Ball",
       "Cyclone",
-      "Gorimuchuu"
+      "Bewildered"
     ],
     "totalStats": 375,
     "ovrWeighted": 56,
@@ -12116,7 +12116,7 @@
     "moves": [
       "Coil Turn",
       "Magic",
-      "Kumo no Ito",
+      "Spider Web",
       "Hawk Shot"
     ],
     "totalStats": 459,
@@ -12145,7 +12145,7 @@
       "Coil Turn",
       "Cross Drive",
       "Illusion Ball",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 343,
     "ovrWeighted": 51,
@@ -12199,8 +12199,8 @@
     },
     "moves": [
       "Coil Turn",
-      "Dash Accel",
-      "Kamaitachi",
+      "Dash Accelerator",
+      "Whirlwind Cut",
       "Cyclone"
     ],
     "totalStats": 415,
@@ -12226,10 +12226,10 @@
       "freedom": 14
     },
     "moves": [
-      "Kage Nui",
+      "Shadow Stitch",
       "Dokugiri no Jutsu",
       "Bunshin Feint",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 404,
     "ovrWeighted": 59,
@@ -12256,7 +12256,7 @@
     "moves": [
       "Coil Turn",
       "Blade Attack",
-      "Kumo no Ito",
+      "Spider Web",
       "Cross Drive"
     ],
     "totalStats": 466,
@@ -12284,7 +12284,7 @@
     "moves": [
       "Coil Turn",
       "Quick Draw",
-      "Kumo no Ito",
+      "Spider Web",
       "Illusion Ball"
     ],
     "totalStats": 408,
@@ -12310,10 +12310,10 @@
       "freedom": 12
     },
     "moves": [
-      "Onryou",
-      "Zanzou",
-      "Kumo no Ito",
-      "Kagome Kagome"
+      "Ghost Pull",
+      "Afterimage",
+      "Spider Web",
+      "Bamboo Pattern"
     ],
     "totalStats": 446,
     "ovrWeighted": 63,
@@ -12340,7 +12340,7 @@
     "moves": [
       "Coil Turn",
       "Monkey Turn",
-      "Ushiro no Shoumen",
+      "About Face",
       "Back Tornado"
     ],
     "totalStats": 357,
@@ -12366,13 +12366,13 @@
       "freedom": 16
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Earthquake",
-      "Gorimuchuu",
+      "Bewildered",
       "Tsuchi Daruma"
     ],
     "totalStats": 408,
-    "ovrWeighted": 59,
+    "ovrWeighted": 57,
     "ovrPure": 58
   },
   {
@@ -12394,13 +12394,13 @@
       "freedom": 23
     },
     "moves": [
-      "Dash Accel",
-      "Judge Through",
-      "Dokonjou Bat",
-      "Koutei Penguin 2gou"
+      "Dash Accelerator",
+      "Breakthrough",
+      "Utter Gutsiness Bat",
+      "Emperor Penguin No.2"
     ],
     "totalStats": 418,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 60
   },
   {
@@ -12422,13 +12422,13 @@
       "freedom": 23
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Zigzag Spark",
       "Dokugiri no Jutsu",
       "Dash Storm"
     ],
     "totalStats": 396,
-    "ovrWeighted": 57,
+    "ovrWeighted": 59,
     "ovrPure": 57
   },
   {
@@ -12450,7 +12450,7 @@
       "freedom": 19
     },
     "moves": [
-      "Judge Through",
+      "Breakthrough",
       "Fake Ball",
       "Dokugiri no Jutsu",
       "Kung Fu Head"
@@ -12506,10 +12506,10 @@
       "freedom": 15
     },
     "moves": [
-      "Kung Fu Head",
-      "Tatsumaki Senpuu",
-      "Bunshin Shoot",
-      "Sabaki no Tettsui"
+      "Kung Fu Header",
+      "Whirlwind Twister",
+      "Clone Shot",
+      "Divine Stamp"
     ],
     "totalStats": 419,
     "ovrWeighted": 60,
@@ -12535,7 +12535,7 @@
     },
     "moves": [
       "Magic",
-      "Kamikakushi",
+      "Teleport Shot",
       "Illusion Ball",
       "Freeze Shot"
     ],
@@ -12562,9 +12562,9 @@
       "freedom": 9
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Magic",
-      "Zanzou",
+      "Afterimage",
       "Moonsault"
     ],
     "totalStats": 346,
@@ -12590,8 +12590,8 @@
       "freedom": 15
     },
     "moves": [
-      "Super Scan (DF)",
-      "Super Scan (OF)",
+      "Defence Scan",
+      "Attack Scan",
       "Harvest",
       "Freeze Shot"
     ],
@@ -12618,10 +12618,10 @@
       "freedom": 28
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Zigzag Spark",
       "Blade Attack",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 434,
     "ovrWeighted": 62,
@@ -12647,12 +12647,12 @@
     },
     "moves": [
       "Magic",
-      "Noroi",
-      "Onryou",
-      "Psycho Shot"
+      "Black Magic",
+      "Ghost Pull",
+      "Wrath Shot"
     ],
     "totalStats": 398,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -12674,13 +12674,13 @@
       "freedom": 15
     },
     "moves": [
-      "Noroi",
-      "Zanzou",
+      "Black Magic",
+      "Afterimage",
       "Cyclone",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 382,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 55
   },
   {
@@ -12702,10 +12702,10 @@
       "freedom": 26
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Blade Attack",
       "Bunshin Feint",
-      "Jigoku Guruma"
+      "Rolling Hell"
     ],
     "totalStats": 406,
     "ovrWeighted": 58,
@@ -12730,7 +12730,7 @@
       "freedom": 21
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Zigzag Spark",
       "Bunshin Feint",
       "Dash Storm"
@@ -12758,7 +12758,7 @@
       "freedom": 20
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Zigzag Spark",
       "Hyakuretsu Shot",
       "Back Tornado"
@@ -12786,13 +12786,13 @@
       "freedom": 16
     },
     "moves": [
-      "Shikofumi",
-      "Mogura Feint",
+      "Sumo Stomp",
+      "Mole Fake",
       "The Wall",
       "Tsuchi Daruma"
     ],
     "totalStats": 418,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 60
   },
   {
@@ -12814,9 +12814,9 @@
       "freedom": 19
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Spiral Shot",
-      "Kamaitachi",
+      "Whirlwind Cut",
       "Cross Drive"
     ],
     "totalStats": 432,
@@ -12842,13 +12842,13 @@
       "freedom": 24
     },
     "moves": [
-      "Shippuu Dash",
-      "Judge Through",
-      "Dokonjou Bat",
+      "Flurry Dash",
+      "Breakthrough",
+      "Utter Gutsiness Bat",
       "Dash Storm"
     ],
     "totalStats": 464,
-    "ovrWeighted": 66,
+    "ovrWeighted": 67,
     "ovrPure": 66
   },
   {
@@ -12870,9 +12870,9 @@
       "freedom": 17
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Spinning Cut",
-      "Spinning Shoot",
+      "Spinning Shot",
       "Dash Storm"
     ],
     "totalStats": 428,
@@ -12898,8 +12898,8 @@
       "freedom": 17
     },
     "moves": [
-      "Phantom Shoot",
-      "Bunshin Shoot",
+      "Phantom Shot",
+      "Clone Shot",
       "Bunshin Feint",
       "Back Tornado"
     ],
@@ -12926,9 +12926,9 @@
       "freedom": 22
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Spiral Shot",
-      "Patriot Shoot",
+      "Patriot Shot",
       "Shine Drive"
     ],
     "totalStats": 421,
@@ -12954,7 +12954,7 @@
       "freedom": 15
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Hyakuretsu Shot",
       "Run Ball Run",
       "Zigzag Spark"
@@ -12983,12 +12983,12 @@
     },
     "moves": [
       "Doppelganger",
-      "Spinning Shoot",
-      "Zanzou",
+      "Spinning Shot",
+      "Afterimage",
       "Divine Arrow"
     ],
     "totalStats": 403,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 58
   },
   {
@@ -13011,9 +13011,9 @@
     },
     "moves": [
       "Rolling Kick",
-      "Phantom Shoot",
-      "Zanzou",
-      "Dokonjou Bat"
+      "Phantom Shot",
+      "Afterimage",
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 451,
     "ovrWeighted": 63,
@@ -13039,7 +13039,7 @@
     },
     "moves": [
       "Snake Shot",
-      "Phantom Shoot",
+      "Phantom Shot",
       "Meteor Attack",
       "Run Ball Run"
     ],
@@ -13094,13 +13094,13 @@
       "freedom": 22
     },
     "moves": [
-      "Shikofumi",
-      "Mogura Feint",
+      "Sumo Stomp",
+      "Mole Fake",
       "Earthquake",
       "Tsuchi Daruma"
     ],
     "totalStats": 421,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 60
   },
   {
@@ -13122,13 +13122,13 @@
       "freedom": 19
     },
     "moves": [
-      "Super Scan (OF)",
-      "Super Scan (DF)",
+      "Attack Scan",
+      "Defence Scan",
       "Rolling Kick",
-      "Psycho Shot"
+      "Wrath Shot"
     ],
     "totalStats": 426,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 61
   },
   {
@@ -13150,9 +13150,9 @@
       "freedom": 15
     },
     "moves": [
-      "Phantom Shoot",
+      "Phantom Shot",
       "Zigzag Spark",
-      "Bunshin Shoot",
+      "Clone Shot",
       "Death Zone"
     ],
     "totalStats": 385,
@@ -13178,9 +13178,9 @@
       "freedom": 20
     },
     "moves": [
-      "Phantom Shoot",
-      "Super Scan (OF)",
-      "Super Scan (DF)",
+      "Phantom Shot",
+      "Attack Scan",
+      "Defence Scan",
       "Twin Boost"
     ],
     "totalStats": 401,
@@ -13207,7 +13207,7 @@
     },
     "moves": [
       "Grenade Shot",
-      "Zanzou",
+      "Afterimage",
       "Cyclone",
       "Back Tornado"
     ],
@@ -13235,8 +13235,8 @@
     },
     "moves": [
       "Rolling Kick",
-      "Dynamite Shoot",
-      "Gorimuchuu",
+      "Dynamite Shot",
+      "Bewildered",
       "Freeze Shot"
     ],
     "totalStats": 446,
@@ -13265,7 +13265,7 @@
       "Toughness Block",
       "Freeze Shot",
       "Illusion Ball",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 425,
     "ovrWeighted": 65,
@@ -13318,10 +13318,10 @@
       "freedom": 33
     },
     "moves": [
-      "Dynamite Shoot",
-      "Gorimuchuu",
+      "Dynamite Shot",
+      "Bewildered",
       "Tsuchi Daruma",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 407,
     "ovrWeighted": 59,
@@ -13346,10 +13346,10 @@
       "freedom": 20
     },
     "moves": [
-      "Phantom Shoot",
-      "Dynamite Shoot",
-      "Bunshin Shoot",
-      "Jigoku Guruma"
+      "Phantom Shot",
+      "Dynamite Shot",
+      "Clone Shot",
+      "Rolling Hell"
     ],
     "totalStats": 419,
     "ovrWeighted": 64,
@@ -13375,12 +13375,12 @@
     },
     "moves": [
       "Doppelganger",
-      "Phantom Shoot",
-      "Psycho Shot",
+      "Phantom Shot",
+      "Wrath Shot",
       "Blade Attack"
     ],
     "totalStats": 368,
-    "ovrWeighted": 51,
+    "ovrWeighted": 53,
     "ovrPure": 53
   },
   {
@@ -13402,10 +13402,10 @@
       "freedom": 37
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Dokonjou Bat",
+      "Rodeo Clown",
+      "Utter Gutsiness Bat",
       "Bunshin Feint",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 482,
     "ovrWeighted": 64,
@@ -13430,13 +13430,13 @@
       "freedom": 26
     },
     "moves": [
-      "Psycho Shot",
+      "Wrath Shot",
       "Illusion Ball",
       "Twin Boost",
       "Death Zone"
     ],
     "totalStats": 414,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 59
   },
   {
@@ -13460,7 +13460,7 @@
     "moves": [
       "Grenade Shot",
       "Shine Drive",
-      "Shoot Pocket",
+      "Shot Pocket",
       "Full Power Shield"
     ],
     "totalStats": 391,
@@ -13486,8 +13486,8 @@
       "freedom": 43
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Ushiro no Shoumen",
+      "Rodeo Clown",
+      "About Face",
       "God Hand",
       "Majin The Hand"
     ],
@@ -13514,9 +13514,9 @@
       "freedom": 26
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Zigzag Spark",
-      "Kamaitachi",
+      "Whirlwind Cut",
       "Cyclone"
     ],
     "totalStats": 427,
@@ -13542,7 +13542,7 @@
       "freedom": 20
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Horn Train",
       "Heat Tackle",
       "Dash Storm"
@@ -13570,8 +13570,8 @@
       "freedom": 42
     },
     "moves": [
-      "Shikofumi",
-      "Onryou",
+      "Sumo Stomp",
+      "Ghost Pull",
       "Dokugiri no Jutsu",
       "Earthquake"
     ],
@@ -13598,9 +13598,9 @@
       "freedom": 41
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Monkey Turn",
-      "Dokonjou Bat",
+      "Utter Gutsiness Bat",
       "Bunshin Feint"
     ],
     "totalStats": 437,
@@ -13626,13 +13626,13 @@
       "freedom": 15
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Monkey Turn",
-      "Kumo no Ito",
+      "Spider Web",
       "Moonsault"
     ],
     "totalStats": 398,
-    "ovrWeighted": 55,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -13656,11 +13656,11 @@
     "moves": [
       "Killer Slide",
       "Heat Tackle",
-      "Ushiro no Shoumen",
+      "About Face",
       "Reflect Buster"
     ],
     "totalStats": 450,
-    "ovrWeighted": 63,
+    "ovrWeighted": 62,
     "ovrPure": 64
   },
   {
@@ -13682,7 +13682,7 @@
       "freedom": 36
     },
     "moves": [
-      "Spinning Shoot",
+      "Spinning Shot",
       "Spinning Cut",
       "Illusion Ball",
       "The Phoenix"
@@ -13710,13 +13710,13 @@
       "freedom": 22
     },
     "moves": [
-      "Suisei Shoot",
-      "Dynamite Shoot",
-      "Patriot Shoot",
+      "Comet Shot",
+      "Dynamite Shot",
+      "Patriot Shot",
       "Shine Drive"
     ],
     "totalStats": 342,
-    "ovrWeighted": 49,
+    "ovrWeighted": 50,
     "ovrPure": 49
   },
   {
@@ -13738,13 +13738,13 @@
       "freedom": 29
     },
     "moves": [
-      "Kage Nui",
+      "Shadow Stitch",
       "Dark Tornado",
       "Doppelganger",
       "Death Zone"
     ],
     "totalStats": 462,
-    "ovrWeighted": 65,
+    "ovrWeighted": 64,
     "ovrPure": 66
   },
   {
@@ -13769,7 +13769,7 @@
       "Heaven's Time",
       "Divine Stamp",
       "Cyclone",
-      "Whirlwind"
+      "God Knows"
     ],
     "totalStats": 502,
     "ovrWeighted": 73,
@@ -13796,11 +13796,11 @@
     "moves": [
       "Toughness Block",
       "Blade Attack",
-      "Shoot Pocket",
+      "Shot Pocket",
       "Harvest"
     ],
     "totalStats": 392,
-    "ovrWeighted": 53,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -13851,9 +13851,9 @@
     },
     "moves": [
       "Snake Shot",
-      "Patriot Shoot",
-      "Tatsumaki Senpuu",
-      "Super Scan (OF)"
+      "Patriot Shot",
+      "Whirlwind Twister",
+      "Attack Scan"
     ],
     "totalStats": 427,
     "ovrWeighted": 63,
@@ -13878,10 +13878,10 @@
       "freedom": 31
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Super Armadillo",
       "Tsuchi Daruma",
-      "Jigoku Guruma"
+      "Rolling Hell"
     ],
     "totalStats": 353,
     "ovrWeighted": 50,
@@ -13906,13 +13906,13 @@
       "freedom": 19
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Magic",
-      "Dokonjou Bat",
-      "Judge Through"
+      "Utter Gutsiness Bat",
+      "Breakthrough"
     ],
     "totalStats": 399,
-    "ovrWeighted": 56,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -13963,7 +13963,7 @@
     },
     "moves": [
       "Killer Slide",
-      "Dash Accel",
+      "Dash Accelerator",
       "Monkey Turn",
       "Moonsault"
     ],
@@ -13993,7 +13993,7 @@
       "Killer Slide",
       "Fake Ball",
       "Illusion Ball",
-      "Sabaki no Tettsui"
+      "Divine Stamp"
     ],
     "totalStats": 351,
     "ovrWeighted": 53,
@@ -14018,7 +14018,7 @@
       "freedom": 43
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Killer Slide",
       "Toughness Block",
       "Counterstrike"
@@ -14046,8 +14046,8 @@
       "freedom": 22
     },
     "moves": [
-      "Dash Accel",
-      "Kamikakushi",
+      "Dash Accelerator",
+      "Teleport Shot",
       "Bunshin Feint",
       "Tarzan Kick"
     ],
@@ -14076,7 +14076,7 @@
     "moves": [
       "Toughness Block",
       "Killer Slide",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Hurricane Arrow"
     ],
     "totalStats": 394,
@@ -14103,12 +14103,12 @@
     },
     "moves": [
       "Magic",
-      "Noroi",
-      "Shikofumi",
-      "Onryou"
+      "Black Magic",
+      "Sumo Stomp",
+      "Ghost Pull"
     ],
     "totalStats": 403,
-    "ovrWeighted": 59,
+    "ovrWeighted": 60,
     "ovrPure": 58
   },
   {
@@ -14130,9 +14130,9 @@
       "freedom": 18
     },
     "moves": [
-      "Super Scan (DF)",
-      "Super Scan (OF)",
-      "Patriot Shoot",
+      "Defence Scan",
+      "Attack Scan",
+      "Patriot Shot",
       "Freeze Shot"
     ],
     "totalStats": 395,
@@ -14158,10 +14158,10 @@
       "freedom": 26
     },
     "moves": [
-      "Kamikakushi",
-      "Onryou",
-      "Noroi",
-      "Bunshin Shoot"
+      "Teleport Shot",
+      "Ghost Pull",
+      "Black Magic",
+      "Clone Shot"
     ],
     "totalStats": 360,
     "ovrWeighted": 52,
@@ -14214,10 +14214,10 @@
       "freedom": 14
     },
     "moves": [
-      "Onryou",
-      "Noroi",
-      "Ushiro no Shoumen",
-      "Psycho Shot"
+      "Ghost Pull",
+      "Black Magic",
+      "About Face",
+      "Wrath Shot"
     ],
     "totalStats": 434,
     "ovrWeighted": 62,
@@ -14270,9 +14270,9 @@
       "freedom": 25
     },
     "moves": [
-      "Kamikakushi",
-      "Psycho Shot",
-      "Kumo no Ito",
+      "Teleport Shot",
+      "Wrath Shot",
+      "Spider Web",
       "Bunshin Feint"
     ],
     "totalStats": 424,
@@ -14329,7 +14329,7 @@
       "Killer Slide",
       "Blade Attack",
       "Magic",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 384,
     "ovrWeighted": 56,
@@ -14382,9 +14382,9 @@
       "freedom": 12
     },
     "moves": [
-      "Spinning Shoot",
-      "Phantom Shoot",
-      "Dynamite Shoot",
+      "Spinning Shot",
+      "Phantom Shot",
+      "Dynamite Shot",
       "Twin Boost"
     ],
     "totalStats": 400,
@@ -14411,7 +14411,7 @@
     },
     "moves": [
       "Rolling Kick",
-      "Phantom Shoot",
+      "Phantom Shot",
       "Hyakuretsu Shot",
       "Back Tornado"
     ],
@@ -14466,10 +14466,10 @@
       "freedom": 24
     },
     "moves": [
-      "Super Scan (DF)",
-      "Super Scan (OF)",
+      "Defence Scan",
+      "Attack Scan",
       "Harvest",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 357,
     "ovrWeighted": 55,
@@ -14497,7 +14497,7 @@
       "Killer Slide",
       "Horn Train",
       "Heat Tackle",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 366,
     "ovrWeighted": 56,
@@ -14522,7 +14522,7 @@
       "freedom": 11
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Fake Ball",
       "Dokugiri no Jutsu",
       "Cyclone"
@@ -14550,8 +14550,8 @@
       "freedom": 26
     },
     "moves": [
-      "Shikofumi",
-      "Tamanori Pierrot",
+      "Sumo Stomp",
+      "Rodeo Clown",
       "Rolling Kick",
       "Magic"
     ],
@@ -14578,9 +14578,9 @@
       "freedom": 17
     },
     "moves": [
-      "Shippuu Dash",
-      "Dokonjou Bat",
-      "Judge Through",
+      "Flurry Dash",
+      "Utter Gutsiness Bat",
+      "Breakthrough",
       "Zigzag Spark"
     ],
     "totalStats": 381,
@@ -14607,9 +14607,9 @@
     },
     "moves": [
       "Pressure Punch",
-      "Shoot Pocket",
+      "Shot Pocket",
       "Horn Train",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 375,
     "ovrWeighted": 53,
@@ -14635,12 +14635,12 @@
     },
     "moves": [
       "Power Shield",
-      "Tatsumaki Senpuu",
-      "Kamaitachi",
+      "Whirlwind Twister",
+      "Whirlwind Cut",
       "Full Power Shield"
     ],
     "totalStats": 387,
-    "ovrWeighted": 54,
+    "ovrWeighted": 53,
     "ovrPure": 55
   },
   {
@@ -14662,9 +14662,9 @@
       "freedom": 17
     },
     "moves": [
-      "Ushiro no Shoumen",
-      "Kagome Kagome",
-      "Kamikakushi",
+      "About Face",
+      "Bamboo Pattern",
+      "Teleport Shot",
       "Magic"
     ],
     "totalStats": 408,
@@ -14691,8 +14691,8 @@
     },
     "moves": [
       "Toughness Block",
-      "Judge Through",
-      "Tsumuji",
+      "Breakthrough",
+      "Whirlwind",
       "Counterstrike"
     ],
     "totalStats": 428,
@@ -14718,13 +14718,13 @@
       "freedom": 38
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Coil Turn",
-      "Mogura Feint",
-      "Phantom Shoot"
+      "Mole Fake",
+      "Phantom Shot"
     ],
     "totalStats": 405,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 58
   },
   {
@@ -14748,11 +14748,11 @@
     "moves": [
       "Snake Shot",
       "Tarzan Kick",
-      "Dash Accel",
-      "Mogura Feint"
+      "Dash Accelerator",
+      "Mole Fake"
     ],
     "totalStats": 414,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 59
   },
   {
@@ -14780,7 +14780,7 @@
       "Twin Boost"
     ],
     "totalStats": 357,
-    "ovrWeighted": 52,
+    "ovrWeighted": 51,
     "ovrPure": 51
   },
   {
@@ -14802,10 +14802,10 @@
       "freedom": 40
     },
     "moves": [
-      "Noroi",
-      "Onryou",
-      "Psycho Shot",
-      "Tamanori Pierrot"
+      "Black Magic",
+      "Ghost Pull",
+      "Wrath Shot",
+      "Rodeo Clown"
     ],
     "totalStats": 317,
     "ovrWeighted": 46,
@@ -14832,8 +14832,8 @@
     "moves": [
       "Spiral Shot",
       "Magic",
-      "Phantom Shoot",
-      "Dokonjou Bat"
+      "Phantom Shot",
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 387,
     "ovrWeighted": 54,
@@ -14859,9 +14859,9 @@
     },
     "moves": [
       "Rolling Kick",
-      "Kung Fu Head",
+      "Kung Fu Header",
       "Run Ball Run",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 403,
     "ovrWeighted": 56,
@@ -14886,8 +14886,8 @@
       "freedom": 26
     },
     "moves": [
-      "Shikofumi",
-      "Gorimuchuu",
+      "Sumo Stomp",
+      "Bewildered",
       "Fake Ball",
       "Mega Quake"
     ],
@@ -14915,7 +14915,7 @@
     },
     "moves": [
       "Horn Train",
-      "Mogura Feint",
+      "Mole Fake",
       "Wild Claw",
       "Earthquake"
     ],
@@ -14944,11 +14944,11 @@
     "moves": [
       "Killer Blade",
       "Quick Draw",
-      "Kogarashi",
+      "Mistral",
       "Tarzan Kick"
     ],
     "totalStats": 394,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 56
   },
   {
@@ -14973,7 +14973,7 @@
       "Tarzan Kick",
       "Monkey Turn",
       "Run Ball Run",
-      "Shikofumi"
+      "Sumo Stomp"
     ],
     "totalStats": 428,
     "ovrWeighted": 58,
@@ -15000,11 +15000,11 @@
     "moves": [
       "Killer Slide",
       "Power Shield",
-      "Bakuretsu Punch",
-      "Judge Through"
+      "Blazing Knuckle",
+      "Breakthrough"
     ],
     "totalStats": 348,
-    "ovrWeighted": 50,
+    "ovrWeighted": 49,
     "ovrPure": 50
   },
   {
@@ -15029,10 +15029,10 @@
       "Pressure Punch",
       "Meteor Attack",
       "Rocket Kobushi",
-      "Patriot Shoot"
+      "Patriot Shot"
     ],
     "totalStats": 417,
-    "ovrWeighted": 61,
+    "ovrWeighted": 62,
     "ovrPure": 60
   },
   {
@@ -15056,8 +15056,8 @@
     "moves": [
       "Coil Turn",
       "Spinning Cut",
-      "Kumo no Ito",
-      "Jigoku Guruma"
+      "Spider Web",
+      "Rolling Hell"
     ],
     "totalStats": 397,
     "ovrWeighted": 57,
@@ -15084,8 +15084,8 @@
     "moves": [
       "Killer Slide",
       "Fake Ball",
-      "Super Scan (OF)",
-      "Super Scan (DF)"
+      "Attack Scan",
+      "Defence Scan"
     ],
     "totalStats": 399,
     "ovrWeighted": 57,
@@ -15110,13 +15110,13 @@
       "freedom": 17
     },
     "moves": [
-      "Noroi",
+      "Black Magic",
       "Killer Blade",
       "Doppelganger",
-      "Makiwari Chop"
+      "Wood Chopper"
     ],
     "totalStats": 379,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 54
   },
   {
@@ -15140,8 +15140,8 @@
     "moves": [
       "Quick Draw",
       "Condor Dive",
-      "Onryou",
-      "Kagome Kagome"
+      "Ghost Pull",
+      "Bamboo Pattern"
     ],
     "totalStats": 408,
     "ovrWeighted": 57,
@@ -15194,10 +15194,10 @@
       "freedom": 13
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Condor Dive",
       "Hawk Shot",
-      "Makiwari Chop"
+      "Wood Chopper"
     ],
     "totalStats": 410,
     "ovrWeighted": 58,
@@ -15228,7 +15228,7 @@
       "Full Power Shield"
     ],
     "totalStats": 414,
-    "ovrWeighted": 62,
+    "ovrWeighted": 60,
     "ovrPure": 59
   },
   {
@@ -15251,9 +15251,9 @@
     },
     "moves": [
       "Doppelganger",
-      "Ushiro no Shoumen",
+      "About Face",
       "Super Armadillo",
-      "Shikofumi"
+      "Sumo Stomp"
     ],
     "totalStats": 405,
     "ovrWeighted": 57,
@@ -15278,7 +15278,7 @@
       "freedom": 18
     },
     "moves": [
-      "Kamikakushi",
+      "Teleport Shot",
       "Doppelganger",
       "Magic",
       "Back Tornado"
@@ -15306,13 +15306,13 @@
       "freedom": 32
     },
     "moves": [
-      "Tatsumaki Senpuu",
-      "Shippuu Dash",
-      "Zanzou",
+      "Whirlwind Twister",
+      "Flurry Dash",
+      "Afterimage",
       "Grenade Shot"
     ],
     "totalStats": 354,
-    "ovrWeighted": 50,
+    "ovrWeighted": 49,
     "ovrPure": 51
   },
   {
@@ -15335,9 +15335,9 @@
     },
     "moves": [
       "Doppelganger",
-      "Onryou",
-      "Kage Nui",
-      "Psycho Shot"
+      "Ghost Pull",
+      "Shadow Stitch",
+      "Wrath Shot"
     ],
     "totalStats": 396,
     "ovrWeighted": 59,
@@ -15362,9 +15362,9 @@
       "freedom": 24
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Magic",
-      "Kamikakushi",
+      "Teleport Shot",
       "Cyclone"
     ],
     "totalStats": 413,
@@ -15391,12 +15391,12 @@
     },
     "moves": [
       "Toughness Block",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Earthquake",
-      "Sabaki no Tettsui"
+      "Divine Stamp"
     ],
     "totalStats": 397,
-    "ovrWeighted": 57,
+    "ovrWeighted": 55,
     "ovrPure": 57
   },
   {
@@ -15424,7 +15424,7 @@
       "Hurricane Arrow"
     ],
     "totalStats": 439,
-    "ovrWeighted": 63,
+    "ovrWeighted": 62,
     "ovrPure": 63
   },
   {
@@ -15447,9 +15447,9 @@
     },
     "moves": [
       "Dokugiri no Jutsu",
-      "Kamikakushi",
-      "Ushiro no Shoumen",
-      "Kagome Kagome"
+      "Teleport Shot",
+      "About Face",
+      "Bamboo Pattern"
     ],
     "totalStats": 379,
     "ovrWeighted": 53,
@@ -15474,8 +15474,8 @@
       "freedom": 27
     },
     "moves": [
-      "Suisei Shoot",
-      "Dynamite Shoot",
+      "Comet Shot",
+      "Dynamite Shot",
       "Illusion Ball",
       "Divine Arrow"
     ],
@@ -15503,9 +15503,9 @@
     },
     "moves": [
       "Grenade Shot",
-      "Noroi",
+      "Black Magic",
       "Twin Boost",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 416,
     "ovrWeighted": 59,
@@ -15531,7 +15531,7 @@
     },
     "moves": [
       "Power Shield",
-      "Super Scan (DF)",
+      "Defence Scan",
       "Cyclone",
       "Full Power Shield"
     ],
@@ -15558,7 +15558,7 @@
       "freedom": 16
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Spiral Shot",
       "Spinning Cut",
       "Illusion Ball"
@@ -15587,12 +15587,12 @@
     },
     "moves": [
       "Coil Turn",
-      "Tatsumaki Senpuu",
-      "Kagome Kagome",
-      "Kamaitachi"
+      "Whirlwind Twister",
+      "Bamboo Pattern",
+      "Whirlwind Cut"
     ],
     "totalStats": 416,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 59
   },
   {
@@ -15614,13 +15614,13 @@
       "freedom": 34
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Tarzan Kick",
       "Tsuchi Daruma",
       "Earthquake"
     ],
     "totalStats": 379,
-    "ovrWeighted": 53,
+    "ovrWeighted": 54,
     "ovrPure": 54
   },
   {
@@ -15643,12 +15643,12 @@
     },
     "moves": [
       "Killer Blade",
-      "Super Scan (DF)",
-      "Bakuretsu Punch",
-      "Super Scan (OF)"
+      "Defence Scan",
+      "Blazing Knuckle",
+      "Attack Scan"
     ],
     "totalStats": 393,
-    "ovrWeighted": 56,
+    "ovrWeighted": 55,
     "ovrPure": 56
   },
   {
@@ -15672,7 +15672,7 @@
     "moves": [
       "Killer Slide",
       "Fake Ball",
-      "Shippuu Dash",
+      "Flurry Dash",
       "Monkey Turn"
     ],
     "totalStats": 406,
@@ -15699,7 +15699,7 @@
     },
     "moves": [
       "Quick Draw",
-      "Shippuu Dash",
+      "Flurry Dash",
       "Cyclone",
       "Hawk Shot"
     ],
@@ -15729,10 +15729,10 @@
       "Magic",
       "Illusion Ball",
       "Moonsault",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 392,
-    "ovrWeighted": 54,
+    "ovrWeighted": 55,
     "ovrPure": 56
   },
   {
@@ -15754,10 +15754,10 @@
       "freedom": 17
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Tarzan Kick",
       "Earthquake",
-      "Dynamite Shoot"
+      "Dynamite Shot"
     ],
     "totalStats": 398,
     "ovrWeighted": 55,
@@ -15811,9 +15811,9 @@
     },
     "moves": [
       "Coil Turn",
-      "Kung Fu Head",
+      "Kung Fu Header",
       "Magic",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 410,
     "ovrWeighted": 57,
@@ -15839,12 +15839,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Tsumuji",
-      "Kogarashi",
+      "Whirlwind",
+      "Mistral",
       "Dash Storm"
     ],
     "totalStats": 402,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -15866,10 +15866,10 @@
       "freedom": 20
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "The Wall",
       "Tsuchi Daruma",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 415,
     "ovrWeighted": 62,
@@ -15897,7 +15897,7 @@
       "Quick Draw",
       "Zigzag Spark",
       "Horn Train",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 405,
     "ovrWeighted": 60,
@@ -15922,9 +15922,9 @@
       "freedom": 26
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Coil Turn",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Run Ball Run"
     ],
     "totalStats": 411,
@@ -15956,7 +15956,7 @@
       "God Hand"
     ],
     "totalStats": 383,
-    "ovrWeighted": 53,
+    "ovrWeighted": 54,
     "ovrPure": 55
   },
   {
@@ -15980,7 +15980,7 @@
     "moves": [
       "Zigzag Spark",
       "Illusion Ball",
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Run Ball Run"
     ],
     "totalStats": 411,
@@ -16006,10 +16006,10 @@
       "freedom": 17
     },
     "moves": [
-      "Noroi",
-      "Onryou",
+      "Black Magic",
+      "Ghost Pull",
       "Doppelganger",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 403,
     "ovrWeighted": 56,
@@ -16040,7 +16040,7 @@
       "Bunshin Feint"
     ],
     "totalStats": 403,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 58
   },
   {
@@ -16092,11 +16092,11 @@
     "moves": [
       "Killer Slide",
       "Killer Blade",
-      "Ushiro no Shoumen",
+      "About Face",
       "Counterstrike"
     ],
     "totalStats": 401,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -16120,7 +16120,7 @@
     "moves": [
       "Zigzag Spark",
       "Illusion Ball",
-      "Kumo no Ito",
+      "Spider Web",
       "Hurricane Arrow"
     ],
     "totalStats": 375,
@@ -16146,7 +16146,7 @@
       "freedom": 15
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Monkey Turn",
       "Horn Train",
       "Heat Tackle"
@@ -16175,12 +16175,12 @@
     },
     "moves": [
       "Killer Blade",
-      "Onryou",
-      "Super Scan (DF)",
-      "Kogarashi"
+      "Ghost Pull",
+      "Defence Scan",
+      "Mistral"
     ],
     "totalStats": 403,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 58
   },
   {
@@ -16202,8 +16202,8 @@
       "freedom": 16
     },
     "moves": [
-      "Dynamite Shoot",
-      "Tamanori Pierrot",
+      "Dynamite Shot",
+      "Rodeo Clown",
       "Twin Boost",
       "Boost Glider"
     ],
@@ -16231,9 +16231,9 @@
     },
     "moves": [
       "Cross Drive",
-      "Bunshin Shoot",
+      "Clone Shot",
       "Bunshin Feint",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 400,
     "ovrWeighted": 55,
@@ -16259,12 +16259,12 @@
     },
     "moves": [
       "Snake Shot",
-      "Shikofumi",
-      "Gorimuchuu",
+      "Sumo Stomp",
+      "Bewildered",
       "Earthquake"
     ],
     "totalStats": 407,
-    "ovrWeighted": 56,
+    "ovrWeighted": 55,
     "ovrPure": 58
   },
   {
@@ -16287,12 +16287,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Shoot Pocket",
-      "Super Scan (DF)",
+      "Shot Pocket",
+      "Defence Scan",
       "Rocket Kobushi"
     ],
     "totalStats": 402,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 57
   },
   {
@@ -16316,8 +16316,8 @@
     "moves": [
       "Horn Train",
       "Grenade Shot",
-      "Judge Through",
-      "Patriot Shoot"
+      "Breakthrough",
+      "Patriot Shot"
     ],
     "totalStats": 414,
     "ovrWeighted": 56,
@@ -16342,13 +16342,13 @@
       "freedom": 19
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Run Ball Run",
       "Magic",
       "Illusion Ball"
     ],
     "totalStats": 372,
-    "ovrWeighted": 52,
+    "ovrWeighted": 51,
     "ovrPure": 53
   },
   {
@@ -16372,8 +16372,8 @@
     "moves": [
       "Grenade Shot",
       "Horn Train",
-      "Dynamite Shoot",
-      "Patriot Shoot"
+      "Dynamite Shot",
+      "Patriot Shot"
     ],
     "totalStats": 415,
     "ovrWeighted": 57,
@@ -16399,8 +16399,8 @@
     },
     "moves": [
       "Horn Train",
-      "Judge Through",
-      "Kamaitachi",
+      "Breakthrough",
+      "Whirlwind Cut",
       "Harvest"
     ],
     "totalStats": 405,
@@ -16427,7 +16427,7 @@
     },
     "moves": [
       "Zigzag Spark",
-      "Super Scan (DF)",
+      "Defence Scan",
       "Tsuchi Daruma",
       "Hurricane Arrow"
     ],
@@ -16454,13 +16454,13 @@
       "freedom": 9
     },
     "moves": [
-      "Dokonjou Bat",
-      "Judge Through",
-      "Ushiro no Shoumen",
+      "Utter Gutsiness Bat",
+      "Breakthrough",
+      "About Face",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 412,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 59
   },
   {
@@ -16482,9 +16482,9 @@
       "freedom": 16
     },
     "moves": [
-      "Kamikakushi",
+      "Teleport Shot",
       "Magic",
-      "Psycho Shot",
+      "Wrath Shot",
       "Illusion Ball"
     ],
     "totalStats": 406,
@@ -16510,10 +16510,10 @@
       "freedom": 20
     },
     "moves": [
-      "Kumo no Ito",
-      "Gorimuchuu",
-      "Jigoku Guruma",
-      "Kagome Kagome"
+      "Spider Web",
+      "Bewildered",
+      "Rolling Hell",
+      "Bamboo Pattern"
     ],
     "totalStats": 383,
     "ovrWeighted": 53,
@@ -16541,7 +16541,7 @@
       "Coil Turn",
       "Spinning Cut",
       "Cyclone",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 352,
     "ovrWeighted": 52,
@@ -16566,7 +16566,7 @@
       "freedom": 20
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "The Wall",
       "Tsuchi Daruma",
       "Shine Drive"
@@ -16596,7 +16596,7 @@
     "moves": [
       "Grenade Shot",
       "Meteor Attack",
-      "Zanzou",
+      "Afterimage",
       "Shine Drive"
     ],
     "totalStats": 413,
@@ -16623,8 +16623,8 @@
     },
     "moves": [
       "Meteor Attack",
-      "Dokonjou Bat",
-      "Mogura Feint",
+      "Utter Gutsiness Bat",
+      "Mole Fake",
       "Reflect Buster"
     ],
     "totalStats": 423,
@@ -16650,13 +16650,13 @@
       "freedom": 17
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Zigzag Spark",
       "Run Ball Run",
       "Back Tornado"
     ],
     "totalStats": 401,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -16678,13 +16678,13 @@
       "freedom": 21
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Earthquake",
       "Tsuchi Daruma",
       "Mega Quake"
     ],
     "totalStats": 418,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 60
   },
   {
@@ -16708,11 +16708,11 @@
     "moves": [
       "Grenade Shot",
       "Meteor Attack",
-      "Mogura Feint",
+      "Mole Fake",
       "Tsuchi Daruma"
     ],
     "totalStats": 402,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 57
   },
   {
@@ -16735,7 +16735,7 @@
     },
     "moves": [
       "Spinning Cut",
-      "Kumo no Ito",
+      "Spider Web",
       "Bunshin Feint",
       "Hurricane Arrow"
     ],
@@ -16764,7 +16764,7 @@
     "moves": [
       "Quick Draw",
       "Blade Attack",
-      "Gorimuchuu",
+      "Bewildered",
       "Counterstrike"
     ],
     "totalStats": 426,
@@ -16821,10 +16821,10 @@
       "Hawk Shot",
       "Quick Draw",
       "Back Tornado",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 403,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 58
   },
   {
@@ -16846,13 +16846,13 @@
       "freedom": 34
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Dokugiri no Jutsu",
       "Dash Storm",
       "Hurricane Arrow"
     ],
     "totalStats": 372,
-    "ovrWeighted": 52,
+    "ovrWeighted": 51,
     "ovrPure": 53
   },
   {
@@ -16877,7 +16877,7 @@
       "Killer Slide",
       "Fake Ball",
       "Illusion Ball",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 423,
     "ovrWeighted": 61,
@@ -16902,13 +16902,13 @@
       "freedom": 22
     },
     "moves": [
-      "Shikofumi",
-      "Dokonjou Bat",
-      "Tatsumaki Senpuu",
-      "Mogura Feint"
+      "Sumo Stomp",
+      "Utter Gutsiness Bat",
+      "Whirlwind Twister",
+      "Mole Fake"
     ],
     "totalStats": 362,
-    "ovrWeighted": 53,
+    "ovrWeighted": 52,
     "ovrPure": 52
   },
   {
@@ -16931,8 +16931,8 @@
     },
     "moves": [
       "Doppelganger",
-      "Super Scan (DF)",
-      "Super Scan (OF)",
+      "Defence Scan",
+      "Attack Scan",
       "Moonsault"
     ],
     "totalStats": 451,
@@ -16960,11 +16960,11 @@
     "moves": [
       "Toughness Block",
       "Quick Draw",
-      "Tsumuji",
-      "Bakuretsu Punch"
+      "Whirlwind",
+      "Blazing Knuckle"
     ],
     "totalStats": 360,
-    "ovrWeighted": 52,
+    "ovrWeighted": 51,
     "ovrPure": 51
   },
   {
@@ -16986,9 +16986,9 @@
       "freedom": 35
     },
     "moves": [
-      "Kamikakushi",
-      "Noroi",
-      "Psycho Shot",
+      "Teleport Shot",
+      "Black Magic",
+      "Wrath Shot",
       "Bunshin Feint"
     ],
     "totalStats": 299,
@@ -17014,8 +17014,8 @@
       "freedom": 22
     },
     "moves": [
-      "Kamikakushi",
-      "Judge Through",
+      "Teleport Shot",
+      "Breakthrough",
       "Run Ball Run",
       "Moonsault"
     ],
@@ -17042,13 +17042,13 @@
       "freedom": 21
     },
     "moves": [
-      "Kamikakushi",
+      "Teleport Shot",
       "Fake Ball",
-      "Bunshin Shoot",
+      "Clone Shot",
       "Bunshin Feint"
     ],
     "totalStats": 342,
-    "ovrWeighted": 46,
+    "ovrWeighted": 47,
     "ovrPure": 49
   },
   {
@@ -17070,13 +17070,13 @@
       "freedom": 24
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Zanzou",
-      "Phantom Shoot",
+      "Rodeo Clown",
+      "Afterimage",
+      "Phantom Shot",
       "Run Ball Run"
     ],
     "totalStats": 403,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 58
   },
   {
@@ -17099,12 +17099,12 @@
     },
     "moves": [
       "Killer Slide",
-      "Dynamite Shoot",
+      "Dynamite Shot",
       "Twin Boost",
-      "Jigoku Guruma"
+      "Rolling Hell"
     ],
     "totalStats": 400,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 57
   },
   {
@@ -17129,10 +17129,10 @@
       "Pressure Punch",
       "Power Shield",
       "Quick Draw",
-      "Kogarashi"
+      "Mistral"
     ],
     "totalStats": 417,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 60
   },
   {
@@ -17154,13 +17154,13 @@
       "freedom": 24
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
-      "Jigoku Guruma",
+      "Rolling Hell",
       "Hurricane Arrow"
     ],
     "totalStats": 472,
-    "ovrWeighted": 69,
+    "ovrWeighted": 68,
     "ovrPure": 67
   },
   {
@@ -17211,12 +17211,12 @@
     },
     "moves": [
       "Killer Slide",
-      "Judge Through",
-      "Dokonjou Bat",
+      "Breakthrough",
+      "Utter Gutsiness Bat",
       "Boost Glider"
     ],
     "totalStats": 367,
-    "ovrWeighted": 51,
+    "ovrWeighted": 49,
     "ovrPure": 52
   },
   {
@@ -17239,8 +17239,8 @@
     },
     "moves": [
       "Killer Slide",
-      "Dynamite Shoot",
-      "Patriot Shoot",
+      "Dynamite Shot",
+      "Patriot Shot",
       "Shine Drive"
     ],
     "totalStats": 378,
@@ -17266,10 +17266,10 @@
       "freedom": 15
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Coil Turn",
       "Monkey Turn",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 371,
     "ovrWeighted": 55,
@@ -17296,7 +17296,7 @@
     "moves": [
       "Doppelganger",
       "Spinning Cut",
-      "Zanzou",
+      "Afterimage",
       "Bunshin Feint"
     ],
     "totalStats": 322,
@@ -17323,12 +17323,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Shoot Pocket",
-      "Kage Nui",
-      "Tsumuji"
+      "Shot Pocket",
+      "Shadow Stitch",
+      "Whirlwind"
     ],
     "totalStats": 336,
-    "ovrWeighted": 49,
+    "ovrWeighted": 47,
     "ovrPure": 48
   },
   {
@@ -17350,13 +17350,13 @@
       "freedom": 27
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Killer Slide",
-      "Bakuretsu Punch",
-      "Ushiro no Shoumen"
+      "Blazing Knuckle",
+      "About Face"
     ],
     "totalStats": 397,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 57
   },
   {
@@ -17378,7 +17378,7 @@
       "freedom": 26
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
       "Earthquake",
       "Tsuchi Daruma"
@@ -17406,9 +17406,9 @@
       "freedom": 24
     },
     "moves": [
-      "Shippuu Dash",
-      "Spinning Shoot",
-      "Super Scan (OF)",
+      "Flurry Dash",
+      "Spinning Shot",
+      "Attack Scan",
       "Cross Drive"
     ],
     "totalStats": 398,
@@ -17464,7 +17464,7 @@
     "moves": [
       "Pressure Punch",
       "Power Shield",
-      "Kumo no Ito",
+      "Spider Web",
       "Full Power Shield"
     ],
     "totalStats": 355,
@@ -17491,8 +17491,8 @@
     },
     "moves": [
       "Blade Attack",
-      "Zanzou",
-      "Kamaitachi",
+      "Afterimage",
+      "Whirlwind Cut",
       "Hurricane Arrow"
     ],
     "totalStats": 349,
@@ -17520,7 +17520,7 @@
     "moves": [
       "Grenade Shot",
       "Tsuchi Daruma",
-      "Mogura Feint",
+      "Mole Fake",
       "Back Tornado"
     ],
     "totalStats": 417,
@@ -17547,8 +17547,8 @@
     },
     "moves": [
       "Coil Turn",
-      "Gorimuchuu",
-      "Kamaitachi",
+      "Bewildered",
+      "Whirlwind Cut",
       "Back Tornado"
     ],
     "totalStats": 379,
@@ -17574,13 +17574,13 @@
       "freedom": 22
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Spinning Cut",
       "Cross Drive",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 425,
-    "ovrWeighted": 60,
+    "ovrWeighted": 61,
     "ovrPure": 61
   },
   {
@@ -17603,9 +17603,9 @@
     },
     "moves": [
       "Killer Slide",
-      "Judge Through",
-      "Dokonjou Bat",
-      "Ushiro no Shoumen"
+      "Breakthrough",
+      "Utter Gutsiness Bat",
+      "About Face"
     ],
     "totalStats": 430,
     "ovrWeighted": 63,
@@ -17630,9 +17630,9 @@
       "freedom": 19
     },
     "moves": [
-      "Noroi",
-      "Onryou",
-      "Psycho Shot",
+      "Black Magic",
+      "Ghost Pull",
+      "Wrath Shot",
       "Doppelganger"
     ],
     "totalStats": 347,
@@ -17659,9 +17659,9 @@
     },
     "moves": [
       "Doppelganger",
-      "Kage Nui",
+      "Shadow Stitch",
       "Bunshin Feint",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 408,
     "ovrWeighted": 59,
@@ -17686,13 +17686,13 @@
       "freedom": 27
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Bunshin Feint",
-      "Bunshin Shoot",
-      "Kage Nui"
+      "Clone Shot",
+      "Shadow Stitch"
     ],
     "totalStats": 408,
-    "ovrWeighted": 59,
+    "ovrWeighted": 60,
     "ovrPure": 58
   },
   {
@@ -17720,7 +17720,7 @@
       "Rocket Kobushi"
     ],
     "totalStats": 366,
-    "ovrWeighted": 45,
+    "ovrWeighted": 44,
     "ovrPure": 52
   },
   {
@@ -17744,11 +17744,11 @@
     "moves": [
       "Magic",
       "Killer Blade",
-      "Super Scan (DF)",
+      "Defence Scan",
       "Counterstrike"
     ],
     "totalStats": 357,
-    "ovrWeighted": 55,
+    "ovrWeighted": 53,
     "ovrPure": 51
   },
   {
@@ -17772,7 +17772,7 @@
     "moves": [
       "Pressure Punch",
       "Power Shield",
-      "Gorimuchuu",
+      "Bewildered",
       "Rocket Kobushi"
     ],
     "totalStats": 408,
@@ -17798,13 +17798,13 @@
       "freedom": 17
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Tarzan Kick",
       "The Wall",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 413,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 59
   },
   {
@@ -17860,7 +17860,7 @@
       "Tarzan Kick"
     ],
     "totalStats": 415,
-    "ovrWeighted": 64,
+    "ovrWeighted": 63,
     "ovrPure": 59
   },
   {
@@ -17884,7 +17884,7 @@
     "moves": [
       "Coil Turn",
       "Blade Attack",
-      "Ushiro no Shoumen",
+      "About Face",
       "Bunshin Feint"
     ],
     "totalStats": 372,
@@ -17910,7 +17910,7 @@
       "freedom": 21
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Pressure Punch",
       "Tornado Catch",
       "Counterstrike"
@@ -17938,13 +17938,13 @@
       "freedom": 39
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Condor Dive",
       "Hawk Shot",
-      "Super Scan (OF)"
+      "Attack Scan"
     ],
     "totalStats": 319,
-    "ovrWeighted": 45,
+    "ovrWeighted": 47,
     "ovrPure": 46
   },
   {
@@ -17967,9 +17967,9 @@
     },
     "moves": [
       "Doppelganger",
-      "Noroi",
-      "Onryou",
-      "Kage Nui"
+      "Black Magic",
+      "Ghost Pull",
+      "Shadow Stitch"
     ],
     "totalStats": 409,
     "ovrWeighted": 57,
@@ -17996,11 +17996,11 @@
     "moves": [
       "Tornado Catch",
       "Power Shield",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Counterstrike"
     ],
     "totalStats": 414,
-    "ovrWeighted": 60,
+    "ovrWeighted": 58,
     "ovrPure": 59
   },
   {
@@ -18022,9 +18022,9 @@
       "freedom": 20
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Blade Attack",
-      "Dokonjou Bat",
+      "Utter Gutsiness Bat",
       "Hurricane Arrow"
     ],
     "totalStats": 401,
@@ -18051,7 +18051,7 @@
     },
     "moves": [
       "Killer Slide",
-      "Onryou",
+      "Ghost Pull",
       "Monkey Turn",
       "Blade Attack"
     ],
@@ -18078,10 +18078,10 @@
       "freedom": 15
     },
     "moves": [
-      "Noroi",
-      "Onryou",
-      "Kamikakushi",
-      "Ushiro no Shoumen"
+      "Black Magic",
+      "Ghost Pull",
+      "Teleport Shot",
+      "About Face"
     ],
     "totalStats": 392,
     "ovrWeighted": 54,
@@ -18106,10 +18106,10 @@
       "freedom": 15
     },
     "moves": [
-      "Noroi",
-      "Onryou",
-      "Kage Nui",
-      "Psycho Shot"
+      "Black Magic",
+      "Ghost Pull",
+      "Shadow Stitch",
+      "Wrath Shot"
     ],
     "totalStats": 405,
     "ovrWeighted": 58,
@@ -18134,13 +18134,13 @@
       "freedom": 32
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Spinning Cut",
-      "Mogura Feint",
+      "Mole Fake",
       "Tsuchi Daruma"
     ],
     "totalStats": 397,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -18162,7 +18162,7 @@
       "freedom": 15
     },
     "moves": [
-      "Judge Through",
+      "Breakthrough",
       "Meteor Attack",
       "Boost Glider",
       "Fire Tornado"
@@ -18192,7 +18192,7 @@
     "moves": [
       "Spinning Cut",
       "Magic",
-      "Spinning Shoot",
+      "Spinning Shot",
       "Illusion Ball"
     ],
     "totalStats": 400,
@@ -18221,7 +18221,7 @@
       "Snake Shot",
       "Tarzan Kick",
       "Run Ball Run",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 400,
     "ovrWeighted": 55,
@@ -18246,13 +18246,13 @@
       "freedom": 17
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Illusion Ball",
       "Moonsault",
       "Kung Fu Head"
     ],
     "totalStats": 394,
-    "ovrWeighted": 56,
+    "ovrWeighted": 57,
     "ovrPure": 56
   },
   {
@@ -18275,8 +18275,8 @@
     },
     "moves": [
       "Spinning Cut",
-      "Kage Nui",
-      "Kamaitachi",
+      "Shadow Stitch",
+      "Whirlwind Cut",
       "Dash Storm"
     ],
     "totalStats": 415,
@@ -18302,9 +18302,9 @@
       "freedom": 19
     },
     "moves": [
-      "Tatsumaki Senpuu",
-      "Dash Accel",
-      "Kamaitachi",
+      "Whirlwind Twister",
+      "Dash Accelerator",
+      "Whirlwind Cut",
       "Cyclone"
     ],
     "totalStats": 411,
@@ -18330,10 +18330,10 @@
       "freedom": 19
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
       "Earthquake",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 429,
     "ovrWeighted": 61,
@@ -18359,8 +18359,8 @@
     },
     "moves": [
       "Tornado Catch",
-      "Gorimuchuu",
-      "Tsumuji",
+      "Bewildered",
+      "Whirlwind",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 401,
@@ -18386,7 +18386,7 @@
       "freedom": 19
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Zigzag Spark",
       "Quick Draw",
       "Meteor Attack"
@@ -18415,9 +18415,9 @@
     },
     "moves": [
       "Quick Draw",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Cyclone",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 386,
     "ovrWeighted": 54,
@@ -18443,7 +18443,7 @@
     },
     "moves": [
       "Grenade Shot",
-      "Kung Fu Head",
+      "Kung Fu Header",
       "Shine Drive",
       "Moonsault"
     ],
@@ -18470,10 +18470,10 @@
       "freedom": 22
     },
     "moves": [
-      "Nekketsu Punch",
-      "Tatsumaki Senpuu",
+      "Fireball Knuckle",
+      "Whirlwind Twister",
       "Rocket Kobushi",
-      "Makiwari Chop"
+      "Wood Chopper"
     ],
     "totalStats": 406,
     "ovrWeighted": 58,
@@ -18498,9 +18498,9 @@
       "freedom": 16
     },
     "moves": [
-      "Onryou",
-      "Noroi",
-      "Zanzou",
+      "Ghost Pull",
+      "Black Magic",
+      "Afterimage",
       "Doppelganger"
     ],
     "totalStats": 357,
@@ -18532,7 +18532,7 @@
       "Moonsault"
     ],
     "totalStats": 371,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 53
   },
   {
@@ -18555,9 +18555,9 @@
     },
     "moves": [
       "Rolling Kick",
-      "Phantom Shoot",
+      "Phantom Shot",
       "Hyakuretsu Shot",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 404,
     "ovrWeighted": 57,
@@ -18582,10 +18582,10 @@
       "freedom": 15
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Killer Slide",
       "Horn Train",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 386,
     "ovrWeighted": 55,
@@ -18611,12 +18611,12 @@
     },
     "moves": [
       "Grenade Shot",
-      "Tamanori Pierrot",
-      "Patriot Shoot",
+      "Rodeo Clown",
+      "Patriot Shot",
       "Twin Boost"
     ],
     "totalStats": 339,
-    "ovrWeighted": 45,
+    "ovrWeighted": 46,
     "ovrPure": 48
   },
   {
@@ -18638,10 +18638,10 @@
       "freedom": 11
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Heat Tackle",
-      "Judge Through",
-      "Jigoku Guruma"
+      "Breakthrough",
+      "Rolling Hell"
     ],
     "totalStats": 399,
     "ovrWeighted": 57,
@@ -18667,12 +18667,12 @@
     },
     "moves": [
       "Pressure Punch",
-      "Dash Accel",
+      "Dash Accelerator",
       "Counterstrike",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 402,
-    "ovrWeighted": 59,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -18695,12 +18695,12 @@
     },
     "moves": [
       "Fake Ball",
-      "Kumo no Ito",
+      "Spider Web",
       "Dokugiri no Jutsu",
-      "Kamikakushi"
+      "Teleport Shot"
     ],
     "totalStats": 363,
-    "ovrWeighted": 51,
+    "ovrWeighted": 52,
     "ovrPure": 52
   },
   {
@@ -18724,8 +18724,8 @@
     "moves": [
       "Grenade Shot",
       "Freeze Shot",
-      "Zanzou",
-      "Kogarashi"
+      "Afterimage",
+      "Mistral"
     ],
     "totalStats": 380,
     "ovrWeighted": 54,
@@ -18750,13 +18750,13 @@
       "freedom": 16
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Magic",
       "Illusion Ball",
       "Run Ball Run"
     ],
     "totalStats": 415,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 59
   },
   {
@@ -18778,7 +18778,7 @@
       "freedom": 16
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Super Armadillo",
       "The Wall",
       "Tsuchi Daruma"
@@ -18806,13 +18806,13 @@
       "freedom": 14
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Grenade Shot",
       "Hawk Shot",
       "Dash Storm"
     ],
     "totalStats": 415,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 59
   },
   {
@@ -18834,8 +18834,8 @@
       "freedom": 22
     },
     "moves": [
-      "Suisei Shoot",
-      "Kung Fu Head",
+      "Comet Shot",
+      "Kung Fu Header",
       "Illusion Ball",
       "Run Ball Run"
     ],
@@ -18862,13 +18862,13 @@
       "freedom": 23
     },
     "moves": [
-      "Dokonjou Bat",
+      "Utter Gutsiness Bat",
       "Killer Slide",
-      "Judge Through",
+      "Breakthrough",
       "Hurricane Arrow"
     ],
     "totalStats": 407,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 58
   },
   {
@@ -18890,13 +18890,13 @@
       "freedom": 16
     },
     "moves": [
-      "Noroi",
-      "Psycho Shot",
+      "Black Magic",
+      "Wrath Shot",
       "Illusion Ball",
       "Freeze Shot"
     ],
     "totalStats": 422,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 60
   },
   {
@@ -18918,9 +18918,9 @@
       "freedom": 20
     },
     "moves": [
-      "Dokonjou Bat",
+      "Utter Gutsiness Bat",
       "Killer Slide",
-      "Ushiro no Shoumen",
+      "About Face",
       "Back Tornado"
     ],
     "totalStats": 407,
@@ -18948,8 +18948,8 @@
     "moves": [
       "Toughness Block",
       "Horn Train",
-      "Ushiro no Shoumen",
-      "Bakuretsu Punch"
+      "About Face",
+      "Blazing Knuckle"
     ],
     "totalStats": 403,
     "ovrWeighted": 59,
@@ -18974,9 +18974,9 @@
       "freedom": 18
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Horn Train",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Gigant Wall"
     ],
     "totalStats": 383,
@@ -19003,7 +19003,7 @@
     },
     "moves": [
       "Doppelganger",
-      "Kage Nui",
+      "Shadow Stitch",
       "Magic",
       "Illusion Ball"
     ],
@@ -19030,7 +19030,7 @@
       "freedom": 19
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "The Wall",
       "Tsuchi Daruma",
       "Super Armadillo"
@@ -19058,8 +19058,8 @@
       "freedom": 27
     },
     "moves": [
-      "Dokonjou Bat",
-      "Kung Fu Head",
+      "Utter Gutsiness Bat",
+      "Kung Fu Header",
       "Spinning Cut",
       "Cyclone"
     ],
@@ -19114,9 +19114,9 @@
       "freedom": 27
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Spinning Cut",
-      "Zanzou",
+      "Afterimage",
       "Blade Attack"
     ],
     "totalStats": 414,
@@ -19142,10 +19142,10 @@
       "freedom": 18
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Fake Ball",
-      "Judge Through",
-      "Ushiro no Shoumen"
+      "Breakthrough",
+      "About Face"
     ],
     "totalStats": 389,
     "ovrWeighted": 56,
@@ -19171,12 +19171,12 @@
     },
     "moves": [
       "Pressure Punch",
-      "Shoot Pocket",
-      "Ushiro no Shoumen",
+      "Shot Pocket",
+      "About Face",
       "Counterstrike"
     ],
     "totalStats": 405,
-    "ovrWeighted": 59,
+    "ovrWeighted": 60,
     "ovrPure": 58
   },
   {
@@ -19198,9 +19198,9 @@
       "freedom": 19
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Illusion Ball",
-      "Super Scan (DF)",
+      "Defence Scan",
       "Kung Fu Head"
     ],
     "totalStats": 433,
@@ -19226,9 +19226,9 @@
       "freedom": 22
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "The Wall",
-      "Patriot Shoot",
+      "Patriot Shot",
       "Shine Drive"
     ],
     "totalStats": 430,
@@ -19254,13 +19254,13 @@
       "freedom": 18
     },
     "moves": [
-      "Dash Accel",
-      "Gorimuchuu",
+      "Dash Accelerator",
+      "Bewildered",
       "Monkey Turn",
       "Fake Ball"
     ],
     "totalStats": 410,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 59
   },
   {
@@ -19283,7 +19283,7 @@
     },
     "moves": [
       "Spinning Cut",
-      "Judge Through",
+      "Breakthrough",
       "Illusion Ball",
       "Bunshin Feint"
     ],
@@ -19340,7 +19340,7 @@
     "moves": [
       "Grenade Shot",
       "Killer Slide",
-      "Judge Through",
+      "Breakthrough",
       "Shine Drive"
     ],
     "totalStats": 384,
@@ -19367,9 +19367,9 @@
     },
     "moves": [
       "Quick Draw",
-      "Super Scan (DF)",
-      "Super Scan (OF)",
-      "Kumo no Ito"
+      "Defence Scan",
+      "Attack Scan",
+      "Spider Web"
     ],
     "totalStats": 394,
     "ovrWeighted": 57,
@@ -19400,7 +19400,7 @@
       "Hurricane Arrow"
     ],
     "totalStats": 376,
-    "ovrWeighted": 52,
+    "ovrWeighted": 53,
     "ovrPure": 54
   },
   {
@@ -19424,8 +19424,8 @@
     "moves": [
       "Magic",
       "Illusion Ball",
-      "Phantom Shoot",
-      "Psycho Shot"
+      "Phantom Shot",
+      "Wrath Shot"
     ],
     "totalStats": 369,
     "ovrWeighted": 54,
@@ -19451,12 +19451,12 @@
     },
     "moves": [
       "Rolling Kick",
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Coil Turn",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 357,
-    "ovrWeighted": 49,
+    "ovrWeighted": 50,
     "ovrPure": 51
   },
   {
@@ -19478,7 +19478,7 @@
       "freedom": 22
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Condor Dive",
       "Magic",
       "Run Ball Run"
@@ -19507,12 +19507,12 @@
     },
     "moves": [
       "Toughness Block",
-      "Makiwari Chop",
-      "Gorimuchuu",
-      "Bakuretsu Punch"
+      "Wood Chopper",
+      "Bewildered",
+      "Blazing Knuckle"
     ],
     "totalStats": 410,
-    "ovrWeighted": 60,
+    "ovrWeighted": 58,
     "ovrPure": 59
   },
   {
@@ -19535,12 +19535,12 @@
     },
     "moves": [
       "Toughness Block",
-      "Shoot Pocket",
+      "Shot Pocket",
       "Super Armadillo",
-      "Makiwari Chop"
+      "Wood Chopper"
     ],
     "totalStats": 394,
-    "ovrWeighted": 60,
+    "ovrWeighted": 57,
     "ovrPure": 56
   },
   {
@@ -19562,8 +19562,8 @@
       "freedom": 27
     },
     "moves": [
-      "Tatsumaki Senpuu",
-      "Kamaitachi",
+      "Whirlwind Twister",
+      "Whirlwind Cut",
       "Dash Storm",
       "Twin Boost"
     ],
@@ -19591,8 +19591,8 @@
     },
     "moves": [
       "Toughness Block",
-      "Gorimuchuu",
-      "Bakuretsu Punch",
+      "Bewildered",
+      "Blazing Knuckle",
       "Counterstrike"
     ],
     "totalStats": 389,
@@ -19618,9 +19618,9 @@
       "freedom": 32
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
-      "Mogura Feint",
+      "Mole Fake",
       "Harvest"
     ],
     "totalStats": 371,
@@ -19674,13 +19674,13 @@
       "freedom": 16
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Pressure Punch",
       "Rocket Kobushi",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 426,
-    "ovrWeighted": 63,
+    "ovrWeighted": 62,
     "ovrPure": 61
   },
   {
@@ -19703,12 +19703,12 @@
     },
     "moves": [
       "Fake Ball",
-      "Dokonjou Bat",
-      "Gorimuchuu",
-      "Kamaitachi"
+      "Utter Gutsiness Bat",
+      "Bewildered",
+      "Whirlwind Cut"
     ],
     "totalStats": 421,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 60
   },
   {
@@ -19731,12 +19731,12 @@
     },
     "moves": [
       "Rolling Kick",
-      "Dash Accel",
+      "Dash Accelerator",
       "Grenade Shot",
-      "Onryou"
+      "Ghost Pull"
     ],
     "totalStats": 391,
-    "ovrWeighted": 56,
+    "ovrWeighted": 55,
     "ovrPure": 56
   },
   {
@@ -19758,13 +19758,13 @@
       "freedom": 33
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Killer Blade",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Counterstrike"
     ],
     "totalStats": 409,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 58
   },
   {
@@ -19786,7 +19786,7 @@
       "freedom": 26
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Quick Draw",
       "Dokugiri no Jutsu",
       "Harvest"
@@ -19814,13 +19814,13 @@
       "freedom": 18
     },
     "moves": [
-      "Shikofumi",
-      "Gorimuchuu",
+      "Sumo Stomp",
+      "Bewildered",
       "Tsuchi Daruma",
       "Reflect Buster"
     ],
     "totalStats": 388,
-    "ovrWeighted": 55,
+    "ovrWeighted": 54,
     "ovrPure": 55
   },
   {
@@ -19843,8 +19843,8 @@
     },
     "moves": [
       "Spinning Cut",
-      "Spinning Shoot",
-      "Shippuu Dash",
+      "Spinning Shot",
+      "Flurry Dash",
       "Harvest"
     ],
     "totalStats": 333,
@@ -19926,13 +19926,13 @@
       "freedom": 24
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Doppelganger",
-      "Shoot Pocket",
-      "Kage Nui"
+      "Shot Pocket",
+      "Shadow Stitch"
     ],
     "totalStats": 401,
-    "ovrWeighted": 60,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -19956,8 +19956,8 @@
     "moves": [
       "Spiral Shot",
       "Grenade Shot",
-      "Judge Through",
-      "Dokonjou Bat"
+      "Breakthrough",
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 414,
     "ovrWeighted": 57,
@@ -19988,7 +19988,7 @@
       "Shine Drive"
     ],
     "totalStats": 416,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 59
   },
   {
@@ -20012,7 +20012,7 @@
     "moves": [
       "Grenade Shot",
       "Spinning Cut",
-      "Jigoku Guruma",
+      "Rolling Hell",
       "Twin Boost"
     ],
     "totalStats": 466,
@@ -20038,13 +20038,13 @@
       "freedom": 15
     },
     "moves": [
-      "Suisei Shoot",
-      "Psycho Shot",
+      "Comet Shot",
+      "Wrath Shot",
       "Cross Drive",
       "Moonsault"
     ],
     "totalStats": 390,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -20066,10 +20066,10 @@
       "freedom": 22
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Fake Ball",
-      "Kung Fu Head",
-      "Kumo no Ito"
+      "Kung Fu Header",
+      "Spider Web"
     ],
     "totalStats": 407,
     "ovrWeighted": 57,
@@ -20095,7 +20095,7 @@
     },
     "moves": [
       "Killer Blade",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Blade Attack",
       "Harvest"
     ],
@@ -20122,10 +20122,10 @@
       "freedom": 17
     },
     "moves": [
-      "Noroi",
-      "Kamikakushi",
+      "Black Magic",
+      "Teleport Shot",
       "Dokugiri no Jutsu",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 411,
     "ovrWeighted": 58,
@@ -20151,8 +20151,8 @@
     },
     "moves": [
       "Super Armadillo",
-      "Mogura Feint",
-      "Kumo no Ito",
+      "Mole Fake",
+      "Spider Web",
       "Run Ball Run"
     ],
     "totalStats": 447,
@@ -20178,13 +20178,13 @@
       "freedom": 19
     },
     "moves": [
-      "Suisei Shoot",
-      "Dash Accel",
+      "Comet Shot",
+      "Dash Accelerator",
       "Bunshin Feint",
       "Run Ball Run"
     ],
     "totalStats": 331,
-    "ovrWeighted": 45,
+    "ovrWeighted": 47,
     "ovrPure": 47
   },
   {
@@ -20212,7 +20212,7 @@
       "Divine Arrow"
     ],
     "totalStats": 410,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 59
   },
   {
@@ -20235,12 +20235,12 @@
     },
     "moves": [
       "Doppelganger",
-      "Tatsumaki Senpuu",
-      "Kumo no Ito",
-      "Psycho Shot"
+      "Whirlwind Twister",
+      "Spider Web",
+      "Wrath Shot"
     ],
     "totalStats": 379,
-    "ovrWeighted": 54,
+    "ovrWeighted": 55,
     "ovrPure": 54
   },
   {
@@ -20262,10 +20262,10 @@
       "freedom": 17
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Killer Slide",
       "Horn Train",
-      "Dynamite Shoot"
+      "Dynamite Shot"
     ],
     "totalStats": 355,
     "ovrWeighted": 52,
@@ -20293,7 +20293,7 @@
       "Spinning Cut",
       "Blade Attack",
       "Cyclone",
-      "Spinning Shoot"
+      "Spinning Shot"
     ],
     "totalStats": 394,
     "ovrWeighted": 57,
@@ -20320,11 +20320,11 @@
     "moves": [
       "Toughness Block",
       "Cyclone",
-      "Gorimuchuu",
+      "Bewildered",
       "Full Power Shield"
     ],
     "totalStats": 418,
-    "ovrWeighted": 59,
+    "ovrWeighted": 60,
     "ovrPure": 60
   },
   {
@@ -20346,7 +20346,7 @@
       "freedom": 28
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Coil Turn",
       "Zigzag Spark",
       "Dash Storm"
@@ -20374,13 +20374,13 @@
       "freedom": 16
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Gorimuchuu",
-      "Zanzou",
+      "Rodeo Clown",
+      "Bewildered",
+      "Afterimage",
       "Fake Ball"
     ],
     "totalStats": 400,
-    "ovrWeighted": 58,
+    "ovrWeighted": 60,
     "ovrPure": 57
   },
   {
@@ -20403,12 +20403,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Tsumuji",
-      "Suisei Shoot",
+      "Whirlwind",
+      "Comet Shot",
       "Moonsault"
     ],
     "totalStats": 420,
-    "ovrWeighted": 63,
+    "ovrWeighted": 60,
     "ovrPure": 60
   },
   {
@@ -20430,7 +20430,7 @@
       "freedom": 19
     },
     "moves": [
-      "Phantom Shoot",
+      "Phantom Shot",
       "Coil Turn",
       "Back Tornado",
       "Dash Storm"
@@ -20459,9 +20459,9 @@
     },
     "moves": [
       "Grenade Shot",
-      "Super Scan (DF)",
-      "Patriot Shoot",
-      "Super Scan (OF)"
+      "Defence Scan",
+      "Patriot Shot",
+      "Attack Scan"
     ],
     "totalStats": 462,
     "ovrWeighted": 67,
@@ -20492,7 +20492,7 @@
       "Cyclone"
     ],
     "totalStats": 407,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 58
   },
   {
@@ -20514,9 +20514,9 @@
       "freedom": 16
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Snake Shot",
-      "Kung Fu Head",
+      "Kung Fu Header",
       "Run Ball Run"
     ],
     "totalStats": 387,
@@ -20542,9 +20542,9 @@
       "freedom": 39
     },
     "moves": [
-      "Dynamite Shoot",
-      "Dash Accel",
-      "Patriot Shoot",
+      "Dynamite Shot",
+      "Dash Accelerator",
+      "Patriot Shot",
       "Heat Tackle"
     ],
     "totalStats": 406,
@@ -20572,11 +20572,11 @@
     "moves": [
       "Tornado Catch",
       "Doppelganger",
-      "Kogarashi",
-      "Ushiro no Shoumen"
+      "Mistral",
+      "About Face"
     ],
     "totalStats": 374,
-    "ovrWeighted": 53,
+    "ovrWeighted": 52,
     "ovrPure": 53
   },
   {
@@ -20601,7 +20601,7 @@
       "Pressure Punch",
       "Horn Train",
       "The Wall",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 396,
     "ovrWeighted": 58,
@@ -20655,7 +20655,7 @@
     },
     "moves": [
       "Rocket Kobushi",
-      "Gorimuchuu",
+      "Bewildered",
       "Dokugiri no Jutsu",
       "Counterstrike"
     ],
@@ -20683,12 +20683,12 @@
     },
     "moves": [
       "Killer Blade",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Spinning Cut",
-      "Kogarashi"
+      "Mistral"
     ],
     "totalStats": 426,
-    "ovrWeighted": 60,
+    "ovrWeighted": 61,
     "ovrPure": 61
   },
   {
@@ -20711,7 +20711,7 @@
     },
     "moves": [
       "Doppelganger",
-      "Noroi",
+      "Black Magic",
       "Magic",
       "Illusion Ball"
     ],
@@ -20738,10 +20738,10 @@
       "freedom": 20
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Spinning Cut",
       "Blade Attack",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 373,
     "ovrWeighted": 52,
@@ -20768,8 +20768,8 @@
     "moves": [
       "Doppelganger",
       "Spinning Cut",
-      "Super Scan (OF)",
-      "Psycho Shot"
+      "Attack Scan",
+      "Wrath Shot"
     ],
     "totalStats": 413,
     "ovrWeighted": 59,
@@ -20794,13 +20794,13 @@
       "freedom": 20
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Zigzag Spark",
-      "Mogura Feint",
+      "Mole Fake",
       "Tsuchi Daruma"
     ],
     "totalStats": 406,
-    "ovrWeighted": 57,
+    "ovrWeighted": 55,
     "ovrPure": 58
   },
   {
@@ -20822,13 +20822,13 @@
       "freedom": 17
     },
     "moves": [
-      "Zanzou",
-      "Kumo no Ito",
+      "Afterimage",
+      "Spider Web",
       "Dash Storm",
       "Shine Drive"
     ],
     "totalStats": 343,
-    "ovrWeighted": 46,
+    "ovrWeighted": 47,
     "ovrPure": 49
   },
   {
@@ -20850,13 +20850,13 @@
       "freedom": 22
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Toughness Block",
       "Rocket Kobushi",
       "Cyclone"
     ],
     "totalStats": 429,
-    "ovrWeighted": 67,
+    "ovrWeighted": 64,
     "ovrPure": 61
   },
   {
@@ -20878,7 +20878,7 @@
       "freedom": 38
     },
     "moves": [
-      "Dokonjou Bat",
+      "Utter Gutsiness Bat",
       "Heat Tackle",
       "Blade Attack",
       "Tsuchi Daruma"
@@ -20908,7 +20908,7 @@
     "moves": [
       "Killer Slide",
       "The Wall",
-      "Jigoku Guruma",
+      "Rolling Hell",
       "Reflect Buster"
     ],
     "totalStats": 413,
@@ -20934,10 +20934,10 @@
       "freedom": 19
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Tarzan Kick",
-      "Gorimuchuu",
-      "Dokonjou Bat"
+      "Bewildered",
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 413,
     "ovrWeighted": 57,
@@ -20962,9 +20962,9 @@
       "freedom": 8
     },
     "moves": [
-      "Kamikakushi",
+      "Teleport Shot",
       "Tarzan Kick",
-      "Dokonjou Bat",
+      "Utter Gutsiness Bat",
       "Horn Train"
     ],
     "totalStats": 421,
@@ -21021,10 +21021,10 @@
       "Tornado Catch",
       "Wild Claw",
       "Hawk Shot",
-      "Kogarashi"
+      "Mistral"
     ],
     "totalStats": 348,
-    "ovrWeighted": 54,
+    "ovrWeighted": 55,
     "ovrPure": 50
   },
   {
@@ -21047,7 +21047,7 @@
     },
     "moves": [
       "Killer Slide",
-      "Onryou",
+      "Ghost Pull",
       "Horn Train",
       "Tsuchi Daruma"
     ],
@@ -21074,8 +21074,8 @@
       "freedom": 26
     },
     "moves": [
-      "Tatsumaki Senpuu",
-      "Zanzou",
+      "Whirlwind Twister",
+      "Afterimage",
       "Quick Draw",
       "Cyclone"
     ],
@@ -21104,11 +21104,11 @@
     "moves": [
       "Killer Slide",
       "Quick Draw",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Snake Shot"
     ],
     "totalStats": 317,
-    "ovrWeighted": 43,
+    "ovrWeighted": 42,
     "ovrPure": 45
   },
   {
@@ -21131,9 +21131,9 @@
     },
     "moves": [
       "Killer Slide",
-      "Judge Through",
+      "Breakthrough",
       "Cyclone",
-      "Zanzou"
+      "Afterimage"
     ],
     "totalStats": 403,
     "ovrWeighted": 58,
@@ -21158,10 +21158,10 @@
       "freedom": 17
     },
     "moves": [
-      "Onryou",
-      "Noroi",
-      "Phantom Shoot",
-      "Psycho Shot"
+      "Ghost Pull",
+      "Black Magic",
+      "Phantom Shot",
+      "Wrath Shot"
     ],
     "totalStats": 359,
     "ovrWeighted": 51,
@@ -21192,7 +21192,7 @@
       "Gigant Wall"
     ],
     "totalStats": 383,
-    "ovrWeighted": 53,
+    "ovrWeighted": 52,
     "ovrPure": 55
   },
   {
@@ -21214,9 +21214,9 @@
       "freedom": 21
     },
     "moves": [
-      "Onryou",
-      "Kumo no Ito",
-      "Kamaitachi",
+      "Ghost Pull",
+      "Spider Web",
+      "Whirlwind Cut",
       "Dash Storm"
     ],
     "totalStats": 414,
@@ -21243,9 +21243,9 @@
     },
     "moves": [
       "Grenade Shot",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Shine Drive",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 382,
     "ovrWeighted": 52,
@@ -21270,13 +21270,13 @@
       "freedom": 36
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Rolling Kick",
       "Fire Tornado",
       "Back Tornado"
     ],
     "totalStats": 389,
-    "ovrWeighted": 56,
+    "ovrWeighted": 57,
     "ovrPure": 56
   },
   {
@@ -21301,10 +21301,10 @@
       "Power Shield",
       "Full Power Shield",
       "Coil Turn",
-      "Gorimuchuu"
+      "Bewildered"
     ],
     "totalStats": 420,
-    "ovrWeighted": 62,
+    "ovrWeighted": 61,
     "ovrPure": 60
   },
   {
@@ -21326,13 +21326,13 @@
       "freedom": 20
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Illusion Ball",
       "Hawk Shot",
       "Twin Boost"
     ],
     "totalStats": 389,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -21354,13 +21354,13 @@
       "freedom": 16
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Rocket Kobushi",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Spinning Cut"
     ],
     "totalStats": 384,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 55
   },
   {
@@ -21382,10 +21382,10 @@
       "freedom": 34
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Killer Slide",
       "Spinning Cut",
-      "Judge Through"
+      "Breakthrough"
     ],
     "totalStats": 396,
     "ovrWeighted": 56,
@@ -21410,13 +21410,13 @@
       "freedom": 20
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Power Shield",
       "Spinning Cut",
       "Full Power Shield"
     ],
     "totalStats": 407,
-    "ovrWeighted": 62,
+    "ovrWeighted": 61,
     "ovrPure": 58
   },
   {
@@ -21440,8 +21440,8 @@
     "moves": [
       "Coil Turn",
       "Blade Attack",
-      "Super Scan (DF)",
-      "Super Scan (OF)"
+      "Defence Scan",
+      "Attack Scan"
     ],
     "totalStats": 403,
     "ovrWeighted": 58,
@@ -21466,10 +21466,10 @@
       "freedom": 16
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Magic",
       "Illusion Ball",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 430,
     "ovrWeighted": 60,
@@ -21495,9 +21495,9 @@
     },
     "moves": [
       "Spiral Shot",
-      "Super Scan (DF)",
-      "Super Scan (OF)",
-      "Kumo no Ito"
+      "Defence Scan",
+      "Attack Scan",
+      "Spider Web"
     ],
     "totalStats": 370,
     "ovrWeighted": 52,
@@ -21524,11 +21524,11 @@
     "moves": [
       "Wild Claw",
       "Fake Ball",
-      "Bakuretsu Punch",
-      "Kumo no Ito"
+      "Blazing Knuckle",
+      "Spider Web"
     ],
     "totalStats": 382,
-    "ovrWeighted": 52,
+    "ovrWeighted": 51,
     "ovrPure": 55
   },
   {
@@ -21550,7 +21550,7 @@
       "freedom": 15
     },
     "moves": [
-      "Super Scan (OF)",
+      "Attack Scan",
       "Meteor Attack",
       "Quick Draw",
       "Cross Drive"
@@ -21578,13 +21578,13 @@
       "freedom": 18
     },
     "moves": [
-      "Dash Accel",
-      "Gorimuchuu",
-      "Mogura Feint",
+      "Dash Accelerator",
+      "Bewildered",
+      "Mole Fake",
       "Tsuchi Daruma"
     ],
     "totalStats": 383,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 55
   },
   {
@@ -21606,10 +21606,10 @@
       "freedom": 19
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Coil Turn",
-      "Shippuu Dash",
-      "Kamaitachi"
+      "Flurry Dash",
+      "Whirlwind Cut"
     ],
     "totalStats": 388,
     "ovrWeighted": 58,
@@ -21634,7 +21634,7 @@
       "freedom": 17
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Illusion Ball",
       "Spinning Cut",
       "Cyclone"
@@ -21663,9 +21663,9 @@
     },
     "moves": [
       "Quick Draw",
-      "Ushiro no Shoumen",
-      "Gorimuchuu",
-      "Kagome Kagome"
+      "About Face",
+      "Bewildered",
+      "Bamboo Pattern"
     ],
     "totalStats": 390,
     "ovrWeighted": 52,
@@ -21746,7 +21746,7 @@
       "freedom": 33
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Coil Turn",
       "Dokugiri no Jutsu",
       "Cyclone"
@@ -21774,10 +21774,10 @@
       "freedom": 22
     },
     "moves": [
-      "Onryou",
-      "Psycho Shot",
-      "Kumo no Ito",
-      "Kagome Kagome"
+      "Ghost Pull",
+      "Wrath Shot",
+      "Spider Web",
+      "Bamboo Pattern"
     ],
     "totalStats": 383,
     "ovrWeighted": 53,
@@ -21804,7 +21804,7 @@
     "moves": [
       "Doppelganger",
       "Magic",
-      "Kumo no Ito",
+      "Spider Web",
       "Run Ball Run"
     ],
     "totalStats": 415,
@@ -21830,13 +21830,13 @@
       "freedom": 16
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Zigzag Spark",
       "Hawk Shot",
-      "Patriot Shoot"
+      "Patriot Shot"
     ],
     "totalStats": 388,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 55
   },
   {
@@ -21858,8 +21858,8 @@
       "freedom": 15
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Gorimuchuu",
+      "Rodeo Clown",
+      "Bewildered",
       "Snake Shot",
       "Boost Glider"
     ],
@@ -21920,7 +21920,7 @@
       "Freeze Shot"
     ],
     "totalStats": 374,
-    "ovrWeighted": 57,
+    "ovrWeighted": 53,
     "ovrPure": 53
   },
   {
@@ -21942,13 +21942,13 @@
       "freedom": 31
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Killer Slide",
-      "Judge Through",
+      "Breakthrough",
       "Cyclone"
     ],
     "totalStats": 378,
-    "ovrWeighted": 53,
+    "ovrWeighted": 52,
     "ovrPure": 54
   },
   {
@@ -21970,13 +21970,13 @@
       "freedom": 23
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Tornado Catch",
       "Rocket Kobushi",
-      "Kogarashi"
+      "Mistral"
     ],
     "totalStats": 437,
-    "ovrWeighted": 62,
+    "ovrWeighted": 61,
     "ovrPure": 62
   },
   {
@@ -21999,12 +21999,12 @@
     },
     "moves": [
       "Coil Turn",
-      "Kumo no Ito",
+      "Spider Web",
       "Tsuchi Daruma",
       "Moonsault"
     ],
     "totalStats": 411,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 59
   },
   {
@@ -22032,7 +22032,7 @@
       "Full Power Shield"
     ],
     "totalStats": 335,
-    "ovrWeighted": 50,
+    "ovrWeighted": 48,
     "ovrPure": 48
   },
   {
@@ -22056,8 +22056,8 @@
     "moves": [
       "Quick Draw",
       "Bunshin Feint",
-      "Kage Nui",
-      "Bunshin Shoot"
+      "Shadow Stitch",
+      "Clone Shot"
     ],
     "totalStats": 362,
     "ovrWeighted": 53,
@@ -22082,13 +22082,13 @@
       "freedom": 22
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Doppelganger",
-      "Judge Through",
+      "Breakthrough",
       "Heat Tackle"
     ],
     "totalStats": 375,
-    "ovrWeighted": 51,
+    "ovrWeighted": 52,
     "ovrPure": 54
   },
   {
@@ -22110,8 +22110,8 @@
       "freedom": 16
     },
     "moves": [
-      "Judge Through",
-      "Super Scan (OF)",
+      "Breakthrough",
+      "Attack Scan",
       "Boost Glider",
       "Fire Tornado"
     ],
@@ -22141,10 +22141,10 @@
       "Monkey Turn",
       "Cross Drive",
       "Back Tornado",
-      "Tamanori Pierrot"
+      "Rodeo Clown"
     ],
     "totalStats": 419,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 60
   },
   {
@@ -22168,11 +22168,11 @@
     "moves": [
       "Killer Blade",
       "Spinning Cut",
-      "Tsumuji",
-      "Kage Nui"
+      "Whirlwind",
+      "Shadow Stitch"
     ],
     "totalStats": 352,
-    "ovrWeighted": 48,
+    "ovrWeighted": 49,
     "ovrPure": 50
   },
   {
@@ -22195,7 +22195,7 @@
     },
     "moves": [
       "Rolling Kick",
-      "Spinning Shoot",
+      "Spinning Shot",
       "Fake Ball",
       "Back Tornado"
     ],
@@ -22253,10 +22253,10 @@
       "Pressure Punch",
       "Spinning Cut",
       "Toughness Block",
-      "Makiwari Chop"
+      "Wood Chopper"
     ],
     "totalStats": 424,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 61
   },
   {
@@ -22281,7 +22281,7 @@
       "Pressure Punch",
       "Wild Claw",
       "Rocket Kobushi",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 400,
     "ovrWeighted": 55,
@@ -22306,13 +22306,13 @@
       "freedom": 32
     },
     "moves": [
-      "Dash Accel",
-      "Psycho Shot",
-      "Dokonjou Bat",
+      "Dash Accelerator",
+      "Wrath Shot",
+      "Utter Gutsiness Bat",
       "Divine Arrow"
     ],
     "totalStats": 304,
-    "ovrWeighted": 44,
+    "ovrWeighted": 45,
     "ovrPure": 43
   },
   {
@@ -22335,9 +22335,9 @@
     },
     "moves": [
       "Rolling Kick",
-      "Phantom Shoot",
+      "Phantom Shot",
       "Run Ball Run",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 348,
     "ovrWeighted": 48,
@@ -22390,13 +22390,13 @@
       "freedom": 17
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
       "Super Armadillo",
-      "Mogura Feint"
+      "Mole Fake"
     ],
     "totalStats": 404,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 58
   },
   {
@@ -22419,7 +22419,7 @@
     },
     "moves": [
       "Blade Attack",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Cyclone",
       "Cross Drive"
     ],
@@ -22474,13 +22474,13 @@
       "freedom": 16
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Horn Train",
       "Earthquake",
       "Mega Quake"
     ],
     "totalStats": 317,
-    "ovrWeighted": 46,
+    "ovrWeighted": 45,
     "ovrPure": 45
   },
   {
@@ -22504,11 +22504,11 @@
     "moves": [
       "Coil Turn",
       "Power Shield",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Horn Train"
     ],
     "totalStats": 408,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 58
   },
   {
@@ -22531,12 +22531,12 @@
     },
     "moves": [
       "Rocket Kobushi",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Coil Turn",
-      "Noroi"
+      "Black Magic"
     ],
     "totalStats": 401,
-    "ovrWeighted": 63,
+    "ovrWeighted": 61,
     "ovrPure": 57
   },
   {
@@ -22558,7 +22558,7 @@
       "freedom": 25
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
       "Earthquake",
       "Boost Glider"
@@ -22587,7 +22587,7 @@
     },
     "moves": [
       "Doppelganger",
-      "Gorimuchuu",
+      "Bewildered",
       "Magic",
       "Illusion Ball"
     ],
@@ -22617,10 +22617,10 @@
       "Killer Blade",
       "Doppelganger",
       "Wild Claw",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 408,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 58
   },
   {
@@ -22643,12 +22643,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Gorimuchuu",
-      "Tsumuji",
+      "Bewildered",
+      "Whirlwind",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 391,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -22670,10 +22670,10 @@
       "freedom": 14
     },
     "moves": [
-      "Nekketsu Punch",
-      "Makiwari Chop",
+      "Fireball Knuckle",
+      "Wood Chopper",
       "Fake Ball",
-      "Kogarashi"
+      "Mistral"
     ],
     "totalStats": 414,
     "ovrWeighted": 60,
@@ -22700,11 +22700,11 @@
     "moves": [
       "Spiral Shot",
       "Hyakuretsu Shot",
-      "Patriot Shoot",
-      "Dokonjou Bat"
+      "Patriot Shot",
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 352,
-    "ovrWeighted": 48,
+    "ovrWeighted": 50,
     "ovrPure": 50
   },
   {
@@ -22729,7 +22729,7 @@
       "Tornado Catch",
       "Wild Claw",
       "Spinning Cut",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 371,
     "ovrWeighted": 52,
@@ -22755,9 +22755,9 @@
     },
     "moves": [
       "Fake Ball",
-      "Judge Through",
-      "Ushiro no Shoumen",
-      "Dokonjou Bat"
+      "Breakthrough",
+      "About Face",
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 417,
     "ovrWeighted": 62,
@@ -22783,12 +22783,12 @@
     },
     "moves": [
       "Coil Turn",
-      "Shippuu Dash",
+      "Flurry Dash",
       "Zigzag Spark",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 402,
-    "ovrWeighted": 57,
+    "ovrWeighted": 55,
     "ovrPure": 57
   },
   {
@@ -22838,7 +22838,7 @@
       "freedom": 15
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Spiral Shot",
       "Monkey Turn",
       "Tarzan Kick"
@@ -22868,8 +22868,8 @@
     "moves": [
       "Killer Slide",
       "Toughness Block",
-      "Bakuretsu Punch",
-      "Kagome Kagome"
+      "Blazing Knuckle",
+      "Bamboo Pattern"
     ],
     "totalStats": 416,
     "ovrWeighted": 59,
@@ -22894,9 +22894,9 @@
       "freedom": 31
     },
     "moves": [
-      "Psycho Shot",
+      "Wrath Shot",
       "Blade Attack",
-      "Hurricane Arrow",
+      "Hurricane Arrows",
       "Divine Arrow"
     ],
     "totalStats": 393,
@@ -22923,9 +22923,9 @@
     },
     "moves": [
       "Magic",
-      "Zanzou",
+      "Afterimage",
       "Bunshin Feint",
-      "Bunshin Shoot"
+      "Clone Shot"
     ],
     "totalStats": 397,
     "ovrWeighted": 58,
@@ -22951,12 +22951,12 @@
     },
     "moves": [
       "Toughness Block",
-      "Goal Zurashi",
+      "Sliding Goal",
       "Rocket Kobushi",
       "Full Power Shield"
     ],
     "totalStats": 367,
-    "ovrWeighted": 52,
+    "ovrWeighted": 51,
     "ovrPure": 52
   },
   {
@@ -22981,10 +22981,10 @@
       "Tarzan Kick",
       "Run Ball Run",
       "Fake Ball",
-      "Tamanori Pierrot"
+      "Rodeo Clown"
     ],
     "totalStats": 387,
-    "ovrWeighted": 54,
+    "ovrWeighted": 53,
     "ovrPure": 55
   },
   {
@@ -23007,12 +23007,12 @@
     },
     "moves": [
       "Pressure Punch",
-      "Shikofumi",
-      "Makiwari Chop",
+      "Sumo Stomp",
+      "Wood Chopper",
       "Horn Train"
     ],
     "totalStats": 406,
-    "ovrWeighted": 56,
+    "ovrWeighted": 58,
     "ovrPure": 58
   },
   {
@@ -23034,9 +23034,9 @@
       "freedom": 16
     },
     "moves": [
-      "Super Scan (DF)",
-      "Super Scan (OF)",
-      "Kung Fu Head",
+      "Defence Scan",
+      "Attack Scan",
+      "Kung Fu Header",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 417,
@@ -23062,8 +23062,8 @@
       "freedom": 31
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Dynamite Shoot",
+      "Rodeo Clown",
+      "Dynamite Shot",
       "Monkey Turn",
       "Tsuchi Daruma"
     ],
@@ -23090,7 +23090,7 @@
       "freedom": 19
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
       "Monkey Turn",
       "Earthquake"
@@ -23124,7 +23124,7 @@
       "Whirlwind"
     ],
     "totalStats": 318,
-    "ovrWeighted": 44,
+    "ovrWeighted": 45,
     "ovrPure": 45
   },
   {
@@ -23148,8 +23148,8 @@
     "moves": [
       "Quick Draw",
       "Blade Attack",
-      "Zanzou",
-      "Jigoku Guruma"
+      "Afterimage",
+      "Rolling Hell"
     ],
     "totalStats": 366,
     "ovrWeighted": 59,
@@ -23177,7 +23177,7 @@
       "Coil Turn",
       "Zigzag Spark",
       "Dokugiri no Jutsu",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 427,
     "ovrWeighted": 62,
@@ -23203,9 +23203,9 @@
     },
     "moves": [
       "Fake Ball",
-      "Judge Through",
-      "Dokonjou Bat",
-      "Ushiro no Shoumen"
+      "Breakthrough",
+      "Utter Gutsiness Bat",
+      "About Face"
     ],
     "totalStats": 407,
     "ovrWeighted": 59,
@@ -23232,11 +23232,11 @@
     "moves": [
       "Toughness Block",
       "Rocket Kobushi",
-      "Kage Nui",
-      "Bakuretsu Punch"
+      "Shadow Stitch",
+      "Blazing Knuckle"
     ],
     "totalStats": 406,
-    "ovrWeighted": 62,
+    "ovrWeighted": 59,
     "ovrPure": 58
   },
   {
@@ -23260,7 +23260,7 @@
     "moves": [
       "Killer Slide",
       "Spinning Cut",
-      "Judge Through",
+      "Breakthrough",
       "Cyclone"
     ],
     "totalStats": 393,
@@ -23292,7 +23292,7 @@
       "Cyclone"
     ],
     "totalStats": 409,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 58
   },
   {
@@ -23315,7 +23315,7 @@
     },
     "moves": [
       "Killer Slide",
-      "Dash Accel",
+      "Dash Accelerator",
       "Spinning Cut",
       "Horn Train"
     ],
@@ -23342,9 +23342,9 @@
       "freedom": 17
     },
     "moves": [
-      "Psycho Shot",
+      "Wrath Shot",
       "Doppelganger",
-      "Onryou",
+      "Ghost Pull",
       "Magic"
     ],
     "totalStats": 384,
@@ -23371,12 +23371,12 @@
     },
     "moves": [
       "Dokugiri no Jutsu",
-      "Phantom Shoot",
-      "Kumo no Ito",
-      "Dokonjou Bat"
+      "Phantom Shot",
+      "Spider Web",
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 417,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 60
   },
   {
@@ -23398,7 +23398,7 @@
       "freedom": 14
     },
     "moves": [
-      "Spinning Shoot",
+      "Spinning Shot",
       "Snake Shot",
       "Heat Tackle",
       "Twin Boost"
@@ -23426,8 +23426,8 @@
       "freedom": 14
     },
     "moves": [
-      "Shippuu Dash",
-      "Dynamite Shoot",
+      "Flurry Dash",
+      "Dynamite Shot",
       "Twin Boost",
       "Illusion Ball"
     ],
@@ -23457,7 +23457,7 @@
       "Fake Ball",
       "Magic",
       "Illusion Ball",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 389,
     "ovrWeighted": 57,
@@ -23482,13 +23482,13 @@
       "freedom": 22
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Rocket Kobushi",
       "Heat Tackle",
-      "Kogarashi"
+      "Mistral"
     ],
     "totalStats": 409,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 58
   },
   {
@@ -23512,7 +23512,7 @@
     "moves": [
       "Quick Draw",
       "Horn Train",
-      "Judge Through",
+      "Breakthrough",
       "Harvest"
     ],
     "totalStats": 467,
@@ -23539,9 +23539,9 @@
     },
     "moves": [
       "Killer Blade",
-      "Makiwari Chop",
-      "Kage Nui",
-      "Bakuretsu Punch"
+      "Wood Chopper",
+      "Shadow Stitch",
+      "Blazing Knuckle"
     ],
     "totalStats": 392,
     "ovrWeighted": 58,
@@ -23568,8 +23568,8 @@
     "moves": [
       "Doppelganger",
       "Monkey Turn",
-      "Zanzou",
-      "Sabaki no Tettsui"
+      "Afterimage",
+      "Divine Stamp"
     ],
     "totalStats": 384,
     "ovrWeighted": 51,
@@ -23594,10 +23594,10 @@
       "freedom": 22
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Fake Ball",
       "Dokugiri no Jutsu",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 444,
     "ovrWeighted": 65,
@@ -23651,12 +23651,12 @@
     },
     "moves": [
       "Toughness Block",
-      "Super Scan (DF)",
+      "Defence Scan",
       "Full Power Shield",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 348,
-    "ovrWeighted": 46,
+    "ovrWeighted": 48,
     "ovrPure": 50
   },
   {
@@ -23678,13 +23678,13 @@
       "freedom": 16
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Dokugiri no Jutsu",
       "Freeze Shot",
       "Shine Drive"
     ],
     "totalStats": 400,
-    "ovrWeighted": 56,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -23706,13 +23706,13 @@
       "freedom": 22
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Pressure Punch",
       "Tornado Catch",
       "Counterstrike"
     ],
     "totalStats": 389,
-    "ovrWeighted": 54,
+    "ovrWeighted": 53,
     "ovrPure": 56
   },
   {
@@ -23736,11 +23736,11 @@
     "moves": [
       "Tornado Catch",
       "Quick Draw",
-      "Kogarashi",
+      "Mistral",
       "Dash Accel"
     ],
     "totalStats": 384,
-    "ovrWeighted": 52,
+    "ovrWeighted": 53,
     "ovrPure": 55
   },
   {
@@ -23762,13 +23762,13 @@
       "freedom": 19
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Toughness Block",
       "Rocket Kobushi",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 408,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 58
   },
   {
@@ -23790,10 +23790,10 @@
       "freedom": 19
     },
     "moves": [
-      "Super Scan (OF)",
-      "Super Scan (DF)",
+      "Attack Scan",
+      "Defence Scan",
       "Bunshin Feint",
-      "Ushiro no Shoumen"
+      "About Face"
     ],
     "totalStats": 412,
     "ovrWeighted": 58,
@@ -23821,7 +23821,7 @@
       "Fake Ball",
       "Illusion Ball",
       "Cross Drive",
-      "Dokonjou Bat"
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 408,
     "ovrWeighted": 62,
@@ -23846,13 +23846,13 @@
       "freedom": 14
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Quick Draw",
       "Illusion Ball",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 398,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -23876,8 +23876,8 @@
     "moves": [
       "Pressure Punch",
       "Horn Train",
-      "Makiwari Chop",
-      "Bakuretsu Punch"
+      "Wood Chopper",
+      "Blazing Knuckle"
     ],
     "totalStats": 388,
     "ovrWeighted": 54,
@@ -23902,9 +23902,9 @@
       "freedom": 22
     },
     "moves": [
-      "Dynamite Shoot",
+      "Dynamite Shot",
       "Meteor Attack",
-      "Kung Fu Head",
+      "Kung Fu Header",
       "Boost Glider"
     ],
     "totalStats": 405,
@@ -23931,12 +23931,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Kogarashi",
+      "Mistral",
       "Cyclone",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 396,
-    "ovrWeighted": 56,
+    "ovrWeighted": 55,
     "ovrPure": 57
   },
   {
@@ -23961,10 +23961,10 @@
       "Pressure Punch",
       "The Wall",
       "Full Power Shield",
-      "Tamanori Pierrot"
+      "Rodeo Clown"
     ],
     "totalStats": 321,
-    "ovrWeighted": 41,
+    "ovrWeighted": 43,
     "ovrPure": 46
   },
   {
@@ -23986,7 +23986,7 @@
       "freedom": 15
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Illusion Ball",
       "Run Ball Run",
       "Back Tornado"
@@ -24014,7 +24014,7 @@
       "freedom": 11
     },
     "moves": [
-      "Dynamite Shoot",
+      "Dynamite Shot",
       "Magic",
       "Hyakuretsu Shot",
       "Spinning Cut"
@@ -24042,13 +24042,13 @@
       "freedom": 16
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Super Armadillo",
       "Tsuchi Daruma",
-      "Jigoku Guruma"
+      "Rolling Hell"
     ],
     "totalStats": 402,
-    "ovrWeighted": 58,
+    "ovrWeighted": 56,
     "ovrPure": 57
   },
   {
@@ -24070,13 +24070,13 @@
       "freedom": 19
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Magic",
       "Illusion Ball",
       "Run Ball Run"
     ],
     "totalStats": 424,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 61
   },
   {
@@ -24128,8 +24128,8 @@
     "moves": [
       "Coil Turn",
       "Magic",
-      "Super Scan (OF)",
-      "Super Scan (DF)"
+      "Attack Scan",
+      "Defence Scan"
     ],
     "totalStats": 304,
     "ovrWeighted": 44,
@@ -24154,9 +24154,9 @@
       "freedom": 26
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Quick Draw",
-      "Kagome Kagome",
+      "Bamboo Pattern",
       "Shine Drive"
     ],
     "totalStats": 410,
@@ -24183,12 +24183,12 @@
     },
     "moves": [
       "Power Shield",
-      "Kumo no Ito",
+      "Spider Web",
       "Full Power Shield",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 409,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 58
   },
   {
@@ -24211,9 +24211,9 @@
     },
     "moves": [
       "Grenade Shot",
-      "Dash Accel",
-      "Patriot Shoot",
-      "Zanzou"
+      "Dash Accelerator",
+      "Patriot Shot",
+      "Afterimage"
     ],
     "totalStats": 404,
     "ovrWeighted": 57,
@@ -24238,7 +24238,7 @@
       "freedom": 19
     },
     "moves": [
-      "Dynamite Shoot",
+      "Dynamite Shot",
       "Monkey Turn",
       "Twin Boost",
       "Shine Drive"
@@ -24267,9 +24267,9 @@
     },
     "moves": [
       "Doppelganger",
-      "Gorimuchuu",
+      "Bewildered",
       "Blade Attack",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 412,
     "ovrWeighted": 61,
@@ -24300,7 +24300,7 @@
       "Run Ball Run"
     ],
     "totalStats": 393,
-    "ovrWeighted": 56,
+    "ovrWeighted": 54,
     "ovrPure": 56
   },
   {
@@ -24323,12 +24323,12 @@
     },
     "moves": [
       "Toughness Block",
-      "Super Scan (DF)",
+      "Defence Scan",
       "Rocket Kobushi",
       "Gigant Wall"
     ],
     "totalStats": 386,
-    "ovrWeighted": 53,
+    "ovrWeighted": 54,
     "ovrPure": 55
   },
   {
@@ -24350,8 +24350,8 @@
       "freedom": 42
     },
     "moves": [
-      "Spinning Shoot",
-      "Gorimuchuu",
+      "Spinning Shot",
+      "Bewildered",
       "Cross Drive",
       "Bunshin Feint"
     ],
@@ -24378,9 +24378,9 @@
       "freedom": 28
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Killer Slide",
-      "Dynamite Shoot",
+      "Dynamite Shot",
       "Run Ball Run"
     ],
     "totalStats": 381,
@@ -24407,7 +24407,7 @@
     },
     "moves": [
       "Tornado Catch",
-      "Tsumuji",
+      "Whirlwind",
       "Quick Draw",
       "Counterstrike"
     ],
@@ -24435,8 +24435,8 @@
     },
     "moves": [
       "Horn Train",
-      "Super Scan (DF)",
-      "Super Scan (OF)",
+      "Defence Scan",
+      "Attack Scan",
       "Harvest"
     ],
     "totalStats": 401,
@@ -24463,12 +24463,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Tsumuji",
+      "Whirlwind",
       "Cyclone",
-      "Kogarashi"
+      "Mistral"
     ],
     "totalStats": 410,
-    "ovrWeighted": 63,
+    "ovrWeighted": 61,
     "ovrPure": 59
   },
   {
@@ -24490,9 +24490,9 @@
       "freedom": 21
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Shikofumi",
-      "Dynamite Shoot",
+      "Rodeo Clown",
+      "Sumo Stomp",
+      "Dynamite Shot",
       "Tsuchi Daruma"
     ],
     "totalStats": 401,
@@ -24519,9 +24519,9 @@
     },
     "moves": [
       "Doppelganger",
-      "Kumo no Ito",
-      "Kage Nui",
-      "Jigoku Guruma"
+      "Spider Web",
+      "Shadow Stitch",
+      "Rolling Hell"
     ],
     "totalStats": 382,
     "ovrWeighted": 55,
@@ -24547,9 +24547,9 @@
     },
     "moves": [
       "Grenade Shot",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Tsuchi Daruma",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 404,
     "ovrWeighted": 57,
@@ -24575,7 +24575,7 @@
     },
     "moves": [
       "Twin Boost",
-      "Shippuu Dash",
+      "Flurry Dash",
       "Zigzag Spark",
       "Shine Drive"
     ],
@@ -24602,13 +24602,13 @@
       "freedom": 16
     },
     "moves": [
-      "Gorimuchuu",
+      "Bewildered",
       "Cross Drive",
-      "Dokonjou Bat",
+      "Utter Gutsiness Bat",
       "Spinning Cut"
     ],
     "totalStats": 395,
-    "ovrWeighted": 56,
+    "ovrWeighted": 54,
     "ovrPure": 56
   },
   {
@@ -24632,7 +24632,7 @@
     "moves": [
       "Killer Blade",
       "Doppelganger",
-      "Tsumuji",
+      "Whirlwind",
       "Counterstrike"
     ],
     "totalStats": 409,
@@ -24658,7 +24658,7 @@
       "freedom": 31
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Blade Attack",
       "Super Armadillo",
       "Earthquake"
@@ -24687,7 +24687,7 @@
     },
     "moves": [
       "Tarzan Kick",
-      "Gorimuchuu",
+      "Bewildered",
       "Hawk Shot",
       "Dokugiri no Jutsu"
     ],
@@ -24714,7 +24714,7 @@
       "freedom": 25
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "The Wall",
       "Super Armadillo",
       "Mega Quake"
@@ -24743,12 +24743,12 @@
     },
     "moves": [
       "Killer Slide",
-      "Zanzou",
+      "Afterimage",
       "Heat Tackle",
       "Moonsault"
     ],
     "totalStats": 405,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 58
   },
   {
@@ -24773,7 +24773,7 @@
       "Quick Draw",
       "Monkey Turn",
       "Blade Attack",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 355,
     "ovrWeighted": 50,
@@ -24798,8 +24798,8 @@
       "freedom": 26
     },
     "moves": [
-      "Spinning Shoot",
-      "Gorimuchuu",
+      "Spinning Shot",
+      "Bewildered",
       "Heat Tackle",
       "Harvest"
     ],
@@ -24826,9 +24826,9 @@
       "freedom": 15
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Tsuchi Daruma",
-      "Mogura Feint",
+      "Mole Fake",
       "Earthquake"
     ],
     "totalStats": 411,
@@ -24854,10 +24854,10 @@
       "freedom": 19
     },
     "moves": [
-      "Noroi",
-      "Onryou",
-      "Kage Nui",
-      "Kagome Kagome"
+      "Black Magic",
+      "Ghost Pull",
+      "Shadow Stitch",
+      "Bamboo Pattern"
     ],
     "totalStats": 399,
     "ovrWeighted": 55,
@@ -24882,13 +24882,13 @@
       "freedom": 17
     },
     "moves": [
-      "Dash Accel",
-      "Judge Through",
-      "Mogura Feint",
+      "Dash Accelerator",
+      "Breakthrough",
+      "Mole Fake",
       "Tsuchi Daruma"
     ],
     "totalStats": 379,
-    "ovrWeighted": 54,
+    "ovrWeighted": 53,
     "ovrPure": 54
   },
   {
@@ -24910,7 +24910,7 @@
       "freedom": 15
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Killer Slide",
       "Rocket Kobushi",
       "Counterstrike"
@@ -24940,11 +24940,11 @@
     "moves": [
       "Rolling Kick",
       "Meteor Attack",
-      "Gorimuchuu",
+      "Bewildered",
       "Shine Drive"
     ],
     "totalStats": 412,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 59
   },
   {
@@ -24966,10 +24966,10 @@
       "freedom": 22
     },
     "moves": [
-      "Spinning Shoot",
-      "Tatsumaki Senpuu",
+      "Spinning Shot",
+      "Whirlwind Twister",
       "Cross Drive",
-      "Koutei Penguin 2gou"
+      "Emperor Penguin No.2"
     ],
     "totalStats": 400,
     "ovrWeighted": 55,
@@ -25024,7 +25024,7 @@
     "moves": [
       "Pressure Punch",
       "Toughness Block",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Counterstrike"
     ],
     "totalStats": 402,
@@ -25050,13 +25050,13 @@
       "freedom": 15
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Toughness Block",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Killer Slide"
     ],
     "totalStats": 364,
-    "ovrWeighted": 53,
+    "ovrWeighted": 52,
     "ovrPure": 52
   },
   {
@@ -25079,9 +25079,9 @@
     },
     "moves": [
       "Coil Turn",
-      "Gorimuchuu",
+      "Bewildered",
       "Spinning Cut",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 397,
     "ovrWeighted": 59,
@@ -25107,12 +25107,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Tsumuji",
-      "Kogarashi",
-      "Zanzou"
+      "Whirlwind",
+      "Mistral",
+      "Afterimage"
     ],
     "totalStats": 399,
-    "ovrWeighted": 57,
+    "ovrWeighted": 58,
     "ovrPure": 57
   },
   {
@@ -25134,10 +25134,10 @@
       "freedom": 35
     },
     "moves": [
-      "Judge Through",
-      "Shoot Pocket",
-      "Super Scan (DF)",
-      "Super Scan (OF)"
+      "Breakthrough",
+      "Shot Pocket",
+      "Defence Scan",
+      "Attack Scan"
     ],
     "totalStats": 408,
     "ovrWeighted": 59,
@@ -25162,10 +25162,10 @@
       "freedom": 15
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
-      "Kamaitachi",
-      "Sabaki no Tettsui"
+      "Whirlwind Cut",
+      "Divine Stamp"
     ],
     "totalStats": 427,
     "ovrWeighted": 63,
@@ -25219,12 +25219,12 @@
     },
     "moves": [
       "Magic",
-      "Kogarashi",
+      "Mistral",
       "Illusion Ball",
       "Counterstrike"
     ],
     "totalStats": 405,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 58
   },
   {
@@ -25246,13 +25246,13 @@
       "freedom": 22
     },
     "moves": [
-      "Noroi",
-      "Onryou",
+      "Black Magic",
+      "Ghost Pull",
       "Doppelganger",
-      "Jigoku Guruma"
+      "Rolling Hell"
     ],
     "totalStats": 400,
-    "ovrWeighted": 57,
+    "ovrWeighted": 55,
     "ovrPure": 57
   },
   {
@@ -25276,7 +25276,7 @@
     "moves": [
       "Coil Turn",
       "Cyclone",
-      "Kamaitachi",
+      "Whirlwind Cut",
       "Hawk Shot"
     ],
     "totalStats": 392,
@@ -25302,7 +25302,7 @@
       "freedom": 20
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Zigzag Spark",
       "Illusion Ball",
       "Cross Drive"
@@ -25331,12 +25331,12 @@
     },
     "moves": [
       "Freeze Shot",
-      "Judge Through",
+      "Breakthrough",
       "Cyclone",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 419,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 60
   },
   {
@@ -25360,8 +25360,8 @@
     "moves": [
       "Horn Train",
       "Killer Slide",
-      "Dokonjou Bat",
-      "Mogura Feint"
+      "Utter Gutsiness Bat",
+      "Mole Fake"
     ],
     "totalStats": 419,
     "ovrWeighted": 61,
@@ -25389,7 +25389,7 @@
       "Coil Turn",
       "Spinning Cut",
       "Magic",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 250,
     "ovrWeighted": 36,
@@ -25416,7 +25416,7 @@
     "moves": [
       "Freeze Shot",
       "Doppelganger",
-      "Gorimuchuu",
+      "Bewildered",
       "Back Tornado"
     ],
     "totalStats": 408,
@@ -25443,7 +25443,7 @@
     },
     "moves": [
       "Condor Dive",
-      "Dash Accel",
+      "Dash Accelerator",
       "Hawk Shot",
       "Dash Storm"
     ],
@@ -25470,7 +25470,7 @@
       "freedom": 17
     },
     "moves": [
-      "Dynamite Shoot",
+      "Dynamite Shot",
       "Twin Boost",
       "Shine Drive",
       "Heat Tackle"
@@ -25504,7 +25504,7 @@
       "Bunshin Feint"
     ],
     "totalStats": 401,
-    "ovrWeighted": 56,
+    "ovrWeighted": 55,
     "ovrPure": 57
   },
   {
@@ -25554,13 +25554,13 @@
       "freedom": 18
     },
     "moves": [
-      "Makiwari Chop",
+      "Wood Chopper",
       "Rocket Kobushi",
-      "Tsumuji",
-      "Kogarashi"
+      "Whirlwind",
+      "Mistral"
     ],
     "totalStats": 412,
-    "ovrWeighted": 63,
+    "ovrWeighted": 60,
     "ovrPure": 59
   },
   {
@@ -25584,7 +25584,7 @@
     "moves": [
       "Coil Turn",
       "Spinning Cut",
-      "Dash Accel",
+      "Dash Accelerator",
       "Bunshin Feint"
     ],
     "totalStats": 404,
@@ -25612,7 +25612,7 @@
     "moves": [
       "Spiral Shot",
       "Meteor Attack",
-      "Super Scan (OF)",
+      "Attack Scan",
       "Tsuchi Daruma"
     ],
     "totalStats": 457,
@@ -25638,13 +25638,13 @@
       "freedom": 16
     },
     "moves": [
-      "Shikofumi",
-      "Gorimuchuu",
+      "Sumo Stomp",
+      "Bewildered",
       "Earthquake",
-      "Dokonjou Bat"
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 347,
-    "ovrWeighted": 46,
+    "ovrWeighted": 47,
     "ovrPure": 50
   },
   {
@@ -25669,10 +25669,10 @@
       "Killer Slide",
       "Wild Claw",
       "Tornado Catch",
-      "Nekketsu Punch"
+      "Fireball Knuckle"
     ],
     "totalStats": 407,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 58
   },
   {
@@ -25694,13 +25694,13 @@
       "freedom": 26
     },
     "moves": [
-      "Kamikakushi",
-      "Onryou",
+      "Teleport Shot",
+      "Ghost Pull",
       "Doppelganger",
-      "Psycho Shot"
+      "Wrath Shot"
     ],
     "totalStats": 411,
-    "ovrWeighted": 50,
+    "ovrWeighted": 51,
     "ovrPure": 59
   },
   {
@@ -25722,9 +25722,9 @@
       "freedom": 15
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Quick Draw",
-      "Kumo no Ito",
+      "Spider Web",
       "Run Ball Run"
     ],
     "totalStats": 374,
@@ -25752,8 +25752,8 @@
     "moves": [
       "Pressure Punch",
       "Rocket Kobushi",
-      "Gorimuchuu",
-      "Bakuretsu Punch"
+      "Bewildered",
+      "Blazing Knuckle"
     ],
     "totalStats": 385,
     "ovrWeighted": 53,
@@ -25778,9 +25778,9 @@
       "freedom": 42
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Spinning Cut",
-      "Spinning Shoot",
+      "Spinning Shot",
       "Cross Drive"
     ],
     "totalStats": 366,
@@ -25806,13 +25806,13 @@
       "freedom": 16
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Pressure Punch",
       "Tornado Catch",
       "Hurricane Arrow"
     ],
     "totalStats": 385,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 55
   },
   {
@@ -25834,7 +25834,7 @@
       "freedom": 10
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Quick Draw",
       "Bunshin Feint",
       "Cyclone"
@@ -25864,11 +25864,11 @@
     "moves": [
       "Power Shield",
       "Doppelganger",
-      "Kumo no Ito",
+      "Spider Web",
       "Full Power Shield"
     ],
     "totalStats": 373,
-    "ovrWeighted": 55,
+    "ovrWeighted": 54,
     "ovrPure": 53
   },
   {
@@ -25891,12 +25891,12 @@
     },
     "moves": [
       "Power Shield",
-      "Ushiro no Shoumen",
+      "About Face",
       "Full Power Shield",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 348,
-    "ovrWeighted": 55,
+    "ovrWeighted": 56,
     "ovrPure": 50
   },
   {
@@ -25918,9 +25918,9 @@
       "freedom": 14
     },
     "moves": [
-      "Noroi",
-      "Onryou",
-      "Psycho Shot",
+      "Black Magic",
+      "Ghost Pull",
+      "Wrath Shot",
       "Divine Arrow"
     ],
     "totalStats": 371,
@@ -25948,11 +25948,11 @@
     "moves": [
       "Magic",
       "Doppelganger",
-      "Kage Nui",
+      "Shadow Stitch",
       "Bunshin Feint"
     ],
     "totalStats": 420,
-    "ovrWeighted": 60,
+    "ovrWeighted": 61,
     "ovrPure": 60
   },
   {
@@ -25974,13 +25974,13 @@
       "freedom": 16
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Horn Train",
       "Doppelganger",
       "Twin Boost"
     ],
     "totalStats": 410,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 59
   },
   {
@@ -26002,9 +26002,9 @@
       "freedom": 20
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Grenade Shot",
-      "Judge Through",
+      "Breakthrough",
       "Run Ball Run"
     ],
     "totalStats": 368,
@@ -26030,13 +26030,13 @@
       "freedom": 14
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Coil Turn",
       "Grenade Shot",
       "Hyakuretsu Shot"
     ],
     "totalStats": 379,
-    "ovrWeighted": 56,
+    "ovrWeighted": 57,
     "ovrPure": 54
   },
   {
@@ -26060,7 +26060,7 @@
     "moves": [
       "Killer Slide",
       "Cross Drive",
-      "Judge Through",
+      "Breakthrough",
       "Freeze Shot"
     ],
     "totalStats": 416,
@@ -26115,8 +26115,8 @@
     },
     "moves": [
       "Quick Draw",
-      "Super Scan (OF)",
-      "Kage Nui",
+      "Attack Scan",
+      "Shadow Stitch",
       "Moonsault"
     ],
     "totalStats": 423,
@@ -26144,11 +26144,11 @@
     "moves": [
       "Doppelganger",
       "Magic",
-      "Onryou",
-      "Noroi"
+      "Ghost Pull",
+      "Black Magic"
     ],
     "totalStats": 413,
-    "ovrWeighted": 59,
+    "ovrWeighted": 58,
     "ovrPure": 59
   },
   {
@@ -26170,13 +26170,13 @@
       "freedom": 20
     },
     "moves": [
-      "Tamanori Pierrot",
-      "Gorimuchuu",
-      "Judge Through",
-      "Jigoku Guruma"
+      "Rodeo Clown",
+      "Bewildered",
+      "Breakthrough",
+      "Rolling Hell"
     ],
     "totalStats": 337,
-    "ovrWeighted": 45,
+    "ovrWeighted": 46,
     "ovrPure": 48
   },
   {
@@ -26198,10 +26198,10 @@
       "freedom": 17
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Quick Draw",
       "Illusion Ball",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 393,
     "ovrWeighted": 55,
@@ -26226,13 +26226,13 @@
       "freedom": 16
     },
     "moves": [
-      "Tatsumaki Senpuu",
-      "Zanzou",
-      "Kamaitachi",
+      "Whirlwind Twister",
+      "Afterimage",
+      "Whirlwind Cut",
       "Back Tornado"
     ],
     "totalStats": 402,
-    "ovrWeighted": 58,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -26254,13 +26254,13 @@
       "freedom": 39
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Pressure Punch",
       "Horn Train",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 315,
-    "ovrWeighted": 45,
+    "ovrWeighted": 44,
     "ovrPure": 45
   },
   {
@@ -26312,11 +26312,11 @@
     "moves": [
       "Tornado Catch",
       "Freeze Shot",
-      "Tsumuji",
+      "Whirlwind",
       "Back Tornado"
     ],
     "totalStats": 426,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 61
   },
   {
@@ -26338,7 +26338,7 @@
       "freedom": 31
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Killer Slide",
       "Rocket Kobushi",
       "Horn Train"
@@ -26368,7 +26368,7 @@
     "moves": [
       "Killer Slide",
       "Earthquake",
-      "Ushiro no Shoumen",
+      "About Face",
       "Mega Quake"
     ],
     "totalStats": 404,
@@ -26394,13 +26394,13 @@
       "freedom": 20
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Power Shield",
       "Rocket Kobushi",
-      "Makiwari Chop"
+      "Wood Chopper"
     ],
     "totalStats": 432,
-    "ovrWeighted": 66,
+    "ovrWeighted": 67,
     "ovrPure": 62
   },
   {
@@ -26422,10 +26422,10 @@
       "freedom": 15
     },
     "moves": [
-      "Nekketsu Punch",
-      "Shikofumi",
+      "Fireball Knuckle",
+      "Sumo Stomp",
       "Horn Train",
-      "Bakuretsu Punch"
+      "Blazing Knuckle"
     ],
     "totalStats": 364,
     "ovrWeighted": 51,
@@ -26450,13 +26450,13 @@
       "freedom": 19
     },
     "moves": [
-      "Phantom Shoot",
-      "Gorimuchuu",
+      "Phantom Shot",
+      "Bewildered",
       "Dokugiri no Jutsu",
       "Shine Drive"
     ],
     "totalStats": 346,
-    "ovrWeighted": 45,
+    "ovrWeighted": 47,
     "ovrPure": 49
   },
   {
@@ -26478,13 +26478,13 @@
       "freedom": 19
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Killer Blade",
-      "Kage Nui",
-      "Bakuretsu Punch"
+      "Shadow Stitch",
+      "Blazing Knuckle"
     ],
     "totalStats": 390,
-    "ovrWeighted": 56,
+    "ovrWeighted": 55,
     "ovrPure": 56
   },
   {
@@ -26535,7 +26535,7 @@
     },
     "moves": [
       "Coil Turn",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Spinning Cut",
       "Zigzag Spark"
     ],
@@ -26563,7 +26563,7 @@
     },
     "moves": [
       "Fake Ball",
-      "Shoot Pocket",
+      "Shot Pocket",
       "Cyclone",
       "Wild Claw"
     ],
@@ -26590,13 +26590,13 @@
       "freedom": 38
     },
     "moves": [
-      "Dash Accel",
-      "Gorimuchuu",
-      "Mogura Feint",
+      "Dash Accelerator",
+      "Bewildered",
+      "Mole Fake",
       "Blade Attack"
     ],
     "totalStats": 393,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -26620,7 +26620,7 @@
     "moves": [
       "Toughness Block",
       "Rocket Kobushi",
-      "Kumo no Ito",
+      "Spider Web",
       "Full Power Shield"
     ],
     "totalStats": 412,
@@ -26647,8 +26647,8 @@
     },
     "moves": [
       "Toughness Block",
-      "Makiwari Chop",
-      "Shikofumi",
+      "Wood Chopper",
+      "Sumo Stomp",
       "Earthquake"
     ],
     "totalStats": 370,
@@ -26674,10 +26674,10 @@
       "freedom": 33
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Toughness Block",
       "Doppelganger",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 347,
     "ovrWeighted": 56,
@@ -26703,7 +26703,7 @@
     },
     "moves": [
       "Quick Draw",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Cyclone",
       "Dash Storm"
     ],
@@ -26730,13 +26730,13 @@
       "freedom": 16
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Horn Train",
       "Tsuchi Daruma",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 456,
-    "ovrWeighted": 64,
+    "ovrWeighted": 63,
     "ovrPure": 65
   },
   {
@@ -26760,8 +26760,8 @@
     "moves": [
       "Killer Slide",
       "Zigzag Spark",
-      "Kumo no Ito",
-      "Kamaitachi"
+      "Spider Web",
+      "Whirlwind Cut"
     ],
     "totalStats": 405,
     "ovrWeighted": 57,
@@ -26786,10 +26786,10 @@
       "freedom": 16
     },
     "moves": [
-      "Onryou",
-      "Zanzou",
+      "Ghost Pull",
+      "Afterimage",
       "Hawk Shot",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 395,
     "ovrWeighted": 57,
@@ -26814,13 +26814,13 @@
       "freedom": 19
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Magic",
-      "Onryou",
+      "Ghost Pull",
       "Condor Dive"
     ],
     "totalStats": 419,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 60
   },
   {
@@ -26842,7 +26842,7 @@
       "freedom": 38
     },
     "moves": [
-      "Spinning Shoot",
+      "Spinning Shot",
       "Tarzan Kick",
       "Tsuchi Daruma",
       "Reflect Buster"
@@ -26870,10 +26870,10 @@
       "freedom": 25
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Condor Dive",
       "Hawk Shot",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 406,
     "ovrWeighted": 58,
@@ -26898,13 +26898,13 @@
       "freedom": 26
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Zigzag Spark",
       "Dokugiri no Jutsu",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 368,
-    "ovrWeighted": 52,
+    "ovrWeighted": 51,
     "ovrPure": 53
   },
   {
@@ -26927,9 +26927,9 @@
     },
     "moves": [
       "Rolling Kick",
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Hyakuretsu Shot",
-      "Kamaitachi"
+      "Whirlwind Cut"
     ],
     "totalStats": 413,
     "ovrWeighted": 63,
@@ -26955,9 +26955,9 @@
     },
     "moves": [
       "Snake Shot",
-      "Onryou",
+      "Ghost Pull",
       "Doppelganger",
-      "Psycho Shot"
+      "Wrath Shot"
     ],
     "totalStats": 350,
     "ovrWeighted": 50,
@@ -26982,10 +26982,10 @@
       "freedom": 22
     },
     "moves": [
-      "Onryou",
-      "Noroi",
+      "Ghost Pull",
+      "Black Magic",
       "Dokugiri no Jutsu",
-      "Kage Nui"
+      "Shadow Stitch"
     ],
     "totalStats": 368,
     "ovrWeighted": 53,
@@ -27012,11 +27012,11 @@
     "moves": [
       "Tornado Catch",
       "Spinning Cut",
-      "Tsumuji",
+      "Whirlwind",
       "Cyclone"
     ],
     "totalStats": 390,
-    "ovrWeighted": 57,
+    "ovrWeighted": 56,
     "ovrPure": 56
   },
   {
@@ -27039,9 +27039,9 @@
     },
     "moves": [
       "Fake Ball",
-      "Judge Through",
+      "Breakthrough",
       "Harvest",
-      "Dokonjou Bat"
+      "Utter Gutsiness Bat"
     ],
     "totalStats": 402,
     "ovrWeighted": 59,
@@ -27067,12 +27067,12 @@
     },
     "moves": [
       "Grenade Shot",
-      "Dynamite Shoot",
-      "Patriot Shoot",
+      "Dynamite Shot",
+      "Patriot Shot",
       "Twin Boost"
     ],
     "totalStats": 406,
-    "ovrWeighted": 54,
+    "ovrWeighted": 55,
     "ovrPure": 58
   },
   {
@@ -27096,7 +27096,7 @@
     "moves": [
       "Pressure Punch",
       "Quick Draw",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Hurricane Arrow"
     ],
     "totalStats": 387,
@@ -27122,7 +27122,7 @@
       "freedom": 11
     },
     "moves": [
-      "Spinning Shoot",
+      "Spinning Shot",
       "Magic",
       "Fake Ball",
       "Hyakuretsu Shot"
@@ -27150,7 +27150,7 @@
       "freedom": 9
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Toughness Block",
       "Earthquake",
       "Counterstrike"
@@ -27179,12 +27179,12 @@
     },
     "moves": [
       "Tornado Catch",
-      "Shoot Pocket",
-      "Kogarashi",
-      "Kumo no Ito"
+      "Shot Pocket",
+      "Mistral",
+      "Spider Web"
     ],
     "totalStats": 389,
-    "ovrWeighted": 59,
+    "ovrWeighted": 57,
     "ovrPure": 56
   },
   {
@@ -27206,13 +27206,13 @@
       "freedom": 34
     },
     "moves": [
-      "Noroi",
-      "Kamikakushi",
-      "Psycho Shot",
+      "Black Magic",
+      "Teleport Shot",
+      "Wrath Shot",
       "Divine Arrow"
     ],
     "totalStats": 326,
-    "ovrWeighted": 46,
+    "ovrWeighted": 45,
     "ovrPure": 47
   },
   {
@@ -27234,7 +27234,7 @@
       "freedom": 16
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Freeze Shot",
       "Illusion Ball",
       "Twin Boost"
@@ -27262,9 +27262,9 @@
       "freedom": 27
     },
     "moves": [
-      "Super Scan (DF)",
-      "Super Scan (OF)",
-      "Kamikakushi",
+      "Defence Scan",
+      "Attack Scan",
+      "Teleport Shot",
       "Divine Arrow"
     ],
     "totalStats": 446,
@@ -27290,13 +27290,13 @@
       "freedom": 19
     },
     "moves": [
-      "Shippuu Dash",
+      "Flurry Dash",
       "Killer Slide",
       "Quick Draw",
       "Back Tornado"
     ],
     "totalStats": 436,
-    "ovrWeighted": 61,
+    "ovrWeighted": 60,
     "ovrPure": 62
   },
   {
@@ -27320,11 +27320,11 @@
     "moves": [
       "Tornado Catch",
       "Power Shield",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Coil Turn"
     ],
     "totalStats": 419,
-    "ovrWeighted": 62,
+    "ovrWeighted": 60,
     "ovrPure": 60
   },
   {
@@ -27374,7 +27374,7 @@
       "freedom": 15
     },
     "moves": [
-      "Suisei Shoot",
+      "Comet Shot",
       "Condor Dive",
       "Illusion Ball",
       "Dash Storm"
@@ -27402,7 +27402,7 @@
       "freedom": 34
     },
     "moves": [
-      "Onryou",
+      "Ghost Pull",
       "Magic",
       "Killer Blade",
       "Counterstrike"
@@ -27436,7 +27436,7 @@
       "Bunshin Feint"
     ],
     "totalStats": 385,
-    "ovrWeighted": 61,
+    "ovrWeighted": 59,
     "ovrPure": 55
   },
   {
@@ -27458,10 +27458,10 @@
       "freedom": 20
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Rocket Kobushi",
       "Fake Ball",
-      "Kagome Kagome"
+      "Bamboo Pattern"
     ],
     "totalStats": 419,
     "ovrWeighted": 63,
@@ -27514,13 +27514,13 @@
       "freedom": 15
     },
     "moves": [
-      "Shoot Pocket",
+      "Shot Pocket",
       "Zigzag Spark",
       "Wild Claw",
       "Hyakuretsu Shot"
     ],
     "totalStats": 382,
-    "ovrWeighted": 53,
+    "ovrWeighted": 54,
     "ovrPure": 55
   },
   {
@@ -27542,7 +27542,7 @@
       "freedom": 20
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Doppelganger",
       "Magic",
       "Illusion Ball"
@@ -27572,11 +27572,11 @@
     "moves": [
       "Toughness Block",
       "Wild Claw",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Full Power Shield"
     ],
     "totalStats": 334,
-    "ovrWeighted": 52,
+    "ovrWeighted": 49,
     "ovrPure": 48
   },
   {
@@ -27598,8 +27598,8 @@
       "freedom": 17
     },
     "moves": [
-      "Shikofumi",
-      "Judge Through",
+      "Sumo Stomp",
+      "Breakthrough",
       "Tsuchi Daruma",
       "The Wall"
     ],
@@ -27627,7 +27627,7 @@
     },
     "moves": [
       "Quick Draw",
-      "Gorimuchuu",
+      "Bewildered",
       "Cyclone",
       "Dash Storm"
     ],
@@ -27654,10 +27654,10 @@
       "freedom": 21
     },
     "moves": [
-      "Phantom Shoot",
+      "Phantom Shot",
       "Hyakuretsu Shot",
-      "Dokonjou Bat",
-      "Kamaitachi"
+      "Utter Gutsiness Bat",
+      "Whirlwind Cut"
     ],
     "totalStats": 446,
     "ovrWeighted": 66,
@@ -27682,13 +27682,13 @@
       "freedom": 21
     },
     "moves": [
-      "Nekketsu Punch",
+      "Fireball Knuckle",
       "Power Shield",
       "Killer Slide",
       "Full Power Shield"
     ],
     "totalStats": 435,
-    "ovrWeighted": 63,
+    "ovrWeighted": 61,
     "ovrPure": 62
   },
   {
@@ -27716,7 +27716,7 @@
       "Full Power Shield"
     ],
     "totalStats": 408,
-    "ovrWeighted": 60,
+    "ovrWeighted": 59,
     "ovrPure": 58
   },
   {
@@ -27738,10 +27738,10 @@
       "freedom": 26
     },
     "moves": [
-      "Onryou",
-      "Kumo no Ito",
+      "Ghost Pull",
+      "Spider Web",
       "Dokugiri no Jutsu",
-      "Jigoku Guruma"
+      "Rolling Hell"
     ],
     "totalStats": 429,
     "ovrWeighted": 65,
@@ -27766,9 +27766,9 @@
       "freedom": 16
     },
     "moves": [
-      "Judge Through",
+      "Breakthrough",
       "Killer Slide",
-      "Ushiro no Shoumen",
+      "About Face",
       "Tsuchi Daruma"
     ],
     "totalStats": 417,
@@ -27822,9 +27822,9 @@
       "freedom": 34
     },
     "moves": [
-      "Noroi",
-      "Onryou",
-      "Bunshin Shoot",
+      "Black Magic",
+      "Ghost Pull",
+      "Clone Shot",
       "Bunshin Feint"
     ],
     "totalStats": 330,
@@ -27852,11 +27852,11 @@
     "moves": [
       "Tornado Catch",
       "Power Shield",
-      "Tsumuji",
+      "Whirlwind",
       "Counterstrike"
     ],
     "totalStats": 453,
-    "ovrWeighted": 63,
+    "ovrWeighted": 64,
     "ovrPure": 65
   },
   {
@@ -27878,7 +27878,7 @@
       "freedom": 22
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Grenade Shot",
       "The Wall",
       "Mega Quake"
@@ -27912,7 +27912,7 @@
       "Counterstrike"
     ],
     "totalStats": 402,
-    "ovrWeighted": 59,
+    "ovrWeighted": 57,
     "ovrPure": 57
   },
   {
@@ -27934,13 +27934,13 @@
       "freedom": 35
     },
     "moves": [
-      "Noroi",
+      "Black Magic",
       "Killer Blade",
-      "Makiwari Chop",
+      "Wood Chopper",
       "Counterstrike"
     ],
     "totalStats": 410,
-    "ovrWeighted": 58,
+    "ovrWeighted": 59,
     "ovrPure": 59
   },
   {
@@ -27962,7 +27962,7 @@
       "freedom": 17
     },
     "moves": [
-      "Shikofumi",
+      "Sumo Stomp",
       "Grenade Shot",
       "Meteor Attack",
       "Mega Quake"
@@ -27990,10 +27990,10 @@
       "freedom": 16
     },
     "moves": [
-      "Gorimuchuu",
-      "Mogura Feint",
+      "Bewildered",
+      "Mole Fake",
       "Tsuchi Daruma",
-      "Kumo no Ito"
+      "Spider Web"
     ],
     "totalStats": 367,
     "ovrWeighted": 51,
@@ -28018,13 +28018,13 @@
       "freedom": 24
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Magic",
       "Zigzag Spark",
       "Bunshin Feint"
     ],
     "totalStats": 389,
-    "ovrWeighted": 53,
+    "ovrWeighted": 52,
     "ovrPure": 56
   },
   {
@@ -28048,7 +28048,7 @@
     "moves": [
       "Doppelganger",
       "Magic",
-      "Kage Nui",
+      "Shadow Stitch",
       "Dokugiri no Jutsu"
     ],
     "totalStats": 423,
@@ -28074,7 +28074,7 @@
       "freedom": 17
     },
     "moves": [
-      "Tamanori Pierrot",
+      "Rodeo Clown",
       "Run Ball Run",
       "Magic",
       "Cyclone"
@@ -28104,11 +28104,11 @@
     "moves": [
       "Pressure Punch",
       "Power Shield",
-      "Bakuretsu Punch",
+      "Blazing Knuckle",
       "Harvest"
     ],
     "totalStats": 354,
-    "ovrWeighted": 55,
+    "ovrWeighted": 52,
     "ovrPure": 51
   },
   {
@@ -28131,8 +28131,8 @@
     },
     "moves": [
       "Tornado Catch",
-      "Tsumuji",
-      "Kogarashi",
+      "Whirlwind",
+      "Mistral",
       "Hurricane Arrow"
     ],
     "totalStats": 330,
@@ -28158,13 +28158,13 @@
       "freedom": 26
     },
     "moves": [
-      "Tatsumaki Senpuu",
-      "Zanzou",
-      "Kage Nui",
-      "Bunshin Shoot"
+      "Whirlwind Twister",
+      "Afterimage",
+      "Shadow Stitch",
+      "Clone Shot"
     ],
     "totalStats": 467,
-    "ovrWeighted": 66,
+    "ovrWeighted": 67,
     "ovrPure": 67
   },
   {
@@ -28186,7 +28186,7 @@
       "freedom": 26
     },
     "moves": [
-      "Tatsumaki Senpuu",
+      "Whirlwind Twister",
       "Condor Dive",
       "Hawk Shot",
       "Boost Glider"
@@ -28214,7 +28214,7 @@
       "freedom": 17
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Freeze Shot",
       "Twin Boost",
       "Bunshin Feint"
@@ -28270,7 +28270,7 @@
       "freedom": 19
     },
     "moves": [
-      "Dash Accel",
+      "Dash Accelerator",
       "Spinning Cut",
       "Heat Tackle",
       "Harvest"
@@ -28298,9 +28298,9 @@
       "freedom": 34
     },
     "moves": [
-      "Spinning Shoot",
-      "Tatsumaki Senpuu",
-      "Kamaitachi",
+      "Spinning Shot",
+      "Whirlwind Twister",
+      "Whirlwind Cut",
       "Back Tornado"
     ],
     "totalStats": 388,
@@ -28355,96 +28355,12 @@
     },
     "moves": [
       "Rolling Kick",
-      "Zanzou",
+      "Afterimage",
       "Run Ball Run",
       "Moonsault"
     ],
     "totalStats": 407,
     "ovrWeighted": 56,
     "ovrPure": 58
-  },
-  {
-    "id": "p_1014",
-    "name": "Layton",
-    "team": "Layton Team",
-    "position": "DF",
-    "element": "Wood",
-    "stats": {
-      "fp": 255,
-      "tp": 255,
-      "kick": 84,
-      "body": 84,
-      "control": 84,
-      "guard": 84,
-      "speed": 84,
-      "stamina": 84,
-      "guts": 84,
-      "freedom": 59
-    },
-    "moves": [
-      "Sabaki no Tettsui",
-      "Counterstrike",
-      "gigant Wall",
-      "The Galaxy"
-    ],
-    "totalStats": 588,
-    "ovrWeighted": 84,
-    "ovrPure": 84
-  },
-  {
-    "id": "p_1015",
-    "name": "Luke",
-    "team": "Layton Team",
-    "position": "MF",
-    "element": "Wind",
-    "stats": {
-      "fp": 240,
-      "tp": 240,
-      "kick": 79,
-      "body": 74,
-      "control": 79,
-      "guard": 69,
-      "speed": 99,
-      "stamina": 79,
-      "guts": 74,
-      "freedom": 51
-    },
-    "moves": [
-      "Rocket Kobushi",
-      "Run Ball Run",
-      "Cyclone",
-      "Moonsault"
-    ],
-    "totalStats": 553,
-    "ovrWeighted": 80,
-    "ovrPure": 79
-  },
-  {
-    "id": "p_1016",
-    "name": "Flora",
-    "team": "Layton Team",
-    "position": "MF",
-    "element": "Wood",
-    "stats": {
-      "fp": 240,
-      "tp": 240,
-      "kick": 79,
-      "body": 74,
-      "control": 79,
-      "guard": 69,
-      "speed": 99,
-      "stamina": 79,
-      "guts": 74,
-      "freedom": 51
-    },
-    "moves": [
-      "Kagome Kagome",
-      "Magic",
-      "Koutei Penguin 2gou",
-      "Ushiro no Shoumen"
-    ],
-    "totalStats": 553,
-    "ovrWeighted": 80,
-    "ovrPure": 79
   }
 ]
