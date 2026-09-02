@@ -391,75 +391,71 @@ export default function PlayerSearchModal({
           {/* Avatar Badge with Sprite */}
           <PlayerAvatar player={player} size="sm" showPosition={false} />
 
-          {/* Name, Team & Badges (Full width without squeezing) */}
-          <div className="min-w-0 flex-1 pr-1">
+          {/* Name, Team & Badges */}
+          <div className="min-w-0 flex-1">
             <h4 className="font-bold text-xs sm:text-sm text-white truncate leading-tight" title={player.name}>
               {player.name}
             </h4>
             <p className="text-[10px] sm:text-[11px] text-slate-400 truncate mt-0.5">{player.team}</p>
-            <div className="flex items-center gap-1.5 mt-1">
+            <div className="flex items-center gap-1.5 mt-1 flex-wrap">
               <PositionBadge position={player.position} size="sm" />
               <ElementBadge element={player.element} size="sm" showLabel={false} />
+
+              {/* Counter Widget (- [N] +) with Persistent Memory */}
+              {showCounters && (
+                <div
+                  className="flex items-center bg-slate-900/95 border border-slate-700/80 hover:border-slate-600 rounded-md p-0.5 shadow-sm ml-auto"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      updatePlayerCounter(player.name, -1);
+                    }}
+                    title="Diminuisci contatore"
+                    className="w-4 h-4 rounded flex items-center justify-center bg-slate-800/90 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer active:scale-90"
+                  >
+                    <Minus size={9} strokeWidth={2.5} />
+                  </button>
+                  <span
+                    className={`min-w-[16px] text-center font-mono font-bold text-[11px] px-1 select-none ${
+                      count > 0 ? 'text-amber-300 font-extrabold' : 'text-slate-400'
+                    }`}
+                  >
+                    {count}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      updatePlayerCounter(player.name, 1);
+                    }}
+                    title="Aumenta contatore"
+                    className="w-4 h-4 rounded flex items-center justify-center bg-slate-800/90 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer active:scale-90"
+                  >
+                    <Plus size={9} strokeWidth={2.5} />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
 
-        {/* Right Section: Counter on Top Row (aligned with Name), OVR/Tier on Bottom */}
-        <div className="shrink-0 flex flex-col items-end justify-between self-stretch min-h-[52px] pl-1">
-          {/* Top: Counter Widget (- [N] +) near right margin */}
-          {showCounters ? (
-            <div
-              className="flex items-center bg-slate-900/95 border border-slate-700/80 hover:border-slate-600 rounded-md p-0.5 shadow-sm"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  updatePlayerCounter(player.name, -1);
-                }}
-                title="Diminuisci contatore"
-                className="w-4 h-4 rounded flex items-center justify-center bg-slate-800/90 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer active:scale-90"
-              >
-                <Minus size={9} strokeWidth={2.5} />
-              </button>
-              <span
-                className={`min-w-[16px] text-center font-mono font-bold text-[11px] px-1 select-none ${
-                  count > 0 ? 'text-amber-300 font-extrabold' : 'text-slate-400'
-                }`}
-              >
-                {count}
-              </span>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  updatePlayerCounter(player.name, 1);
-                }}
-                title="Aumenta contatore"
-                className="w-4 h-4 rounded flex items-center justify-center bg-slate-800/90 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer active:scale-90"
-              >
-                <Plus size={9} strokeWidth={2.5} />
-              </button>
-            </div>
-          ) : (
-            <div />
-          )}
-
-          {/* Bottom: OVR & Tier Badge */}
-          <div className="flex items-center gap-1.5 mt-auto">
-            <span className="font-mono font-black text-xs sm:text-sm text-amber-300 leading-none">
-              {player.ovr} <span className="text-[9px] font-mono text-slate-500 font-normal uppercase">OVR</span>
-            </span>
-            <span className={`text-[9px] font-mono font-bold px-1.5 py-0.2 rounded border ${tier.color} leading-tight`}>
-              {tier.label}
-            </span>
-            {isCurrentSelected && (
-              <span className="text-[9px] font-bold text-amber-400 flex items-center gap-0.5 ml-0.5">
-                <Check size={10} />
-              </span>
-            )}
+        {/* OVR, Tier & In Uso */}
+        <div className="text-right shrink-0 flex flex-col items-end justify-center pr-1">
+          <div className="flex items-baseline gap-0.5">
+            <span className="text-[9px] font-mono text-slate-500 uppercase">OVR</span>
+            <span className="font-mono font-black text-base text-amber-300">{player.ovr}</span>
           </div>
+          <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded border mt-0.5 ${tier.color}`}>
+            TIER {tier.label}
+          </span>
+          {isCurrentSelected && (
+            <span className="text-[9px] font-bold text-amber-400 flex items-center gap-0.5 mt-0.5">
+              <Check size={10} /> In Uso
+            </span>
+          )}
         </div>
       </div>
     );
