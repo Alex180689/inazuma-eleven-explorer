@@ -12,33 +12,44 @@ export default defineConfig({
       buildStart() {
         const syncSprites = () => {
           try {
-            const spritesDir = path.resolve(__dirname, 'sprites');
+            const primaryDir = path.resolve(__dirname, 'sprites');
+            const fallbackDir = path.resolve(__dirname, 'wiki_scraper', 'sprites');
             const publicSpritesDir = path.resolve(__dirname, 'public', 'sprites');
             const registryFile = path.resolve(__dirname, 'src', 'data', 'spriteRegistry.json');
-            if (!fs.existsSync(spritesDir)) return;
             if (!fs.existsSync(publicSpritesDir)) fs.mkdirSync(publicSpritesDir, { recursive: true });
 
-            const files = fs.readdirSync(spritesDir).filter(f => f.toLowerCase().endsWith('.webp'));
-            const spriteNames = [];
+            const spriteNames = new Set();
 
-            for (const f of files) {
-              const lowerName = f.toLowerCase();
-              spriteNames.push(lowerName.replace(/\.webp$/i, ''));
-
-              const src = path.resolve(spritesDir, f);
-              const dst = path.resolve(publicSpritesDir, lowerName);
-              if (!fs.existsSync(dst) || fs.statSync(src).mtimeMs > fs.statSync(dst).mtimeMs) {
-                fs.copyFileSync(src, dst);
-              }
-              if (f !== lowerName) {
-                const dstOrig = path.resolve(publicSpritesDir, f);
-                if (!fs.existsSync(dstOrig) || fs.statSync(src).mtimeMs > fs.statSync(dstOrig).mtimeMs) {
-                  fs.copyFileSync(src, dstOrig);
+            // 1. Copy fallback sprites from wiki_scraper/sprites
+            if (fs.existsSync(fallbackDir)) {
+              const fallbackFiles = fs.readdirSync(fallbackDir).filter(f => f.toLowerCase().endsWith('.webp'));
+              for (const f of fallbackFiles) {
+                const lower = f.toLowerCase();
+                spriteNames.add(lower.replace(/\.webp$/i, ''));
+                const src = path.resolve(fallbackDir, f);
+                const dst = path.resolve(publicSpritesDir, lower);
+                if (!fs.existsSync(dst) || fs.statSync(src).mtimeMs > fs.statSync(dst).mtimeMs) {
+                  fs.copyFileSync(src, dst);
                 }
               }
             }
 
-            fs.writeFileSync(registryFile, JSON.stringify(Array.from(new Set(spriteNames)).sort(), null, 2));
+            // 2. Copy primary sprites from sprites/ (OVERWRITING any collision so sprites/ always wins!)
+            if (fs.existsSync(primaryDir)) {
+              const primaryFiles = fs.readdirSync(primaryDir).filter(f => f.toLowerCase().endsWith('.webp'));
+              for (const f of primaryFiles) {
+                const lower = f.toLowerCase();
+                spriteNames.add(lower.replace(/\.webp$/i, ''));
+                const src = path.resolve(primaryDir, f);
+                const dst = path.resolve(publicSpritesDir, lower);
+                fs.copyFileSync(src, dst);
+                if (f !== lower) {
+                  fs.copyFileSync(src, path.resolve(publicSpritesDir, f));
+                }
+              }
+            }
+
+            fs.writeFileSync(registryFile, JSON.stringify(Array.from(spriteNames).sort(), null, 2));
           } catch (e) {
             console.error('Error syncing sprites:', e);
           }
@@ -48,33 +59,44 @@ export default defineConfig({
       configureServer(server) {
         const syncSprites = () => {
           try {
-            const spritesDir = path.resolve(__dirname, 'sprites');
+            const primaryDir = path.resolve(__dirname, 'sprites');
+            const fallbackDir = path.resolve(__dirname, 'wiki_scraper', 'sprites');
             const publicSpritesDir = path.resolve(__dirname, 'public', 'sprites');
             const registryFile = path.resolve(__dirname, 'src', 'data', 'spriteRegistry.json');
-            if (!fs.existsSync(spritesDir)) return;
             if (!fs.existsSync(publicSpritesDir)) fs.mkdirSync(publicSpritesDir, { recursive: true });
 
-            const files = fs.readdirSync(spritesDir).filter(f => f.toLowerCase().endsWith('.webp'));
-            const spriteNames = [];
+            const spriteNames = new Set();
 
-            for (const f of files) {
-              const lowerName = f.toLowerCase();
-              spriteNames.push(lowerName.replace(/\.webp$/i, ''));
-
-              const src = path.resolve(spritesDir, f);
-              const dst = path.resolve(publicSpritesDir, lowerName);
-              if (!fs.existsSync(dst) || fs.statSync(src).mtimeMs > fs.statSync(dst).mtimeMs) {
-                fs.copyFileSync(src, dst);
-              }
-              if (f !== lowerName) {
-                const dstOrig = path.resolve(publicSpritesDir, f);
-                if (!fs.existsSync(dstOrig) || fs.statSync(src).mtimeMs > fs.statSync(dstOrig).mtimeMs) {
-                  fs.copyFileSync(src, dstOrig);
+            // 1. Copy fallback sprites from wiki_scraper/sprites
+            if (fs.existsSync(fallbackDir)) {
+              const fallbackFiles = fs.readdirSync(fallbackDir).filter(f => f.toLowerCase().endsWith('.webp'));
+              for (const f of fallbackFiles) {
+                const lower = f.toLowerCase();
+                spriteNames.add(lower.replace(/\.webp$/i, ''));
+                const src = path.resolve(fallbackDir, f);
+                const dst = path.resolve(publicSpritesDir, lower);
+                if (!fs.existsSync(dst) || fs.statSync(src).mtimeMs > fs.statSync(dst).mtimeMs) {
+                  fs.copyFileSync(src, dst);
                 }
               }
             }
 
-            fs.writeFileSync(registryFile, JSON.stringify(Array.from(new Set(spriteNames)).sort(), null, 2));
+            // 2. Copy primary sprites from sprites/ (OVERWRITING any collision so sprites/ always wins!)
+            if (fs.existsSync(primaryDir)) {
+              const primaryFiles = fs.readdirSync(primaryDir).filter(f => f.toLowerCase().endsWith('.webp'));
+              for (const f of primaryFiles) {
+                const lower = f.toLowerCase();
+                spriteNames.add(lower.replace(/\.webp$/i, ''));
+                const src = path.resolve(primaryDir, f);
+                const dst = path.resolve(publicSpritesDir, lower);
+                fs.copyFileSync(src, dst);
+                if (f !== lower) {
+                  fs.copyFileSync(src, path.resolve(publicSpritesDir, f));
+                }
+              }
+            }
+
+            fs.writeFileSync(registryFile, JSON.stringify(Array.from(spriteNames).sort(), null, 2));
           } catch (e) {
             console.error('Error syncing sprites:', e);
           }
@@ -102,8 +124,10 @@ export default defineConfig({
               );
             }
 
+            // Priority: primary sprites/ FIRST, then wiki_scraper/sprites as fallback
             const searchDirs = [
               path.resolve(__dirname, 'sprites'),
+              path.resolve(__dirname, 'wiki_scraper', 'sprites'),
               path.resolve(__dirname, 'public', 'sprites'),
             ];
 
