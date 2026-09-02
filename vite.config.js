@@ -9,7 +9,93 @@ export default defineConfig({
     react(),
     {
       name: 'serve-sprites',
+      buildStart() {
+        const syncSprites = () => {
+          try {
+            const publicSpritesDir = path.resolve(__dirname, 'public', 'sprites');
+            const registryFile = path.resolve(__dirname, 'src', 'data', 'spriteRegistry.json');
+            if (!fs.existsSync(publicSpritesDir)) fs.mkdirSync(publicSpritesDir, { recursive: true });
+
+            const sourceDirs = [
+              path.resolve(__dirname, 'wiki_scraper', 'sprites'),
+              path.resolve(__dirname, 'sprites'),
+            ];
+
+            const spriteNames = new Set();
+
+            for (const sDir of sourceDirs) {
+              if (fs.existsSync(sDir)) {
+                const files = fs.readdirSync(sDir).filter(f => f.toLowerCase().endsWith('.webp'));
+                for (const f of files) {
+                  const lowerName = f.toLowerCase();
+                  const baseName = lowerName.replace(/\.webp$/i, '');
+                  spriteNames.add(baseName);
+
+                  const src = path.resolve(sDir, f);
+                  const dst = path.resolve(publicSpritesDir, lowerName);
+                  if (!fs.existsSync(dst) || fs.statSync(src).mtimeMs > fs.statSync(dst).mtimeMs) {
+                    fs.copyFileSync(src, dst);
+                  }
+                }
+              }
+            }
+
+            const publicFiles = fs.readdirSync(publicSpritesDir).filter(f => f.toLowerCase().endsWith('.webp'));
+            for (const f of publicFiles) {
+              spriteNames.add(f.toLowerCase().replace(/\.webp$/i, ''));
+            }
+
+            fs.writeFileSync(registryFile, JSON.stringify(Array.from(spriteNames).sort(), null, 2));
+          } catch (e) {
+            console.error('Error syncing sprites:', e);
+          }
+        };
+        syncSprites();
+      },
       configureServer(server) {
+        const syncSprites = () => {
+          try {
+            const publicSpritesDir = path.resolve(__dirname, 'public', 'sprites');
+            const registryFile = path.resolve(__dirname, 'src', 'data', 'spriteRegistry.json');
+            if (!fs.existsSync(publicSpritesDir)) fs.mkdirSync(publicSpritesDir, { recursive: true });
+
+            const sourceDirs = [
+              path.resolve(__dirname, 'wiki_scraper', 'sprites'),
+              path.resolve(__dirname, 'sprites'),
+            ];
+
+            const spriteNames = new Set();
+
+            for (const sDir of sourceDirs) {
+              if (fs.existsSync(sDir)) {
+                const files = fs.readdirSync(sDir).filter(f => f.toLowerCase().endsWith('.webp'));
+                for (const f of files) {
+                  const lowerName = f.toLowerCase();
+                  const baseName = lowerName.replace(/\.webp$/i, '');
+                  spriteNames.add(baseName);
+
+                  const src = path.resolve(sDir, f);
+                  const dst = path.resolve(publicSpritesDir, lowerName);
+                  if (!fs.existsSync(dst) || fs.statSync(src).mtimeMs > fs.statSync(dst).mtimeMs) {
+                    fs.copyFileSync(src, dst);
+                  }
+                }
+              }
+            }
+
+            const publicFiles = fs.readdirSync(publicSpritesDir).filter(f => f.toLowerCase().endsWith('.webp'));
+            for (const f of publicFiles) {
+              spriteNames.add(f.toLowerCase().replace(/\.webp$/i, ''));
+            }
+
+            fs.writeFileSync(registryFile, JSON.stringify(Array.from(spriteNames).sort(), null, 2));
+          } catch (e) {
+            console.error('Error syncing sprites:', e);
+          }
+        };
+
+        syncSprites();
+
         server.middlewares.use((req, res, next) => {
           if (req.url && req.url.startsWith('/sprites/')) {
             const rawName = req.url.replace('/sprites/', '').split('?')[0];
@@ -31,6 +117,7 @@ export default defineConfig({
             }
 
             const searchDirs = [
+              path.resolve(__dirname, 'public', 'sprites'),
               path.resolve(__dirname, 'sprites'),
               path.resolve(__dirname, 'wiki_scraper', 'sprites')
             ];
