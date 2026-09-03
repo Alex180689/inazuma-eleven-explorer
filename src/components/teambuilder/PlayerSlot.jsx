@@ -94,7 +94,12 @@ export default function PlayerSlot({
         }}
         onMouseEnter={(e) => {
           if (player && onSlotHover && !isCtrlPressed) {
-            onSlotHover(slot, isBench, player, e.currentTarget.getBoundingClientRect());
+            onSlotHover(slot, isBench, player, e.currentTarget.getBoundingClientRect(), e);
+          }
+        }}
+        onMouseMove={(e) => {
+          if (player && onSlotHover && !isCtrlPressed) {
+            onSlotHover(slot, isBench, player, e.currentTarget.getBoundingClientRect(), e);
           }
         }}
         onMouseLeave={() => {

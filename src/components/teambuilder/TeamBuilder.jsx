@@ -311,12 +311,17 @@ export default function TeamBuilder({
 
   // Ctrl Key tracking for fast removal with hover preview
   const [isCtrlPressed, setIsCtrlPressed] = useState(false);
+  // Shift Key tracking to reveal player info hover card
+  const [isShiftPressed, setIsShiftPressed] = useState(false);
 
   // Hover Player Popover Card state (with debounced entry and instant dismissal)
   const [hoveredCardInfo, setHoveredCardInfo] = useState(null);
   const hoverTimeoutRef = useRef(null);
 
-  const handleSlotHover = useCallback((slot, isBench, player, rect) => {
+  const handleSlotHover = useCallback((slot, isBench, player, rect, e) => {
+    if (e?.shiftKey !== undefined) {
+      setIsShiftPressed(e.shiftKey);
+    }
     if (isCtrlPressed || dragStateRef.current?.isDragging || dragStateRef.current?.isPointerDown) {
       setHoveredCardInfo(null);
       return;
@@ -324,7 +329,7 @@ export default function TeamBuilder({
     clearTimeout(hoverTimeoutRef.current);
     hoverTimeoutRef.current = setTimeout(() => {
       setHoveredCardInfo({ player, targetRect: rect, isBench });
-    }, 140);
+    }, 60);
   }, [isCtrlPressed]);
 
   const handleSlotLeave = useCallback(() => {
@@ -339,14 +344,21 @@ export default function TeamBuilder({
         clearTimeout(hoverTimeoutRef.current);
         setHoveredCardInfo(null);
       }
+      if (e.key === 'Shift' || e.shiftKey) {
+        setIsShiftPressed(true);
+      }
     };
     const handleKeyUp = (e) => {
       if (e.key === 'Control' || !e.ctrlKey) {
         setIsCtrlPressed(false);
       }
+      if (e.key === 'Shift' || !e.shiftKey) {
+        setIsShiftPressed(false);
+      }
     };
     const handleBlur = () => {
       setIsCtrlPressed(false);
+      setIsShiftPressed(false);
       clearTimeout(hoverTimeoutRef.current);
       setHoveredCardInfo(null);
     };
@@ -840,8 +852,8 @@ export default function TeamBuilder({
         </div>
       </div>
 
-      {/* Hover Player Info Popover Card with Mini Radar Chart and Moves */}
-      {!activeDrag && !isCtrlPressed && hoveredCardInfo && (
+      {/* Hover Player Info Popover Card with Mini Radar Chart and Moves (Requires Shift) */}
+      {!activeDrag && !isCtrlPressed && isShiftPressed && hoveredCardInfo && (
         <PlayerHoverCard
           player={hoveredCardInfo.player}
           targetRect={hoveredCardInfo.targetRect}

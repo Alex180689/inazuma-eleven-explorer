@@ -92,21 +92,56 @@ export default function PlayerSearchModal({
   const inputRef = useRef(null);
   const scrollContainerRef = useRef(null);
 
-  // Hover Player Card state (with debounced entry and instant dismissal)
+  // Hover Player Card state (revealed only while holding Shift)
   const [hoveredCardInfo, setHoveredCardInfo] = useState(null);
+  const [isShiftPressed, setIsShiftPressed] = useState(false);
   const hoverTimeoutRef = useRef(null);
 
-  const handleCardHover = (player, rect) => {
+  const handleCardHover = (player, rect, e) => {
+    if (e?.shiftKey !== undefined) {
+      setIsShiftPressed(e.shiftKey);
+    }
     clearTimeout(hoverTimeoutRef.current);
     hoverTimeoutRef.current = setTimeout(() => {
       setHoveredCardInfo({ player, targetRect: rect });
-    }, 140);
+    }, 60);
   };
 
   const handleCardLeave = () => {
     clearTimeout(hoverTimeoutRef.current);
     setHoveredCardInfo(null);
   };
+
+  // Global listener for Shift key to show/hide hover card dynamically
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Shift' || e.shiftKey) {
+        setIsShiftPressed(true);
+      }
+    };
+    const handleKeyUp = (e) => {
+      if (e.key === 'Shift' || !e.shiftKey) {
+        setIsShiftPressed(false);
+      }
+    };
+    const handleBlur = () => {
+      setIsShiftPressed(false);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    window.addEventListener('blur', handleBlur);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
+      window.removeEventListener('blur', handleBlur);
+    };
+  }, []);
+
+  // Clear hover state when search term changes
+  useEffect(() => {
+    handleCardLeave();
+  }, [searchTerm]);
 
   // Focus input and reset scroll on open
   useEffect(() => {
@@ -351,7 +386,12 @@ export default function PlayerSearchModal({
     return (
       <div
         key={`${keyPrefix}-${player.id}`}
-        onMouseEnter={(e) => handleCardHover(player, e.currentTarget.getBoundingClientRect())}
+        onMouseEnter={(e) => handleCardHover(player, e.currentTarget.getBoundingClientRect(), e)}
+        onMouseMove={(e) => {
+          if (e.shiftKey !== isShiftPressed) {
+            setIsShiftPressed(e.shiftKey);
+          }
+        }}
         onMouseLeave={handleCardLeave}
         onClick={() => {
           handleCardLeave();
@@ -714,7 +754,11 @@ export default function PlayerSearchModal({
                 </span>
               )}
             </span>
-            <span className="text-[11px] text-slate-500">Clicca su una scheda per selezionare</span>
+            <span className="text-[11px] text-slate-400 flex items-center gap-1.5">
+              <span>Tieni premuto <kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px] border border-slate-700 font-bold">Shift</kbd> per dettagli</span>
+              <span>•</span>
+              <span>Clicca per selezionare</span>
+            </span>
           </div>
 
           {/* Scrollable Players List / Grid */}
@@ -729,16 +773,12 @@ export default function PlayerSearchModal({
                   <div className="space-y-6">
                     {/* Direct Matches (by Name) */}
                     {directPlayers.length > 0 && (
-                      <div>
-                        {(teamGroups.length > 0 || moveGroups.length > 0) && (
-                          <div className="flex items-center gap-2 mb-3 px-1">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
-                            <span className="text-xs font-black uppercase tracking-wider text-slate-300 font-mono">
-                              Corrispondenza Nome ({directPlayers.length})
-                            </span>
-                          </div>
-                        )}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-3">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-xs font-bold text-emerald-400 uppercase tracking-wider font-mono">
+                          <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                          <span>Corrispondenza Nome ({directPlayers.length})</span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5">
                           {directPlayers.slice(0, displayCount).map((player) => renderPlayerCard(player, 'name'))}
                         </div>
                         {directPlayers.length > displayCount && (
@@ -821,8 +861,8 @@ export default function PlayerSearchModal({
           </div>
         </div>
 
-        {/* Hover Player Info Popover Card with Mini Radar Chart and Moves */}
-        {isOpen && hoveredCardInfo && (
+        {/* Hover Player Info Popover Card with Mini Radar Chart and Moves (Requires Shift key) */}
+        {isOpen && isShiftPressed && hoveredCardInfo && (
           <PlayerHoverCard
             player={hoveredCardInfo.player}
             targetRect={hoveredCardInfo.targetRect}
